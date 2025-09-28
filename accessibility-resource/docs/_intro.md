@@ -12,7 +12,7 @@ topics:
   - hub
   - user:visually-impaired
   - user:developer
-  - provider:flatmap-docs-kit
+  - provider:accessibility-resource
   - tool:smart-reader
   - tool:copilot
   - tool:screen-reader

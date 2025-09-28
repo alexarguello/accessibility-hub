@@ -31,29 +31,29 @@ Bridge the gap between accessibility needs and inclusive technology by:
 
 ### How the Hub is organized
 
-- For Users (/flatmap-docs-kit/docs/for-users)
+- For Users (/accessibility-resource/docs/for-users)
   - By Disability Type: vision, hearing, mobility, cognitive, neurodiversity, aging & dexterity
   - Applications: curated app categories and open-source options
-  - Example: Screen Readers (/flatmap-docs-kit/docs/for-users/by-disability-type/vision/screen-readers)
-- For Developers (/flatmap-docs-kit/docs/for-developers)
-  - Accessibility APIs & SDKs (/flatmap-docs-kit/docs/for-developers/apis-sdks)
-  - Accessible Web Dev Checklist (/flatmap-docs-kit/docs/for-developers/accessible-web-dev-checklist)
-  - Engineering Gaps & Design Patterns (/flatmap-docs-kit/docs/for-developers/engineering-gaps)
-  - How to Contribute (/flatmap-docs-kit/docs/for-developers/how_to-%20contribute)
-- Hot Topics (/flatmap-docs-kit/docs/hot-topics)
+  - Example: Screen Readers (/accessibility-resource/docs/for-users/by-disability-type/vision/screen-readers)
+- For Developers (/accessibility-resource/docs/for-developers)
+  - Accessibility APIs & SDKs (/accessibility-resource/docs/for-developers/apis-sdks)
+  - Accessible Web Dev Checklist (/accessibility-resource/docs/for-developers/accessible-web-dev-checklist)
+  - Engineering Gaps & Design Patterns (/accessibility-resource/docs/for-developers/engineering-gaps)
+  - How to Contribute (/accessibility-resource/docs/for-developers/how_to-%20contribute)
+- Hot Topics (/accessibility-resource/docs/hot-topics)
   - Examples: Seeing AI, ARIA Roles, Accessibility Testing, Color Contrast, Smart Homes
-- Use Cases (/flatmap-docs-kit/docs/use-cases)
+- Use Cases (/accessibility-resource/docs/use-cases)
   - Home, Work, and Future scenarios
-- Resources (/flatmap-docs-kit/docs/resources)
+- Resources (/accessibility-resource/docs/resources)
   - Tool Directory, Legal Standards, Tutorials, Research
-  - Example: Legal Standards (/flatmap-docs-kit/docs/resources/legal-standards)
-- Unmet Needs (/flatmap-docs-kit/docs/unmet-needs)
+  - Example: Legal Standards (/accessibility-resource/docs/resources/legal-standards)
+- Unmet Needs (/accessibility-resource/docs/unmet-needs)
   - Gaps and future possibilities to inspire new solutions
-- Community (/flatmap-docs-kit/docs/community)
+- Community (/accessibility-resource/docs/community)
   - Personas, Events, Forums, Success Stories
-- Community Contributions (/flatmap-docs-kit/docs/community-contributions)
+- Community Contributions (/accessibility-resource/docs/community-contributions)
   - Getting Started, What’s Missing?, To-Do List, Interview Template
-- Contributor Dashboard (/flatmap-docs-kit/docs/contribute)
+- Contributor Dashboard (/accessibility-resource/docs/contribute)
   - Live view of high-impact gaps, collaboration invites, and items needing review
 
 ### Key capabilities
@@ -65,14 +65,14 @@ Bridge the gap between accessibility needs and inclusive technology by:
 
 ### Quick start
 
-- I am a user or caregiver → Visit For Users (/flatmap-docs-kit/docs/for-users)
-- I build products → Visit For Developers (/flatmap-docs-kit/docs/for-developers)
-- I want curated insights → Explore Hot Topics (/flatmap-docs-kit/docs/hot-topics)
-- I want to help → Open the Contributor Dashboard (/flatmap-docs-kit/docs/contribute)
+- I am a user or caregiver → Visit For Users (/accessibility-resource/docs/for-users)
+- I build products → Visit For Developers (/accessibility-resource/docs/for-developers)
+- I want curated insights → Explore Hot Topics (/accessibility-resource/docs/hot-topics)
+- I want to help → Open the Contributor Dashboard (/accessibility-resource/docs/contribute)
 
 ### Future vision
 
-We aim to incubate high-impact projects, including a smart reader for visually impaired scientists, and other solutions surfaced in Unmet Needs (/flatmap-docs-kit/docs/unmet-needs).
+We aim to incubate high-impact projects, including a smart reader for visually impaired scientists, and other solutions surfaced in Unmet Needs (/accessibility-resource/docs/unmet-needs).
 
 ### What you can expect
 
@@ -83,7 +83,7 @@ We aim to incubate high-impact projects, including a smart reader for visually i
 ### Contribute
 
 This hub grows through community input. Suggest improvements, add resources, or start a new topic:
-- Community Contributions (/flatmap-docs-kit/docs/community-contributions)
-- Contributor Dashboard (/flatmap-docs-kit/docs/contribute)
+- Community Contributions (/accessibility-resource/docs/community-contributions)
+- Contributor Dashboard (/accessibility-resource/docs/contribute)
 
 <small>Disclaimer: This is an educational resource and not legal or medical advice. Always test with real users and follow applicable standards and regulations.</small>

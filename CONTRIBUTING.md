@@ -29,7 +29,7 @@ Check the last section in the sidebar called `Contribute`. Here you'll find exam
 ### 2. Add or Improve Resources
 Have your own idea? Follow these steps:
 - Browse `/docs/` to find the right folder for your topic.
-- Copy the [`/docs/.template.md`](accessibility-hub/docs/.template.md) file as a starting point for your new resource.
+- Copy the [`/docs/.template.md`](accessibility-resource/docs/.template.md) file as a starting point for your new resource.
 - Rename your file (e.g., `screen-readers.md`, `dos-and-donts.md`).
 
 ⚠️ Do not name files `intro.md` or `index.md` — these are reserved for folder landing pages.

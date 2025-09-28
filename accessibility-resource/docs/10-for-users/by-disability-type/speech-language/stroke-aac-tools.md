@@ -33,4 +33,4 @@ Stroke survivors often experience aphasia, dysarthria, or motor impairments that
 - Yes/No cards or gesture-based systems
 
 ### Resource 📎
-Use the [Stroke Communication Profile Questionnaire](/flatmap-docs-kit/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire) to match AAC tools to user needs.
+Use the [Stroke Communication Profile Questionnaire](/accessibility-resource/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire) to match AAC tools to user needs.

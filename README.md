@@ -27,7 +27,7 @@ Explore accessibility resources in ways that work for you:
 
 ### Get Started Path
 If you’re new to accessibility or want a guided introduction:
-→ [`/docs/getting-started`](./accessibility-hub/docs/60-community-contributions/getting-started.md)
+→ [`/docs/getting-started`](accessibility-resource/docs/60-community-contributions/getting-started.md)
 
 ### Browse by Topic or Disability Type
 Navigate by topic, disability type, or use our sidebar for structured exploration.
@@ -89,7 +89,7 @@ Submit guides, tools, case studies, or links that help make technology more acce
 - How to submit a pull request
 
 ### Help Us Fill the Gaps
-Visit the [`Contribute`](./accessibility-hub/flatmap-tools/contribute-dashboard-template.md) dashboard to:
+Visit the [`Contribute`](accessibility-resource/flatmap-tools/contribute-dashboard-template.md) dashboard to:
 - Find articles and resources we need
 - Join open collaborations
 - Review drafts
