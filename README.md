@@ -89,7 +89,7 @@ Submit guides, tools, case studies, or links that help make technology more acce
 - How to submit a pull request
 
 ### Help Us Fill the Gaps
-Visit the [`Contribute`](./docs/contribute-dashboard) dashboard to:
+Visit the [`Contribute`](./accessibility-hub/flatmap-tools/contribute-dashboard-template.md) dashboard to:
 - Find articles and resources we need
 - Join open collaborations
 - Review drafts
