@@ -27,7 +27,7 @@ Explore accessibility resources in ways that work for you:
 
 ### Get Started Path
 If you’re new to accessibility or want a guided introduction:
-→ [`/docs/getting-started`](./docs/00-getting-started)
+→ [`/docs/getting-started`](./accessibility-hub/docs/60-community-contributions/getting-started.md)
 
 ### Browse by Topic or Disability Type
 Navigate by topic, disability type, or use our sidebar for structured exploration.
