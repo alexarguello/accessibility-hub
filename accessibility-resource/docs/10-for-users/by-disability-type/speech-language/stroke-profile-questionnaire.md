@@ -61,8 +61,8 @@ Use this questionnaire to assess the communication needs of individuals recoveri
 ### How to Use This Questionnaire 📎
 
 Once completed, use the responses to:
-- Select appropriate AAC apps or devices from [AAC Tools for Stroke Recovery](../stroke-aac-tools.md)
-- Guide caregiver strategies from the [Caregiver Guide for Post-Stroke Communication](../stroke-caregiver-guide.md)
+- Select appropriate AAC apps or devices from [AAC Tools for Stroke Recovery](/docs/for-users/by-disability-type/speech-language/stroke-aac-tools)
+- Guide caregiver strategies from the [Caregiver Guide for Post-Stroke Communication](/docs/for-users/by-disability-type/speech-language/stroke-caregiver-guide)
 - Identify therapy needs and match with local or online providers
 
 This tool is designed for caregivers, clinicians, and individuals with stroke to co-create a personalized communication plan.

@@ -27,7 +27,7 @@ Explore accessibility resources in ways that work for you:
 
 ### Get Started Path
 If you’re new to accessibility or want a guided introduction:
-→ [`/docs/getting-started`](accessibility-resource/docs/60-community-contributions/getting-started.md)
+→ [`/docs/getting-started`](docs/60-community-contributions/getting-started.md)
 
 ### Browse by Topic or Disability Type
 Navigate by topic, disability type, or use our sidebar for structured exploration.
@@ -82,7 +82,7 @@ Our tag system helps you quickly identify and filter resources by type, audience
 Your contributions make the Accessibility Hub better for everyone! We welcome:
 
 ### Adding New Resources
-Submit guides, tools, case studies, or links that help make technology more accessible. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for:
+Submit guides, tools, case studies, or links that help make technology more accessible. See [`CONTRIBUTING.md`](docs/99-contribute/contributing) for:
 - Where to place your file
 - How to structure metadata and tags
 - Accessibility best practices for contributions

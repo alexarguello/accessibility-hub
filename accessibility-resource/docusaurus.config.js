@@ -13,7 +13,7 @@ const config = {
   },
 
   url: 'https://alexarguello.github.io',
-  baseUrl: '/accessibility-resource/',
+  baseUrl: '/accessibility-hub/',
 
   trailingSlash: true,
 

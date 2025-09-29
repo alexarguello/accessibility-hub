@@ -9,7 +9,7 @@ OUTPUT_DIR = os.path.join(ROOT_DIR, "99-contribute")
 TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "contribute-page-template.md")
 DASHBOARD_TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "contribute-dashboard-template.md")
 DASHBOARD_OUTPUT_PATH = os.path.join(OUTPUT_DIR, "index.md")
-CONTRIBUTING_MD_PATH = os.path.abspath(os.path.join(os.getcwd(), "../CONTRIBUTING.md"))
+CONTRIBUTING_MD_PATH = os.path.abspath(os.path.join(os.getcwd(), "../contributing.md"))
 CONTRIB_GUIDE_OUTPUT_PATH = os.path.join(OUTPUT_DIR, "contributing-new-resource.md")
 
 def load_template():
@@ -312,9 +312,9 @@ def create_contribution_page(md_path, rel_path, frontmatter):
     print(f"✅ Created: {output_path}")
 
 def extract_contrib_guide():
-    # Extract the section from CONTRIBUTING.md
+    # Extract the section from contributing.md
     if not os.path.exists(CONTRIBUTING_MD_PATH):
-        print(f"⚠️ CONTRIBUTING.md not found at {CONTRIBUTING_MD_PATH}")
+        print(f"⚠️ contributing.md not found at {CONTRIBUTING_MD_PATH}")
         return
     with open(CONTRIBUTING_MD_PATH, "r", encoding="utf-8") as f:
         lines = f.readlines()
@@ -325,7 +325,7 @@ def extract_contrib_guide():
             start = i
             break
     if start is None:
-        print("⚠️ Could not find '## 📝 How to Add a New Resource' section in CONTRIBUTING.md")
+        print("⚠️ Could not find '## 📝 How to Add a New Resource' section in contributing.md")
         return
     for j in range(start+1, len(lines)):
         if lines[j].strip().startswith("## "):

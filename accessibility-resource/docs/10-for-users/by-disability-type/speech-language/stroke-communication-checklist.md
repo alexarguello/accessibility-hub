@@ -37,4 +37,4 @@ This checklist helps caregivers and professionals assess the communication abili
 - Are there signs of depression or anxiety?
 
 ### Resource
-Use the [Stroke Communication Profile Questionnaire](/accessibility-resource/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire) to gather detailed information for personalized AAC planning.
+Use the [Stroke Communication Profile Questionnaire](/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire) to gather detailed information for personalized AAC planning.
