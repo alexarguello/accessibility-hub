@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./accessibility-hub
+        #working-directory: ./accessibility-hub
 
     steps:
       - name: Checkout code
