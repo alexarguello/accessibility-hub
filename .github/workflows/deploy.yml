@@ -11,9 +11,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    #defaults:
-    #  run:
-        #working-directory: ./accessibility-hub
+    defaults:
+      run:
+        working-directory: ./accessibility-resource
 
     steps:
       - name: Checkout code
