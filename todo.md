@@ -20,3 +20,10 @@ A centralized list of tasks and ideas for the accessibility-hub project.
 ## ⚙️ Project Management & Contribution
 
 - [ ] **Implement "Report an Issue" Link**: Integrate the "report an issue" functionality into the documentation, directing users to the [GitHub issues page](https://github.com/alexarguello/accessibility-hub/issues).
+
+## fix broken links
+
+[WARNING] Docs markdown link couldn't be resolved: (../.template.md) in source file "C:\Users\Alexandra\IdeaProjects\accessibility-hub\accessibility-resource\docs\99-contribute\contributing.md" for version current
+[WARNING] Docs markdown link couldn't be resolved: (/TOPICS_GUIDE.md) in source file "C:\Users\Alexandra\IdeaProjects\accessibility-hub\accessibility-resource\docs\99-contribute\contributing.md" for version current
+[WARNING] Docs markdown link couldn't be resolved: (../../../FRONTMATTER_GUIDE.md) in source file "C:\Users\Alexandra\IdeaProjects\accessibility-hub\accessibility-resource\docs\99-contribute\contributing.md" for version current
+[WARNING] Docs markdown link couldn't be resolved: (../../../TOPICS_GUIDE.md) in source file "C:\Users\Alexandra\IdeaProjects\accessibility-hub\accessibility-resource\docs\99-contribute\contributing.md" for version current

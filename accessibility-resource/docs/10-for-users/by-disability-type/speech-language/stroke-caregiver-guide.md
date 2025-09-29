@@ -35,4 +35,4 @@ Supporting a loved one after stroke involves patience, creativity, and knowledge
 - Use relaxation tools like Calm to manage stress
 
 ### Resource 📎
-Download the [Stroke Communication Profile Questionnaire](https://github.com/alexarguello/accessibility-resource/blob/main/accessibility-hub/docs/40-resources/stroke-profile-questionnaire.md) to guide your support plan.
+Download the [Stroke Communication Profile Questionnaire](/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire) to guide your support plan.

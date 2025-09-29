@@ -39,5 +39,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./accessibility-hub/build
+          publish_dir: ./build
           force_orphan: true
+          enable_jekyll: false
