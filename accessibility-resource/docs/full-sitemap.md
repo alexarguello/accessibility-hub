@@ -108,18 +108,18 @@ resources_learning_paths_quickstart_guide_md["Quickstart Guide with FOSS"]
 resources_learning_paths --> resources_learning_paths_quickstart_guide_md
 resources_learning_paths_certifications_md["Certifications"]
 resources_learning_paths --> resources_learning_paths_certifications_md
-resources_learning_paths_conferences_events_md["Conferences & Events"]
-resources_learning_paths --> resources_learning_paths_conferences_events_md
-resources_learning_paths_communities_groups_md["Communities & Groups"]
-resources_learning_paths --> resources_learning_paths_communities_groups_md
-resources_learning_paths_free_oss_resources_md["Free & Open Source Resources"]
-resources_learning_paths --> resources_learning_paths_free_oss_resources_md
 resources_research_md["Research & Whitepapers"]
 resources --> resources_research_md
 resources_legal_standards_md["Legal standards"]
 resources --> resources_legal_standards_md
 resources_tool_directory_md["Tool Directory"]
 resources --> resources_tool_directory_md
+resources_conferences_events_md["Conferences & Events"]
+resources --> resources_conferences_events_md
+resources_communities_groups_md["Communities & Groups"]
+resources --> resources_communities_groups_md
+resources_free_oss_resources_md["Guides, Open source Tools and Patterns"]
+resources --> resources_free_oss_resources_md
 use_cases["Use Cases"]
 root --> use_cases
 use_cases_work_md["Work-Related Use Cases"]
@@ -226,12 +226,12 @@ click resources_learning_paths "/accessibility-hub/docs/resources/learning-paths
 click resources_learning_paths_courses_programs_md "/accessibility-hub/docs/resources/learning-paths/courses-programs"
 click resources_learning_paths_quickstart_guide_md "/accessibility-hub/docs/resources/learning-paths/quickstart-guide"
 click resources_learning_paths_certifications_md "/accessibility-hub/docs/resources/learning-paths/certifications"
-click resources_learning_paths_conferences_events_md "/accessibility-hub/docs/resources/learning-paths/conferences-events"
-click resources_learning_paths_communities_groups_md "/accessibility-hub/docs/resources/learning-paths/communities-groups"
-click resources_learning_paths_free_oss_resources_md "/accessibility-hub/docs/resources/learning-paths/free-oss-resources"
 click resources_research_md "/accessibility-hub/docs/resources/research"
 click resources_legal_standards_md "/accessibility-hub/docs/resources/legal-standards"
 click resources_tool_directory_md "/accessibility-hub/docs/resources/tool-directory"
+click resources_conferences_events_md "/accessibility-hub/docs/resources/conferences-events"
+click resources_communities_groups_md "/accessibility-hub/docs/resources/communities-groups"
+click resources_free_oss_resources_md "/accessibility-hub/docs/resources/free-oss-resources"
 click use_cases "/accessibility-hub/docs/use-cases"
 click use_cases_work_md "/accessibility-hub/docs/use-cases/work"
 click use_cases_home_md "/accessibility-hub/docs/use-cases/home"
@@ -370,18 +370,18 @@ classDef custom47 fill:#ffd699,stroke:green,stroke-width:4px,stroke-dasharray:0;
 class resources_learning_paths_quickstart_guide_md custom47;
 classDef custom48 fill:#ffd699,stroke:yellow,stroke-width:4px,stroke-dasharray:0;
 class resources_learning_paths_certifications_md custom48;
-classDef custom49 fill:#ffd699,stroke:yellow,stroke-width:4px,stroke-dasharray:0;
-class resources_learning_paths_conferences_events_md custom49;
-classDef custom50 fill:#ffd699,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class resources_learning_paths_communities_groups_md custom50;
-classDef custom51 fill:#ffd699,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class resources_learning_paths_free_oss_resources_md custom51;
-classDef custom52 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class resources_research_md custom52;
-classDef custom53 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class resources_legal_standards_md custom53;
-classDef custom54 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class resources_tool_directory_md custom54;
+classDef custom49 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class resources_research_md custom49;
+classDef custom50 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class resources_legal_standards_md custom50;
+classDef custom51 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class resources_tool_directory_md custom51;
+classDef custom52 fill:#ffcccc,stroke:yellow,stroke-width:4px,stroke-dasharray:0;
+class resources_conferences_events_md custom52;
+classDef custom53 fill:#ffcccc,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class resources_communities_groups_md custom53;
+classDef custom54 fill:#ffcccc,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class resources_free_oss_resources_md custom54;
 classDef custom55 fill:#d5b3ff;
 class use_cases custom55;
 classDef custom56 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;

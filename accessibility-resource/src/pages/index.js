@@ -13,10 +13,10 @@ const cards = [
     bgClass: 'card-bg-blue',
   },
   {
-    title: 'Accessibility Guidelines',
+    title: 'Accessibility Resources',
     emoji: '📖',
-    headline: 'Best practices and standards',
-    description: 'Explore WCAG, ARIA, and other accessibility guidelines to make your projects inclusive for everyone.',
+    headline: 'Everything you need to advance accessibility',
+    description: 'A curated library of events, communities, open source tools, and research.',
     link: '/docs/resources',
     bgClass: 'card-bg-green',
   },
@@ -42,7 +42,7 @@ const cards = [
     title: 'Learning Paths',
     emoji: '🧑‍🎓',
     headline: 'Start your accessibility journey',
-    description: 'Follow curated learning paths for beginners and advanced practitioners to master accessibility.',
+    description: 'A curated library of learning paths, certifications, events, communities, tools and more.',
     link: '/docs/resources/learning-paths',
     bgClass: 'card-bg-red',
   },
@@ -50,7 +50,7 @@ const cards = [
       title: 'Frequently Asked Topics',
       emoji: '💡',
       headline: 'Want to dive into the hot topics?',
-      description: 'See the most requested topics and jump directly to neural networks, RAG, chatbots, MCP, agents, and more.',
+      description: 'See the most requested topics and jump directly to them.',
       link: '/hot-topics',
       bgClass: 'card-bg-teal',
     },
@@ -63,7 +63,7 @@ export default function Home() {
       <div className="homepage">
         <main>
           <div className="homepage__container">
-            <h1 className="homepage__title">Find Everything Accessibility</h1>
+            <h1 className="homepage__title">Accessibility Hub</h1>
             <p className="homepage__subtitle">
               Explore, learn, and build inclusive digital experiences for everyone.
             </p>

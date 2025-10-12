@@ -1,5 +1,5 @@
 ---
-title: Free & Open Source Resources
+title: Guides, Open source Tools and Patterns
 sidebar_position: 6
 level: beginner
 type: reference
@@ -14,8 +14,7 @@ topics:
   - tool:NVDA
 ---
 
-# Free & Open Source Resources
-
+# Guides, Open Source Tools and Patterns 
 A curated list of high-quality, no-cost guides, tools, and patterns.
 
 ---
