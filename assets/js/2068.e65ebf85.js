@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_resource=self.webpackChunkdocusaurus_resource||[]).push([[2068],{2068:(e,s,u)=>{u.d(s,{createInfoServices:()=>r.v});var r=u(1366);u(8198)}}]);
