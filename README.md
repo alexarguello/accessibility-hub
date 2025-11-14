@@ -113,6 +113,6 @@ Each entry includes:
 
 ## Accessibility Commitment
 
-We are committed to making this hub accessible to everyone. If you encounter any barriers or have suggestions for improvement, please [open an issue](https://github.com/your-repo/issues) or contact us directly.
+We are committed to making this hub accessible to everyone. If you encounter any barriers or have suggestions for improvement, please [open an issue](https://github.com/alexarguello/accessibility-hub/issues) or contact us directly.
 
 Thank you for helping build a more accessible digital world!
