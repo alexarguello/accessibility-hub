@@ -27,7 +27,7 @@ Explore accessibility resources in ways that work for you:
 
 ### Get Started Path
 If you’re new to accessibility or want a guided introduction:
-→ [`Overview`](docs/about/overview.md)
+→ [`Overview`](accessibility-resource/docs/00-about/overview.md)
 
 ### Browse by Topic or Disability Type
 Navigate by topic, disability type, or use our sidebar for structured exploration.
