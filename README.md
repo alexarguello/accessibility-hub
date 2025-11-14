@@ -82,7 +82,7 @@ Our tag system helps you quickly identify and filter resources by type, audience
 Your contributions make the Accessibility Hub better for everyone! We welcome:
 
 ### Adding New Resources
-Submit guides, tools, case studies, or links that help make technology more accessible. See [`CONTRIBUTING.md`](docs/99-contribute/contributing) for:
+Submit guides, tools, case studies, or links that help make technology more accessible. See [`CONTRIBUTING.md`](accessibility-resource/docs/60-community-contributions/contributing.md) for:
 - Where to place your file
 - How to structure metadata and tags
 - Accessibility best practices for contributions
