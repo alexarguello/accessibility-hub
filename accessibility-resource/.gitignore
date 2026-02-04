@@ -7,7 +7,6 @@ build
 # Generated files
 .docusaurus
 .cache-loader
-docs/99-contribute
 docs/**/index.md
 
 # Misc

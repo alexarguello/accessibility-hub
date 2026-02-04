@@ -108,6 +108,7 @@ const config = {
               { label: 'Open Issues', href: 'https://github.com/alexarguello/accessibility-hub/issues' },
               { label: 'Propose a Resource', href: 'https://github.com/alexarguello/accessibility-hub/issues/new' },
               { label: 'Frontmatter Guide', to: '/docs/contribute/FRONTMATTER_GUIDE' },
+              { label: 'Topics Guide', to: '/docs/contribute/TOPICS_GUIDE' },
             ],
           },
           {
