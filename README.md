@@ -27,7 +27,7 @@ Explore accessibility resources in ways that work for you:
 
 ### Get Started Path
 If you’re new to accessibility or want a guided introduction:
-→ [`/docs/getting-started`](docs/60-community-contributions/getting-started.md)
+→ [`Overview`](accessibility-resource/docs/00-about/overview.md)
 
 ### Browse by Topic or Disability Type
 Navigate by topic, disability type, or use our sidebar for structured exploration.
@@ -82,7 +82,7 @@ Our tag system helps you quickly identify and filter resources by type, audience
 Your contributions make the Accessibility Hub better for everyone! We welcome:
 
 ### Adding New Resources
-Submit guides, tools, case studies, or links that help make technology more accessible. See [`CONTRIBUTING.md`](docs/99-contribute/contributing) for:
+Submit guides, tools, case studies, or links that help make technology more accessible. See [`CONTRIBUTING.md`](accessibility-resource/docs/60-community-contributions/contributing.md) for:
 - Where to place your file
 - How to structure metadata and tags
 - Accessibility best practices for contributions
@@ -113,6 +113,6 @@ Each entry includes:
 
 ## Accessibility Commitment
 
-We are committed to making this hub accessible to everyone. If you encounter any barriers or have suggestions for improvement, please [open an issue](https://github.com/your-repo/issues) or contact us directly.
+We are committed to making this hub accessible to everyone. If you encounter any barriers or have suggestions for improvement, please [open an issue](https://github.com/alexarguello/accessibility-hub/issues) or contact us directly.
 
 Thank you for helping build a more accessible digital world!
