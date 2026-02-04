@@ -4,8 +4,8 @@ import remarkStripHeadingEmojis from './plugins/remark-strip-heading-emojis.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Home',
+  tagline: 'A11YHub: Accessibility resources and tools',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -49,18 +49,7 @@ const config = {
             remarkStripHeadingEmojis,
           ],
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -80,9 +69,9 @@ const config = {
       },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'A11YHub Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -90,11 +79,10 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'About',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/alexarguello/accessibility-hub',
             label: 'GitHub',
             position: 'right',
           },
@@ -104,46 +92,40 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Explore',
             items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
+              { label: 'Home', to: '/' },
+              { label: 'Welcome', to: '/docs' },
+              { label: 'Hot Topics', to: '/docs/hot-topics' },
+              { label: 'Use Cases', to: '/docs/use-cases' },
+              { label: 'Resources', to: '/docs/resources' },
+            ],
+          },
+          {
+            title: 'Contribute',
+            items: [
+              { label: 'How to Contribute', to: '/docs/contribute/contributing' },
+              { label: 'Open Issues', href: 'https://github.com/alexarguello/accessibility-hub/issues' },
+              { label: 'Propose a Resource', href: 'https://github.com/alexarguello/accessibility-hub/issues/new' },
+              { label: 'Frontmatter Guide', to: '/docs/contribute/FRONTMATTER_GUIDE' },
             ],
           },
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
+              { label: 'Coming soon', href: '#' },
             ],
           },
           {
-            title: 'More',
+            title: 'About',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+              { label: 'Project Overview', to: '/docs' },
+              { label: 'License', to: 'https://github.com/alexarguello/accessibility-hub/blob/main/LICENSE' },
+              { label: 'GitHub', href: 'https://github.com/alexarguello/accessibility-hub' },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} A11YHub. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
