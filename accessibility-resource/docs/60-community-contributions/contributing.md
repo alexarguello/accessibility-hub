@@ -60,9 +60,9 @@ Frontmatter is essential YAML metadata included in every resource file to ensure
   - `topics`: Tags summarizing the content, with a focus on:
     - Broad categories like `accessibility`.
     - Specific prefixes such as `assistive-technology`.
-    - More about topics [here the Topics guide](/docs/contribute/TOPICS_GUIDE)
+    - More about topics [here the Topics guide](/docs/community-contributions/TOPICS_GUIDE)
 
-For the full guide, refer to [FRONTMATTER_GUIDE](/docs/contribute/FRONTMATTER_GUIDE).
+For the full guide, refer to [FRONTMATTER_GUIDE](/docs/community-contributions/FRONTMATTER_GUIDE).
 
 ### 4. Submit a Pull Request
 Create a Pull Request (PR) in our GitHub repository. Include a summary of your changes, why they're important, and mention any related GitHub issues.
@@ -112,7 +112,7 @@ To maintain consistency, use the following **topics** when tagging your content:
 - `provider:nv-access`
 
 Include your tags as **specific and accurate as possible** — these improve searchability and structure for other contributors.
-For more details, check out the [Topics by Category](TOPICS_GUIDE.md).
+For more details, check out the [Topics by Category](/docs/community-contributions/TOPICS_GUIDE).
 
 ## Formatting and Writing Guidelines
 1. **Focus on Accessibility**: Write with an accessibility-first mindset, including inclusive examples (e.g., using headings, lists, and descriptive text).

@@ -107,8 +107,8 @@ const config = {
               { label: 'How to Contribute', to: '/docs/contribute/contributing' },
               { label: 'Open Issues', href: 'https://github.com/alexarguello/accessibility-hub/issues' },
               { label: 'Propose a Resource', href: 'https://github.com/alexarguello/accessibility-hub/issues/new' },
-              { label: 'Frontmatter Guide', to: '/docs/contribute/FRONTMATTER_GUIDE' },
-              { label: 'Topics Guide', to: '/docs/contribute/TOPICS_GUIDE' },
+              { label: 'Frontmatter Guide', to: '/docs/community-contributions/FORMATTER_GUIDE' },
+              { label: 'Topics Guide', to: '/docs/community-contributions/TOPICS_GUIDE' },
             ],
           },
           {

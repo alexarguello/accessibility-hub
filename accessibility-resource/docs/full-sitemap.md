@@ -130,6 +130,8 @@ use_cases_future_md["Hypothetical/Future Scenarios"]
 use_cases --> use_cases_future_md
 community_contributions["Community Contributions"]
 root --> community_contributions
+community_contributions_contributing_md["Contributing to the Accessibility Hub"]
+community_contributions --> community_contributions_contributing_md
 community_contributions_interview_template_md["Testimony Interview Template"]
 community_contributions --> community_contributions_interview_template_md
 community_contributions_whats_missing_md["What’s Missing?"]
@@ -138,6 +140,10 @@ community_contributions_getting_started_md["Getting Started"]
 community_contributions --> community_contributions_getting_started_md
 community_contributions_to_do_list_md["To-Do List"]
 community_contributions --> community_contributions_to_do_list_md
+community_contributions_FRONTMATTER_GUIDE_md["Guide to Writing Frontmatter for Resources"]
+community_contributions --> community_contributions_FRONTMATTER_GUIDE_md
+community_contributions_TOPICS_GUIDE_md["TOPICS_GUIDE"]
+community_contributions --> community_contributions_TOPICS_GUIDE_md
 unmet_needs["Unmet Needs"]
 root --> unmet_needs
 unmet_needs_unmet_needs_md["Unmet Needs & Future Possibilities"]
@@ -237,10 +243,13 @@ click use_cases_work_md "/accessibility-hub/docs/use-cases/work"
 click use_cases_home_md "/accessibility-hub/docs/use-cases/home"
 click use_cases_future_md "/accessibility-hub/docs/use-cases/future"
 click community_contributions "/accessibility-hub/docs/community-contributions"
+click community_contributions_contributing_md "/accessibility-hub/docs/community-contributions/contributing"
 click community_contributions_interview_template_md "/accessibility-hub/docs/community-contributions/interview-template"
 click community_contributions_whats_missing_md "/accessibility-hub/docs/community-contributions/whats-missing"
 click community_contributions_getting_started_md "/accessibility-hub/docs/community-contributions/getting-started"
 click community_contributions_to_do_list_md "/accessibility-hub/docs/community-contributions/to-do-list"
+click community_contributions_FRONTMATTER_GUIDE_md "/accessibility-hub/docs/community-contributions/FRONTMATTER_GUIDE"
+click community_contributions_TOPICS_GUIDE_md "/accessibility-hub/docs/community-contributions/TOPICS_GUIDE"
 click unmet_needs "/accessibility-hub/docs/unmet-needs"
 click unmet_needs_unmet_needs_md "/accessibility-hub/docs/unmet-needs/unmet-needs"
 click hot_topics "/accessibility-hub/docs/hot-topics"
@@ -392,54 +401,60 @@ classDef custom58 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:
 class use_cases_future_md custom58;
 classDef custom59 fill:#d5b3ff;
 class community_contributions custom59;
-classDef custom60 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class community_contributions_interview_template_md custom60;
+classDef custom60 fill:lightgrey,stroke:yellow,stroke-width:4px,stroke-dasharray:0;
+class community_contributions_contributing_md custom60;
 classDef custom61 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class community_contributions_whats_missing_md custom61;
+class community_contributions_interview_template_md custom61;
 classDef custom62 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class community_contributions_getting_started_md custom62;
+class community_contributions_whats_missing_md custom62;
 classDef custom63 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class community_contributions_to_do_list_md custom63;
-classDef custom64 fill:#d5b3ff;
-class unmet_needs custom64;
-classDef custom65 fill:lightgrey,stroke:yellow,stroke-width:4px,stroke-dasharray:0;
-class unmet_needs_unmet_needs_md custom65;
-classDef custom66 fill:#d5b3ff;
-class hot_topics custom66;
-classDef custom67 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_accessibility_audit_md custom67;
-classDef custom68 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_accessibility_testing_md custom68;
-classDef custom69 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_alt_text_ai_md custom69;
+class community_contributions_getting_started_md custom63;
+classDef custom64 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class community_contributions_to_do_list_md custom64;
+classDef custom65 fill:#ffcccc;
+class community_contributions_FRONTMATTER_GUIDE_md custom65;
+classDef custom66 fill:#ffcccc;
+class community_contributions_TOPICS_GUIDE_md custom66;
+classDef custom67 fill:#d5b3ff;
+class unmet_needs custom67;
+classDef custom68 fill:lightgrey,stroke:yellow,stroke-width:4px,stroke-dasharray:0;
+class unmet_needs_unmet_needs_md custom68;
+classDef custom69 fill:#d5b3ff;
+class hot_topics custom69;
 classDef custom70 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_aria_roles_md custom70;
+class hot_topics_accessibility_audit_md custom70;
 classDef custom71 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_bug_bounty_md custom71;
+class hot_topics_accessibility_testing_md custom71;
 classDef custom72 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_color_contrast_md custom72;
+class hot_topics_alt_text_ai_md custom72;
 classDef custom73 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_dyslexia_support_md custom73;
+class hot_topics_aria_roles_md custom73;
 classDef custom74 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_github_access_tools_md custom74;
+class hot_topics_bug_bounty_md custom74;
 classDef custom75 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_inclusive_design_md custom75;
+class hot_topics_color_contrast_md custom75;
 classDef custom76 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_langchain4j_tools_md custom76;
+class hot_topics_dyslexia_support_md custom76;
 classDef custom77 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_nlp_assist_md custom77;
+class hot_topics_github_access_tools_md custom77;
 classDef custom78 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_otter_ai_md custom78;
+class hot_topics_inclusive_design_md custom78;
 classDef custom79 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_real_time_captions_md custom79;
+class hot_topics_langchain4j_tools_md custom79;
 classDef custom80 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_seeing_ai_md custom80;
+class hot_topics_nlp_assist_md custom80;
 classDef custom81 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_smart_homes_md custom81;
+class hot_topics_otter_ai_md custom81;
 classDef custom82 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_springai_assistive_md custom82;
+class hot_topics_real_time_captions_md custom82;
 classDef custom83 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
-class hot_topics_voice_navigation_md custom83;
+class hot_topics_seeing_ai_md custom83;
+classDef custom84 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class hot_topics_smart_homes_md custom84;
+classDef custom85 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class hot_topics_springai_assistive_md custom85;
+classDef custom86 fill:lightgrey,stroke:green,stroke-width:4px,stroke-dasharray:0;
+class hot_topics_voice_navigation_md custom86;
 linkStyle default interpolate basis
 ```
 
