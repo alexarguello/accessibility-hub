@@ -104,10 +104,10 @@ const config = {
           {
             title: 'Contribute',
             items: [
-              { label: 'How to Contribute', to: '/docs/contribute/contributing' },
+              { label: 'How to Contribute', to: '/docs/community-contributions/contributing' },
               { label: 'Open Issues', href: 'https://github.com/alexarguello/accessibility-hub/issues' },
               { label: 'Propose a Resource', href: 'https://github.com/alexarguello/accessibility-hub/issues/new' },
-              { label: 'Frontmatter Guide', to: '/docs/community-contributions/FORMATTER_GUIDE' },
+              { label: 'Frontmatter Guide', to: '/docs/community-contributions/FRONTMATTER_GUIDE' },
               { label: 'Topics Guide', to: '/docs/community-contributions/TOPICS_GUIDE' },
             ],
           },
