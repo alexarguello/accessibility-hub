@@ -1,4 +1,4 @@
-## 🛠️ Metadata for Resources (Frontmatter)
+## ️ Metadata for Resources (Frontmatter)
 Every file must include a `frontmatter` section (YAML metadata) to classify and describe the resource. This helps us organize the hub and ensures your contribution integrates seamlessly into our systems.
 You can find a full **frontmatter guide** [here](FRONTMATTER_GUIDE.md), but below are **standard fields** for accessibility-related content:
 ### **Required Metadata Fields**
@@ -16,7 +16,7 @@ You can find a full **frontmatter guide** [here](FRONTMATTER_GUIDE.md), but belo
 - `visibility`: public or internal (default: `public`).
 - `features`: optional fields like `priority` or `responsibility`.
 - 
-# 📖 Guide to Writing Frontmatter for Resources
+#  Guide to Writing Frontmatter for Resources
 The `frontmatter` is a YAML block at the top of each Markdown file used to classify, tag, and describe your resource. It ensures the resource is easy to find, well-structured, and properly rendered on the platform.
 ## **General Rules**
 1. **Required Fields**: These are mandatory for all resources (`title`, `type`, etc.). Always include them.
