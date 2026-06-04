@@ -21,20 +21,37 @@ const config = {
   projectName: 'accessibility-hub',
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
-  // ✅ Enable Mermaid plugin
-  themes: ['@docusaurus/theme-mermaid'],
-
-  // ✅ Enable Mermaid in Markdown
+  // ✅ Mermaid + broken link hook (onBrokenMarkdownLinks moved here per v4 deprecation)
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
+
+  // ✅ Mermaid theme + search plugin
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: 'docs',
+        searchBarPosition: 'right',
+        indexBlog: false,
+        indexPages: true,
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -43,8 +60,10 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          // ✅ Fixed: points to your actual repo (was pointing to facebook/docusaurus)
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/alexarguello/accessibility-hub/edit/main/accessibility-resource/',
+          showLastUpdateTime: true,
           remarkPlugins: [
             remarkStripHeadingEmojis,
           ],
@@ -71,8 +90,10 @@ const config = {
       navbar: {
         title: 'Home',
         logo: {
-          alt: 'A11YHub Logo',
+          // ✅ Fixed: was duplicating "A11YHub Logo" as both alt text and link text
+          alt: 'A11YHub',
           src: 'img/logo.svg',
+          href: '/',
         },
         items: [
           {
@@ -80,6 +101,27 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'About',
+          },
+          // ✅ Added: primary sections now reachable from the top nav
+          {
+            to: '/docs/for-users',
+            position: 'left',
+            label: 'For Users',
+          },
+          {
+            to: '/docs/for-developers',
+            position: 'left',
+            label: 'For Developers',
+          },
+          {
+            to: '/docs/hot-topics',
+            position: 'left',
+            label: 'Hot Topics',
+          },
+          {
+            to: '/docs/resources',
+            position: 'left',
+            label: 'Resources',
           },
           {
             href: 'https://github.com/alexarguello/accessibility-hub',
@@ -114,14 +156,22 @@ const config = {
           {
             title: 'Community',
             items: [
-              { label: 'Coming soon', href: '#' },
+              // ✅ Fixed: was href="#" (dead anchor) — now points to real GitHub pages
+              {
+                label: 'GitHub Discussions',
+                href: 'https://github.com/alexarguello/accessibility-hub/discussions',
+              },
+              {
+                label: 'Open an Issue',
+                href: 'https://github.com/alexarguello/accessibility-hub/issues/new',
+              },
             ],
           },
           {
             title: 'About',
             items: [
               { label: 'Project Overview', to: '/docs' },
-              { label: 'License', to: 'https://github.com/alexarguello/accessibility-hub/blob/main/LICENSE' },
+              { label: 'License', href: 'https://github.com/alexarguello/accessibility-hub/blob/main/LICENSE' },
               { label: 'GitHub', href: 'https://github.com/alexarguello/accessibility-hub' },
             ],
           },

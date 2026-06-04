@@ -1,0 +1,22 @@
+{
+  "ignorePatterns": [
+    { "pattern": "^https://github\\.com/alexarguello/accessibility-hub/edit" },
+    { "pattern": "^mailto:" },
+    { "pattern": "^#" }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/accessibility-hub/",
+      "replacement": "https://alexarguello.github.io/accessibility-hub/"
+    },
+    {
+      "pattern": "^/docs/",
+      "replacement": "https://alexarguello.github.io/accessibility-hub/docs/"
+    }
+  ],
+  "retryOn429": true,
+  "retryCount": 2,
+  "fallbackRetryDelay": "30s",
+  "timeout": "10s",
+  "aliveStatusCodes": [200, 206]
+}
