@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import styles from './HotTopics.module.css';
 
@@ -26,10 +26,10 @@ const types = ['tool', 'concept', 'protocol', 'use'];
 
 // Category emoji and label mappings
 const categoryEmojis = {
-  tool: '🧰',
-  concept: '🎓',
-  protocol: '📜',
-  use: '🏠',
+  tool: 'ðŸ§°',
+  concept: 'ðŸŽ“',
+  protocol: 'ðŸ“œ',
+  use: 'ðŸ ',
 };
 const categoryText = {
   tool: 'Tool',
@@ -51,8 +51,8 @@ export default function HotTopicsPage() {
 
   // Compose filter context description
   const filterContext = isFiltered
-      ? `Showing ${visibleTopics.length} of ${topics.length} topics. Filtered by: ${activeFilters.map(type => categoryText[type]).join(', ')}`
-      : `Showing all ${topics.length} topics`;
+    ? `Filtered by: ${activeFilters.map(type => type.charAt(0).toUpperCase() + type.slice(1)).join(', ')}`
+    : 'Showing all topics';
 
   // Focus management after filtering
   useEffect(() => {
@@ -100,7 +100,7 @@ export default function HotTopicsPage() {
         </button>
 */}
 
-        {/* 🪧 Filter Buttons */}
+        {/* ðŸª§ Filter Buttons */}
         <div role="group" aria-label="Filter topics by category" className={styles.filterGroup}>
           <span className={styles.srOnly} id="filter-group-desc">
             Use these buttons to filter topics by category.
@@ -118,16 +118,17 @@ export default function HotTopicsPage() {
               )}
               <span aria-hidden="true" className={styles.filterEmoji}>{categoryEmojis[type]}</span> {' '}
               <span className={styles.filterText}>{categoryText[type]}</span>
+              <span className="sr-only"> category button: {categoryText[type]}</span>
             </button>
           ))}
         </div>
 
         {/* Visually hidden filter context for screen readers */}
-        <div id="filter-context" className={styles.srOnly} aria-live="polite" aria-atomic="true">
+        <div id="filter-context" className={styles.srOnly} aria-live="polite">
           {filterContext}
         </div>
 
-        {/* 🧩 Filtered Topic Tags */}
+        {/* ðŸ§© Filtered Topic Tags */}
         <ul
           className={`${styles.topicsGrid} ${reduceMotion ? styles.reduceMotion : ''}`}
           aria-describedby="filter-context"
