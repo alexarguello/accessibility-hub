@@ -31,29 +31,29 @@ Bridge the gap between accessibility needs and inclusive technology by:
 
 ### How the Hub is organized
 
-- For Users (/accessibility-resource/docs/for-users)
+- For Users (/accessibility-hub/docs/for-users)
   - By Disability Type: vision, hearing, mobility, cognitive, neurodiversity, aging & dexterity
   - Applications: curated app categories and open-source options
-  - Example: Screen Readers (/accessibility-resource/docs/for-users/by-disability-type/vision/screen-readers)
-- For Developers (/accessibility-resource/docs/for-developers)
-  - Accessibility APIs & SDKs (/accessibility-resource/docs/for-developers/apis-sdks)
-  - Accessible Web Dev Checklist (/accessibility-resource/docs/for-developers/accessible-web-dev-checklist)
-  - Engineering Gaps & Design Patterns (/accessibility-resource/docs/for-developers/engineering-gaps)
-  - How to Contribute (/accessibility-resource/docs/for-developers/how_to-%20contribute)
-- Hot Topics (/accessibility-resource/docs/hot-topics)
+  - Example: Screen Readers (/accessibility-hub/docs/for-users/by-disability-type/vision/screen-readers)
+- For Developers (/accessibility-hub/docs/for-developers)
+  - Accessibility APIs & SDKs (/accessibility-hub/docs/for-developers/apis-sdks)
+  - Accessible Web Dev Checklist (/accessibility-hub/docs/for-developers/accessible-web-dev-checklist)
+  - Engineering Gaps & Design Patterns (/accessibility-hub/docs/for-developers/engineering-gaps)
+  - How to Contribute (/accessibility-hub/docs/for-developers/how_to-%20contribute)
+- Hot Topics (/accessibility-hub/docs/hot-topics)
   - Examples: Seeing AI, ARIA Roles, Accessibility Testing, Color Contrast, Smart Homes
-- Use Cases (/accessibility-resource/docs/use-cases)
+- Use Cases (/accessibility-hub/docs/use-cases)
   - Home, Work, and Future scenarios
-- Resources (/accessibility-resource/docs/resources)
+- Resources (/accessibility-hub/docs/resources)
   - Tool Directory, Legal Standards, Tutorials, Research
-  - Example: Legal Standards (/accessibility-resource/docs/resources/legal-standards)
-- Unmet Needs (/accessibility-resource/docs/unmet-needs)
+  - Example: Legal Standards (/accessibility-hub/docs/resources/legal-standards)
+- Unmet Needs (/accessibility-hub/docs/unmet-needs)
   - Gaps and future possibilities to inspire new solutions
-- Community (/accessibility-resource/docs/community)
+- Community (/accessibility-hub/docs/community)
   - Personas, Events, Forums, Success Stories
-- Community Contributions (/accessibility-resource/docs/community-contributions)
+- Community Contributions (/accessibility-hub/docs/community-contributions)
   - Getting Started, What’s Missing?, To-Do List, Interview Template
-- Contributor Dashboard (/accessibility-resource/docs/contribute)
+- Contributor Dashboard (/accessibility-hub/docs/contribute)
   - Live view of high-impact gaps, collaboration invites, and items needing review
 
 ### Key capabilities
@@ -65,14 +65,14 @@ Bridge the gap between accessibility needs and inclusive technology by:
 
 ### Quick start
 
-- I am a user or caregiver → Visit For Users (/accessibility-resource/docs/for-users)
-- I build products → Visit For Developers (/accessibility-resource/docs/for-developers)
-- I want curated insights → Explore Hot Topics (/accessibility-resource/docs/hot-topics)
-- I want to help → Open the Contributor Dashboard (/accessibility-resource/docs/contribute)
+- I am a user or caregiver → Visit For Users (/accessibility-hub/docs/for-users)
+- I build products → Visit For Developers (/accessibility-hub/docs/for-developers)
+- I want curated insights → Explore Hot Topics (/accessibility-hub/docs/hot-topics)
+- I want to help → Open the Contributor Dashboard (/accessibility-hub/docs/contribute)
 
 ### Future vision
 
-We aim to incubate high-impact projects, including a smart reader for visually impaired scientists, and other solutions surfaced in Unmet Needs (/accessibility-resource/docs/unmet-needs).
+We aim to incubate high-impact projects, including a smart reader for visually impaired scientists, and other solutions surfaced in Unmet Needs (/accessibility-hub/docs/unmet-needs).
 
 ### What you can expect
 
@@ -83,7 +83,7 @@ We aim to incubate high-impact projects, including a smart reader for visually i
 ### Contribute
 
 This hub grows through community input. Suggest improvements, add resources, or start a new topic:
-- Community Contributions (/accessibility-resource/docs/community-contributions)
-- Contributor Dashboard (/accessibility-resource/docs/contribute)
+- Community Contributions (/accessibility-hub/docs/community-contributions)
+- Contributor Dashboard (/accessibility-hub/docs/contribute)
 
 <small>Disclaimer: This is an educational resource and not legal or medical advice. Always test with real users and follow applicable standards and regulations.</small>
