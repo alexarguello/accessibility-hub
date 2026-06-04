@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 import styles from './HotTopics.module.css';
 
@@ -41,116 +41,86 @@ const categoryText = {
 export default function HotTopicsPage() {
   const [reduceMotion, setReduceMotion] = useState(false);
   const [activeFilters, setActiveFilters] = useState([]);
-  const topicsListRef = useRef(null);
 
   const isFiltered = activeFilters.length > 0;
 
   const visibleTopics = isFiltered
-    ? topics.filter(topic => activeFilters.includes(topic.type))
-    : topics;
+      ? topics.filter(topic => activeFilters.includes(topic.type))
+      : topics;
 
-  // Compose filter context description
+  // Compose filter status — visible to all users, announced by screen readers via aria-live
   const filterContext = isFiltered
       ? `Showing ${visibleTopics.length} of ${topics.length} topics. Filtered by: ${activeFilters.map(type => categoryText[type]).join(', ')}`
       : `Showing all ${topics.length} topics`;
 
-  // Focus management after filtering
-  useEffect(() => {
-    if (topicsListRef.current) {
-      topicsListRef.current.focus();
-    }
-  }, [activeFilters]);
-
   const toggleFilter = (type) => {
     setActiveFilters(prev =>
-      prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]
+        prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]
     );
   };
 
   return (
-    <main className={styles.hotTopics} role="main" aria-label="Hot Topics in Accessibility and AI">
-      <div className={styles.container}>
-        <h1 className={styles.header}>
-          <span className={styles.hotWord}>Hot</span> Topics in Accessibility & AI
-        </h1>
-        <p>Click a tag to learn more. You can also filter by category below.</p>
-        {/* Legend for category types */}
-        <ul className={styles.categoryLegend}>
-          {types.map(type => (
-            <li key={type} className={styles.categoryLegendItem}>
-              <span aria-hidden="true" className={styles.legendEmoji}>{categoryEmojis[type]}</span>
-              <span className={styles.legendText}>{categoryText[type]}</span>
-            </li>
-          ))}
-        </ul>
+      <main className={styles.hotTopics} role="main" aria-label="Hot Topics in Accessibility and AI">
+        <div className={styles.container}>
+          <h1 className={styles.header}>
+            <span className={styles.hotWord}>Hot</span> Topics in Accessibility & AI
+          </h1>
+          <p>Click a tag to learn more. You can also filter by category below.</p>
 
-{/**
-        <button
-          onClick={() => setReduceMotion(prev => !prev)}
-          aria-pressed={reduceMotion}
-          aria-label="Toggle reduced motion for animations"
-          className={styles.motionToggle}
-        >
-          {reduceMotion ? 'Enable Animations' : 'Reduce Motion'}
-          <span className={styles.srOnly}>
-            {reduceMotion
-              ? 'Animations are currently reduced. Click to enable animations.'
-              : 'Animations are currently enabled. Click to reduce motion.'}
-          </span>
-        </button>
-*/}
+          {/* Legend for category types */}
+          <ul className={styles.categoryLegend}>
+            {types.map(type => (
+                <li key={type} className={styles.categoryLegendItem}>
+                  <span aria-hidden="true" className={styles.legendEmoji}>{categoryEmojis[type]}</span>
+                  <span className={styles.legendText}>{categoryText[type]}</span>
+                </li>
+            ))}
+          </ul>
 
-        {/* 🪧 Filter Buttons */}
-        <div role="group" aria-label="Filter topics by category" className={styles.filterGroup}>
-          <span className={styles.srOnly} id="filter-group-desc">
-            Use these buttons to filter topics by category.
-          </span>
-          {types.map(type => (
-            <button
-              key={type}
-              onClick={() => toggleFilter(type)}
-              aria-pressed={activeFilters.includes(type)}
-              className={`${styles.filterButton} ${styles[`${type}Legend`]} ${activeFilters.includes(type) ? styles.active : styles.inactive}`}
-              aria-label={`Filter by category: ${categoryText[type]}`}
-            >
-              {activeFilters.includes(type) && (
-                <span aria-hidden="true" style={{ textDecoration: 'underline', fontWeight: 'bold' }}>&#10003; </span>
-              )}
-              <span aria-hidden="true" className={styles.filterEmoji}>{categoryEmojis[type]}</span> {' '}
-              <span className={styles.filterText}>{categoryText[type]}</span>
-            </button>
-          ))}
+          {/* Filter Buttons */}
+          <div role="group" aria-label="Filter topics by category" className={styles.filterGroup}>
+            {types.map(type => (
+                <button
+                    key={type}
+                    onClick={() => toggleFilter(type)}
+                    aria-pressed={activeFilters.includes(type)}
+                    className={`${styles.filterButton} ${styles[`${type}Legend`]} ${activeFilters.includes(type) ? styles.active : styles.inactive}`}
+                    aria-label={`Filter by category: ${categoryText[type]}`}
+                >
+                  {activeFilters.includes(type) && (
+                      <span aria-hidden="true" style={{ textDecoration: 'underline', fontWeight: 'bold' }}>&#10003; </span>
+                  )}
+                  <span aria-hidden="true" className={styles.filterEmoji}>{categoryEmojis[type]}</span>{' '}
+                  <span className={styles.filterText}>{categoryText[type]}</span>
+                </button>
+            ))}
+          </div>
+
+          {/* Filter status — visible to all, announced to screen readers on change */}
+          <div id="filter-context" className={styles.filterStatus} aria-live="polite" aria-atomic="true">
+            {filterContext}
+          </div>
+
+          {/* Topic Tags */}
+          <ul
+              className={`${styles.topicsGrid} ${reduceMotion ? styles.reduceMotion : ''}`}
+              aria-describedby="filter-context"
+              role="list"
+          >
+            {visibleTopics.map((topic, i) => (
+                <li key={i} role="listitem">
+                  <Link
+                      to={topic.link}
+                      className={`${styles.topicTag} ${styles[`topic-${topic.type}`]}`}
+                      aria-label={`${categoryText[topic.type]}: ${topic.label}`}
+                  >
+                    <span className={styles.topicLabel}>{topic.label}</span>
+                    <span aria-hidden="true" className={styles.topicEmoji}>{categoryEmojis[topic.type]}</span>
+                  </Link>
+                </li>
+            ))}
+          </ul>
         </div>
-
-        {/* Visually hidden filter context for screen readers */}
-        <div id="filter-context" className={styles.srOnly} aria-live="polite" aria-atomic="true">
-          {filterContext}
-        </div>
-
-        {/* 🧩 Filtered Topic Tags */}
-        <ul
-          className={`${styles.topicsGrid} ${reduceMotion ? styles.reduceMotion : ''}`}
-          aria-describedby="filter-context"
-          tabIndex="-1"
-          ref={topicsListRef}
-          role="list"
-        >
-          {visibleTopics.map((topic, i) => (
-            <li key={i} role="listitem">
-              <Link
-                to={topic.link}
-                tabIndex={0}
-                className={`${styles.topicTag} ${styles[`topic-${topic.type}`]}`}
-                aria-label={`Topic: ${topic.label}. Category: ${categoryText[topic.type]}`}
-              >
-                <span className={styles.topicLabel}>{topic.label}</span>{' '}
-                <span aria-hidden="true" className={styles.topicEmoji}>{categoryEmojis[topic.type]}</span>
-                <span className="sr-only"> {categoryText[topic.type]} category</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </main>
+      </main>
   );
 }
