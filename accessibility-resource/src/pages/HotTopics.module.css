@@ -1,7 +1,7 @@
-/* Core styling remains the same */
+/* ─── Topic Tags ─────────────────────────────────────────────────── */
 .topicTag {
   display: inline-block;
-  padding: 0.6rem 1rem;      /* Ensures space before and after text */
+  padding: 0.6rem 1rem;
   margin: 0.5rem;
   border-radius: 8px;
   font-size: 1rem;
@@ -9,55 +9,26 @@
   text-decoration: none;
   border: 2px solid transparent;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  white-space: normal;       /* allow wrapping */
-  overflow: visible;         /* no clipping */
-  text-overflow: unset;      /* no ellipsis or black dot */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
 
-.topic-tag:focus,
-.topic-tag:hover {
+/* FIX: was .topic-tag:focus / .topic-tag:hover — never matched; CSS Modules requires camelCase selector */
+.topicTag:focus,
+.topicTag:hover {
   outline: none;
   background-color: #eef6ff;
   border-color: #005fcc;
 }
 
-/* Type-based classes */
-.topic-tool {
-  background-color: #e0f7fa;
-  border-color: #006064;
-}
+/* Type-based background + border */
+.topic-tool     { background-color: #e0f7fa; border-color: #006064; }
+.topic-concept  { background-color: #e8f5e9; border-color: #2e7d32; }
+.topic-protocol { background-color: #fbe9e7; border-color: #d84315; }
+.topic-use      { background-color: #ede7f6; border-color: #4527a0; }
 
-.topic-concept {
-  background-color: #e8f5e9;
-  border-color: #2e7d32;
-}
-
-.topic-protocol {
-  background-color: #fbe9e7;
-  border-color: #d84315;
-}
-
-.topic-use {
-  background-color: #ede7f6;
-  border-color: #4527a0;
-}
-
-/* Toggle button */
-.motionToggle {
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  background-color: #fafafa;
-  border: 2px solid #005fcc;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.motionToggle:focus {
-  outline: 2px dashed #005fcc;
-}
-
-/* Grid container */
+/* ─── Topics Grid ────────────────────────────────────────────────── */
 .topicsGrid {
   display: flex;
   flex-wrap: wrap;
@@ -66,13 +37,14 @@
   padding-left: 0;
 }
 
-/* Reduce motion class disables transitions */
+/* ─── Reduce Motion ──────────────────────────────────────────────── */
 .reduceMotion * {
   animation: none !important;
   transition: none !important;
   scroll-behavior: auto !important;
 }
 
+/* ─── Page Layout ────────────────────────────────────────────────── */
 .header {
   font-size: 2.2rem;
   font-weight: 700;
@@ -89,25 +61,36 @@
   font-size: 2.6rem;
 }
 
-/* 🧑‍🦯 Screen Reader-Only Text */
+/* ─── Screen Reader Only ─────────────────────────────────────────── */
 .srOnly {
   position: absolute !important;
   width: 1px; height: 1px;
   padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0);
+  overflow: hidden; clip: rect(0, 0, 0, 0);
   white-space: nowrap; border: 0;
 }
 
+/* ─── Filter Status (live region — intentionally visible) ────────── */
+/* FIX: was missing from CSS; referenced in hot-topics.js line 100 */
+.filterStatus {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+  min-height: 1.4em; /* prevents layout shift when text changes */
+}
 
-/* 🪧 Legend Styling */
+/* ─── Category Legend ────────────────────────────────────────────── */
 .legendSection {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .legendGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 .legendItem {
@@ -117,36 +100,16 @@
   border-radius: 4px;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
+  text-align: center;
 }
 
-/* 🎨 Colored borders for clarity */
-.toolLegend {
-  color: #006064;
-  border-color: #006064;
-}
-
-.conceptLegend {
-  color: #2e7d32;
-  border-color: #2e7d32;
-}
-
-.protocolLegend {
-  color: #d84315;
-  border-color: #d84315;
-}
-
-.useLegend {
-  color: #4527a0;
-  border-color: #4527a0;
-}
-/* 🌈 Filter Buttons */
+/* ─── Filter Buttons ─────────────────────────────────────────────── */
 .filterGroup {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1.2rem 0;
   justify-content: center;
-  text-align: center;
 }
 
 .filterButton {
@@ -158,31 +121,6 @@
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: center;
-}
-
-.legendSection {
-  text-align: center;
-}
-
-.legendGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.legendItem {
-  text-align: center;
-}
-
-.filterButton {
-  font-size: 0.9rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  border: 2px solid transparent;
-  background-color: #f7f7f7;
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .filterButton:focus {
@@ -190,19 +128,41 @@
   outline-offset: 2px;
 }
 
-/* 🟢 Active vs. Inactive States */
+/* Active = pressed */
 .active {
   font-weight: bold;
   border-color: #000;
   background-color: #eef6ff;
 }
 
-.inactive {
-  opacity: 0.5;
+/*
+ * FIX: was opacity: 0.5 — halves contrast on colored text/borders.
+ * Using a compound selector (.filterButton.inactive) to beat the single-class
+ * legend color rules in the cascade, so inactive grey always wins.
+ */
+.filterButton.inactive {
+  color: #767676;
+  border-color: #ccc;
+  background-color: #f7f7f7;
 }
 
-/* 🧠 Colored Filter Types */
-.toolLegend { color: #006064; }
-.conceptLegend { color: #2e7d32; }
-.protocolLegend { color: #d84315; }
-.useLegend { color: #4527a0; }
+/* ─── Legend / Filter type colors ───────────────────────────────── */
+.toolLegend     { color: #006064; border-color: #006064; }
+.conceptLegend  { color: #2e7d32; border-color: #2e7d32; }
+.protocolLegend { color: #d84315; border-color: #d84315; }
+.useLegend      { color: #4527a0; border-color: #4527a0; }
+
+/* Motion toggle (unused in current JS but kept for future use) */
+.motionToggle {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #fafafa;
+  border: 2px solid #005fcc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.motionToggle:focus {
+  outline: 2px dashed #005fcc;
+}
