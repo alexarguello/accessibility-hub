@@ -494,6 +494,9 @@ def generate_index_md(folder_path, rel_path):
         output.append(frontmatter)
         output.append(DO_NOT_EDIT)
         output += custom_intro
+    text_nav = build_text_nav(lines, clicks)
+    if text_nav:
+        output.extend(text_nav)
     output += [
                   "```mermaid",
                   "graph LR",
@@ -504,9 +507,6 @@ def generate_index_md(folder_path, rel_path):
     legend_items = create_compact_legend(style_classes, style_config)
     if legend_items:
         output.extend(legend_items)
-    text_nav = build_text_nav(lines, clicks)
-    if text_nav:
-        output.extend(text_nav)
     index_md_path = os.path.join(folder_path, "index.md")
     with open(index_md_path, "w", encoding="utf-8") as f:
         f.write("\n".join(output))
@@ -544,6 +544,10 @@ def generate_root_index_md():
         DO_NOT_EDIT,
         ''
     ]
+    style_config = load_style_config()
+    text_nav = build_text_nav(lines, clicks)
+    if text_nav:
+        output.extend(text_nav)
     output += custom_intro + [
         '```mermaid',
         'graph LR',
@@ -551,13 +555,9 @@ def generate_root_index_md():
                   'linkStyle default interpolate basis',
                   '```'
               ]
-    style_config = load_style_config()
     legend_items = create_compact_legend(style_classes, style_config)
     if legend_items:
         output.extend(legend_items)
-    text_nav = build_text_nav(lines, clicks)
-    if text_nav:
-        output.extend(text_nav)
     index_md_path = os.path.join(ROOT_DIR, "index.md")
     with open(index_md_path, "w", encoding="utf-8") as f:
         f.write("\n".join(output))
@@ -596,6 +596,10 @@ def generate_full_sitemap():
         DO_NOT_EDIT,
         ''
     ]
+    style_config = load_style_config()
+    text_nav = build_text_nav(lines, clicks)
+    if text_nav:
+        output.extend(text_nav)
     output += custom_intro + [
         '```mermaid',
         'graph LR',
@@ -603,13 +607,9 @@ def generate_full_sitemap():
                   'linkStyle default interpolate basis',
                   '```'
               ]
-    style_config = load_style_config()
     legend_items = create_compact_legend(style_classes, style_config)
     if legend_items:
         output.extend(legend_items)
-    text_nav = build_text_nav(lines, clicks)
-    if text_nav:
-        output.extend(text_nav)
     sitemap_path = os.path.join(ROOT_DIR, "full-sitemap.md")
     with open(sitemap_path, "w", encoding="utf-8") as f:
         f.write("\n".join(output))
@@ -670,6 +670,9 @@ def create_compact_legend(style_classes, style_config):
     NOTE: Icon entries are intentionally excluded. create_node_label() calls
     _strip_emojis() on every composed label, so icons never appear in the
     rendered graph and must not appear in the legend (mismatch fix).
+
+    Depth-based background colors (the 5-color palette applied via classDef)
+    are documented here as a separate row since they are not in style_config.
     """
     border_tags = []
     background_groups = {}
@@ -694,6 +697,13 @@ def create_compact_legend(style_classes, style_config):
 
     legend_lines = []
 
+    # Depth palette — hardcoded in build_mermaid(), not in style_config
+    legend_lines.append(
+        "node background = depth in hierarchy: "
+        "light blue (depth 0) | light purple (depth 1) | "
+        "light pink (depth 2) | light orange (depth 3) | light green (depth 4)"
+    )
+
     if border_tags:
         legend_lines.append(" | ".join(border_tags))
 
@@ -701,15 +711,12 @@ def create_compact_legend(style_classes, style_config):
         bg_parts = []
         for bg_color, tags in background_groups.items():
             if bg_color == "lightgrey":
-                bg_parts.append(f"bg grey: {', '.join(tags)}")
+                bg_parts.append(f"bg light grey (overrides depth color): {', '.join(tags)}")
             elif bg_color == "lightgreen":
-                bg_parts.append(f"bg green: {', '.join(tags)}")
+                bg_parts.append(f"bg light green (overrides depth color): {', '.join(tags)}")
             else:
-                bg_parts.append(f"bg {bg_color}: {', '.join(tags)}")
+                bg_parts.append(f"bg {bg_color} (overrides depth color): {', '.join(tags)}")
         legend_lines.append(" | ".join(bg_parts))
-
-    if not legend_lines:
-        return []
 
     legend_text = "<br />".join(legend_lines)
     return [
@@ -724,15 +731,28 @@ def build_text_nav(lines, clicks):
     Parses node labels and click URLs produced by build_mermaid() and emits a
     <details> block that works without JavaScript and is fully keyboard/SR
     accessible. Satisfies WCAG 1.3.1 for mermaid-only navigation pages.
+
+    Handles two node types:
+    - Internal nodes: have a matching 'click node_id "url"' entry.
+    - External nodes: have no click entry; their URL is embedded in the label
+      as <a href='url' ...>Title</a>. We extract both the URL and text.
     """
     # Parse node labels — lines look like: node_id["Label text"]
+    # External nodes look like: node_id["<a href='url' ...>Title</a>"]
     node_labels = {}
+    node_external_urls = {}
     for line in lines:
         m = re.match(r'^(\w+)\["(.+)"\]$', line.strip())
         if m:
-            label = re.sub(r'<[^>]+>', '', m.group(2)).strip()  # strip embedded HTML
+            nid = m.group(1)
+            raw = m.group(2)
+            # Check for an external href embedded in the label
+            ext = re.search(r"href='([^']+)'", raw)
+            if ext:
+                node_external_urls[nid] = ext.group(1)
+            label = re.sub(r'<[^>]+>', '', raw).strip()
             if label:
-                node_labels[m.group(1)] = label
+                node_labels[nid] = label
 
     # Parse click URLs — entries look like: click node_id "url"
     node_urls = {}
@@ -741,11 +761,14 @@ def build_text_nav(lines, clicks):
         if m:
             node_urls[m.group(1)] = m.group(2)
 
-    items = [
-        f'  <li><a href="{node_urls[nid]}">{label}</a></li>'
-        for nid, label in node_labels.items()
-        if nid in node_urls
-    ]
+    items = []
+    for nid, label in node_labels.items():
+        if nid in node_urls:
+            items.append(f'  <li><a href="{node_urls[nid]}">{label}</a></li>')
+        elif nid in node_external_urls:
+            items.append(
+                f'  <li><a href="{node_external_urls[nid]}" target="_blank" rel="noopener noreferrer">{label} ↗</a></li>'
+            )
 
     if not items:
         return []

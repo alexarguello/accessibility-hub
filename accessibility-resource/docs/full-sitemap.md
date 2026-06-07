@@ -6,6 +6,98 @@ hide_title: true
 ---
 <!-- AUTO-GENERATED FILE — DO NOT EDIT. Regenerated on merge -->
 
+
+<details class="flatmap-text-nav">
+<summary>Text navigation (no-JS / screen reader alternative)</summary>
+<ul>
+  <li><a href="/accessibility-hub/docs/full-sitemap">Full Site Map</a></li>
+  <li><a href="/accessibility-hub/docs/for-users">For Users</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/applications">Applications</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type">By Disability Type</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity">Aging Dexterity</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity/external-resources">Aging & Dexterity - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/cognitive">Cognitive</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/cognitive/external-resources">Cognitive - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/hearing">Hearing</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/hearing/external-resources">Hearing - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/mobility">Mobility</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/mobility/external-resources">Mobility - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/mobility/aphasia-communication-quickstart">Aphasia Communication Quick Start for Caregivers</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/neurodiversity">Neurodiversity</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/neurodiversity/external-resources">Neurodiversity - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language">Speech Language</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/external-resources">Speech & Language - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-communication-checklist">Stroke Communication Needs Checklist</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-aac-tools">AAC Tools for Stroke Recovery</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-caregiver-guide">Caregiver Guide for Post-Stroke Communication</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire">Stroke Communication Profile Questionnaire</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision">Vision</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/screen-readers">Screen Readers</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/e-readers">Accessible E-Readers</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/external-resources">Vision - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/companies">Companies Committed to Accessibility (Vision)</a></li>
+  <li><a href="/accessibility-hub/docs/about">About</a></li>
+  <li><a href="/accessibility-hub/docs/about/overview">Accessibility Hub Overview</a></li>
+  <li><a href="/accessibility-hub/docs/about/about">About Accessibility Hub</a></li>
+  <li><a href="/accessibility-hub/docs/about/roadmap">Roadmap</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers">For Developers</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/accessible-ap-_design-guide">Accessible API Design for Developers</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/how_to- contribute">How to contribute</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/apis-sdks">Accessibility APIs & SDKs</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/case-studies">Developer Case Studies</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/engineering-gaps">Engineering Gaps & Design Patterns</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/accessible-web-dev-checklist">Accessible Web Development Checklist  # A concise, descriptive title (e.g., '...</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/external-resources">for Developers - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/community">Community</a></li>
+  <li><a href="/accessibility-hub/docs/community/forums">Forums or Discussions</a></li>
+  <li><a href="/accessibility-hub/docs/community/events">Events & Hackathons</a></li>
+  <li><a href="/accessibility-hub/docs/community/success-stories">Success Stories</a></li>
+  <li><a href="/accessibility-hub/docs/community/personas">User Personas</a></li>
+  <li><a href="/accessibility-hub/docs/resources">Resources</a></li>
+  <li><a href="/accessibility-hub/docs/resources/learning-paths">Learning Paths</a></li>
+  <li><a href="/accessibility-hub/docs/resources/learning-paths/courses-programs">Courses & Programs</a></li>
+  <li><a href="/accessibility-hub/docs/resources/learning-paths/quickstart-guide">Quickstart Guide with FOSS</a></li>
+  <li><a href="/accessibility-hub/docs/resources/learning-paths/certifications">Certifications</a></li>
+  <li><a href="/accessibility-hub/docs/resources/research">Research & Whitepapers</a></li>
+  <li><a href="/accessibility-hub/docs/resources/legal-standards">Legal standards</a></li>
+  <li><a href="/accessibility-hub/docs/resources/tool-directory">Tool Directory</a></li>
+  <li><a href="/accessibility-hub/docs/resources/conferences-events">Conferences & Events</a></li>
+  <li><a href="/accessibility-hub/docs/resources/communities-groups">Communities & Groups</a></li>
+  <li><a href="/accessibility-hub/docs/resources/free-oss-resources">Guides, Open source Tools and Patterns</a></li>
+  <li><a href="/accessibility-hub/docs/use-cases">Use Cases</a></li>
+  <li><a href="/accessibility-hub/docs/use-cases/work">Work-Related Use Cases</a></li>
+  <li><a href="/accessibility-hub/docs/use-cases/home">Home and Daily Life Scenarios</a></li>
+  <li><a href="/accessibility-hub/docs/use-cases/future">Hypothetical/Future Scenarios</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions">Community Contributions</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/contributing">Contributing to the Accessibility Hub</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/interview-template">Testimony Interview Template</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/whats-missing">What’s Missing?</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/getting-started">Getting Started</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/to-do-list">To-Do List</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/FRONTMATTER_GUIDE">Guide to Writing Frontmatter for Resources</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/TOPICS_GUIDE">TOPICS_GUIDE</a></li>
+  <li><a href="/accessibility-hub/docs/unmet-needs">Unmet Needs</a></li>
+  <li><a href="/accessibility-hub/docs/unmet-needs/unmet-needs">Unmet Needs & Future Possibilities</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics">Hot Topics</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/accessibility-audit">Accessibility Audit</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/accessibility-testing">Accessibility Testing</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/alt-text-ai">Alt Text AI</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/aria-roles">ARIA Roles</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/bug-bounty">Bug Bounty</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/color-contrast">Color Contrast</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/dyslexia-support">Dyslexia Support</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/github-access-tools">GitHub Access Tools</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/inclusive-design">Inclusive Design</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/langchain4j-tools">LangChain4J Tools</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/nlp-assist">NLP Assist</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/otter-ai">Otter.ai</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/real-time-captions">Real-time Captions</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/seeing-ai">Seeing AI</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/smart-homes">Smart Homes</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/springai-assistive">SpringAI Assistive</a></li>
+  <li><a href="/accessibility-hub/docs/hot-topics/voice-navigation">Voice Navigation</a></li>
+</ul>
+</details>
 ### Full Site Map
 <small>Complete overview of all content in this resource. This map shows everything at maximum depth - it's quite detailed!</small>
 
@@ -458,96 +550,4 @@ class hot_topics_voice_navigation_md custom86;
 linkStyle default interpolate basis
 ```
 
-<small><strong>Legend:</strong><br />border:🟢 level:beginner | border:🟡 level:intermediate | border:🟠 level:advanced | border:🔴 level:expert<br />bg grey: status:review-needed, status:draft, status:missing</small>
-
-<details class="flatmap-text-nav">
-<summary>Text navigation (no-JS / screen reader alternative)</summary>
-<ul>
-  <li><a href="/accessibility-hub/docs/full-sitemap">Full Site Map</a></li>
-  <li><a href="/accessibility-hub/docs/for-users">For Users</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/applications">Applications</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type">By Disability Type</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity">Aging Dexterity</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity/external-resources">Aging & Dexterity - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/cognitive">Cognitive</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/cognitive/external-resources">Cognitive - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/hearing">Hearing</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/hearing/external-resources">Hearing - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/mobility">Mobility</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/mobility/external-resources">Mobility - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/mobility/aphasia-communication-quickstart">Aphasia Communication Quick Start for Caregivers</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/neurodiversity">Neurodiversity</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/neurodiversity/external-resources">Neurodiversity - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language">Speech Language</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/external-resources">Speech & Language - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-communication-checklist">Stroke Communication Needs Checklist</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-aac-tools">AAC Tools for Stroke Recovery</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-caregiver-guide">Caregiver Guide for Post-Stroke Communication</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire">Stroke Communication Profile Questionnaire</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision">Vision</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/screen-readers">Screen Readers</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/e-readers">Accessible E-Readers</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/external-resources">Vision - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/for-users/by-disability-type/vision/companies">Companies Committed to Accessibility (Vision)</a></li>
-  <li><a href="/accessibility-hub/docs/about">About</a></li>
-  <li><a href="/accessibility-hub/docs/about/overview">Accessibility Hub Overview</a></li>
-  <li><a href="/accessibility-hub/docs/about/about">About Accessibility Hub</a></li>
-  <li><a href="/accessibility-hub/docs/about/roadmap">Roadmap</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers">For Developers</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/accessible-ap-_design-guide">Accessible API Design for Developers</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/how_to- contribute">How to contribute</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/apis-sdks">Accessibility APIs & SDKs</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/case-studies">Developer Case Studies</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/engineering-gaps">Engineering Gaps & Design Patterns</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/accessible-web-dev-checklist">Accessible Web Development Checklist  # A concise, descriptive title (e.g., '...</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/external-resources">for Developers - External Resources</a></li>
-  <li><a href="/accessibility-hub/docs/community">Community</a></li>
-  <li><a href="/accessibility-hub/docs/community/forums">Forums or Discussions</a></li>
-  <li><a href="/accessibility-hub/docs/community/events">Events & Hackathons</a></li>
-  <li><a href="/accessibility-hub/docs/community/success-stories">Success Stories</a></li>
-  <li><a href="/accessibility-hub/docs/community/personas">User Personas</a></li>
-  <li><a href="/accessibility-hub/docs/resources">Resources</a></li>
-  <li><a href="/accessibility-hub/docs/resources/learning-paths">Learning Paths</a></li>
-  <li><a href="/accessibility-hub/docs/resources/learning-paths/courses-programs">Courses & Programs</a></li>
-  <li><a href="/accessibility-hub/docs/resources/learning-paths/quickstart-guide">Quickstart Guide with FOSS</a></li>
-  <li><a href="/accessibility-hub/docs/resources/learning-paths/certifications">Certifications</a></li>
-  <li><a href="/accessibility-hub/docs/resources/research">Research & Whitepapers</a></li>
-  <li><a href="/accessibility-hub/docs/resources/legal-standards">Legal standards</a></li>
-  <li><a href="/accessibility-hub/docs/resources/tool-directory">Tool Directory</a></li>
-  <li><a href="/accessibility-hub/docs/resources/conferences-events">Conferences & Events</a></li>
-  <li><a href="/accessibility-hub/docs/resources/communities-groups">Communities & Groups</a></li>
-  <li><a href="/accessibility-hub/docs/resources/free-oss-resources">Guides, Open source Tools and Patterns</a></li>
-  <li><a href="/accessibility-hub/docs/use-cases">Use Cases</a></li>
-  <li><a href="/accessibility-hub/docs/use-cases/work">Work-Related Use Cases</a></li>
-  <li><a href="/accessibility-hub/docs/use-cases/home">Home and Daily Life Scenarios</a></li>
-  <li><a href="/accessibility-hub/docs/use-cases/future">Hypothetical/Future Scenarios</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions">Community Contributions</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/contributing">Contributing to the Accessibility Hub</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/interview-template">Testimony Interview Template</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/whats-missing">What’s Missing?</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/getting-started">Getting Started</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/to-do-list">To-Do List</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/FRONTMATTER_GUIDE">Guide to Writing Frontmatter for Resources</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/TOPICS_GUIDE">TOPICS_GUIDE</a></li>
-  <li><a href="/accessibility-hub/docs/unmet-needs">Unmet Needs</a></li>
-  <li><a href="/accessibility-hub/docs/unmet-needs/unmet-needs">Unmet Needs & Future Possibilities</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics">Hot Topics</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/accessibility-audit">Accessibility Audit</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/accessibility-testing">Accessibility Testing</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/alt-text-ai">Alt Text AI</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/aria-roles">ARIA Roles</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/bug-bounty">Bug Bounty</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/color-contrast">Color Contrast</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/dyslexia-support">Dyslexia Support</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/github-access-tools">GitHub Access Tools</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/inclusive-design">Inclusive Design</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/langchain4j-tools">LangChain4J Tools</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/nlp-assist">NLP Assist</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/otter-ai">Otter.ai</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/real-time-captions">Real-time Captions</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/seeing-ai">Seeing AI</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/smart-homes">Smart Homes</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/springai-assistive">SpringAI Assistive</a></li>
-  <li><a href="/accessibility-hub/docs/hot-topics/voice-navigation">Voice Navigation</a></li>
-</ul>
-</details>
+<small><strong>Legend:</strong><br />node background = depth in hierarchy: light blue (depth 0) | light purple (depth 1) | light pink (depth 2) | light orange (depth 3) | light green (depth 4)<br />border:🟢 level:beginner | border:🟡 level:intermediate | border:🟠 level:advanced | border:🔴 level:expert<br />bg light grey (overrides depth color): status:review-needed, status:draft, status:missing</small>
