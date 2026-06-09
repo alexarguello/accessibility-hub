@@ -39,6 +39,7 @@ hide_title: true
   <li><a href="/accessibility-hub/docs/about">About</a></li>
   <li><a href="/accessibility-hub/docs/about/overview">Accessibility Hub Overview</a></li>
   <li><a href="/accessibility-hub/docs/about/about">About Accessibility Hub</a></li>
+  <li><a href="/accessibility-hub/docs/about/legend">Map Legend</a></li>
   <li><a href="/accessibility-hub/docs/about/roadmap">Roadmap</a></li>
   <li><a href="/accessibility-hub/docs/about/dasharray-test">Dasharray Test</a></li>
   <li><a href="/accessibility-hub/docs/for-developers">For Developers</a></li>
@@ -163,6 +164,8 @@ about_overview_md[["Accessibility Hub Overview"]]
 about --> about_overview_md
 about_about_md[["About Accessibility Hub"]]
 about --> about_about_md
+about_legend_md["Map Legend"]
+about --> about_legend_md
 about_roadmap_md[["Roadmap"]]
 about --> about_roadmap_md
 about_dasharray_test_md["Dasharray Test"]
@@ -308,6 +311,7 @@ click for_users_by_disability_type_vision_companies_md "/accessibility-hub/docs/
 click about "/accessibility-hub/docs/about"
 click about_overview_md "/accessibility-hub/docs/about/overview"
 click about_about_md "/accessibility-hub/docs/about/about"
+click about_legend_md "/accessibility-hub/docs/about/legend"
 click about_roadmap_md "/accessibility-hub/docs/about/roadmap"
 click about_dasharray_test_md "/accessibility-hub/docs/about/dasharray-test"
 click for_developers "/accessibility-hub/docs/for-developers"
@@ -437,181 +441,147 @@ classDef custom28 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharra
 class about_overview_md custom28;
 classDef custom29 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
 class about_about_md custom29;
-classDef custom30 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class about_roadmap_md custom30;
-classDef custom31 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:0,color:#205d3b;
-class about_dasharray_test_md custom31;
-classDef custom32 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class for_developers custom32;
-classDef custom33 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class for_developers_accessible_ap__design_guide_md custom33;
-classDef custom34 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class for_developers_how_to__contribute_md custom34;
-classDef custom35 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class for_developers_apis_sdks_md custom35;
+classDef custom30 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
+class about_legend_md custom30;
+classDef custom31 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class about_roadmap_md custom31;
+classDef custom32 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:0,color:#205d3b;
+class about_dasharray_test_md custom32;
+classDef custom33 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class for_developers custom33;
+classDef custom34 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class for_developers_accessible_ap__design_guide_md custom34;
+classDef custom35 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class for_developers_how_to__contribute_md custom35;
 classDef custom36 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class for_developers_case_studies_md custom36;
+class for_developers_apis_sdks_md custom36;
 classDef custom37 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class for_developers_engineering_gaps_md custom37;
-classDef custom38 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class for_developers_accessible_web_dev_checklist_md custom38;
+class for_developers_case_studies_md custom37;
+classDef custom38 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class for_developers_engineering_gaps_md custom38;
 classDef custom39 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class for_developers_external_resources_md custom39;
-classDef custom40 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class community custom40;
-classDef custom41 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_forums_md custom41;
+class for_developers_accessible_web_dev_checklist_md custom39;
+classDef custom40 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class for_developers_external_resources_md custom40;
+classDef custom41 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class community custom41;
 classDef custom42 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_events_md custom42;
+class community_forums_md custom42;
 classDef custom43 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_success_stories_md custom43;
+class community_events_md custom43;
 classDef custom44 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_personas_md custom44;
-classDef custom45 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class resources custom45;
-classDef custom46 fill:#f3e8fd,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#5b21b6;
-class resources_learning_paths custom46;
-classDef custom47 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_learning_paths_courses_programs_md custom47;
+class community_success_stories_md custom44;
+classDef custom45 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class community_personas_md custom45;
+classDef custom46 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class resources custom46;
+classDef custom47 fill:#f3e8fd,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#5b21b6;
+class resources_learning_paths custom47;
 classDef custom48 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_learning_paths_quickstart_guide_md custom48;
-classDef custom49 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
-class resources_learning_paths_certifications_md custom49;
-classDef custom50 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class resources_research_md custom50;
+class resources_learning_paths_courses_programs_md custom48;
+classDef custom49 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
+class resources_learning_paths_quickstart_guide_md custom49;
+classDef custom50 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
+class resources_learning_paths_certifications_md custom50;
 classDef custom51 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class resources_legal_standards_md custom51;
+class resources_research_md custom51;
 classDef custom52 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class resources_tool_directory_md custom52;
-classDef custom53 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
-class resources_conferences_events_md custom53;
-classDef custom54 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_communities_groups_md custom54;
+class resources_legal_standards_md custom52;
+classDef custom53 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class resources_tool_directory_md custom53;
+classDef custom54 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
+class resources_conferences_events_md custom54;
 classDef custom55 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_free_oss_resources_md custom55;
-classDef custom56 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class use_cases custom56;
-classDef custom57 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class use_cases_work_md custom57;
+class resources_communities_groups_md custom55;
+classDef custom56 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
+class resources_free_oss_resources_md custom56;
+classDef custom57 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class use_cases custom57;
 classDef custom58 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class use_cases_home_md custom58;
+class use_cases_work_md custom58;
 classDef custom59 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class use_cases_future_md custom59;
-classDef custom60 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class community_contributions custom60;
-classDef custom61 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class community_contributions_contributing_md custom61;
-classDef custom62 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_interview_template_md custom62;
+class use_cases_home_md custom59;
+classDef custom60 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class use_cases_future_md custom60;
+classDef custom61 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class community_contributions custom61;
+classDef custom62 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class community_contributions_contributing_md custom62;
 classDef custom63 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_whats_missing_md custom63;
+class community_contributions_interview_template_md custom63;
 classDef custom64 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_getting_started_md custom64;
+class community_contributions_whats_missing_md custom64;
 classDef custom65 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_to_do_list_md custom65;
-classDef custom66 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class community_contributions_FRONTMATTER_GUIDE_md custom66;
+class community_contributions_getting_started_md custom65;
+classDef custom66 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class community_contributions_to_do_list_md custom66;
 classDef custom67 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class community_contributions_TOPICS_GUIDE_md custom67;
-classDef custom68 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class unmet_needs custom68;
-classDef custom69 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class unmet_needs_unmet_needs_md custom69;
-classDef custom70 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class hot_topics custom70;
-classDef custom71 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
-class hot_topics_accessibility_audit_md custom71;
+class community_contributions_FRONTMATTER_GUIDE_md custom67;
+classDef custom68 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
+class community_contributions_TOPICS_GUIDE_md custom68;
+classDef custom69 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class unmet_needs custom69;
+classDef custom70 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class unmet_needs_unmet_needs_md custom70;
+classDef custom71 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class hot_topics custom71;
 classDef custom72 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
-class hot_topics_accessibility_testing_md custom72;
+class hot_topics_accessibility_audit_md custom72;
 classDef custom73 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
-class hot_topics_alt_text_ai_md custom73;
-classDef custom74 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_aria_roles_md custom74;
+class hot_topics_accessibility_testing_md custom73;
+classDef custom74 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
+class hot_topics_alt_text_ai_md custom74;
 classDef custom75 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_bug_bounty_md custom75;
+class hot_topics_aria_roles_md custom75;
 classDef custom76 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_color_contrast_md custom76;
+class hot_topics_bug_bounty_md custom76;
 classDef custom77 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_dyslexia_support_md custom77;
+class hot_topics_color_contrast_md custom77;
 classDef custom78 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_github_access_tools_md custom78;
+class hot_topics_dyslexia_support_md custom78;
 classDef custom79 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_inclusive_design_md custom79;
+class hot_topics_github_access_tools_md custom79;
 classDef custom80 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_langchain4j_tools_md custom80;
+class hot_topics_inclusive_design_md custom80;
 classDef custom81 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_nlp_assist_md custom81;
+class hot_topics_langchain4j_tools_md custom81;
 classDef custom82 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_otter_ai_md custom82;
+class hot_topics_nlp_assist_md custom82;
 classDef custom83 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_real_time_captions_md custom83;
+class hot_topics_otter_ai_md custom83;
 classDef custom84 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_seeing_ai_md custom84;
+class hot_topics_real_time_captions_md custom84;
 classDef custom85 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_smart_homes_md custom85;
-classDef custom86 fill:#f1f5f9,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#1e293b;
-class hot_topics_springai_assistive_md custom86;
+class hot_topics_seeing_ai_md custom85;
+classDef custom86 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class hot_topics_smart_homes_md custom86;
 classDef custom87 fill:#f1f5f9,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#1e293b;
-class hot_topics_voice_navigation_md custom87;
+class hot_topics_springai_assistive_md custom87;
+classDef custom88 fill:#f1f5f9,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#1e293b;
+class hot_topics_voice_navigation_md custom88;
 linkStyle default interpolate basis
 ```
 
-<svg viewBox="0 0 580 488" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flatmap legend: status shapes and level border patterns">
-<rect width="580" height="488" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
-<text x="20" y="30" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#0f172a">Status — read the shape</text>
-<g transform="translate(20,49)">
-<rect x="3" y="3" width="114" height="32" rx="19" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2.5" stroke-dasharray="8 4"/>
-<text x="60" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#1e293b">title</text>
-</g>
-<text x="155" y="68" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Planned</text>
-<text x="345" y="68" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">rounded · long-dash</text>
-<line x1="20" y1="92" x2="560" y2="92" stroke="#f1f5f9" stroke-width="1"/>
-<g transform="translate(20,97)">
-<polygon points="3,3 109,3 118,19 109,35 3,35" fill="#fff0e6" stroke="#f6c8a5" stroke-width="2.5" stroke-dasharray="5 4"/>
-<text x="56" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#7c2d12">title</text>
-</g>
-<text x="155" y="116" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Work in progress</text>
-<text x="345" y="116" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">flag · dashed</text>
-<line x1="20" y1="140" x2="560" y2="140" stroke="#f1f5f9" stroke-width="1"/>
-<g transform="translate(20,145)">
-<rect x="3" y="3" width="114" height="32" rx="2" fill="#FAEEDA" stroke="#FAC775" stroke-width="2" stroke-dasharray="1 4"/><rect x="7" y="7" width="106" height="24" rx="1" fill="none" stroke="#FAC775" stroke-width="1.5" stroke-dasharray="1 4"/>
-<text x="60" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#78350f">title</text>
-</g>
-<text x="155" y="164" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Draft</text>
-<text x="345" y="164" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">double-border · dotted</text>
-<line x1="20" y1="188" x2="560" y2="188" stroke="#f1f5f9" stroke-width="1"/>
-<g transform="translate(20,193)">
-<rect x="3" y="3" width="114" height="32" rx="3" fill="#e6f4ea" stroke="#b4dfc5" stroke-width="2.5"/>
-<text x="60" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#205d3b">title</text>
-</g>
-<text x="155" y="212" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Published</text>
-<text x="345" y="212" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">rectangle · solid</text>
-<text x="20" y="266" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#0f172a">Level — read the border pattern</text>
-<g transform="translate(20,285)">
-<rect x="3" y="3" width="114" height="32" rx="3" fill="#f8fafc" stroke="#b4dfc5" stroke-width="2.5" stroke-dasharray="1 5"/>
-<text x="60" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">dots</text>
-</g>
-<text x="155" y="304" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Beginner</text>
-<text x="345" y="304" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">dotted (1,5)</text>
-<line x1="20" y1="328" x2="560" y2="328" stroke="#f1f5f9" stroke-width="1"/>
-<g transform="translate(20,333)">
-<rect x="3" y="3" width="114" height="32" rx="3" fill="#f8fafc" stroke="#b6c8f3" stroke-width="2.5" stroke-dasharray="6 3 1 3"/>
-<text x="60" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">dash-dot</text>
-</g>
-<text x="155" y="352" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Intermediate</text>
-<text x="345" y="352" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">dash-dot (6,3,1,3)</text>
-<line x1="20" y1="376" x2="560" y2="376" stroke="#f1f5f9" stroke-width="1"/>
-<g transform="translate(20,381)">
-<rect x="3" y="3" width="114" height="32" rx="3" fill="#f8fafc" stroke="#dabef3" stroke-width="2.5" stroke-dasharray="8 4"/>
-<text x="60" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">dash</text>
-</g>
-<text x="155" y="400" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Advanced</text>
-<text x="345" y="400" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">long-dash (8,4)</text>
-<line x1="20" y1="424" x2="560" y2="424" stroke="#f1f5f9" stroke-width="1"/>
-<g transform="translate(20,429)">
-<rect x="3" y="3" width="114" height="32" rx="3" fill="#f8fafc" stroke="#f6c8a5" stroke-width="2.5"/>
-<text x="60" y="19" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">solid</text>
-</g>
-<text x="155" y="448" dominant-baseline="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#1e293b">Expert</text>
-<text x="345" y="448" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#64748b">solid</text>
+<svg viewBox="0 0 580 78" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Legend summary. Status is shown by node shape: published is a rectangle, draft is a double border, work in progress is a flag, planned is rounded. Level is shown by border pattern: beginner is dotted, intermediate is dash-dot, advanced is long-dash, expert is solid.">
+<rect width="580" height="78" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="14" y="25" dominant-baseline="middle" font-size="11" font-weight="bold" font-family="sans-serif" fill="#0f172a">Status</text>
+<text x="14" y="57" dominant-baseline="middle" font-size="11" font-weight="bold" font-family="sans-serif" fill="#0f172a">Level</text>
+<rect x="78" y="17" width="30" height="16" rx="2" fill="#e6f4ea" stroke="#b4dfc5" stroke-width="2"/>
+<text x="116" y="25" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Published</text>
+<rect x="205" y="17" width="30" height="16" rx="2" fill="#FAEEDA" stroke="#FAC775" stroke-width="2" stroke-dasharray="1 4"/><rect x="208" y="20" width="24" height="10" rx="1" fill="none" stroke="#FAC775" stroke-width="1" stroke-dasharray="1 4"/>
+<text x="243" y="25" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Draft</text>
+<polygon points="332,17 356,17 362,25 356,33 332,33" fill="#fff0e6" stroke="#f6c8a5" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="370" y="25" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">WIP</text>
+<rect x="459" y="17" width="30" height="16" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8 4"/>
+<text x="497" y="25" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Planned</text>
+<line x1="78" y1="57" x2="108" y2="57" stroke="#b4dfc5" stroke-width="3" stroke-dasharray="1 5"/>
+<text x="116" y="57" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Beginner</text>
+<line x1="205" y1="57" x2="235" y2="57" stroke="#b6c8f3" stroke-width="3" stroke-dasharray="6 3 1 3"/>
+<text x="243" y="57" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Intermediate</text>
+<line x1="332" y1="57" x2="362" y2="57" stroke="#dabef3" stroke-width="3" stroke-dasharray="8 4"/>
+<text x="370" y="57" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Advanced</text>
+<line x1="459" y1="57" x2="489" y2="57" stroke="#f6c8a5" stroke-width="3"/>
+<text x="497" y="57" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Expert</text>
 </svg>
+
+<p class="flatmap-legend-link"><small><a href="/accessibility-hub/docs/about/legend">How to read this map — full legend</a></small></p>

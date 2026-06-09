@@ -146,9 +146,118 @@ def create_mermaid_node_style(styles, default_fill=None, default_text_color=None
     return ','.join(parts) if parts else None
 
 
-def create_compact_legend(style_classes, style_config):
+def create_mini_legend(legend_url=None):
     """
-    Visual legend rendered as a single inline SVG.
+    Compact one-strip legend shown under every flatmap graph.
+    Two rows: status (shape) and level (border pattern), four samples each.
+    SVG presentation attributes only — no style= attributes (MDX/React SSR).
+    Appends a link to the full legend page when legend_url is given.
+    """
+    W, H = 580, 78
+    ROW1, ROW2 = 25, 57   # vertical centers of the two rows
+    X0, STEP = 78, 127    # first item x, distance between items
+    SW = 30               # swatch width
+
+    status_items = [
+        # (kind, fill, stroke, dasharray, label)
+        ('rect',    '#e6f4ea', '#b4dfc5', '',    'Published'),
+        ('double',  '#FAEEDA', '#FAC775', '1 4', 'Draft'),
+        ('flag',    '#fff0e6', '#f6c8a5', '5 4', 'WIP'),
+        ('rounded', '#f1f5f9', '#cbd5e1', '8 4', 'Planned'),
+    ]
+    level_items = [
+        # (stroke, dasharray, label)
+        ('#b4dfc5', '1 5',     'Beginner'),
+        ('#b6c8f3', '6 3 1 3', 'Intermediate'),
+        ('#dabef3', '8 4',     'Advanced'),
+        ('#f6c8a5', '',        'Expert'),
+    ]
+
+    def _da(da):
+        return ' stroke-dasharray="' + da + '"' if da else ''
+
+    def _mini_shape(x, kind, fill, stroke, da):
+        y, h = ROW1 - 8, 16
+        d = _da(da)
+        common = ' fill="' + fill + '" stroke="' + stroke + '" stroke-width="2"' + d + '/>'
+        if kind == 'double':
+            return (
+                '<rect x="' + str(x) + '" y="' + str(y) + '" width="' + str(SW) + '" height="' + str(h) + '" rx="2"' + common
+                + '<rect x="' + str(x + 3) + '" y="' + str(y + 3) + '" width="' + str(SW - 6) + '" height="' + str(h - 6) + '" rx="1" fill="none" stroke="' + stroke + '" stroke-width="1"' + d + '/>'
+            )
+        if kind == 'flag':
+            pts = '{0},{1} {2},{1} {3},{4} {2},{5} {0},{5}'.format(
+                x, y, x + SW - 6, x + SW, ROW1, y + h)
+            return '<polygon points="' + pts + '"' + common
+        rx = '8' if kind == 'rounded' else '2'
+        return '<rect x="' + str(x) + '" y="' + str(y) + '" width="' + str(SW) + '" height="' + str(h) + '" rx="' + rx + '"' + common
+
+    parts = [
+        '<svg viewBox="0 0 ' + str(W) + ' ' + str(H) + '" xmlns="http://www.w3.org/2000/svg"'
+        ' role="img" aria-label="Legend summary. Status is shown by node shape:'
+        ' published is a rectangle, draft is a double border, work in progress is a flag,'
+        ' planned is rounded. Level is shown by border pattern: beginner is dotted,'
+        ' intermediate is dash-dot, advanced is long-dash, expert is solid.">',
+        '<rect width="' + str(W) + '" height="' + str(H) + '" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>',
+        '<text x="14" y="' + str(ROW1) + '" dominant-baseline="middle" font-size="11" font-weight="bold" font-family="sans-serif" fill="#0f172a">Status</text>',
+        '<text x="14" y="' + str(ROW2) + '" dominant-baseline="middle" font-size="11" font-weight="bold" font-family="sans-serif" fill="#0f172a">Level</text>',
+    ]
+    for i, (kind, fill, stroke, da, label) in enumerate(status_items):
+        x = X0 + i * STEP
+        parts.append(_mini_shape(x, kind, fill, stroke, da))
+        parts.append('<text x="' + str(x + SW + 8) + '" y="' + str(ROW1) + '" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">' + label + '</text>')
+    for i, (stroke, da, label) in enumerate(level_items):
+        x = X0 + i * STEP
+        parts.append('<line x1="' + str(x) + '" y1="' + str(ROW2) + '" x2="' + str(x + SW) + '" y2="' + str(ROW2) + '" stroke="' + stroke + '" stroke-width="3"' + _da(da) + '/>')
+        parts.append('<text x="' + str(x + SW + 8) + '" y="' + str(ROW2) + '" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">' + label + '</text>')
+    parts.append('</svg>')
+
+    out = ['', '\n'.join(parts)]
+    if legend_url:
+        out += ['', '<p class="flatmap-legend-link"><small><a href="' + legend_url + '">How to read this map — full legend</a></small></p>']
+    return out
+
+
+DEPTH_NAMES = ['Green', 'Blue', 'Purple', 'Teal', 'Slate']
+
+
+def create_depth_legend():
+    """
+    SVG swatch strip + text table for the folder depth palette.
+    Folder/section nodes use DEPTH_PALETTE colors to show hierarchy depth —
+    this is separate from status (shape) and level (border pattern).
+    Used only on the legend page. SVG presentation attributes only.
+    """
+    W, H = 580, 64
+    X0, STEP, SW, SH = 16, 112, 96, 30
+    Y = (H - SH) // 2
+
+    aria = ('Folder color samples by depth: '
+            + ', '.join('depth {} {}'.format(i if i < 4 else '4 and deeper', n.lower())
+                        for i, n in enumerate(DEPTH_NAMES)) + '.')
+    parts = [
+        '<svg viewBox="0 0 ' + str(W) + ' ' + str(H) + '" xmlns="http://www.w3.org/2000/svg"'
+        ' role="img" aria-label="' + aria + '">',
+        '<rect width="' + str(W) + '" height="' + str(H) + '" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>',
+    ]
+    for i, (fill, text, border) in enumerate(DEPTH_PALETTE):
+        x = X0 + i * STEP
+        label = 'Depth {}'.format(i) if i < 4 else 'Depth 4+'
+        parts.append('<rect x="' + str(x) + '" y="' + str(Y) + '" width="' + str(SW) + '" height="' + str(SH) + '" rx="3" fill="' + fill + '" stroke="' + border + '" stroke-width="1.5"/>')
+        parts.append('<text x="' + str(x + SW // 2) + '" y="' + str(Y + SH // 2) + '" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="' + text + '">' + label + '</text>')
+    parts.append('</svg>')
+
+    table = ['', '| Depth | Color | Background |', '|---|---|---|']
+    for i, ((fill, _t, _b), name) in enumerate(zip(DEPTH_PALETTE, DEPTH_NAMES)):
+        depth = '0 (home)' if i == 0 else ('4+' if i == 4 else str(i))
+        table.append('| {} | {} | `{}` |'.format(depth, name, fill))
+    return ['', '\n'.join(parts)] + table
+
+
+def create_full_legend():
+    """
+    Full visual legend rendered as a single inline SVG.
+    Used only on the dedicated legend page (docs/00-about/legend.md).
     SVG presentation attributes (fill, stroke, stroke-width, etc.) are used
     throughout — no style= attributes — so MDX/React SSR does not reject it.
     """

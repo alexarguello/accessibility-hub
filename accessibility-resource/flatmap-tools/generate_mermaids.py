@@ -15,7 +15,9 @@ from flatmap_styles import (
     STATUS_STYLES,
     apply_styling_to_node,
     create_mermaid_node_style,
-    create_compact_legend,
+    create_depth_legend,
+    create_full_legend,
+    create_mini_legend,
     get_node_line,
     inject_status_styles,
 )
@@ -31,6 +33,7 @@ from flatmap_nodes import (
 
 ROOT_DIR = get_docs_root_dir()
 DO_NOT_EDIT = "<!-- AUTO-GENERATED FILE — DO NOT EDIT. Regenerated on merge -->"
+LEGEND_URL = get_docs_url("about/legend")
 
 
 def get_max_depth():
@@ -212,7 +215,7 @@ def generate_index_md(folder_path, rel_path):
         output.extend(text_nav)
 
     output += _mermaid_block(lines, clicks, class_lines)
-    output += create_compact_legend(style_classes, style_config)
+    output += create_mini_legend(LEGEND_URL)
 
     with open(os.path.join(folder_path, "index.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(output))
@@ -241,7 +244,7 @@ def generate_root_index_md():
         output.extend(text_nav)
 
     output += custom_intro + _mermaid_block(lines, clicks, class_lines)
-    output += create_compact_legend(style_classes, style_config)
+    output += create_mini_legend(LEGEND_URL)
 
     path = os.path.join(ROOT_DIR, "index.md")
     with open(path, "w", encoding="utf-8") as f:
@@ -273,7 +276,7 @@ def generate_full_sitemap():
         output.extend(text_nav)
 
     output += custom_intro + _mermaid_block(lines, clicks, class_lines)
-    output += create_compact_legend(style_classes, style_config)
+    output += create_mini_legend(LEGEND_URL)
 
     path = os.path.join(ROOT_DIR, "full-sitemap.md")
     with open(path, "w", encoding="utf-8") as f:
@@ -281,7 +284,80 @@ def generate_full_sitemap():
     print("Wrote full sitemap: {}".format(path))
 
 
+def generate_legend_page():
+    """Write docs/00-about/legend.md — the full legend reference page.
+
+    Auto-generated so the page stays in sync with STATUS_STYLES and the
+    level border design. Contains the full SVG plus a text version of the
+    same information (WCAG 1.1.1 / 1.4.1 — color and shape are never the
+    only carriers).
+    """
+    frontmatter = (
+        "---\ntitle: Map Legend\nsidebar_label: Map Legend\n"
+        "sidebar_position: 5\nhide_title: true\nlevel: beginner\n"
+        "type: reference\nstatus: published\nvisibility: public\n---"
+    )
+    body = [
+        frontmatter,
+        DO_NOT_EDIT,
+        "",
+        "## Map Legend",
+        "",
+        "Every section page shows a clickable map of its content. Each node",
+        "encodes three pieces of information:",
+        "",
+        "- **Status** — the *shape* of the node shows how finished the page is.",
+        "- **Level** — the *border pattern* shows the expected experience level.",
+        "- **Folder depth** — the *background color* of folder nodes shows how",
+        "  deep that section sits in the site hierarchy.",
+        "",
+        "Color reinforces both signals but is never the only carrier (WCAG 1.4.1).",
+        "A text navigation alternative is provided above every map for screen",
+        "reader and no-JavaScript users.",
+    ]
+    body += create_full_legend()
+    body += [
+        "",
+        "### Status — read the shape",
+        "",
+        "| Status | Shape | Border | Meaning |",
+        "|---|---|---|---|",
+        "| Published | Rectangle | Solid | Reviewed and complete |",
+        "| Draft | Double border | Dotted | Written, awaiting review |",
+        "| Work in progress | Flag | Dashed | Actively being written |",
+        "| Planned | Rounded | Long-dash | Stub — content to come |",
+        "",
+        "### Level — read the border pattern",
+        "",
+        "| Level | Border pattern | Border color | Meaning |",
+        "|---|---|---|---|",
+        "| Beginner | Dots (1 5) | Green `#b4dfc5` | No prior knowledge needed |",
+        "| Intermediate | Dash-dot (6 3 1 3) | Blue `#b6c8f3` | Basic accessibility knowledge assumed |",
+        "| Advanced | Long-dash (8 4) | Purple `#dabef3` | Deep technical content |",
+        "| Expert | Solid | Orange `#f6c8a5` | Specialist topics |",
+        "",
+        "### Folder colors — depth in the hierarchy",
+        "",
+        "Folder (section) nodes are always rectangles and use a separate",
+        "background palette that shows how deep the section sits in the site",
+        "structure. Folder color does not encode status or level.",
+    ]
+    body += create_depth_legend()
+    body += [
+        "",
+        "### When a page has both",
+        "",
+        "The level border pattern takes priority over the status border.",
+        "The shape still tells you the status, so both signals stay readable.",
+    ]
+    path = os.path.join(ROOT_DIR, "00-about", "legend.md")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(body))
+    print("Wrote legend page: {}".format(path))
+
+
 def walk_folders():
+    generate_legend_page()
     for root, dirs, files in os.walk(ROOT_DIR):
         if '99-contribute' in dirs:
             dirs.remove('99-contribute')
