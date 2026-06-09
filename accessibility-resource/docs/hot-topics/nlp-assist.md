@@ -10,6 +10,9 @@ topics:
   - accessibility
   - assistive-technology
   - concept:NLPAssist
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # NLP Assist

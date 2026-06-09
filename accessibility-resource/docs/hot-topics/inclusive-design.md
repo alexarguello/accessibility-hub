@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - concept:InclusiveDesign
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Inclusive Design

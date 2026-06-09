@@ -1,786 +1,295 @@
+"""
+generate_mermaids.py
+Entry point for the A11YHub flatmap generator.
+Walks the docs tree and writes auto-generated index.md files for each section.
+
+Run from accessibility-resource/flatmap-tools/:
+    python generate_mermaids.py
+"""
 import os
-import re
-import json
+
 from util import get_docs_root_dir, load_style_config, get_docs_url
+from flatmap_frontmatter import parse_frontmatter, extract_tags_from_frontmatter
+from flatmap_styles import (
+    DEPTH_PALETTE,
+    STATUS_STYLES,
+    apply_styling_to_node,
+    create_mermaid_node_style,
+    create_compact_legend,
+    get_node_line,
+    inject_status_styles,
+)
+from flatmap_nodes import (
+    strip_order_prefix,
+    normalize_id,
+    extract_title,
+    create_node_label,
+    get_folder_sidebar_position,
+    is_external_doc,
+    build_text_nav,
+)
 
 ROOT_DIR = get_docs_root_dir()
 DO_NOT_EDIT = "<!-- AUTO-GENERATED FILE — DO NOT EDIT. Regenerated on merge -->"
-STYLE_CONFIG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "flatmap-style.config.json"))
+
 
 def get_max_depth():
-    """Get the maximum depth from style config."""
-    style_config = load_style_config()
-    return style_config.get("flatmap_depth", 4)
+    return load_style_config().get("flatmap_depth", 4)
 
-def parse_frontmatter(file_path):
-    """Parse frontmatter from a markdown file and extract tags."""
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            content = f.read()
-        # Check if file has frontmatter (starts with ---)
-        if not content.startswith("---"):
-            return {}
-        # Extract frontmatter
-        frontmatter_match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
-        if not frontmatter_match:
-            return {}
-        frontmatter_text = frontmatter_match.group(1)
-        tags = {}
-        for line in frontmatter_text.split('\n'):
-            line = line.strip()
-            # Ignore commented-out lines
-            if not line or line.startswith('#'):
-                continue
-            if ':' in line:
-                parts = line.split(':', 1)
-                if len(parts) == 2:
-                    key = parts[0].strip()
-                    value = parts[1].strip()
-                    # Remove inline comments (everything after #)
-                    if '#' in value:
-                        value = value.split('#')[0].strip()
-                    # Handle array values like topics: [agents, lifecycle]
-                    if value.startswith('[') and value.endswith(']'):
-                        try:
-                            array_content = value[1:-1]
-                            if array_content.strip():
-                                value = [item.strip() for item in array_content.split(',')]
-                            else:
-                                value = []
-                        except:
-                            value = []
-                    elif value.startswith('"') and value.endswith('"'):
-                        value = value[1:-1]
-                    elif value.startswith("'") and value.endswith("'"):
-                        value = value[1:-1]
-                    tags[key] = value
-    except Exception as e:
-        print(f"⚠️  Warning: Could not parse frontmatter from {file_path}: {e}")
-        return {}
-    return tags
 
-def evaluate_tag_condition(condition, frontmatter):
-    """Evaluate a tag condition like 'author:not_empty AND status:draft'."""
-    if ' AND ' in condition:
-        # Handle AND conditions
-        parts = condition.split(' AND ')
-        return all(evaluate_simple_condition(part.strip(), frontmatter) for part in parts)
-    else:
-        # Handle simple conditions
-        return evaluate_simple_condition(condition, frontmatter)
+def _build_class_lines(classes, style_classes, max_depth):
+    """Generate Mermaid classDef + class assignment lines."""
+    out = []
+    for d in range(max_depth + 1):
+        fill, text, border = DEPTH_PALETTE[d % len(DEPTH_PALETTE)]
+        out.append("classDef col{} fill:{},stroke:{},stroke-width:1.5px,color:{};".format(d, fill, border, text))
+    for nid, col in classes.items():
+        if nid not in style_classes:
+            out.append("class {} col{};".format(nid, col))
+    for i, (nid, style) in enumerate(style_classes.items()):
+        out.append("classDef custom{} {};".format(i, style))
+        out.append("class {} custom{};".format(nid, i))
+    return out
 
-def evaluate_simple_condition(condition, frontmatter):
-    """Evaluate a simple condition like 'author:not_empty' or 'status:draft'."""
-    if ':' not in condition:
-        return False
 
-    field, value = condition.split(':', 1)
-
-    if value == 'not_empty':
-        field_value = frontmatter.get(field, '')
-        return isinstance(field_value, str) and field_value.strip() != ''
-    elif value == 'is_empty':
-        field_value = frontmatter.get(field, '')
-        return not isinstance(field_value, str) or field_value.strip() == ''
-    else:
-        # Direct value comparison
-        return frontmatter.get(field) == value
-
-def extract_tags_from_frontmatter(frontmatter):
-    """Extract all possible tags from frontmatter for styling."""
-    tags = []
-
-    # Direct tag fields
-    tag_fields = ['type', 'status', 'level', 'visibility']
-    for field in tag_fields:
-        if field in frontmatter:
-            value = frontmatter[field]
-            if isinstance(value, str):
-                tags.append(f"{field}:{value}")
-
-    # Handle topics array
-    if 'topics' in frontmatter:
-        topics = frontmatter['topics']
-        if isinstance(topics, list):
-            for topic in topics:
-                if isinstance(topic, str) and ':' in topic:
-                    tags.append(topic)
-
-    # Handle conditional tags
-    # author:not_empty - when author field is not empty
-    author = frontmatter.get('author', '')
-    if isinstance(author, str) and author.strip():
-        tags.append('author:not_empty')
-    else:
-        tags.append('author:is_empty')
-
-    # General is_empty/is_not_empty for any field
-    for field, value in frontmatter.items():
-        if isinstance(value, str):
-            if value.strip():
-                tags.append(f"{field}:is_not_empty")
-            else:
-                tags.append(f"{field}:is_empty")
-        elif value is None or value == "":
-            tags.append(f"{field}:is_empty")
-        else:
-            tags.append(f"{field}:is_not_empty")
-
-    return tags
-
-def apply_styling_to_node(tags, style_config, frontmatter=None):
-    """Apply styling to a node based on tags and style config."""
-    print(f"DEBUG: apply_styling_to_node called with tags: {tags}")
-    print(f"DEBUG: style_config tags: {list(style_config.get('tags', {}).keys())}")
-
-    styles = {
-        'left_icons': [],   # Icons for left side
-        'right_icons': [],  # Icons for right side
-        'border_colors': [],  # List of border colors
-        'background_colors': [],  # List of background colors
-        'text_colors': [],  # List of text colors
-        'border_styles': [],  # List of border styles
-        'border_widths': [],  # List of border widths
-        'clickable': True,
-        'exclude': False
-    }
-
-    # Process all config entries to accumulate properties
-    for config_tag, tag_properties in style_config.get('tags', {}).items():
-        print(f"DEBUG: Processing config tag: {config_tag}")
-        print(f"DEBUG: Tag properties: {tag_properties}")
-
-        # Check if this config entry matches any of our tags
-        tag_matches = False
-
-        # Handle simple tags
-        if config_tag in tags:
-            tag_matches = True
-            print(f"DEBUG: Simple tag match: {config_tag}")
-
-        # Handle complex conditions (AND conditions)
-        elif ' AND ' in config_tag and frontmatter:
-            if evaluate_tag_condition(config_tag, frontmatter):
-                tag_matches = True
-                print(f"DEBUG: Complex tag match: {config_tag}")
-
-        # Apply all properties from matching tags
-        if tag_matches:
-            print(f"DEBUG: Applying properties for {config_tag}")
-            # Handle list of property tuples
-            if isinstance(tag_properties, list):
-                for prop_key, prop_value in tag_properties:
-                    print(f"DEBUG: Processing property {prop_key}: {prop_value}")
-                    if prop_key == 'icon':
-                        # Check if this tag has icon_side specified
-                        icon_side = 'left'  # default
-                        for check_key, check_value in tag_properties:
-                            if check_key == 'icon_side':
-                                icon_side = check_value
-                                break
-
-                        if icon_side == 'right':
-                            styles['right_icons'].append(prop_value)
-                            print(f"DEBUG: Added right icon: {prop_value}")
-                        else:
-                            styles['left_icons'].append(prop_value)
-                            print(f"DEBUG: Added left icon: {prop_value}")
-                    elif prop_key == 'border_color':
-                        styles['border_colors'].append(prop_value)
-                        print(f"DEBUG: Added border color: {prop_value}")
-                    elif prop_key == 'background_color':
-                        styles['background_colors'].append(prop_value)
-                        print(f"DEBUG: Added background color: {prop_value}")
-                    elif prop_key == 'text_color':
-                        styles['text_colors'].append(prop_value)
-                    elif prop_key == 'border_style':
-                        styles['border_styles'].append(prop_value)
-                    elif prop_key == 'border_width':
-                        styles['border_widths'].append(prop_value)
-                    elif prop_key == 'exclude':
-                        styles['exclude'] = prop_value
-
-    print(f"DEBUG: Final styles: {styles}")
-    return styles
-
-def create_mermaid_node_style(styles, default_fill=None):
-    """Create Mermaid-compatible styling for a node."""
-    style_parts = []
-
-    # Use the last background color, or default
-    background_colors = styles.get('background_colors', [])
-    fill_color = background_colors[-1] if background_colors else default_fill
-    if fill_color:
-        style_parts.append(f"fill:{fill_color}")
-
-    # Use the last border color if available
-    border_colors = styles.get('border_colors', [])
-    if border_colors:
-        border_color = border_colors[-1]
-        border_styles = styles.get('border_styles', [])
-        border_style = border_styles[-1] if border_styles else 'solid'
-        border_widths = styles.get('border_widths', [])
-        border_width = border_widths[-1] if border_widths else '2px'
-
-        style_parts.append(f"stroke:{border_color}")
-        style_parts.append(f"stroke-width:{border_width}")
-        style_parts.append(f"stroke-dasharray:{'5,5' if border_style == 'dashed' else '1,1' if border_style == 'dotted' else '0'}")
-
-    # Use the last text color if available
-    text_colors = styles.get('text_colors', [])
-    if text_colors:
-        style_parts.append(f"color:{text_colors[-1]}")
-
-    return ",".join(style_parts) if style_parts else None
-
-def has_author_and_draft(frontmatter):
-    """Check if an article has an author and is in draft status."""
-    status = frontmatter.get('status', '')
-    author = frontmatter.get('author', '')
-
-    is_draft = status == 'draft'
-    has_author = False
-    if isinstance(author, str) and author.strip():
-        has_author = True
-
-    return is_draft and has_author
-
-def _strip_emojis(text: str) -> str:
-    """Remove emoji and certain pictographic symbols from text for accessibility in generated labels."""
-    if not isinstance(text, str):
-        return text
-    emoji_pattern = re.compile(
-        """
-        [\U0001F600-\U0001F64F]  # Emoticons
-        |[\U0001F300-\U0001F5FF]  # Misc Symbols and Pictographs
-        |[\U0001F680-\U0001F6FF]  # Transport & Map
-        |[\U0001F700-\U0001F77F]  # Alchemical Symbols
-        |[\U0001F780-\U0001F7FF]  # Geometric Shapes Extended
-        |[\U0001F800-\U0001F8FF]  # Supplemental Arrows-C
-        |[\U0001F900-\U0001F9FF]  # Supplemental Symbols and Pictographs
-        |[\U0001FA00-\U0001FAFF]  # Chess etc.
-        |[\U00002600-\U000026FF]  # Misc symbols
-        |[\U00002700-\U000027BF]  # Dingbats
-        |[\U0000FE00-\U0000FE0F]  # Variation Selectors
-        |[\U0001F1E6-\U0001F1FF]  # Flags
-        |[\U0000200D]             # Zero Width Joiner
-        """,
-        re.VERBOSE,
+def _mermaid_block(lines, clicks, class_lines):
+    return (
+            ["```mermaid", "graph LR"]
+            + lines + clicks + class_lines
+            + ["linkStyle default interpolate basis", "```"]
     )
-    return emoji_pattern.sub('', text)
 
 
-def create_node_label(title, styles, is_external=False, external_url=None):
-    """
-    Create the label for a node with optional icons and external link.
-    Escapes quotes, brackets, and newlines for Mermaid compatibility.
-    Also strips emojis from the final label for accessibility.
-    """
-    label_parts = []
-    if styles.get('left_icons'):
-        label_parts.extend(styles['left_icons'])
-    safe_title = title.replace('"', "'")
-    safe_title = safe_title.replace('\n', ' ').replace('\r', ' ')
-    safe_title = safe_title.replace('[', '(').replace(']', ')')
-    if len(safe_title) > 80:
-        safe_title = safe_title[:77] + "..."
-    label_parts.append(safe_title)
-    if styles.get('right_icons'):
-        label_parts.extend(styles['right_icons'])
-    label = " ".join(label_parts)
-    label = _strip_emojis(label).strip()
-    if is_external and external_url:
-        return f"<a href='{external_url}' target='_blank' rel='noopener noreferrer'>{label}</a>"
-    return label
-
-def strip_order_prefix(name):
-    return re.sub(r"^\d{2,}-", "", name)
-
-import unicodedata
-
-def normalize_id(path):
-    """
-    Sanitize node IDs for Mermaid: only allow a-z, A-Z, 0-9, _, and -.
-    Replace all other characters with '_'. Ensure no leading digit.
-    """
-    id_raw = unicodedata.normalize('NFKD', path)
-    id_raw = id_raw.encode('ascii', 'ignore').decode('ascii')
-    id_raw = id_raw.replace("/", "_").replace("-", "_").replace(".", "_")
-    id_raw = re.sub(r'[^a-zA-Z0-9_-]', '_', id_raw)
-    id_raw = re.sub(r'^[_\d]+', '', id_raw)
-    if not id_raw:
-        id_raw = "node"
-    return id_raw
-
-def extract_title(path):
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            content = f.read()
-        if content.startswith("---"):
-            match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
-            if match:
-                frontmatter_text = match.group(1)
-                for line in frontmatter_text.split('\n'):
-                    if line.strip().startswith("title:"):
-                        title = line.split(":", 1)[1].strip().strip('"').strip("'")
-                        if title:
-                            return title
-        for line in content.splitlines():
-            if line.strip().startswith("# "):
-                return line.strip().lstrip("# ").strip()
-        return os.path.basename(path).replace(".md", "")
-    except:
-        return "Untitled"
-
-def get_folder_sidebar_position(folder_path):
-    intro_md_path = os.path.join(folder_path, "_intro.md")
-    if os.path.isfile(intro_md_path):
-        fm = parse_frontmatter(intro_md_path)
-        try:
-            pos = float(fm.get('sidebar_position', float('inf')))
-        except:
-            pos = float('inf')
-        return pos
-    return float('inf')
-
-def build_mermaid(folder_path, rel_path, depth, parent_id=None, max_depth_override=None, style_config=None):
+def build_mermaid(folder_path, rel_path, depth, parent_id=None,
+                  max_depth_override=None, style_config=None):
     if style_config is None:
         style_config = load_style_config()
 
-    lines = []
-    clicks = []
-    classes = {}
-    style_classes = {}
+    lines, clicks, classes, style_classes = [], [], {}, {}
     current_id = normalize_id(rel_path or "root")
     label = strip_order_prefix(os.path.basename(folder_path)).replace("-", " ").title() or "Home"
 
-    folder_styles = {'left_icons': [], 'right_icons': [], 'border_colors': [], 'background_colors': [], 'text_colors': [], 'border_styles': [], 'border_widths': [], 'clickable': True, 'exclude': False}
-
-    index_md_path = os.path.join(folder_path, "index.md")
-    intro_md_path = os.path.join(folder_path, "_intro.md")
-
-    folder_frontmatter = {}
-    if os.path.isfile(index_md_path):
-        folder_frontmatter = parse_frontmatter(index_md_path)
-        tags = extract_tags_from_frontmatter(folder_frontmatter)
-        folder_styles = apply_styling_to_node(tags, style_config, folder_frontmatter)
-    elif os.path.isfile(intro_md_path):
-        folder_frontmatter = parse_frontmatter(intro_md_path)
-        tags = extract_tags_from_frontmatter(folder_frontmatter)
-        folder_styles = apply_styling_to_node(tags, style_config, folder_frontmatter)
+    # --- Folder node (structural — always uses depth palette, never status colors) ---
+    index_md = os.path.join(folder_path, "index.md")
+    intro_md = os.path.join(folder_path, "_intro.md")
+    folder_fm = {}
+    folder_styles = {
+        'left_icons': [], 'right_icons': [], 'border_colors': [],
+        'background_colors': [], 'text_colors': [], 'border_styles': [],
+        'border_widths': [], 'clickable': True, 'exclude': False,
+    }
+    for candidate in (index_md, intro_md):
+        if os.path.isfile(candidate):
+            folder_fm = parse_frontmatter(candidate)
+            folder_styles = apply_styling_to_node(
+                extract_tags_from_frontmatter(folder_fm), style_config, folder_fm
+            )
+            break
 
     if folder_styles['exclude']:
         return lines, clicks, classes, style_classes
 
-    node_label = create_node_label(label, folder_styles, is_external=False, external_url=None)
-    lines.append(f'{current_id}["{node_label}"]')
+    node_label = create_node_label(label, folder_styles)
+    # Folder nodes always use rectangle — they are navigation structure, not content
+    lines.append('{}["{}"]'.format(current_id, node_label))
 
     if rel_path:
-        clean_rel_path = "/".join(strip_order_prefix(p) for p in rel_path.split(os.sep))
-        docs_url = get_docs_url(clean_rel_path)
-        clicks.append(f'click {current_id} "{docs_url}"')
+        clean = "/".join(strip_order_prefix(p) for p in rel_path.split(os.sep))
+        clicks.append('click {} "{}"'.format(current_id, get_docs_url(clean)))
     if parent_id:
-        lines.append(f"{parent_id} --> {current_id}")
+        lines.append("{} --> {}".format(parent_id, current_id))
 
-    color_for_depth = ["#b3d9ff", "#d5b3ff", "#ffcccc", "#ffd699", "#d0f0c0"][depth % 5]
-    mermaid_style = create_mermaid_node_style(folder_styles, default_fill=color_for_depth)
-    if mermaid_style:
-        style_classes[current_id] = mermaid_style
+    # Folder styling: depth palette only (tag config border may apply, but no status fill)
+    d_fill, d_text, d_border = DEPTH_PALETTE[depth % len(DEPTH_PALETTE)]
+    style = create_mermaid_node_style(folder_styles, default_fill=d_fill, default_text_color=d_text, default_border_color=d_border)
+    if style:
+        style_classes[current_id] = style
 
-    effective_max_depth = max_depth_override if max_depth_override is not None else get_max_depth()
-    if depth >= effective_max_depth:
+    # --- Children ---
+    effective_max = max_depth_override if max_depth_override is not None else get_max_depth()
+    if depth >= effective_max:
         classes[current_id] = depth
         return lines, clicks, classes, style_classes
-    entries = sorted(os.listdir(folder_path))
-    entries = [e for e in entries if e != '99-contribute']
+
+    entries = [e for e in sorted(os.listdir(folder_path)) if e != '99-contribute']
     combined = []
     for e in entries:
-        full_path = os.path.join(folder_path, e)
-        if os.path.isdir(full_path):
-            pos = get_folder_sidebar_position(full_path)
-            combined.append((e, True, pos))
-        elif e.endswith('.md') and e not in ("index.md", "_intro.md") and not e.startswith("."):
-            fm = parse_frontmatter(full_path)
+        full = os.path.join(folder_path, e)
+        if os.path.isdir(full):
+            combined.append((e, True, get_folder_sidebar_position(full)))
+        elif e.endswith('.md') and e not in ("index.md", "_intro.md") and not e.startswith('.'):
+            fm = parse_frontmatter(full)
             try:
                 pos = float(fm.get('sidebar_position', float('inf')))
-            except:
+            except (TypeError, ValueError):
                 pos = float('inf')
             combined.append((e, False, pos))
     combined.sort(key=lambda x: (x[2], x[0]))
-    palette = ["#b3d9ff", "#d5b3ff", "#ffcccc", "#ffd699", "#d0f0c0"]
+
     for name, is_dir, _ in combined:
+        full = os.path.join(folder_path, name)
+        entry_rel = os.path.join(rel_path, name) if rel_path else name
+
         if is_dir:
-            full_path = os.path.join(folder_path, name)
-            entry_rel_path = os.path.join(rel_path, name) if rel_path else name
-            sub_lines, sub_clicks, sub_classes, sub_style_classes = build_mermaid(full_path, entry_rel_path, depth + 1, current_id, max_depth_override, style_config)
-            lines.extend(sub_lines)
-            clicks.extend(sub_clicks)
-            classes.update(sub_classes)
-            style_classes.update(sub_style_classes)
+            sl, sc, scl, ssc = build_mermaid(
+                full, entry_rel, depth + 1, current_id, max_depth_override, style_config
+            )
+            lines.extend(sl); clicks.extend(sc)
+            classes.update(scl); style_classes.update(ssc)
         else:
-            full_path = os.path.join(folder_path, name)
-            entry_rel_path = os.path.join(rel_path, name) if rel_path else name
-            title = extract_title(full_path)
-            node_id = normalize_id(entry_rel_path)
-            is_external, external_url = is_external_doc(full_path)
-            frontmatter = parse_frontmatter(full_path)
-            tags = extract_tags_from_frontmatter(frontmatter)
-            styles = apply_styling_to_node(tags, style_config, frontmatter)
-            if styles['exclude']:
+            title = extract_title(full)
+            node_id = normalize_id(entry_rel)
+            external, ext_url = is_external_doc(full)
+            fm = parse_frontmatter(full)
+            node_styles = apply_styling_to_node(
+                extract_tags_from_frontmatter(fm), style_config, fm
+            )
+            if node_styles['exclude']:
                 continue
-            status = frontmatter.get('status', '')
-            if status == 'review-needed' or status != 'review-needed':
-                node_label = create_node_label(title, styles, is_external, external_url)
-                lines.append(f'{node_id}["{node_label}"]')
-                if styles['clickable'] and not is_external:
-                    clean_entry_path = get_docs_url("/".join(strip_order_prefix(p) for p in entry_rel_path.replace(".md", "").split(os.sep)))
-                    clicks.append(f'click {node_id} "{clean_entry_path}"')
-                lines.append(f"{current_id} --> {node_id}")
-                color_for_depth = palette[(depth + 1) % len(palette)]
-                mermaid_style = create_mermaid_node_style(styles, default_fill=color_for_depth)
-                if mermaid_style:
-                    style_classes[node_id] = mermaid_style
-                classes[node_id] = depth + 1
+
+            # Leaf nodes: shape + fill + text + border-dash from status
+            status = fm.get('status', 'published')
+            node_styles = inject_status_styles(node_styles, status)
+
+            node_label = create_node_label(title, node_styles, external, ext_url)
+            lines.append(get_node_line(node_id, node_label, status))
+
+            if node_styles['clickable'] and not external:
+                clean = get_docs_url("/".join(
+                    strip_order_prefix(p)
+                    for p in entry_rel.replace(".md", "").split(os.sep)
+                ))
+                clicks.append('click {} "{}"'.format(node_id, clean))
+            lines.append("{} --> {}".format(current_id, node_id))
+
+            # Leaf style: status fill/text/border are already in node_styles;
+            # depth palette provides fallback fill/text if status was unrecognized
+            lf, lt, lb = DEPTH_PALETTE[(depth + 1) % len(DEPTH_PALETTE)]
+            style = create_mermaid_node_style(node_styles, default_fill=lf, default_text_color=lt)
+            if style:
+                style_classes[node_id] = style
+            classes[node_id] = depth + 1
+
     classes[current_id] = depth
     return lines, clicks, classes, style_classes
+
 
 def split_frontmatter_and_body(md_content):
     if md_content.startswith('---'):
         parts = md_content.split('---', 2)
         if len(parts) >= 3:
-            frontmatter = '---' + parts[1] + '---'
-            body = parts[2].lstrip('\n')
-            return frontmatter, body
+            return '---' + parts[1] + '---', parts[2].lstrip('\n')
     return '', md_content
 
+
 def generate_index_md(folder_path, rel_path):
-    folder_name = os.path.basename(folder_path)
-    human_title = strip_order_prefix(folder_name).replace("-", " ").title() or "Home"
-    frontmatter = f"---\ntitle: {human_title}\nhide_title: true\n---"
-    intro_md_path = os.path.join(folder_path, "_intro.md")
-    intro_frontmatter = ''
-    intro_body = ''
-    if os.path.isfile(intro_md_path):
-        with open(intro_md_path, "r", encoding="utf-8") as f:
-            intro_content = f.read().strip()
-        intro_frontmatter, intro_body = split_frontmatter_and_body(intro_content)
-    custom_intro = [
-        f"### {human_title}",
-        '<p class="margin-top-negative"><em>Click any block below to navigate directly to that section.</em></p>',
-        ""
-    ]
+    folder_name  = os.path.basename(folder_path)
+    human_title  = strip_order_prefix(folder_name).replace("-", " ").title() or "Home"
+    frontmatter  = "---\ntitle: {}\nhide_title: true\n---".format(human_title)
+    intro_path   = os.path.join(folder_path, "_intro.md")
     style_config = load_style_config()
-    lines, clicks, classes, style_classes = build_mermaid(folder_path, rel_path, depth=0, style_config=style_config)
-    class_lines = []
-    for d in range(get_max_depth() + 1):
-        color = ["#b3d9ff", "#d5b3ff", "#ffcccc", "#ffd699", "#d0f0c0"][d % 5]
-        class_lines.append(f"classDef col{d} fill:{color},stroke:none;")
-    for node_id, col in classes.items():
-        if node_id not in style_classes:
-            class_lines.append(f"class {node_id} col{col};")
-    style_counter = 0
-    for node_id, style in style_classes.items():
-        style_class_name = f"custom{style_counter}"
-        class_lines.append(f"classDef {style_class_name} {style};")
-        class_lines.append(f"class {node_id} {style_class_name};")
-        style_counter += 1
+
+    lines, clicks, classes, style_classes = build_mermaid(
+        folder_path, rel_path, depth=0, style_config=style_config
+    )
+    class_lines = _build_class_lines(classes, style_classes, get_max_depth())
+    custom_intro = [
+        "### {}".format(human_title),
+        '<p class="margin-top-negative"><em>Click any block below to navigate directly to that section.</em></p>',
+        "",
+    ]
+
     output = []
-    if os.path.isfile(intro_md_path):
-        output.append(intro_frontmatter)
-        output.append(intro_body)
-        output.append("## What's in this chapter?")
-        output += custom_intro
+    if os.path.isfile(intro_path):
+        with open(intro_path, "r", encoding="utf-8") as f:
+            fm, body = split_frontmatter_and_body(f.read().strip())
+        output += [fm, body, "## What's in this chapter?"] + custom_intro
     else:
-        output.append(frontmatter)
-        output.append(DO_NOT_EDIT)
-        output += custom_intro
+        output += [frontmatter, DO_NOT_EDIT] + custom_intro
+
     text_nav = build_text_nav(lines, clicks)
     if text_nav:
         output.extend(text_nav)
-    output += [
-                  "```mermaid",
-                  "graph LR",
-              ] + lines + clicks + class_lines + [
-                  "linkStyle default interpolate basis",
-                  "```"
-              ]
-    legend_items = create_compact_legend(style_classes, style_config)
-    if legend_items:
-        output.extend(legend_items)
-    index_md_path = os.path.join(folder_path, "index.md")
-    with open(index_md_path, "w", encoding="utf-8") as f:
+
+    output += _mermaid_block(lines, clicks, class_lines)
+    output += create_compact_legend(style_classes, style_config)
+
+    with open(os.path.join(folder_path, "index.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(output))
-    print(f"✔️  Wrote: {index_md_path}")
+    print("Wrote: {}".format(os.path.join(folder_path, "index.md")))
+
 
 def generate_root_index_md():
     frontmatter = (
-        '---\n'
-        'sidebar_position: 1\n'
-        'title: Site Overview\n'
-        'hide_title: true\n'
-        '---'
+        "---\nsidebar_position: 1\ntitle: Site Overview\nhide_title: true\n---"
     )
     custom_intro = [
-        '### Welcome',
-        '<small>Here\'s an overview of the first layers of this resource. Simply click on the boxes to get directly to your article of choice, or use the sidebar to navigate.</small>',
-        ''
-    ]
-    lines, clicks, classes, style_classes = build_mermaid(ROOT_DIR, '', depth=0)
-    class_lines = []
-    for d in range(get_max_depth() + 1):
-        color = ["#b3d9ff", "#d5b3ff", "#ffcccc", "#ffd699", "#d0f0c0"][d % 5]
-        class_lines.append(f"classDef col{d} fill:{color},stroke:none;")
-    for node_id, col in classes.items():
-        if node_id not in style_classes:
-            class_lines.append(f"class {node_id} col{col};")
-    style_counter = 0
-    for node_id, style in style_classes.items():
-        style_class_name = f"custom{style_counter}"
-        class_lines.append(f"classDef {style_class_name} {style};")
-        class_lines.append(f"class {node_id} {style_class_name};")
-        style_counter += 1
-    output = [
-        frontmatter,
-        DO_NOT_EDIT,
-        ''
+        "### Welcome",
+        "<small>Here's an overview of the first layers of this resource. "
+        "Simply click on the boxes to get directly to your article of choice, "
+        "or use the sidebar to navigate.</small>",
+        "",
     ]
     style_config = load_style_config()
+    lines, clicks, classes, style_classes = build_mermaid(ROOT_DIR, '', depth=0)
+    class_lines = _build_class_lines(classes, style_classes, get_max_depth())
+
+    output = [frontmatter, DO_NOT_EDIT, ""]
+
     text_nav = build_text_nav(lines, clicks)
     if text_nav:
         output.extend(text_nav)
-    output += custom_intro + [
-        '```mermaid',
-        'graph LR',
-    ] + lines + clicks + class_lines + [
-                  'linkStyle default interpolate basis',
-                  '```'
-              ]
-    legend_items = create_compact_legend(style_classes, style_config)
-    if legend_items:
-        output.extend(legend_items)
-    index_md_path = os.path.join(ROOT_DIR, "index.md")
-    with open(index_md_path, "w", encoding="utf-8") as f:
+
+    output += custom_intro + _mermaid_block(lines, clicks, class_lines)
+    output += create_compact_legend(style_classes, style_config)
+
+    path = os.path.join(ROOT_DIR, "index.md")
+    with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(output))
-    print(f"✔️  Wrote root flatmap: {index_md_path}")
+    print("Wrote root flatmap: {}".format(path))
+
 
 def generate_full_sitemap():
     frontmatter = (
-        '---\n'
-        'title: Full Site Map\n'
-        'sidebar_label: Full Site Map\n'
-        'sidebar_position: 2\n'
-        'hide_title: true\n'
-        '---'
+        "---\ntitle: Full Site Map\nsidebar_label: Full Site Map\n"
+        "sidebar_position: 2\nhide_title: true\n---"
     )
     custom_intro = [
-        '### Full Site Map',
-        '<small>Complete overview of all content in this resource. This map shows everything at maximum depth - it\'s quite detailed!</small>',
-        ''
-    ]
-    lines, clicks, classes, style_classes = build_mermaid(ROOT_DIR, '', depth=0, max_depth_override=10)
-    class_lines = []
-    for d in range(11):
-        color = ["#b3d9ff", "#d5b3ff", "#ffcccc", "#ffd699", "#d0f0c0", "#ffe6cc", "#e6f3ff", "#f0e6ff", "#ffe6e6", "#e6ffe6", "#fff2e6"][d % 11]
-        class_lines.append(f"classDef col{d} fill:{color},stroke:none;")
-    for node_id, col in classes.items():
-        if node_id not in style_classes:
-            class_lines.append(f"class {node_id} col{col};")
-    style_counter = 0
-    for node_id, style in style_classes.items():
-        style_class_name = f"custom{style_counter}"
-        class_lines.append(f"classDef {style_class_name} {style};")
-        class_lines.append(f"class {node_id} {style_class_name};")
-        style_counter += 1
-    output = [
-        frontmatter,
-        DO_NOT_EDIT,
-        ''
+        "### Full Site Map",
+        "<small>Complete overview of all content in this resource. "
+        "This map shows everything at maximum depth - it's quite detailed!</small>",
+        "",
     ]
     style_config = load_style_config()
+    lines, clicks, classes, style_classes = build_mermaid(
+        ROOT_DIR, '', depth=0, max_depth_override=10
+    )
+    class_lines = _build_class_lines(classes, style_classes, 10)
+
+    output = [frontmatter, DO_NOT_EDIT, ""]
+
     text_nav = build_text_nav(lines, clicks)
     if text_nav:
         output.extend(text_nav)
-    output += custom_intro + [
-        '```mermaid',
-        'graph LR',
-    ] + lines + clicks + class_lines + [
-                  'linkStyle default interpolate basis',
-                  '```'
-              ]
-    legend_items = create_compact_legend(style_classes, style_config)
-    if legend_items:
-        output.extend(legend_items)
-    sitemap_path = os.path.join(ROOT_DIR, "full-sitemap.md")
-    with open(sitemap_path, "w", encoding="utf-8") as f:
+
+    output += custom_intro + _mermaid_block(lines, clicks, class_lines)
+    output += create_compact_legend(style_classes, style_config)
+
+    path = os.path.join(ROOT_DIR, "full-sitemap.md")
+    with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(output))
-    print(f"✔️  Wrote full sitemap: {sitemap_path}")
+    print("Wrote full sitemap: {}".format(path))
+
 
 def walk_folders():
     for root, dirs, files in os.walk(ROOT_DIR):
         if '99-contribute' in dirs:
             dirs.remove('99-contribute')
-        md_files = [f for f in files if f.endswith(".md")]
-        if md_files or dirs:
-            rel_path = os.path.relpath(root, ROOT_DIR)
-            if rel_path == ".":
-                rel_path = ""
-            generate_index_md(root, rel_path)
+        if [f for f in files if f.endswith('.md')] or dirs:
+            rel = os.path.relpath(root, ROOT_DIR)
+            generate_index_md(root, "" if rel == "." else rel)
     generate_root_index_md()
     generate_full_sitemap()
 
-def is_external_doc(path):
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            content = f.read()
-            match = re.search(r'^type:\s*external\s*$', content, re.MULTILINE)
-            if not match:
-                return False, None
-            link_match = re.search(r'^link:\s*(\S+)', content, re.MULTILINE)
-            return True, link_match.group(1) if link_match else None
-    except:
-        return False, None
-
-def color_to_dot(color):
-    """Map a color name to a colored dot emoji."""
-    color = color.lower()
-    color_map = {
-        'red': '🔴',
-        'orange': '🟠',
-        'yellow': '🟡',
-        'green': '🟢',
-        'blue': '🔵',
-        'purple': '🟣',
-        'pink': '🩷',
-        'black': '⚫',
-        'white': '⚪',
-        'grey': '⬤',
-        'gray': '⬤',
-        'lightgrey': '⬤',
-        'lightgray': '⬤',
-        'lightgreen': '🟢',
-        'lightcoral': '🔴',
-    }
-    if color.startswith('#'):
-        return '⬤'
-    return color_map.get(color, '⬤')
-
-def create_compact_legend(style_classes, style_config):
-    """Create a compact legend showing border/background color meanings.
-
-    NOTE: Icon entries are intentionally excluded. create_node_label() calls
-    _strip_emojis() on every composed label, so icons never appear in the
-    rendered graph and must not appear in the legend (mismatch fix).
-
-    Depth-based background colors (the 5-color palette applied via classDef)
-    are documented here as a separate row since they are not in style_config.
-    """
-    border_tags = []
-    background_groups = {}
-
-    for tag, tag_config in style_config.get('tags', {}).items():
-        tag_props = dict(tag_config) if isinstance(tag_config, list) else tag_config
-
-        if tag_props.get('exclude', False):
-            continue
-
-        border_color = tag_props.get('border_color', '')
-        background_color = tag_props.get('background_color', '')
-
-        if border_color:
-            border_dot = color_to_dot(border_color)
-            border_tags.append(f"border:{border_dot} {tag}")
-
-        if background_color:
-            if background_color not in background_groups:
-                background_groups[background_color] = []
-            background_groups[background_color].append(tag)
-
-    legend_lines = []
-
-    # Depth palette — hardcoded in build_mermaid(), not in style_config
-    legend_lines.append(
-        "node background = depth in hierarchy: "
-        "light blue (depth 0) | light purple (depth 1) | "
-        "light pink (depth 2) | light orange (depth 3) | light green (depth 4)"
-    )
-
-    if border_tags:
-        legend_lines.append(" | ".join(border_tags))
-
-    if background_groups:
-        bg_parts = []
-        for bg_color, tags in background_groups.items():
-            if bg_color == "lightgrey":
-                bg_parts.append(f"bg light grey (overrides depth color): {', '.join(tags)}")
-            elif bg_color == "lightgreen":
-                bg_parts.append(f"bg light green (overrides depth color): {', '.join(tags)}")
-            else:
-                bg_parts.append(f"bg {bg_color} (overrides depth color): {', '.join(tags)}")
-        legend_lines.append(" | ".join(bg_parts))
-
-    legend_text = "<br />".join(legend_lines)
-    return [
-        "",
-        f"<small><strong>Legend:</strong><br />{legend_text}</small>"
-    ]
-
-
-def build_text_nav(lines, clicks):
-    """Accessible <details> text-navigation fallback for the mermaid diagram.
-
-    Parses node labels and click URLs produced by build_mermaid() and emits a
-    <details> block that works without JavaScript and is fully keyboard/SR
-    accessible. Satisfies WCAG 1.3.1 for mermaid-only navigation pages.
-
-    Handles two node types:
-    - Internal nodes: have a matching 'click node_id "url"' entry.
-    - External nodes: have no click entry; their URL is embedded in the label
-      as <a href='url' ...>Title</a>. We extract both the URL and text.
-    """
-    # Parse node labels — lines look like: node_id["Label text"]
-    # External nodes look like: node_id["<a href='url' ...>Title</a>"]
-    node_labels = {}
-    node_external_urls = {}
-    for line in lines:
-        m = re.match(r'^(\w+)\["(.+)"\]$', line.strip())
-        if m:
-            nid = m.group(1)
-            raw = m.group(2)
-            # Check for an external href embedded in the label
-            ext = re.search(r"href='([^']+)'", raw)
-            if ext:
-                node_external_urls[nid] = ext.group(1)
-            label = re.sub(r'<[^>]+>', '', raw).strip()
-            if label:
-                node_labels[nid] = label
-
-    # Parse click URLs — entries look like: click node_id "url"
-    node_urls = {}
-    for click in clicks:
-        m = re.match(r'^click (\w+) "(.+)"$', click.strip())
-        if m:
-            node_urls[m.group(1)] = m.group(2)
-
-    items = []
-    for nid, label in node_labels.items():
-        if nid in node_urls:
-            items.append(f'  <li><a href="{node_urls[nid]}">{label}</a></li>')
-        elif nid in node_external_urls:
-            items.append(
-                f'  <li><a href="{node_external_urls[nid]}" target="_blank" rel="noopener noreferrer">{label} ↗</a></li>'
-            )
-
-    if not items:
-        return []
-
-    return [
-        '',
-        '<details class="flatmap-text-nav">',
-        '<summary>Text navigation (no-JS / screen reader alternative)</summary>',
-        '<ul>',
-    ] + items + [
-        '</ul>',
-        '</details>',
-    ]
 
 walk_folders()

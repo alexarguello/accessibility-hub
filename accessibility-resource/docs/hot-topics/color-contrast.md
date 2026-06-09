@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - concept:ColorContrast
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Color Contrast

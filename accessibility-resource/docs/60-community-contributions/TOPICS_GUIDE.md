@@ -1,3 +1,14 @@
+---
+title: Topics Guide
+type: guide
+level: beginner
+status: published
+topics:
+  - accessibility
+tags:
+  - level/beginner
+  - type/guide
+---
 ## 1. List of Existing Keywords/Topics
 
 ### Disability-Specific Categories

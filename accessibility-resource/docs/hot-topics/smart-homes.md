@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - use:SmartHomes
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Smart Homes

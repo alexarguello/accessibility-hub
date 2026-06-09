@@ -8,6 +8,9 @@ visibility: public
 topics:
   - accessibility
   - community
+tags:
+  - level/beginner
+  - type/reference
 ---
 
 # Communities & Groups

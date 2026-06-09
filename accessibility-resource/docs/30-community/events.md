@@ -13,6 +13,9 @@ topics:
   - accessibility
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/beginner
+  - type/overview
 ---
 
 Calendar of upcoming accessibility events, hackathons, and webinars.

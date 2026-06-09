@@ -9,6 +9,9 @@ topics: [stroke, communication, aac, assessment]
 author: Alexandra Arguello Saenz (https://github.com/alexarguello)
 eta: 2024-12-16
 provider: [asha, aacinstitute, lingraphica, spokenaac]
+tags:
+  - level/beginner
+  - type/resource
 ---
 
 Use this questionnaire to assess the communication needs of individuals recovering from stroke. Responses help match AAC tools, therapy strategies, and caregiver supports.

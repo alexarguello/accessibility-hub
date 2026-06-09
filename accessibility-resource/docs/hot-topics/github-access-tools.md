@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - tool:GitHubAccessTools
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # GitHub Access Tools

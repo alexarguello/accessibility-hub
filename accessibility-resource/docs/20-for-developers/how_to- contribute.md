@@ -13,6 +13,9 @@ topics:
   - guide
 author: 'Alexandra Arguello Saenz (https://github.com/alexarguello)'
 eta: 2024-12-06
+tags:
+  - level/beginner
+  - type/tutorial
 ---
 
 Developers play a crucial role in making the world more accessible by designing and building digital experiences that are inclusive of people with disabilities. Here are several impactful ways developers can contribute:

@@ -13,6 +13,9 @@ topics:
   - whitepapers
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/beginner
+  - type/tutorial
 ---
 
 Research and whitepapers on accessibility, AI, and assistive technology. (Content to be expanded based on future contributions and curation.)

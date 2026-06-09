@@ -1,14 +1,17 @@
 ---
-title: "Aphasia Communication Quick Start for Caregivers"
-type: "guide"
-level: "beginner"
-status: "published"
+title: Aphasia Communication Quick Start for Caregivers
+type: guide
+level: beginner
+status: published
 topics:
   - accessibility
   - assistive-technology
   - aphasia
   - stroke
   - communication
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Aphasia Communication Quick Start Guide for Caregivers

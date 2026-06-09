@@ -10,6 +10,9 @@ topics:
   - accessibility
   - ai
   - overview
+tags:
+  - level/beginner
+  - type/overview
 ---
 
 ## Accessibility Hub Overview

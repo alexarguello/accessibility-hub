@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - concept:ARIARoles
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # ARIA Roles

@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - protocol:BugBounty
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Bug Bounty

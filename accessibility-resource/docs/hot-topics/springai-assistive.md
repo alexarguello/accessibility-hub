@@ -4,11 +4,14 @@ sidebar_position: 1
 hide_title: true
 level: beginner
 type: guide
-status: draft
+status: planned
 visibility: public
 topics:
   - accessibility
   - tool:SpringAIAssistive
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # SpringAI Assistive

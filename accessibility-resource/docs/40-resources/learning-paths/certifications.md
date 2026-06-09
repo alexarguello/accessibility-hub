@@ -10,6 +10,9 @@ topics:
   - certifications
   - provider:IAAP
   - provider:DHS
+tags:
+  - level/intermediate
+  - type/reference
 ---
 
 # Certifications & Credentials

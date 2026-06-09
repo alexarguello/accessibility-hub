@@ -14,6 +14,9 @@ topics:
   - provider:Microsoft
   - provider:Deque
   - provider:TPGi
+tags:
+  - level/beginner
+  - type/reference
 ---
 
 # Courses & Programs

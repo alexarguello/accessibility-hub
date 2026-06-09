@@ -15,6 +15,9 @@ topics:
   - tool:sdk
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/intermediate
+  - type/api-doc
 ---
 
 APIs and SDKs for accessibility development. (Content to be expanded based on future contributions and curation.)

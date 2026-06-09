@@ -16,6 +16,9 @@ topics:
   - tool:dom-parsing
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/intermediate
+  - type/overview
 ---
 
 | Challenge                               | Opportunity                            | Suggested Tech         |

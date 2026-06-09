@@ -9,6 +9,9 @@ topics: [stroke, aac, assistive-technology, speech-language]
 author: Alexandra Arguello Saenz (https://github.com/alexarguello)
 eta: 2024-12-12
 provider: [spokenaac, tactustherapy, lingraphica, tobii-dynavox]
+tags:
+  - level/beginner
+  - type/tutorial
 ---
 
 Stroke survivors often experience aphasia, dysarthria, or motor impairments that affect communication. AAC tools can restore independence and improve quality of life.

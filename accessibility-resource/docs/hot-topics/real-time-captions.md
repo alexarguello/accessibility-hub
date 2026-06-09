@@ -10,6 +10,9 @@ topics:
   - accessibility
   - assistive-technology
   - tool:RealTimeCaptions
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Real-time Captions

@@ -13,6 +13,9 @@ topics:
   - user:developer
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/intermediate
+  - type/overview
 ---
 
 Case studies for developers working on accessibility. (Content to be expanded based on future contributions and curation.)

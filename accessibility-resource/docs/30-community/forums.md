@@ -13,6 +13,9 @@ topics:
   - discussion
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/beginner
+  - type/overview
 ---
 
 Open forums for sharing experiences, troubleshooting, and networking.

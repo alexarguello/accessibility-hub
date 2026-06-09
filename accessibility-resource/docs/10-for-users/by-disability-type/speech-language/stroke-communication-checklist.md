@@ -9,6 +9,9 @@ topics: [stroke, communication, aac, caregiver-support]
 author: Alexandra Arguello Saenz (https://github.com/alexarguello)
 eta: 2024-12-10
 provider: [asha, aacinstitute, stroke.org, lingraphica]
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 This checklist helps caregivers and professionals assess the communication abilities of individuals recovering from stroke. It supports the selection of appropriate AAC tools and therapy strategies.

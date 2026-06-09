@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - tool:LangChain4JTools
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # LangChain4J Tools

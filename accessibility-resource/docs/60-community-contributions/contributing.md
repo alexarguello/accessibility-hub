@@ -10,6 +10,9 @@ topics:
 - contribute
 
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
+tags:
+  - level/intermediate
+  - type/overview
 ---
 # Contributing to the Accessibility Hub
 Thank you for your interest in contributing to our **Accessibility Hub**!

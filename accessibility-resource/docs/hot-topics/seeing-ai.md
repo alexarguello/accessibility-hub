@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - tool:SeeingAI
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Seeing AI

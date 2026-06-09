@@ -21,6 +21,9 @@ topics:
   - provider:microsoft
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/beginner
+  - type/overview
 ---
 
 # Screen Readers: Your Gateway to Digital Access

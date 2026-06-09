@@ -12,6 +12,9 @@ topics:
   - tool:AccessibilityInsights
   - tool:WAVE
   - tool:NVDA
+tags:
+  - level/beginner
+  - type/reference
 ---
 
 # Guides, Open Source Tools and Patterns 

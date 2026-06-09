@@ -43,6 +43,9 @@ feature-priority: high      # Priority level for feature-related resources: low 
 # feature-status: preview        # missing / experimental / preview / stable / specified
 # feature-responsible: openjdk   # community / openjdk / oracle-architects / jsr / vendor:redhat / project-lead:<name>
 
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Accessible Web Development Checklist

@@ -9,6 +9,9 @@ topics:
   - accessibility
   - community
   - conferences
+tags:
+  - level/intermediate
+  - type/reference
 ---
 
 # Conferences & Events

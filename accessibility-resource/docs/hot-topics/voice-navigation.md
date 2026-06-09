@@ -4,12 +4,15 @@ sidebar_position: 1
 hide_title: true
 level: beginner
 type: guide
-status: draft
+status: planned
 visibility: public
 topics:
   - accessibility
   - assistive-technology
   - tool:VoiceNavigation
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Voice Navigation

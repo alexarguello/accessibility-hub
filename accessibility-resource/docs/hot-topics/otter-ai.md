@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - tool:OtterAI
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Otter.ai

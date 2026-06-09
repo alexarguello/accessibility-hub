@@ -12,6 +12,9 @@ topics:
   - tool:Lighthouse
   - tool:NVDA
   - tool:VoiceOver
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Quickstart: A 7-Day Plan with Free Open Source Tools

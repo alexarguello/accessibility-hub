@@ -83,7 +83,7 @@ const config = {
       mermaid: {
         theme: {
           light: 'neutral',
-          dark: 'forest',
+          dark: 'dark',
         },
       },
       image: 'img/docusaurus-social-card.jpg',

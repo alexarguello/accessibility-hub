@@ -9,6 +9,9 @@ visibility: public
 topics:
   - accessibility
   - concept:DyslexiaSupport
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Dyslexia Support

@@ -4,11 +4,14 @@ sidebar_position: 1
 hide_title: true
 level: beginner
 type: guide
-status: draft
+status: wip
 visibility: public
 topics:
   - accessibility
   - protocol:AccessibilityAudit
+tags:
+  - level/beginner
+  - type/guide
 ---
 
 # Accessibility Audit

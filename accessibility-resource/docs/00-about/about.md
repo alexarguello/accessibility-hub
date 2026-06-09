@@ -16,6 +16,9 @@ topics:
   - hub
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/beginner
+  - type/overview
 ---
 
 A brief introduction to the Accessibility HUB, its history, and the founder’s motivation.  

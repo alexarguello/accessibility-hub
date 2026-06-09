@@ -14,6 +14,9 @@ topics:
   - user:visually-impaired
 author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 eta: 2024-12-06
+tags:
+  - level/beginner
+  - type/tutorial
 ---
 
 ### Hypothetical/Future Scenarios
