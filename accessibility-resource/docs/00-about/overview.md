@@ -42,7 +42,7 @@ Bridge the gap between accessibility needs and inclusive technology by:
   - Accessibility APIs & SDKs (/accessibility-hub/docs/for-developers/apis-sdks)
   - Accessible Web Dev Checklist (/accessibility-hub/docs/for-developers/accessible-web-dev-checklist)
   - Engineering Gaps & Design Patterns (/accessibility-hub/docs/for-developers/engineering-gaps)
-  - How to Contribute (/accessibility-hub/docs/for-developers/how_to-%20contribute)
+  - How to Contribute (/accessibility-hub/docs/for-developers/how-to-contribute)
 - Hot Topics (/accessibility-hub/docs/hot-topics)
   - Examples: Seeing AI, ARIA Roles, Accessibility Testing, Color Contrast, Smart Homes
 - Use Cases (/accessibility-hub/docs/use-cases)

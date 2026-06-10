@@ -13,7 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "lint:md": "remark \"**/*.md\" --frail --quiet --use ./remark/no-heading-emojis.mjs",
-    "lint:links": "find docs -name '*.md' | xargs markdown-link-check --config .mlc-config.json --quiet"
+    "lint:links": "find docs -name '*.md' -print0 | xargs -0 markdown-link-check --config .mlc-config.json --quiet"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
