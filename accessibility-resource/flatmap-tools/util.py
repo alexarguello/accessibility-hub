@@ -11,22 +11,22 @@ def load_style_config():
     try:
         with open(STYLE_CONFIG_PATH, "r", encoding="utf-8") as f:
             content = f.read()
-        
+
         config = {"tags": {}}
-        
+
         # Find the tags section
         tags_start = content.find('"tags":')
         if tags_start == -1:
             return config
-        
+
         # Extract everything from tags: to the end
         tags_content = content[tags_start:]
-        
+
         # Find the opening brace of tags object
         brace_start = tags_content.find('{')
         if brace_start == -1:
             return config
-        
+
         # Find the matching closing brace
         brace_count = 1
         brace_end = brace_start + 1
@@ -36,13 +36,13 @@ def load_style_config():
             elif tags_content[brace_end] == '}':
                 brace_count -= 1
             brace_end += 1
-        
+
         if brace_count > 0:
             return config
-        
+
         tags_section = tags_content[brace_start + 1:brace_end - 1]
         print(f"DEBUG: Tags section: {tags_section[:200]}...")
-        
+
         # Parse each tag entry
         current_pos = 0
         while current_pos < len(tags_section):
@@ -50,20 +50,20 @@ def load_style_config():
             quote_start = tags_section.find('"', current_pos)
             if quote_start == -1:
                 break
-            
+
             # Find the end of the key
             quote_end = tags_section.find('"', quote_start + 1)
             if quote_end == -1:
                 break
-            
+
             key = tags_section[quote_start + 1:quote_end]
             print(f"DEBUG: Found tag key: {key}")
-            
+
             # Find the opening brace of the value
             brace_start = tags_section.find('{', quote_end)
             if brace_start == -1:
                 break
-            
+
             # Find the closing brace of the value
             brace_count = 1
             brace_end = brace_start + 1
@@ -73,16 +73,16 @@ def load_style_config():
                 elif tags_section[brace_end] == '}':
                     brace_count -= 1
                 brace_end += 1
-            
+
             if brace_count > 0:
                 break
-            
+
             value_section = tags_section[brace_start + 1:brace_end - 1]
             print(f"DEBUG: Value section for {key}: {value_section}")
-            
+
             # Parse the value object
             properties = []
-            
+
             # Split by commas and parse each property
             prop_parts = value_section.split(',')
             for part in prop_parts:
@@ -92,11 +92,11 @@ def load_style_config():
                     colon_pos = part.find(':')
                     prop_key = part[:colon_pos].strip().strip('"')
                     prop_value = part[colon_pos + 1:].strip().strip('"')
-                    
+
                     if prop_key and prop_value:
                         properties.append((prop_key, prop_value))
                         print(f"DEBUG: Added property {prop_key}: {prop_value} to {key}")
-            
+
             # Add or merge the tag
             if key in config["tags"]:
                 # Key already exists, extend the list
@@ -106,18 +106,18 @@ def load_style_config():
                 # New key, create list
                 config["tags"][key] = properties
                 print(f"DEBUG: Created new tag {key} with {len(properties)} properties")
-            
+
             # Move to next tag
             current_pos = brace_end
             comma_pos = tags_section.find(',', current_pos)
             if comma_pos == -1:
                 break
             current_pos = comma_pos + 1
-        
+
         print("DEBUG: Final config tags:")
         for key, props in config["tags"].items():
             print(f"  {key}: {props}")
-        
+
         return config
     except Exception as e:
         print(f"⚠️  Warning: Could not load style config: {e}")
@@ -128,21 +128,21 @@ def get_base_folder():
     """Get the base folder name from config, with fallback to auto-detection."""
     config = load_style_config()
     config_base_folder = config.get("base_folder")
-    
+
     # Auto-detect: find the folder that contains flatmap-tools
     current_dir = os.path.dirname(__file__)  # flatmap-tools directory
     parent_dir = os.path.dirname(current_dir)  # parent of flatmap-tools
     detected_base_folder = os.path.basename(parent_dir)
-    
+
     # If config value exists but doesn't match reality, use the detected value
     if config_base_folder and config_base_folder != detected_base_folder:
         print(f"⚠️  Config base_folder '{config_base_folder}' doesn't match actual folder '{detected_base_folder}'. Using detected value.")
         return detected_base_folder
-    
+
     # If config value exists and matches reality, use it
     if config_base_folder:
         return config_base_folder
-    
+
     # Fallback to auto-detection
     return detected_base_folder
 
@@ -183,7 +183,7 @@ def parse_frontmatter(file_path):
                 if key.startswith('#') or key.startswith('🧩'):
                     i += 1
                     continue
-                
+
                 # Handle array values first
                 if value.startswith('[') and value.endswith(']'):
                     array_content = value[1:-1]
@@ -191,11 +191,11 @@ def parse_frontmatter(file_path):
                 # Handle quoted strings
                 elif value.startswith(('"', "'")) and value.endswith(('"', "'")):
                     value = value[1:-1]
-                
+
                 # Strip comments from values (everything after #)
                 if isinstance(value, str):
                     value = value.split('#')[0].strip()
-                
+
                 tags[key] = value
             i += 1
         return tags
@@ -207,9 +207,18 @@ def parse_frontmatter(file_path):
 def extract_title(path):
     try:
         with open(path, "r", encoding="utf-8") as f:
-            for line in f:
-                if line.strip().startswith("# "):
-                    return line.strip().lstrip("# ").strip()
+            in_frontmatter = False
+            for i, line in enumerate(f):
+                stripped = line.strip()
+                if i == 0 and stripped == "---":
+                    in_frontmatter = True
+                    continue
+                if in_frontmatter:
+                    if stripped == "---":
+                        in_frontmatter = False
+                    continue  # never treat frontmatter comments as H1
+                if stripped.startswith("# "):
+                    return stripped.lstrip("# ").strip()
         return os.path.basename(path).replace(".md", "")
     except:
         return "Untitled"
@@ -337,13 +346,13 @@ def make_dashboard_breadcrumb_link(rel_path, article_title=None, to_contribute_p
         folder_path = os.path.join(root_dir, *parts[:-(len(upstreams)-i)])
         title = get_section_title(folder_path)
         crumb_text.append(title)
-    
+
     # Get the article title
     art_title = article_title if article_title else extract_title(os.path.join(root_dir, rel_path))
-    
+
     # Check if this is an _intro.md file (last part is _intro)
     is_intro_file = rel_path.endswith('_intro.md')
-    
+
     # For _intro.md files, don't add the article title if it's the same as the last folder name
     if is_intro_file and len(parts) > 1:
         last_folder_path = os.path.join(root_dir, *parts[:-1])
@@ -359,7 +368,7 @@ def make_dashboard_breadcrumb_link(rel_path, article_title=None, to_contribute_p
         # For regular files, always add the article title
         crumb_text.append(art_title)
         text = " > ".join(crumb_text)
-    
+
     if to_contribute_page:
         id = f"contribute-{normalize_id(rel_path)}"
         docs_url = get_docs_url(f"contribute/{id}")
@@ -397,11 +406,11 @@ def get_base_url():
     flatmap_tools_dir = os.path.dirname(__file__)
     base_folder_path = os.path.dirname(flatmap_tools_dir)
     config_path = os.path.join(base_folder_path, "docusaurus.config.js")
-    
+
     try:
         with open(config_path, "r", encoding="utf-8") as f:
             content = f.read()
-        
+
         # Look for baseUrl: '/something/'
         import re
         match = re.search(r"baseUrl:\s*['\"]([^'\"]*)['\"]", content)
@@ -413,7 +422,7 @@ def get_base_url():
             return base_url
     except Exception as e:
         print(f"⚠️  Warning: Could not read baseUrl from docusaurus.config.js: {e}")
-    
+
     # Fallback: no base URL
     return ''
 

@@ -43,12 +43,12 @@ hide_title: true
   <li><a href="/accessibility-hub/docs/about/roadmap">Roadmap</a></li>
   <li><a href="/accessibility-hub/docs/about/dasharray-test">Dasharray Test</a></li>
   <li><a href="/accessibility-hub/docs/for-developers">For Developers</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/accessible-ap-_design-guide">Accessible API Design for Developers</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/how_to- contribute">How to contribute</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/accessible-api-design-guide">Accessible API Design for Developers</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/how-to-contribute">How to contribute</a></li>
   <li><a href="/accessibility-hub/docs/for-developers/apis-sdks">Accessibility APIs & SDKs</a></li>
   <li><a href="/accessibility-hub/docs/for-developers/case-studies">Developer Case Studies</a></li>
   <li><a href="/accessibility-hub/docs/for-developers/engineering-gaps">Engineering Gaps & Design Patterns</a></li>
-  <li><a href="/accessibility-hub/docs/for-developers/accessible-web-dev-checklist">Accessible Web Development Checklist  # A concise, descriptive title (e.g., '...</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/accessible-web-dev-checklist">Accessible Web Development Checklist</a></li>
   <li><a href="/accessibility-hub/docs/for-developers/external-resources">for Developers - External Resources</a></li>
   <li><a href="/accessibility-hub/docs/community">Community</a></li>
   <li><a href="/accessibility-hub/docs/community/forums">Forums or Discussions</a></li>
@@ -172,17 +172,17 @@ about_dasharray_test_md["Dasharray Test"]
 about --> about_dasharray_test_md
 for_developers["For Developers"]
 root --> for_developers
-for_developers_accessible_ap__design_guide_md[["Accessible API Design for Developers"]]
-for_developers --> for_developers_accessible_ap__design_guide_md
-for_developers_how_to__contribute_md[["How to contribute"]]
-for_developers --> for_developers_how_to__contribute_md
+for_developers_accessible_api_design_guide_md[["Accessible API Design for Developers"]]
+for_developers --> for_developers_accessible_api_design_guide_md
+for_developers_how_to_contribute_md[["How to contribute"]]
+for_developers --> for_developers_how_to_contribute_md
 for_developers_apis_sdks_md[["Accessibility APIs & SDKs"]]
 for_developers --> for_developers_apis_sdks_md
 for_developers_case_studies_md[["Developer Case Studies"]]
 for_developers --> for_developers_case_studies_md
 for_developers_engineering_gaps_md[["Engineering Gaps & Design Patterns"]]
 for_developers --> for_developers_engineering_gaps_md
-for_developers_accessible_web_dev_checklist_md[["Accessible Web Development Checklist  # A concise, descriptive title (e.g., '..."]]
+for_developers_accessible_web_dev_checklist_md[["Accessible Web Development Checklist"]]
 for_developers --> for_developers_accessible_web_dev_checklist_md
 for_developers_external_resources_md[["for Developers - External Resources"]]
 for_developers --> for_developers_external_resources_md
@@ -315,8 +315,8 @@ click about_legend_md "/accessibility-hub/docs/about/legend"
 click about_roadmap_md "/accessibility-hub/docs/about/roadmap"
 click about_dasharray_test_md "/accessibility-hub/docs/about/dasharray-test"
 click for_developers "/accessibility-hub/docs/for-developers"
-click for_developers_accessible_ap__design_guide_md "/accessibility-hub/docs/for-developers/accessible-ap-_design-guide"
-click for_developers_how_to__contribute_md "/accessibility-hub/docs/for-developers/how_to- contribute"
+click for_developers_accessible_api_design_guide_md "/accessibility-hub/docs/for-developers/accessible-api-design-guide"
+click for_developers_how_to_contribute_md "/accessibility-hub/docs/for-developers/how-to-contribute"
 click for_developers_apis_sdks_md "/accessibility-hub/docs/for-developers/apis-sdks"
 click for_developers_case_studies_md "/accessibility-hub/docs/for-developers/case-studies"
 click for_developers_engineering_gaps_md "/accessibility-hub/docs/for-developers/engineering-gaps"
@@ -450,9 +450,9 @@ class about_dasharray_test_md custom32;
 classDef custom33 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
 class for_developers custom33;
 classDef custom34 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class for_developers_accessible_ap__design_guide_md custom34;
+class for_developers_accessible_api_design_guide_md custom34;
 classDef custom35 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class for_developers_how_to__contribute_md custom35;
+class for_developers_how_to_contribute_md custom35;
 classDef custom36 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
 class for_developers_apis_sdks_md custom36;
 classDef custom37 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;

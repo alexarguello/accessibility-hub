@@ -46,15 +46,22 @@ def extract_title(path):
     try:
         with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
+        body = content
         if content.startswith('---'):
             m = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
             if m:
+                body = content[m.end():]  # H1 fallback must not scan frontmatter
                 for line in m.group(1).split('\n'):
                     if line.strip().startswith('title:'):
-                        t = line.split(':', 1)[1].strip().strip('"').strip("'")
+                        t = line.split(':', 1)[1].strip()
+                        if (len(t) > 1 and t[0] == t[-1] and t[0] in '"\''):
+                            t = t[1:-1].strip()
+                        else:
+                            # strip inline YAML comment (whitespace + #)
+                            t = re.split(r'\s+#', t, 1)[0].strip()
                         if t:
                             return t
-        for line in content.splitlines():
+        for line in body.splitlines():
             if line.strip().startswith('# '):
                 return line.strip().lstrip('# ').strip()
     except Exception:

@@ -1,6 +1,6 @@
 ---
 # Resource Metadata: Fill in the fields below to ensure proper classification and organization.
-title: Accessible Web Development Checklist  # A concise, descriptive title (e.g., "Introduction to ARIA")
+title: Accessible Web Development Checklist
 sidebar_position: 5
 hide_title: true
 
