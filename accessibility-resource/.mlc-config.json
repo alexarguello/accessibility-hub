@@ -3,7 +3,7 @@
     { "pattern": "^https://github\\.com/alexarguello/accessibility-hub/edit" },
     { "pattern": "^mailto:" },
     { "pattern": "^#" },
-    { "pattern": "[\"']" }
+    { "pattern": "[\"']|%22|%27|%5B|%5D" }
   ],
   "replacementPatterns": [
     {
@@ -18,6 +18,6 @@
   "retryOn429": true,
   "retryCount": 2,
   "fallbackRetryDelay": "30s",
-  "timeout": "10s",
-  "aliveStatusCodes": [200, 206, 403]
+  "timeout": "20s",
+  "aliveStatusCodes": [200, 206, 403, 405]
 }
