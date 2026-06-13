@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">A11YHub Logo</title>
+  <desc id="desc">Stylized A11Y monogram inside a rounded hex hub, representing Accessibility Hub</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <!-- Hub shape: rounded hex -->
+    <path d="M171 36c14-8 30-8 44 0l82 47c14 8 22 22 22 38v94c0 16-8 30-22 38l-82 47c-14 8-30 8-44 0l-82-47c-14-8-22-22-22-38v-94c0-16 8-30 22-38z" transform="translate(64,64)" fill="url(#g)" opacity="0.12"/>
+
+    <!-- Outer ring for contrast in dark/light themes -->
+    <circle cx="256" cy="256" r="176" fill="url(#g)" opacity="0.18"/>
+    <circle cx="256" cy="256" r="148" fill="#0F172A" opacity="0.9"/>
+
+    <!-- A11Y monogram -->
+    <g transform="translate(128,128)">
+      <!-- A -->
+      <path d="M36 212 L88 36 h32 l52 176 h-28 l-12-44 H76 l-12 44z M84 148 h56 l-26-92h-4l-26 92z" fill="#FFFFFF"/>
+      <!-- 11 -->
+      <rect x="176" y="84" width="20" height="128" rx="10" fill="#FFFFFF"/>
+      <rect x="210" y="84" width="20" height="128" rx="10" fill="#FFFFFF"/>
+      <!-- Y -->
+      <path d="M312 84 h-28 l-34 48 -34-48h-28l48 68v76h28v-76l48-68z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Hub text -->
+    <g aria-hidden="true" fill="#93C5FD">
+      <text x="256" y="420" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="1">A11YHub</text>
+    </g>
+  </g>
+</svg>

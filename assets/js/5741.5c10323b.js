@@ -1,0 +1,1 @@
+(globalThis.webpackChunkdocusaurus_resource=globalThis.webpackChunkdocusaurus_resource||[]).push([[5741],{5741:()=>{}}]);
