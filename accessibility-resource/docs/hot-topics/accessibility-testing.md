@@ -5,13 +5,23 @@ hide_title: true
 level: beginner
 type: guide
 status: wip
-visibility: public
-topics:
-  - accessibility
-  - protocol:AccessibilityTesting
+content_status: placeholder
+audience:
+  - developer
+  - designer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - accessibility-testing
+  - wcag
+  - aria
+topics:
+  - accessibility-testing
+  - wcag
+  - tool:axe
+  - tool:WAVE
+eta: 2025-09-01
 ---
 
 # Accessibility Testing

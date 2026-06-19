@@ -3,18 +3,33 @@ title: Legal standards
 sidebar_position: 3
 hide_title: true
 level: beginner
-type: tutorial
+type: reference
 status: draft
-visibility: public
-topics:
-  - resources  
-  - accessibility
-  - education
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+content_status: shallow
+audience:
+  - developer
+  - designer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/tutorial
+  - wcag
+  - legal-compliance
+  - accessibility
+topics:
+  - wcag
+  - ada
+  - section-508
+  - eaa
+  - legal
+  - provider:w3c
+  - provider:ada.gov
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 ## Legal & Standards Overview

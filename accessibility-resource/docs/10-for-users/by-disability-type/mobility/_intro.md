@@ -3,19 +3,26 @@ title: Mobility
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
+type: overview
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - mobility
+
+tags:
+  - motor-impairment
+  - switch-access
+  - keyboard-accessibility
 topics:
   - mobility
-  - external-resources
-  - accessibility
   - provider:united-spinal
   - provider:reeve-foundation
-  - provider:abilitynet
-  - provider:microsoft
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 # Mobility 

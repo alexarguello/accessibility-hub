@@ -4,21 +4,28 @@ sidebar_position: 2
 hide_title: true
 level: beginner
 type: overview
-status: draft
-visibility: public
+status: wip
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+  - developer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
+
+tags:
+  - accessibility
+  - inclusive-design
+  - ai-accessibility
 topics:
   - accessibility
   - mission
   - vision
-  - empowerment
-  - user:developer
-  - user:disabled
-  - hub
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
 ---
 
 A brief introduction to the Accessibility HUB, its history, and the founder’s motivation.  

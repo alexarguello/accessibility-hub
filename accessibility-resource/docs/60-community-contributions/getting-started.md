@@ -5,16 +5,25 @@ hide_title: true
 level: beginner
 type: tutorial
 status: draft
-visibility: public
-topics:
-  - community-contributions
-  - accessibility
-  - onboarding
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+content_status: placeholder
+audience:
+  - developer
+  - educator
+  - researcher
+  - designer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/tutorial
+  - contribution
+  - open-source
+  - accessibility
+topics:
+  - contribution
+  - onboarding
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 1. Fork & clone.

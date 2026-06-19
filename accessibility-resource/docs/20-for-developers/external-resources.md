@@ -3,15 +3,24 @@ title: for Developers - External Resources
 sidebar_position: 9
 hide_title: true
 level: beginner
-type: 
+type: resource-list
 status: draft
-visibility: public
-topics:
-  
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+content_status: shallow
+audience:
+  - developer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
+  - api-design
+  - accessibility
+  - developer-tools
+topics:
+  - api
+  - accessibility
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 #### External Resources

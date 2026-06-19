@@ -3,18 +3,28 @@ title: Cognitive
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
+type: overview
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+  - educator
+disability_type:
+  - cognitive
+
+tags:
+  - cognitive-accessibility
+  - dyslexia
+  - neurodiversity
 topics:
-  - cognitive  
-  - accessibility
+  - cognitive
   - provider:w3c
   - provider:cast
   - provider:ncld
-  - provider:mencap
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 # Cognitive Disabilities 🧠

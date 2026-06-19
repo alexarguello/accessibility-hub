@@ -2,16 +2,28 @@
 title: Stroke Communication Needs Checklist
 sidebar_position: 2
 level: beginner
-type: guide
+type: checklist
 status: draft
-visibility: public
-topics: [stroke, communication, aac, caregiver-support]
-author: Alexandra Arguello Saenz (https://github.com/alexarguello)
-eta: 2024-12-10
-provider: [asha, aacinstitute, stroke.org, lingraphica]
+content_status: shallow
+audience:
+  - caregiver
+  - end-user
+disability_type:
+  - speech
+  - mobility
+
 tags:
-  - level/beginner
-  - type/guide
+  - stroke
+  - aac
+  - communication
+topics:
+  - stroke
+  - communication
+  - aac
+  - provider:asha
+  - provider:lingraphica
+author: "Alexandra Arguello Saenz (https://github.com/alexarguello)"
+eta: 2025-12-31
 ---
 
 This checklist helps caregivers and professionals assess the communication abilities of individuals recovering from stroke. It supports the selection of appropriate AAC tools and therapy strategies.

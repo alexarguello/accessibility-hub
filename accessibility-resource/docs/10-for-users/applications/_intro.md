@@ -3,22 +3,28 @@ title: Applications
 sidebar_position: 2
 hide_title: true
 level: beginner
-type: overview
+type: resource-list
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+disability_type:
+  - visual
+
+tags:
+  - screen-readers
+  - visual-impairment
+  - assistive-technology
 topics:
-  - applications
-  - accessibility
   - tool:be-my-eyes
   - tool:seeing-ai
   - tool:copilot
-  - tool:markdown-editor
   - provider:applevis
   - provider:bookshare
   - provider:nls-bard
-  - provider:medium
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 ## For visual

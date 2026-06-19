@@ -3,19 +3,28 @@ title: Neurodiversity
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
+type: overview
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+  - educator
+disability_type:
+  - neurological
+
+tags:
+  - neurodiversity
+  - autism
+  - adhd
+  - cognitive-accessibility
 topics:
   - neurodiversity
-  - external-resources
-  - accessibility
   - provider:autistic-advocacy
   - provider:adhd-foundation
-  - provider:bdadyslexia
-  - provider:understood
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 # Neurodiversity 🧬

@@ -2,16 +2,27 @@
 title: Conferences & Events
 sidebar_position: 4
 level: intermediate
-type: reference
+type: resource-list
 status: published
-visibility: public
-topics:
-  - accessibility
+content_status: current
+audience:
+  - developer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
+
+tags:
   - community
   - conferences
-tags:
-  - level/intermediate
-  - type/reference
+  - accessibility
+topics:
+  - conferences
+  - community
+  - provider:deque
+  - provider:csun
+  - provider:w3c
 ---
 
 # Conferences & Events

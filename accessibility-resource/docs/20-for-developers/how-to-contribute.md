@@ -3,19 +3,26 @@ title: How to contribute
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
-status: draft
-visibility: public
-topics:
+type: guide
+status: published
+content_status: current
+audience:
   - developer
-  - contribution
-  - accessibility
-  - guide
-author: 'Alexandra Arguello Saenz (https://github.com/alexarguello)'
-eta: 2024-12-06
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/tutorial
+  - wcag
+  - aria
+  - accessibility-testing
+  - open-source
+topics:
+  - contribution
+  - wcag
+  - aria
+  - semantic-html
+  - accessibility-testing
+author: "Alexandra Arguello Saenz (https://github.com/alexarguello)"
 ---
 
 Developers play a crucial role in making the world more accessible by designing and building digital experiences that are inclusive of people with disabilities. Here are several impactful ways developers can contribute:

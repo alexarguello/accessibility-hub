@@ -5,13 +5,27 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - use:SmartHomes
+content_status: placeholder
+audience:
+  - end-user
+  - caregiver
+  - researcher
+  - business
+disability_type:
+  - mobility
+  - aging
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - smart-home
+  - voice-control
+  - motor-impairment
+topics:
+  - smart-home
+  - iot
+  - voice-control
+  - independence
+eta: 2025-12-31
 ---
 
 # Smart Homes

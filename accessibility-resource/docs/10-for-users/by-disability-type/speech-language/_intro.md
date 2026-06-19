@@ -3,13 +3,26 @@ title: Speech & Language
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
+type: overview
 status: draft
-visibility: public
-topics: [speech, language, external-resources, accessibility]
-author: Alexandra Arguello Saenz (https://github.com/alexarguello)
-eta: 2024-12-06
-provider: [asha, cdacanada, aacinstitute, speech-accessibility-project]
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - speech
+
+tags:
+  - speech-accessibility
+  - aac
+  - voice-control
+topics:
+  - speech
+  - aac
+  - provider:asha
+  - provider:speech-accessibility-project
+author: "Alexandra Arguello Saenz (https://github.com/alexarguello)"
+eta: 2025-12-31
 ---
 
 ## Speech & Language Medical Definition

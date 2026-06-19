@@ -5,13 +5,23 @@ hide_title: true
 level: beginner
 type: overview
 status: draft
-visibility: public
-topics:
-  - hearing  
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
----
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - hearing
 
+tags:
+  - captions
+  - hearing-loss
+  - deaf-accessibility
+topics:
+  - hearing
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
+---
 
 # Hearing Disabilities 👂
 

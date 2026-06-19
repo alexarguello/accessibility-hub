@@ -3,20 +3,27 @@ title: Hypothetical/Future Scenarios
 sidebar_position: 3
 hide_title: true
 level: beginner
-type: tutorial
+type: overview
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - researcher
+  - business
+disability_type:
+  - visual
+
+tags:
+  - ai-accessibility
+  - visual-impairment
+  - innovation
 topics:
   - use-cases
-  - future
-  - accessibility
+  - ai
   - tool:vision-ai
-  - user:visually-impaired
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/tutorial
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 ### Hypothetical/Future Scenarios

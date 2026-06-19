@@ -5,21 +5,29 @@ hide_title: true
 level: intermediate
 type: overview
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - researcher
+  - developer
+  - business
+  - educator
+disability_type:
+  - visual
+  - general
+
+tags:
+  - ai-accessibility
+  - visual-impairment
+  - innovation
 topics:
   - unmet-needs
-  - future
-  - accessibility
   - ai
+  - accessibility
   - tool:ocr
   - tool:vision-ai
-  - user:scientist
-  - user:disabled
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/intermediate
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 # Unmet Needs & Future Possibilities

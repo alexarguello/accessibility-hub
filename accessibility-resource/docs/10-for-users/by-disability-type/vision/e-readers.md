@@ -3,22 +3,29 @@ title: Accessible E-Readers
 sidebar_position: 2
 hide_title: true
 level: beginner
-type: overview
+type: reference
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+disability_type:
+  - visual
+
+tags:
+  - e-readers
+  - braille
+  - text-to-speech
+  - visual-impairment
 topics:
   - e-readers
   - vision
-  - accessibility
   - tool:braille
   - tool:text-to-speech
   - provider:bookshare
   - provider:nls-bard
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 #### Accessible e-readers

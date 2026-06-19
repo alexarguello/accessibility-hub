@@ -2,15 +2,28 @@
 title: Communities & Groups
 sidebar_position: 5
 level: beginner
-type: reference
+type: resource-list
 status: published
-visibility: public
-topics:
-  - accessibility
-  - community
+content_status: current
+audience:
+  - end-user
+  - developer
+  - educator
+  - researcher
+  - caregiver
+  - business
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/reference
+  - community
+  - accessibility
+  - open-source
+topics:
+  - community
+  - provider:a11yproject
+  - provider:webaim
+  - provider:w3c
 ---
 
 # Communities & Groups

@@ -2,16 +2,27 @@
 title: Stroke Communication Profile Questionnaire
 sidebar_position: 5
 level: beginner
-type: resource
+type: checklist
 status: draft
-visibility: public
-topics: [stroke, communication, aac, assessment]
-author: Alexandra Arguello Saenz (https://github.com/alexarguello)
-eta: 2024-12-16
-provider: [asha, aacinstitute, lingraphica, spokenaac]
+content_status: current
+audience:
+  - caregiver
+  - end-user
+disability_type:
+  - speech
+  - mobility
+
 tags:
-  - level/beginner
-  - type/resource
+  - stroke
+  - aac
+  - communication
+topics:
+  - stroke
+  - communication
+  - aac
+  - assessment
+  - provider:asha
+author: "Alexandra Arguello Saenz (https://github.com/alexarguello)"
 ---
 
 Use this questionnaire to assess the communication needs of individuals recovering from stroke. Responses help match AAC tools, therapy strategies, and caregiver supports.

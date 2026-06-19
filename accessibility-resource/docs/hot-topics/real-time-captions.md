@@ -5,14 +5,26 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - assistive-technology
-  - tool:RealTimeCaptions
+content_status: placeholder
+audience:
+  - end-user
+  - caregiver
+  - developer
+  - educator
+disability_type:
+  - hearing
+  - speech
+
 tags:
-  - level/beginner
-  - type/guide
+  - captions
+  - hearing-loss
+  - real-time
+topics:
+  - real-time-captions
+  - hearing
+  - tool:otter-ai
+  - tool:live-transcribe
+eta: 2025-09-01
 ---
 
 # Real-time Captions

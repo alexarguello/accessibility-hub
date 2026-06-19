@@ -5,16 +5,25 @@ hide_title: true
 level: beginner
 type: overview
 status: draft
-visibility: public
+content_status: placeholder
+audience:
+  - end-user
+  - developer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
+
+tags:
+  - accessibility
+  - open-source
 topics:
   - roadmap
   - accessibility
-  - planning
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 - [ ] Add tool reviews by disability.  

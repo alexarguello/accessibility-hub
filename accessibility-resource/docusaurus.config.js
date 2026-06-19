@@ -141,6 +141,7 @@ const config = {
               { label: 'Hot Topics', to: '/docs/hot-topics' },
               { label: 'Use Cases', to: '/docs/use-cases' },
               { label: 'Resources', to: '/docs/resources' },
+              { label: 'Browse by Tag', to: '/docs/tags' },
             ],
           },
           {

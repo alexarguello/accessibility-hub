@@ -1,17 +1,30 @@
 ---
 title: Aphasia Communication Quick Start for Caregivers
-type: guide
 level: beginner
+type: guide
 status: published
+content_status: current
+audience:
+  - caregiver
+  - end-user
+disability_type:
+  - speech
+  - mobility
+
+tags:
+  - aac
+  - stroke
+  - aphasia
 topics:
-  - accessibility
-  - assistive-technology
   - aphasia
   - stroke
   - communication
-tags:
-  - level/beginner
-  - type/guide
+  - aac
+  - provider:asha
+  - provider:aphasia.org
+  - tool:cboard
+  - tool:proloquo2go
+  - tool:live-transcribe
 ---
 
 # Aphasia Communication Quick Start Guide for Caregivers

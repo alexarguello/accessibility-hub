@@ -5,13 +5,24 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - concept:DyslexiaSupport
+content_status: placeholder
+audience:
+  - end-user
+  - developer
+  - designer
+  - educator
+disability_type:
+  - cognitive
+
 tags:
-  - level/beginner
-  - type/guide
+  - dyslexia
+  - cognitive-accessibility
+  - reading
+topics:
+  - dyslexia
+  - cognitive-accessibility
+  - reading
+eta: 2025-09-01
 ---
 
 # Dyslexia Support

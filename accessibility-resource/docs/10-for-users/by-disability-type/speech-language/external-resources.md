@@ -3,23 +3,29 @@ title: Speech & Language - External Resources
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
+type: resource-list
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - speech
+
+tags:
+  - speech-accessibility
+  - aac
+  - voice-control
 topics:
   - speech
-  - language
-  - external-resources
-  - accessibility
+  - aac
   - provider:asha
   - provider:cdacanada
   - provider:aacinstitute
   - provider:speech-accessibility-project
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/tutorial
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 #### External Resources

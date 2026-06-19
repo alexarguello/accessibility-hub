@@ -5,22 +5,29 @@ hide_title: true
 level: beginner
 type: overview
 status: draft
-visibility: public
-topics:
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+  - educator
+disability_type:
+  - visual
+
+tags:
   - screen-readers
+  - visual-impairment
+  - braille
+topics:
   - vision
-  - accessibility
+  - visual-impairment
   - tool:JAWS
   - tool:NVDA
   - tool:VoiceOver
-  - tool:Narrator
-  - tool:Orca
-  - provider:freedom-scientific
+  - provider:afb
   - provider:nv-access
-  - provider:apple
-  - provider:microsoft
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 # Understanding Visual Impairments

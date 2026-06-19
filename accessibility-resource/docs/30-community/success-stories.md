@@ -3,19 +3,28 @@ title: Success Stories
 sidebar_position: 3
 hide_title: true
 level: beginner
-type: overview
+type: reference
 status: draft
-visibility: public
-topics:
-  - community
-  - success-stories
-  - accessibility
-  - user:disabled
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+content_status: placeholder
+audience:
+  - end-user
+  - developer
+  - educator
+  - researcher
+  - caregiver
+  - business
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/overview
+  - community
+  - accessibility
+topics:
+  - success-stories
+  - community
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 Real-world examples of accessibility breakthroughs and user impact.

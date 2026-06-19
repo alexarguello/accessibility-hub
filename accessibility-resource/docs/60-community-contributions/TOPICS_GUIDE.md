@@ -1,14 +1,25 @@
 ---
 title: Topics Guide
-type: guide
 level: beginner
+type: reference
 status: published
-topics:
-  - accessibility
+content_status: needs-update
+audience:
+  - developer
+  - educator
+  - researcher
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - contribution
+  - documentation
+  - accessibility
+topics:
+  - contribution
+  - accessibility
 ---
+
 ## 1. List of Existing Keywords/Topics
 
 ### Disability-Specific Categories

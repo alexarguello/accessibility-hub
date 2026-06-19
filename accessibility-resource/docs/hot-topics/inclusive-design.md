@@ -5,13 +5,22 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - concept:InclusiveDesign
+content_status: placeholder
+audience:
+  - developer
+  - designer
+  - business
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - inclusive-design
+  - accessibility
+  - design
+topics:
+  - inclusive-design
+  - design-principles
+eta: 2025-09-01
 ---
 
 # Inclusive Design

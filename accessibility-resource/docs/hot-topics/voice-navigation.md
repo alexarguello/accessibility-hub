@@ -5,14 +5,23 @@ hide_title: true
 level: beginner
 type: guide
 status: planned
-visibility: public
-topics:
-  - accessibility
-  - assistive-technology
-  - tool:VoiceNavigation
+content_status: placeholder
+audience:
+  - end-user
+  - developer
+disability_type:
+  - mobility
+  - visual
+
 tags:
-  - level/beginner
-  - type/guide
+  - voice-control
+  - motor-impairment
+  - navigation
+topics:
+  - voice-control
+  - speech-recognition
+  - navigation
+eta: 2025-12-31
 ---
 
 # Voice Navigation

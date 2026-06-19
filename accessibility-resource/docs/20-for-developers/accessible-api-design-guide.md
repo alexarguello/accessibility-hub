@@ -4,20 +4,28 @@ sidebar_position: 1
 hide_title: true
 level: intermediate
 type: api-doc
-status: draft
-visibility: public
-topics:
+status: published
+content_status: current
+audience:
   - developer
+disability_type:
+  - general
+
+tags:
+  - api-design
+  - wcag
+  - aria
+  - accessibility-testing
+topics:
   - api
-  - accessibility  
+  - wcag
+  - accessibility-testing
+  - provider:w3c
   - tool:NVDA
   - tool:JAWS
   - tool:VoiceOver
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2025-12-31
-tags:
-  - level/intermediate
-  - type/api-doc
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
 ---
 
 # Accessible API Design for Developers

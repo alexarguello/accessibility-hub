@@ -5,14 +5,22 @@ hide_title: true
 level: beginner
 type: guide
 status: wip
-visibility: public
-topics:
-  - accessibility
-  - assistive-technology
-  - tool:AltTextAI
+content_status: placeholder
+audience:
+  - developer
+  - designer
+disability_type:
+  - visual
+
 tags:
-  - level/beginner
-  - type/guide
+  - alt-text
+  - ai-accessibility
+  - visual-impairment
+topics:
+  - alt-text
+  - ai
+  - tool:seeing-ai
+eta: 2025-09-01
 ---
 
 # Alt Text AI

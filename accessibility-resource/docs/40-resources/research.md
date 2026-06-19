@@ -3,19 +3,25 @@ title: Research & Whitepapers
 sidebar_position: 2
 hide_title: true
 level: beginner
-type: tutorial
+type: resource-list
 status: draft
-visibility: public
-topics:
-  - resources
+content_status: placeholder
+audience:
+  - researcher
+  - educator
+  - developer
+disability_type:
+  - general
+
+tags:
   - research
   - accessibility
+topics:
+  - research
   - whitepapers
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/tutorial
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 Research and whitepapers on accessibility, AI, and assistive technology. (Content to be expanded based on future contributions and curation.)

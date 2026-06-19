@@ -3,13 +3,23 @@ title: Screen Readers
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: overview
-status: draft
-visibility: public
+type: guide
+status: published
+content_status: current
+audience:
+  - end-user
+  - developer
+disability_type:
+  - visual
+
+tags:
+  - screen-readers
+  - visual-impairment
+  - nvda
+  - jaws
 topics:
   - screen-readers
   - vision
-  - accessibility
   - tool:JAWS
   - tool:NVDA
   - tool:VoiceOver
@@ -19,11 +29,8 @@ topics:
   - provider:nv-access
   - provider:apple
   - provider:microsoft
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
 ---
 
 # Screen Readers: Your Gateway to Digital Access

@@ -4,17 +4,26 @@ sidebar_position: 2
 level: beginner
 type: guide
 status: published
-visibility: public
+content_status: current
+audience:
+  - developer
+  - designer
+disability_type:
+  - general
+
+tags:
+  - wcag
+  - accessibility-testing
+  - screen-readers
 topics:
-  - accessibility
-  - assistive-technology
+  - wcag
   - tool:WAVE
   - tool:Lighthouse
   - tool:NVDA
   - tool:VoiceOver
-tags:
-  - level/beginner
-  - type/guide
+  - tool:axe
+  - provider:w3c
+  - provider:a11yproject
 ---
 
 # Quickstart: A 7-Day Plan with Free Open Source Tools

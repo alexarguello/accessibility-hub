@@ -4,19 +4,29 @@ sidebar_position: 2
 level: beginner
 type: reference
 status: published
-visibility: public
-topics:
-  - accessibility
+content_status: current
+audience:
+  - developer
+  - designer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
+
+tags:
   - education
+  - wcag
+  - accessibility
+topics:
+  - education
+  - courses
   - provider:W3C
   - provider:MDN
   - provider:Google
   - provider:Microsoft
   - provider:Deque
   - provider:TPGi
-tags:
-  - level/beginner
-  - type/reference
 ---
 
 # Courses & Programs

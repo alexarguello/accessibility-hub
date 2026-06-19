@@ -4,15 +4,24 @@ sidebar_position: 1
 hide_title: true
 level: beginner
 type: overview
-status: draft
-visibility: public
+status: published
+content_status: current
+audience:
+  - end-user
+  - caregiver
+  - developer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
+
+tags:
+  - accessibility
+  - inclusive-design
+  - ai-accessibility
 topics:
   - accessibility
-  - ai
-  - overview
-tags:
-  - level/beginner
-  - type/overview
 ---
 
 ## Accessibility Hub Overview

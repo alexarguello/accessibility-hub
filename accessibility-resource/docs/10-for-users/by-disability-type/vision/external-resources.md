@@ -3,22 +3,28 @@ title: Vision - External Resources
 sidebar_position: 3
 hide_title: true
 level: beginner
-type: tutorial
+type: resource-list
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - visual
+
+tags:
+  - screen-readers
+  - visual-impairment
+  - braille
 topics:
   - vision
-  - external-resources
-  - accessibility
   - provider:afb
   - provider:bookshare
   - provider:nls-bard
   - provider:apple
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/tutorial
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 #### External Resources

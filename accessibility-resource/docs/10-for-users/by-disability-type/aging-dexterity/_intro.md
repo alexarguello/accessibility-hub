@@ -3,20 +3,27 @@ title: Aging & Dexterity
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
+type: overview
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - aging
+
+tags:
+  - aging
+  - motor-impairment
+  - assistive-technology
 topics:
   - aging
   - dexterity
-  - external-resources
-  - accessibility
   - provider:aarp
   - provider:nia
-  - provider:eldercare
-  - provider:abilitynet
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 # Aging and Dexterity Impairments 👵

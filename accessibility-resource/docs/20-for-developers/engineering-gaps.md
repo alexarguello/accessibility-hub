@@ -3,22 +3,29 @@ title: Engineering Gaps & Design Patterns
 sidebar_position: 4
 hide_title: true
 level: intermediate
-type: overview
+type: reference
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - developer
+  - researcher
+  - business
+disability_type:
+  - general
+
+tags:
+  - ai-accessibility
+  - inclusive-design
+  - innovation
 topics:
   - engineering-gaps
   - design-patterns
-  - accessibility
   - ai
   - tool:vision-api
   - tool:llm
-  - tool:dom-parsing
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/intermediate
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 | Challenge                               | Opportunity                            | Suggested Tech         |

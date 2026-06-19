@@ -5,13 +5,23 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - concept:ColorContrast
+content_status: placeholder
+audience:
+  - developer
+  - designer
+disability_type:
+  - visual
+
 tags:
-  - level/beginner
-  - type/guide
+  - color-contrast
+  - wcag
+  - visual-design
+topics:
+  - color-contrast
+  - wcag
+  - visual-design
+  - tool:WAVE
+eta: 2025-09-01
 ---
 
 # Color Contrast

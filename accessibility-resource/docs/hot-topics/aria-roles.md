@@ -3,15 +3,23 @@ title: ARIA Roles
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: guide
+type: reference
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - concept:ARIARoles
+content_status: placeholder
+audience:
+  - developer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - aria
+  - wcag
+  - semantic-html
+topics:
+  - aria
+  - wcag
+  - semantic-html
+eta: 2025-09-01
 ---
 
 # ARIA Roles

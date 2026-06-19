@@ -3,17 +3,32 @@ title: Contributing to the Accessibility Hub
 sidebar_position: 1
 hide_title: true
 level: intermediate
-type: overview
+type: guide
 status: draft
-visibility: public
-topics:
-- contribute
+content_status: needs-update
+audience:
+  - developer
+  - educator
+  - researcher
+  - designer
+disability_type:
+  - general
 
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 tags:
-  - level/intermediate
-  - type/overview
+  - contribution
+  - wcag
+  - aria
+  - open-source
+topics:
+  - contribution
+  - accessibility
+  - wcag
+  - aria
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
+
 # Contributing to the Accessibility Hub
 Thank you for your interest in contributing to our **Accessibility Hub**!
 Our mission is to create the **most reliable, well-organized, and user-friendly resource** for anyone involved in making the world more accessible. This includes tools, guidelines, and resources for improving digital accessibility in areas such as screen readers, assistive technologies, visual impairments, and more.

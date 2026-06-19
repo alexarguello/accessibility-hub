@@ -5,19 +5,23 @@ hide_title: true
 level: beginner
 type: tutorial
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+disability_type:
+  - visual
+
+tags:
+  - visual-impairment
+  - ai-accessibility
+  - assistive-technology
 topics:
   - use-cases
-  - home
-  - accessibility
   - tool:be-my-eyes
   - tool:seeing-ai
-  - user:visually-impaired
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/tutorial
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 ### Home and Daily Life Scenarios

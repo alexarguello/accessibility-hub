@@ -5,13 +5,21 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - protocol:BugBounty
+content_status: placeholder
+audience:
+  - developer
+  - business
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - accessibility-testing
+  - community
+  - open-source
+topics:
+  - accessibility-testing
+  - bug-bounty
+eta: 2025-12-31
 ---
 
 # Bug Bounty

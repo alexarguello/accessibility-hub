@@ -2,16 +2,25 @@
 title: SpringAI Assistive
 sidebar_position: 1
 hide_title: true
-level: beginner
+level: intermediate
 type: guide
 status: planned
-visibility: public
-topics:
-  - accessibility
-  - tool:SpringAIAssistive
+content_status: placeholder
+audience:
+  - developer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - ai-accessibility
+  - java
+  - assistive-technology
+topics:
+  - spring-ai
+  - java
+  - ai
+  - accessibility
+eta: 2025-12-31
 ---
 
 # SpringAI Assistive

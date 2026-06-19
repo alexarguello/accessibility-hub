@@ -2,16 +2,25 @@
 title: LangChain4J Tools
 sidebar_position: 1
 hide_title: true
-level: beginner
+level: intermediate
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - tool:LangChain4JTools
+content_status: placeholder
+audience:
+  - developer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - ai-accessibility
+  - java
+  - llm
+topics:
+  - langchain4j
+  - ai
+  - java
+  - llm
+eta: 2025-12-31
 ---
 
 # LangChain4J Tools

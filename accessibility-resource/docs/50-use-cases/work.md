@@ -5,19 +5,22 @@ hide_title: true
 level: beginner
 type: tutorial
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+disability_type:
+  - visual
+
+tags:
+  - visual-impairment
+  - ai-accessibility
+  - workplace-accessibility
 topics:
   - use-cases
-  - work
-  - accessibility
   - tool:copilot
-  - tool:powerpoint
-  - user:visually-impaired
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/tutorial
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 ### Work-Related Use Cases

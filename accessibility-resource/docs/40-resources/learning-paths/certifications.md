@@ -4,15 +4,25 @@ sidebar_position: 3
 level: intermediate
 type: reference
 status: published
-visibility: public
-topics:
-  - accessibility
+content_status: current
+audience:
+  - developer
+  - designer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
+
+tags:
   - certifications
+  - education
+  - accessibility
+topics:
+  - certifications
+  - education
   - provider:IAAP
   - provider:DHS
-tags:
-  - level/intermediate
-  - type/reference
 ---
 
 # Certifications & Credentials

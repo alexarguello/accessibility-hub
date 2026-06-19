@@ -1,170 +1,261 @@
 ---
-title: Metadata for Resources (Frontmatter) guide
-type: guide
+title: Frontmatter Guide
+type: reference
 level: beginner
 status: published
-topics:
-  - accessibility
+content_status: current
+audience:
+  - developer
+  - educator
+  - researcher
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - contribution
+  - documentation
+  - accessibility
+topics:
+  - contribution
+  - accessibility
+author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
 ---
 
-Every file must include a `frontmatter` section (YAML metadata) to classify and describe the resource. This helps us organize the hub and ensures your contribution integrates seamlessly into our systems.
-You can find a full **frontmatter guide** [here](FRONTMATTER_GUIDE.md), but below are **standard fields** for accessibility-related content:
-### **Required Metadata Fields**
-- `title`: concise resource name (e.g., "Introduction to ARIA").
-- `type`: type of content (e.g., `overview`, `guide`, `tutorial`, `reference`).
-- `level`: target expertise level (`beginner`, `intermediate`, `advanced`).
-- `status`: resource status (`draft`, `wip`, `published`).
-- `topics`: tags summarizing content. Split into **general categories** and **specific prefixes** like:
-  - Accessibility basics: `accessibility`, `assistive-technology`.
-  - Tools: `tool:JAWS`, `tool:NVDA`, `tool:VoiceOver`, etc.
-  - Providers: `provider:freedom-scientific`, `provider:apple`.
+Every Markdown file in `/docs/` must include a YAML frontmatter block at the top. This classifies the document for filtering, search, and the flatmap renderer.
 
-### **Optional Metadata Fields**
-- `author`: your name or team (GitHub links welcome!).
-- `visibility`: public or internal (default: `public`).
-- `features`: optional fields like `priority` or `responsibility`.
-- 
-#  Guide to Writing Frontmatter for Resources
-The `frontmatter` is a YAML block at the top of each Markdown file used to classify, tag, and describe your resource. It ensures the resource is easy to find, well-structured, and properly rendered on the platform.
-## **General Rules**
-1. **Required Fields**: These are mandatory for all resources (`title`, `type`, etc.). Always include them.
-2. **Optional Fields**: These fields provide more context for maintainers or downstream consumers but can be skipped unless necessary.
-3. **Syntax**:
-  - Use consistent indentation (two spaces).
-  - Use lowercase for predefined values (e.g., `status: draft`, not `Draft`).
+## Quick Template
 
-## **Frontmatter Template Example**
-``` yaml
+```yaml
 ---
-title: My Resource Title
+title: Your Resource Title
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: overview
-status: published
-visibility: public
+type: guide
+status: draft
+content_status: placeholder
+audience:
+  - end-user
+disability_type:
+  - general
+tags:
+  - accessibility
 topics:
-  - topic-example1
-  - topic-example2
+  - tool:example
 author: ["Your Name (https://github.com/your-profile)"]
-eta: 2024-01-15
-feature-priority: low
-feature-responsible: Team Name / Contact
+eta: 2025-12-31
 ---
 ```
-## **Field-by-Field Guide**
-### 1. **`title`** (Required)
-- **Description**: The resource's display title. Should be concise and descriptive.
-- **Example**: `"Introduction to Accessibility Tools"`
 
-### 2. **`sidebar_position`** (Optional)
-- **Description**: Position of the resource in the sidebar navigation.
-- **Value**: An integer defining the position (e.g., `1`, `2`). Lower numbers appear first.
+For the full template with all optional fields, copy `docs/.template.md`.
 
-### 3. **`hide_title`** (Optional)
-- **Description**: Determines if the title should be hidden on the rendered page.
-- **Values**:
-  - `true`: Hide the title.
-  - `false`: Show the title.
+---
 
-### 4. **`level`** (Required)
-- **Description**: Difficulty level or intended audience expertise.
-- **Allowed Values**:
-  - `beginner`
-  - `intermediate`
-  - `advanced`
+## Required Fields
 
-### 5. **`type`** (Required)
-- **Description**: The type or purpose of the resource.
-- **Allowed Values**:
-  - `overview`
-  - `tutorial`
-  - `reference`
-  - `guide`
-  - `documentation`
+### `title` · string
 
-### 6. **`status`** (Required)
-- **Description**: Current state of the resource in the development process.
-- **Allowed Values**:
-  - `draft`: A work-in-progress; not ready for publication.
-  - `planned`: Planned work that isn’t started yet. Must include `eta`.
-  - `wip`: "Work in progress"; partially complete.
-  - `published`: Fully complete and published.
+Concise display title shown in the sidebar, flatmap nodes, and search results.
 
-### 7. **`visibility`** (Required)
-- **Description**: Defines who can see the resource.
-- **Allowed Values**:
-  - `public`: Visible to everyone.
-  - `internal`: Only visible to project team members.
-
-### 8. **`topics`** (Required)
-- **Description**: List of tags or keywords that contextualize the resource.
-- **Best Practices**:
-  - Use existing topics if possible for consistency.
-  - Topics can include categories (e.g., `accessibility`), tools (e.g., `tool:JAWS`), and providers (e.g., `provider:microsoft`).
-
-**Examples**:
-- `accessibility`
-- `assistive-technology`
-- `tool:JAWS`
-- `tool:NVDA`
-- `provider:microsoft`
-
-### 9. **`author`** (Optional)
-- **Description**: Name(s) and GitHub profile(s) of the author(s).
-- **Value**: A list with names and optional profiles.
-- **Example**:
-``` yaml
-  author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
+```yaml
+title: Introduction to Screen Readers
 ```
-### 10. **`eta`** (Optional but Required for `planned` or `wip` statuses)
-- **Description**: Estimated time of arrival (completion date) for incomplete resources.
-- **Value**: A date in `YYYY-MM-DD` format.
-- **Example**: `eta: 2024-03-01`
 
-### 11. **`feature-priority`** (Optional)
-- **Description**: Indicates the priority level of this resource for the project.
-- **Allowed Values**:
-  - `low`
-  - `medium`
-  - `high`
+---
 
-### 12. **`feature-responsible`** (Optional)
-- **Description**: Name or group responsible for maintaining or completing the resource.
-- **Value**: A person or team name.
-- **Example**:
-``` yaml
-  feature-responsible: Accessibility Team
+### `status` · enum
+
+The publication state of the page.
+
+| Value | Meaning |
+|---|---|
+| `draft` | Written but not yet reviewed |
+| `wip` | Actively being written — partial content |
+| `published` | Reviewed and complete |
+| `planned` | Stub — content not started yet |
+
+`planned` and `wip` require an `eta` date.
+
+```yaml
+status: draft
 ```
-## **Allowed Values for Topics**
-Here is a list of example topics you can use. Note that these are not exhaustive, and you can add new ones, but using existing ones ensures consistency:
-### General Categories
-- `accessibility`
-- `visual-impairment`
-- `assistive-technology`
-- `screen-readers`
-- `usability`
 
-### Tools (Prefix: `tool:`)
-- `tool:JAWS`
-- `tool:NVDA`
-- `tool:VoiceOver`
-- `tool:Narrator`
-- `tool:Orca`
+---
 
-### Providers (Prefix: `provider:`)
-- `provider:freedom-scientific`
-- `provider:nv-access`
-- `provider:apple`
-- `provider:microsoft`
+### `level` · enum
 
-## **Best Practices for Creating Frontmatter**
-1. **Organize your topics**: Use categories and prefixes (e.g., `tool:`, `provider:`) to keep tags structured.
-2. **Keep values accurate**: Ensure the correct `status` is set (`draft`, `wip`, etc.) and update `eta` for incomplete resources.
-3. **Reusability**: Try to use existing topics and values whenever possible.
-4. **Clarity**: Use clear titles to align with the resource purpose.
+Expected expertise of the reader.
 
-With this guide, you'll ensure all resources include consistent, high-quality frontmatter, making them easier to search, classify, and maintain. If followed correctly, this approach will also streamline triage and visualization of your content!
+| Value | Reader |
+|---|---|
+| `beginner` | No prior accessibility knowledge needed |
+| `intermediate` | Basic accessibility concepts assumed |
+| `advanced` | Deep technical content (ARIA internals, API design) |
+| `expert` | Specialist topics (standards authoring, AT development) |
+
+```yaml
+level: beginner
+```
+
+---
+
+### `type` · enum
+
+The format and purpose of the content.
+
+| Value | Use for |
+|---|---|
+| `overview` | Section intro — sets context, links to subtopics |
+| `guide` | Step-by-step instructional content |
+| `tutorial` | Hands-on walkthrough with concrete exercises |
+| `reference` | Lookup content — specs, comparisons, criteria |
+| `api-doc` | API or SDK documentation with code examples |
+| `checklist` | Structured list of actionable items to verify |
+| `resource-list` | Curated list of external links with descriptions |
+
+```yaml
+type: guide
+```
+
+---
+
+### `content_status` · enum
+
+How complete the actual content is, independent of the publication `status`. Used to triage work.
+
+| Value | Meaning |
+|---|---|
+| `placeholder` | Title + stub only — no real content yet |
+| `shallow` | Has content but needs significant expansion |
+| `current` | Complete and accurate |
+| `needs-update` | Has content but outdated or references stale info |
+
+```yaml
+content_status: shallow
+```
+
+---
+
+### `audience` · array of enum
+
+Who this document is for. Used by the `/guide-me` chatbot for persona routing and by nav filters.
+
+| Value | Who |
+|---|---|
+| `end-user` | People with disabilities using assistive technology |
+| `caregiver` | Family members and support workers |
+| `developer` | Engineers building accessible software |
+| `designer` | UX/product designers |
+| `educator` | Teachers and trainers |
+| `researcher` | Academic or policy researchers |
+| `business` | Product managers, executives, procurement |
+
+Use multiple values when content genuinely serves multiple audiences.
+
+```yaml
+audience:
+  - end-user
+  - caregiver
+```
+
+---
+
+### `disability_type` · array of enum
+
+Which disability category the content primarily addresses. This is the primary filter axis in the For Users section.
+
+| Value | Covers |
+|---|---|
+| `visual` | Blindness, low vision, color blindness |
+| `hearing` | Deafness, hard of hearing, auditory processing |
+| `cognitive` | Dyslexia, ADHD, intellectual disabilities, dementia |
+| `mobility` | Limb differences, paralysis, motor impairments |
+| `speech` | Aphasia, dysarthria, stuttering, AAC users |
+| `neurological` | Autism, ADHD, epilepsy, neurodiversity broadly |
+| `chronic-illness` | Fatigue, pain, conditions that fluctuate |
+| `aging` | Age-related changes in dexterity, vision, hearing, cognition |
+| `multiple` | Content addressing two or more disability types together |
+| `general` | Not disability-specific (WCAG standards, tooling, contribution guides) |
+
+```yaml
+disability_type:
+  - visual
+  - hearing
+```
+
+---
+
+## Optional Fields
+
+### `tags` · array of string
+
+Human-readable content keywords rendered by Docusaurus as clickable chips at the bottom of each page. All tags are browsable at [`/docs/tags/`](/docs/tags).
+
+Use 2–4 tags per doc. Choose words a site visitor would search or browse by — not structural metadata (don't repeat `level` or `type` values here).
+
+**Good tag examples:** `screen-readers`, `wcag`, `aria`, `color-contrast`, `captions`, `keyboard-accessibility`, `alt-text`, `aac`, `stroke`, `cognitive-accessibility`, `inclusive-design`, `api-design`, `mobile-accessibility`, `pdf-accessibility`, `dyslexia`, `braille`, `voice-control`, `ai-accessibility`
+
+> **`tags` vs `topics`** — these serve different systems:
+>
+> | | `tags` | `topics` |
+> |---|---|---|
+> | **Rendered by** | Docusaurus — chip list on each page, `/docs/tags/` browsing | Internal — `/guide-me` chatbot + search index |
+> | **Audience** | Site visitors | Code and tools |
+> | **Format** | Short human-readable words | Prefixed conventions (`tool:NVDA`, `provider:apple`) |
+
+```yaml
+tags:
+  - screen-readers
+  - wcag
+  - aria
+```
+
+---
+
+### `topics` · array of string
+
+Machine-readable keywords for specific tools, providers, standards, and subtopics. Used by the `/guide-me` chatbot and search indexing. Never rendered as Docusaurus tags. Keep `topics` focused — do not repeat values already expressed by `audience` or `disability_type`.
+
+**Conventions:**
+
+| Prefix | Example | Use for |
+|---|---|---|
+| `tool:` | `tool:NVDA` | Specific software tools |
+| `provider:` | `provider:apple` | Organizations and vendors |
+| `wcag:` | `wcag:1.4.3` | Specific WCAG success criteria |
+| (none) | `aria`, `stroke`, `aac` | Specific subtopics |
+
+```yaml
+topics:
+  - tool:NVDA
+  - tool:JAWS
+  - provider:nv-access
+  - wcag:1.4.1
+  - aria
+```
+
+---
+
+### `author` · array of string
+
+Contributor name(s) and optional GitHub profile links.
+
+```yaml
+author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
+```
+
+---
+
+### `eta` · date (YYYY-MM-DD)
+
+Estimated completion date. **Required when `status` is `draft`, `wip`, or `planned`.** Remove when the page reaches `published`.
+
+```yaml
+eta: 2025-09-01
+```
+
+---
+
+### `sidebar_position` · integer
+
+Controls sidebar 

@@ -4,14 +4,24 @@ sidebar_position: 4
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics: [stroke, caregiver-support, communication, accessibility]
-author: Alexandra Arguello Saenz (https://github.com/alexarguello)
-eta: 2024-12-14
-provider: [asha, aphasia.org, aacinstitute]
+content_status: shallow
+audience:
+  - caregiver
+disability_type:
+  - speech
+  - mobility
+
 tags:
-  - level/beginner
-  - type/guide
+  - stroke
+  - aac
+  - caregiving
+topics:
+  - stroke
+  - communication
+  - aac
+  - provider:asha
+author: "Alexandra Arguello Saenz (https://github.com/alexarguello)"
+eta: 2025-12-31
 ---
 
 Supporting a loved one after stroke involves patience, creativity, and knowledge of communication strategies.

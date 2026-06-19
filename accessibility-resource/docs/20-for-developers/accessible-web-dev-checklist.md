@@ -1,51 +1,33 @@
 ---
-# Resource Metadata: Fill in the fields below to ensure proper classification and organization.
 title: Accessible Web Development Checklist
 sidebar_position: 5
 hide_title: true
-
-# REQUIRED METADATA — please complete all fields:
-level: beginner             # Target audience expertise: beginner / intermediate / advanced
-type: guide                 # Type of content: overview / guide / tutorial / reference
-status: draft               # Current state: draft / wip (work in progress) / published
-visibility: public          # Visibility: public (default) or internal
-topics:
-  - accessibility
-  - web-standards
-  - semantic-html
-  - keyboard-accessibility
-  - screen-reader-support
-  - aria
-  - color-contrast
-  - visual-design
-  - responsive-design
-  - images-and-media
-  - alt-text
-  - forms-and-inputs
-  - error-messages
-  - mobile-accessibility
-  - touch-accessibility
-  - dynamic-content
-  - testing
-  - validation
-
-# OPTIONAL METADATA — provide only if applicable:
-author: ["Your Name (https://github.com/your-profile)"]  # Contributor(s)
-
-eta: 2026-01-15             # Estimated completion date for draft or planned resources
-feature-priority: high      # Priority level for feature-related resources: low / medium / high
-
-# article-priority: high   # high / medium — omit if not important
-# collaboration: open      # set if author welcomes collaborators
-# collaboration-topic: "need help implementing Spring Boot starter examples"  # explain what help is welcome (appears on the dashboard & collab page)
-# review-reason: "seems not to be on the right topic" # required when status: review-needed — will show on the article and in the dashboard
-# Feature-related tags (only if this doc describes a feature or gap in Java+AI):
-# feature-status: preview        # missing / experimental / preview / stable / specified
-# feature-responsible: openjdk   # community / openjdk / oracle-architects / jsr / vendor:redhat / project-lead:<name>
+level: beginner
+type: checklist
+status: published
+content_status: current
+audience:
+  - developer
+  - designer
+disability_type:
+  - general
 
 tags:
-  - level/beginner
-  - type/guide
+  - wcag
+  - aria
+  - color-contrast
+  - keyboard-accessibility
+topics:
+  - wcag
+  - semantic-html
+  - aria
+  - color-contrast
+  - keyboard-accessibility
+  - tool:axe
+  - tool:Lighthouse
+  - tool:WAVE
+author:
+  - Your Name (https://github.com/your-profile)
 ---
 
 # Accessible Web Development Checklist

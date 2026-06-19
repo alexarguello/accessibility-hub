@@ -3,22 +3,29 @@ title: Companies Committed to Accessibility (Vision)
 sidebar_position: 4
 hide_title: true
 level: beginner
-type: overview
+type: resource-list
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - developer
+  - business
+disability_type:
+  - visual
+
+tags:
+  - screen-readers
+  - visual-impairment
+  - assistive-technology
 topics:
   - vision
-  - companies
-  - accessibility
   - provider:freedom-scientific
   - provider:nv-access
   - provider:apple
   - provider:microsoft
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 ### Companies committed to accessibility

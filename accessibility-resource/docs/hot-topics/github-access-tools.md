@@ -5,13 +5,21 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - tool:GitHubAccessTools
+content_status: placeholder
+audience:
+  - developer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - developer-tools
+  - accessibility
+  - open-source
+topics:
+  - github
+  - developer-tools
+  - accessibility
+eta: 2025-12-31
 ---
 
 # GitHub Access Tools

@@ -3,24 +3,30 @@ title: Tool Directory
 sidebar_position: 3
 hide_title: true
 level: beginner
-type: overview
+type: resource-list
 status: draft
-visibility: public
-topics:
-  - tool-directory
+content_status: shallow
+audience:
+  - end-user
+  - developer
+  - designer
+disability_type:
+  - general
+
+tags:
+  - assistive-technology
+  - screen-readers
   - accessibility
-  - tool:nvda
+topics:
+  - tool:NVDA
   - tool:seeing-ai
   - tool:bookshare
   - tool:be-my-eyes
   - tool:copilot
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
-
 
 | Tool              | Type             | Tags                         | Link                                        |
 |-------------------|------------------|------------------------------|---------------------------------------------|

@@ -3,18 +3,31 @@ title: Accessibility Learning Paths
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
-status: draft
-visibility: public
-topics:
-  - resources
-  - tutorials
-  - accessibility
-  - education
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
----
+type: guide
+status: published
+content_status: current
+audience:
+  - developer
+  - designer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - general
 
+tags:
+  - education
+  - wcag
+  - accessibility
+topics:
+  - education
+  - wcag
+  - provider:w3c
+  - provider:mdn
+  - provider:deque
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+---
 
 # Accessibility Learning Paths
 

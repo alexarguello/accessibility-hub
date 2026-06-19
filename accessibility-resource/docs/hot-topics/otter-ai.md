@@ -5,13 +5,26 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - tool:OtterAI
+content_status: placeholder
+audience:
+  - end-user
+  - developer
+  - educator
+  - researcher
+  - caregiver
+  - business
+disability_type:
+  - hearing
+
 tags:
-  - level/beginner
-  - type/guide
+  - captions
+  - hearing-loss
+  - ai-accessibility
+topics:
+  - real-time-captions
+  - hearing
+  - tool:otter-ai
+eta: 2025-09-01
 ---
 
 # Otter.ai

@@ -2,17 +2,25 @@
 title: NLP Assist
 sidebar_position: 1
 hide_title: true
-level: beginner
+level: intermediate
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - assistive-technology
-  - concept:NLPAssist
+content_status: placeholder
+audience:
+  - developer
+  - researcher
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - ai-accessibility
+  - nlp
+  - assistive-technology
+topics:
+  - nlp
+  - ai
+  - accessibility
+eta: 2025-12-31
 ---
 
 # NLP Assist

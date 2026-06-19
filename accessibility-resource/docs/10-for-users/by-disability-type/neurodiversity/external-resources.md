@@ -3,22 +3,30 @@ title: Neurodiversity - External Resources
 sidebar_position: 1
 hide_title: true
 level: beginner
-type: tutorial
+type: resource-list
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+  - educator
+disability_type:
+  - neurological
+
+tags:
+  - neurodiversity
+  - dyslexia
+  - autism
+  - adhd
 topics:
   - neurodiversity
-  - external-resources
-  - accessibility
   - provider:autistic-advocacy
   - provider:adhd-foundation
   - provider:bdadyslexia
   - provider:understood
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/tutorial
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 #### External Resources

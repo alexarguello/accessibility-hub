@@ -5,13 +5,21 @@ hide_title: true
 level: beginner
 type: guide
 status: wip
-visibility: public
-topics:
-  - accessibility
-  - protocol:AccessibilityAudit
+content_status: placeholder
+audience:
+  - developer
+  - designer
+disability_type:
+  - general
+
 tags:
-  - level/beginner
-  - type/guide
+  - accessibility-testing
+  - wcag
+  - inclusive-design
+topics:
+  - accessibility-testing
+  - wcag
+eta: 2025-09-01
 ---
 
 # Accessibility Audit

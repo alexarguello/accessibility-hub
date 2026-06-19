@@ -3,20 +3,29 @@ title: User Personas
 sidebar_position: 5
 hide_title: true
 level: beginner
-type: overview
+type: reference
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - developer
+  - designer
+  - educator
+  - researcher
+  - business
+disability_type:
+  - visual
+  - general
+
+tags:
+  - inclusive-design
+  - user-research
+  - accessibility
 topics:
   - personas
   - accessibility
-  - user:blind-developer
-  - user:scientist
-  - user:educator
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
-tags:
-  - level/beginner
-  - type/overview
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
+eta: 2025-12-31
 ---
 
 ### Blind Developer  

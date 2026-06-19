@@ -3,19 +3,22 @@ title: For Users
 sidebar_position: 3
 hide_title: true
 level: beginner
-type: tutorial
+type: overview
 status: draft
-visibility: public
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - general
+
+tags:
+  - assistive-technology
+  - accessibility
 topics:
   - accessibility
-  - user-guide
-  - user:disabled
-  - user:visually-impaired
-  - review
-  - feedback
-  - success-stories
-author: ["Alexandra Arguello Saenz (https://github.com/alexarguello)"]
-eta: 2024-12-06
+author:
+  - Alexandra Arguello Saenz (https://github.com/alexarguello)
 ---
 
 Guides, reviews, and resources for people with disabilities to discover, use, and rate accessibility tools.  

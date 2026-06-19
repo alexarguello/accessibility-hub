@@ -2,19 +2,30 @@
 title: Guides, Open source Tools and Patterns
 sidebar_position: 6
 level: beginner
-type: reference
+type: resource-list
 status: published
-visibility: public
+content_status: current
+audience:
+  - developer
+  - designer
+disability_type:
+  - general
+
+tags:
+  - wcag
+  - accessibility-testing
+  - open-source
 topics:
-  - accessibility
+  - wcag
   - open-source
   - tool:axe
   - tool:AccessibilityInsights
   - tool:WAVE
   - tool:NVDA
-tags:
-  - level/beginner
-  - type/reference
+  - provider:w3c
+  - provider:webaim
+  - provider:a11yproject
+  - provider:deque
 ---
 
 # Guides, Open Source Tools and Patterns 

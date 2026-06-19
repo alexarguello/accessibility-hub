@@ -5,13 +5,23 @@ hide_title: true
 level: beginner
 type: guide
 status: draft
-visibility: public
-topics:
-  - accessibility
-  - tool:SeeingAI
+content_status: placeholder
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - visual
+
 tags:
-  - level/beginner
-  - type/guide
+  - visual-impairment
+  - ai-accessibility
+  - alt-text
+topics:
+  - visual-impairment
+  - ai
+  - tool:seeing-ai
+  - provider:microsoft
+eta: 2025-09-01
 ---
 
 # Seeing AI

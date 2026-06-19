@@ -2,16 +2,29 @@
 title: AAC Tools for Stroke Recovery
 sidebar_position: 3
 level: beginner
-type: tutorial
+type: resource-list
 status: draft
-visibility: public
-topics: [stroke, aac, assistive-technology, speech-language]
-author: Alexandra Arguello Saenz (https://github.com/alexarguello)
-eta: 2024-12-12
-provider: [spokenaac, tactustherapy, lingraphica, tobii-dynavox]
+content_status: shallow
+audience:
+  - end-user
+  - caregiver
+disability_type:
+  - speech
+  - mobility
+
 tags:
-  - level/beginner
-  - type/tutorial
+  - aac
+  - stroke
+  - speech-accessibility
+topics:
+  - stroke
+  - aac
+  - provider:spokenaac
+  - provider:tactustherapy
+  - provider:lingraphica
+  - provider:tobii-dynavox
+author: "Alexandra Arguello Saenz (https://github.com/alexarguello)"
+eta: 2025-12-31
 ---
 
 Stroke survivors often experience aphasia, dysarthria, or motor impairments that affect communication. AAC tools can restore independence and improve quality of life.
