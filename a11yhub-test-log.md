@@ -9,7 +9,7 @@ Automated tests live in `accessibility-resource/e2e/`.
 **Change:** aria-live count, aria-atomic, removed redundant sr-only span, simplified aria-label on topic links, removed auto-focus useEffect  
 **Files:** `accessibility-resource/src/pages/hot-topics.js`  
 **Date:** June 2026  
-**Status:** ✅ Done — all tests pass. SR-NEW-2 browse mode behavior confirmed expected (not a code bug).
+**Status:** ✅ Done — all core behavior tests pass. ⚠️ V1 and SR1 expectations updated 2026-06-19 to reflect HOT-003 redesign (button labels, pressed state styling changed).
 
 ### Keyboard tests
 | # | Steps | Expected | Pass/Fail |
@@ -22,7 +22,7 @@ Automated tests live in `accessibility-resource/e2e/`.
 ### Screen reader tests (NVDA + Firefox recommended)
 | # | Steps | Expected | Pass/Fail |
 |---|-------|----------|-----------|
-| SR1 | Focus a filter button, listen to announcement | Reads label ("Filter by category: Tool"), role ("toggle button"), and state ("pressed" or "not pressed") — category name announced once only | ✅ Pass |
+| SR1 | Focus a filter button, listen to announcement | Reads label ("Filter by Tool (rectangle · solid border)"), role ("toggle button"), and state ("pressed" or "not pressed") — category name announced once only | ⬜ Retest — aria-label format changed in HOT-003 |
 | SR2 | Activate a filter button | Live region announces e.g. "Showing 3 of 18 topics. Filtered by: Protocol" | ✅ Pass |
 | SR3 | Activate a second filter | Live region announces full updated message (both filters + new count) | ✅ Pass |
 | SR4 | Deactivate all filters | Live region announces "Showing all 18 topics" | ✅ Pass |
@@ -34,7 +34,7 @@ Automated tests live in `accessibility-resource/e2e/`.
 ### Visual / functional tests
 | # | Steps | Expected | Pass/Fail |
 |---|-------|----------|-----------|
-| V1 | Activate a filter button | Button shows pressed state visually (underline + checkmark) | ✅ Pass |
+| V1 | Activate a filter button | Button shows pressed state: checkmark prefix + bold text + drop-shadow ring (useFilter uses stronger drop-shadow instead of box-shadow, which doesn't follow clip-path) | ⬜ Retest — active state styling changed in HOT-003 |
 | V2 | Check srOnly is visually hidden but AT-accessible | sr-only text not visible; live region still announced by screen reader | ✅ Pass — filter status is intentionally visible (removed srOnly, added filterStatus class) |
 | V3 | Console: `document.querySelector('[aria-label="Filter by category: Protocol"]').getAttribute('aria-pressed')` | Returns "true" when active, "false" when not | ✅ Pass |
 | V4 | Filter by "Tool", then "Concept" | Only Tool + Concept topics appear in the list | ✅ Pass |
@@ -262,6 +262,66 @@ _None._
 ### Automation notes
 - U1–U5: keep as a pytest file under `flatmap-tools/` (currently run ad hoc)
 - G1–G2: add CI grep step over generated `index.md` files (same place as the emoji-legend grep idea in FLATMAP-002)
+
+---
+
+## HOT-003 — Hot Topics visual redesign
+**Change:** Full visual redesign of `hot-topics.js` and `HotTopics.module.css` to align with the mermaid flatmap design language. Shape + border pattern dual-encode card type (WCAG 1.4.1). Emojis removed site-wide (inaccessible by default). Breadcrumb added. Protocol color swapped amber → blue for contrast.
+
+**Files:** `accessibility-resource/src/pages/hot-topics.js`, `accessibility-resource/src/pages/HotTopics.module.css`  
+**Date:** 2026-06-19  
+**Status:** ⬜ Awaiting verification — run `npm run build && npm run serve` first.
+
+### Shape encoding applied
+| Type | Shape | Border | Fill | Text | Border color |
+|------|-------|--------|------|------|--------------|
+| tool | rectangle (4px radius) | solid 2.5px | #e6f4ea | #205d3b | #b4dfc5 |
+| concept | pill (20px radius) | dashed 2.5px | #f1f5f9 | #1e293b | #cbd5e1 |
+| protocol | double-border rectangle | dotted 2.5px + inner ::before ring | #e7f0fd | #1e40af | #b6c8f3 |
+| use | inward-notch pentagon (clip-path) | drop-shadow border | #fff0e6 | #7c2d12 | #f6c8a5 |
+
+### Visual / functional tests
+| # | Steps | Expected | Pass/Fail |
+|---|-------|----------|-----------|
+| V1 | Load `/hot-topics`, inspect each card type | tool = rectangle + solid green border; concept = pill + dashed slate border; protocol = double dotted blue border; use = right-side V-notch + orange drop-shadow border | ⬜ |
+| V2 | Inspect filter buttons | Each button background, border color, border style, and shape match its card type (including pill for concept, double-ring for protocol, notch for use) | ⬜ |
+| V3 | Click no filters (default state) | All 4 filter buttons display at full opacity with their type colors visible | ⬜ |
+| V4 | Click one filter button | That button gets checkmark + bold + ring; all other buttons dim to ~55% opacity but their shape and color remain readable | ⬜ |
+| V5 | Check use case cards in the grid | The V-notch on the right side is contained within the card boundary — no arrow tip overlapping the next card | ⬜ |
+| V6 | Compare protocol (blue) and use (orange) cards side by side | Colors are clearly distinct — not similar shades | ⬜ |
+| V7 | Inspect page top | "← Home" breadcrumb link visible above the `<h1>` | ⬜ |
+| V8 | Console: `document.querySelectorAll('.hot-topics_topic-use__*').forEach(el => console.log(window.getComputedStyle(el).clipPath))` (adjust class name for CSS Modules hash) | Returns a polygon value, confirming clip-path is applied | ⬜ |
+
+### Keyboard tests
+| # | Steps | Expected | Pass/Fail |
+|---|-------|----------|-----------|
+| K1 | Tab to the breadcrumb "← Home" link | Focus lands on link, visible focus ring appears | ⬜ |
+| K2 | Press Enter on the breadcrumb | Navigates to home page (`/accessibility-hub/`) | ⬜ |
+| K3 | Tab through filter buttons | All 4 reachable; use case button (clip-path shape) still focusable and shows focus ring | ⬜ |
+| K4 | Tab to a use case topic card | Focus ring visible (box-shadow ring — rectangular, which is acceptable for clip-path shapes) | ⬜ |
+
+### Screen reader tests (NVDA + Firefox)
+| # | Steps | Expected | Pass/Fail |
+|---|-------|----------|-----------|
+| SR1 | Focus each filter button, listen | Reads e.g. "Filter by Tool (rectangle · solid border), toggle button, not pressed" — shape description included in label; no emoji announced | ⬜ |
+| SR2 | Focus a topic card link, listen | Reads e.g. "Tool: Alt Text AI, link" — no emoji, no shape description (shape is visual-only; type is in the label) | ⬜ |
+| SR3 | Browse to breadcrumb in reading mode | NVDA announces "← Home, link" (or similar) within a navigation landmark | ⬜ |
+| SR4 | Activate a filter; listen to live region | "Showing N of 18 topics. Filtered by: [Type]" — unchanged from HOT-001 SR2 | ⬜ |
+
+### Open issues
+_None identified yet — pending verification._
+
+### Implementation notes
+- `clip-path` on `.topic-use` and `.useFilter` means `border` and `box-shadow` don't follow the shape. `filter: drop-shadow()` is used instead for the visible outline. Focus ring for `.topic-use` is also drop-shadow-based.
+- Protocol `::before` pseudo-element provides the inner dotted ring (avoids outline/focus conflict).
+- Inactive filter state uses `opacity: 0.55` — only applied when `hasActiveFilter && !isActive`. Default state (no filter selected) shows all buttons at full opacity.
+- Emojis fully removed from all user-facing strings; `categoryEmojis` constant deleted.
+
+### Automation notes (HOT-002 suite — check for breakage)
+- HOT-002 F2 (`aria-pressed="false"` on 4 buttons at load): still valid, re-run to confirm
+- HOT-002 K1 (Space activates filter): still valid
+- No HOT-002 tests check the exact `aria-label` text, so the label format change in HOT-003 does not break the automated suite
+- V8 above: automate with Playwright `evaluate()` to assert `clip-path` contains `polygon`
 
 ---
 
