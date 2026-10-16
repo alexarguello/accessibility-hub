@@ -1,0 +1,25 @@
+{
+  "_comment": "Hot Topics card data. To add, remove, or update a topic, edit this file only — no code change needed.",
+  "_maintenance": "Quarterly review (~90 min): remove broken/outdated entries, add 2-3 topics you've genuinely encountered, verify each audience type (tool/concept/protocol/use) is still represented. Set lastReviewed to today's date after each pass.",
+  "lastReviewed": "2026-06-24",
+  "topics": [
+    { "label": "Alt Text AI",          "type": "tool",     "link": "/docs/hot-topics/alt-text-ai" },
+    { "label": "Voice Navigation",     "type": "tool",     "link": "/docs/hot-topics/voice-navigation" },
+    { "label": "Real-time Captions",   "type": "tool",     "link": "/docs/hot-topics/real-time-captions" },
+    { "label": "Screen Readers",       "type": "tool",     "link": "/docs/for-users/by-disability-type/vision/screen-readers" },
+    { "label": "NLP Assist",           "type": "concept",  "link": "/docs/hot-topics/nlp-assist" },
+    { "label": "Accessibility Audit",  "type": "protocol", "link": "/docs/hot-topics/accessibility-audit" },
+    { "label": "Color Contrast",       "type": "concept",  "link": "/docs/hot-topics/color-contrast" },
+    { "label": "ARIA Roles",           "type": "concept",  "link": "/docs/hot-topics/aria-roles" },
+    { "label": "Inclusive Design",     "type": "concept",  "link": "/docs/hot-topics/inclusive-design" },
+    { "label": "Seeing AI",            "type": "tool",     "link": "/docs/hot-topics/seeing-ai" },
+    { "label": "Otter.ai",             "type": "tool",     "link": "/docs/hot-topics/otter-ai" },
+    { "label": "GitHub Access Tools",  "type": "tool",     "link": "/docs/hot-topics/github-access-tools" },
+    { "label": "Accessibility Testing","type": "protocol", "link": "/docs/hot-topics/accessibility-testing" },
+    { "label": "SpringAI Assistive",   "type": "tool",     "link": "/docs/hot-topics/springai-assistive" },
+    { "label": "LangChain4J Tools",    "type": "tool",     "link": "/docs/hot-topics/langchain4j-tools" },
+    { "label": "Smart Homes",          "type": "use",      "link": "/docs/hot-topics/smart-homes" },
+    { "label": "Dyslexia Support",     "type": "concept",  "link": "/docs/hot-topics/dyslexia-support" },
+    { "label": "Bug Bounty",           "type": "protocol", "link": "/docs/hot-topics/bug-bounty" }
+  ]
+}

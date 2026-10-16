@@ -77,4 +77,5 @@ test.describe('Hot Topics page', () => {
     await page.keyboard.press('Space');
     await expect(toolBtn).toHaveAttribute('aria-pressed', 'true');
   });
+
 });

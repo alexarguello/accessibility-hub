@@ -133,7 +133,7 @@ _None._
 ### Keyboard tests
 | # | Steps | Expected | Pass/Fail |
 |---|-------|----------|-----------|
-| K1 | Tab to the "Text navigation" `<details>` summary on any flatmap page | Focus lands on summary, visible focus ring appears | ✅ Pass — but requires tabbing through every mermaid node first. See open issue K1-REACHABILITY. |
+| K1 | Tab to the "Text navigation" `<details>` summary on any flatmap page | Focus lands on summary, visible focus ring appears | ✅ Pass |
 | K2 | Press Space or Enter on the summary | `<details>` expands, list of links becomes visible | ✅ Pass |
 | K3 | Tab through the expanded link list | Each link is reachable in order, no traps | ✅ Pass |
 | K4 | Press Enter on a link | Navigates to the correct section page | ✅ Pass |
@@ -156,7 +156,10 @@ _None._
 | V3 | Disable JS (DevTools → Network conditions → JS blocked), reload | Mermaid doesn't render; `<details>` fallback still present and all links resolve | ✅ Pass |
 
 ### Open issues
-- **K1-REACHABILITY** 🔴 The `<details>` text nav is placed AFTER the mermaid block. Every mermaid node is a tab stop, so keyboard users must tab through the entire graph before reaching it. Fix: move `build_text_nav()` output to BEFORE the mermaid block in the generator. (WCAG 2.4.1 — bypass blocks)
+_None._
+
+### Resolved issues
+- **K1-REACHABILITY** ✅ Resolved 2026-06-24 — `<details>` text nav now renders BEFORE the mermaid block. Keyboard users reach it without tabbing through the entire graph. (WCAG 2.4.1 — bypass blocks)
 
 ### Automation notes
 - K1–K5: automatable with Playwright keyboard API (`page.keyboard.press('Tab')`, `press('Enter')`)
@@ -282,14 +285,14 @@ _None._
 
 ### Visual / functional tests
 | # | Steps | Expected | Pass/Fail |
-|---|-------|----------|-----------|
-| V1 | Load `/hot-topics`, inspect each card type | tool = rectangle + solid green border; concept = pill + dashed slate border; protocol = double dotted blue border; use = right-side V-notch + orange drop-shadow border | ⬜ |
-| V2 | Inspect filter buttons | Each button background, border color, border style, and shape match its card type (including pill for concept, double-ring for protocol, notch for use) | ⬜ |
-| V3 | Click no filters (default state) | All 4 filter buttons display at full opacity with their type colors visible | ⬜ |
-| V4 | Click one filter button | That button gets checkmark + bold + ring; all other buttons dim to ~55% opacity but their shape and color remain readable | ⬜ |
-| V5 | Check use case cards in the grid | The V-notch on the right side is contained within the card boundary — no arrow tip overlapping the next card | ⬜ |
-| V6 | Compare protocol (blue) and use (orange) cards side by side | Colors are clearly distinct — not similar shades | ⬜ |
-| V7 | Inspect page top | "← Home" breadcrumb link visible above the `<h1>` | ⬜ |
+|---|-------|----------|----------|
+| V1 | Load `/hot-topics`, inspect each card type | tool = rectangle + solid green border; concept = pill + dashed slate border; protocol = double dotted blue border; use = right-side V-notch + orange drop-shadow border | ✅ Pass |
+| V2 | Inspect filter buttons | Each button background, border color, border style, and shape match its card type (including pill for concept, double-ring for protocol, notch for use) | ✅ Pass |
+| V3 | Click no filters (default state) | All 4 filter buttons display at full opacity with their type colors visible | ✅ Pass |
+| V4 | Click one filter button | That button gets checkmark + bold + ring; all other buttons dim to ~55% opacity but their shape and color remain readable | ✅ Pass |
+| V5 | Check use case cards in the grid | The V-notch on the right side is contained within the card boundary — no arrow tip overlapping the next card | ✅ Pass |
+| V6 | Compare protocol (blue) and use (orange) cards side by side | Colors are clearly distinct — not similar shades | ✅ Pass |
+| V7 | Inspect page top | "← Home" breadcrumb link visible above the `<h1>` | ✅ Pass |
 | V8 | Console: `document.querySelectorAll('.hot-topics_topic-use__*').forEach(el => console.log(window.getComputedStyle(el).clipPath))` (adjust class name for CSS Modules hash) | Returns a polygon value, confirming clip-path is applied | ⬜ |
 
 ### Keyboard tests
@@ -322,6 +325,50 @@ _None identified yet — pending verification._
 - HOT-002 K1 (Space activates filter): still valid
 - No HOT-002 tests check the exact `aria-label` text, so the label format change in HOT-003 does not break the automated suite
 - V8 above: automate with Playwright `evaluate()` to assert `clip-path` contains `polygon`
+
+---
+
+## HOT-004 — Config-driven topics + Suggest link
+**Change:** Extracted hardcoded `topics` array from `hot-topics.js` into `hot-topics.config.json`. Added `lastReviewed` field and quarterly review cadence comment. Added "Suggest a topic" link above the card grid pointing to a new GitHub Issue template (`.github/ISSUE_TEMPLATE/suggest-hot-topic.md`).
+
+**Files:** `accessibility-resource/src/pages/hot-topics.config.json` (new), `accessibility-resource/src/pages/hot-topics.js`, `accessibility-resource/src/pages/HotTopics.module.css`, `.github/ISSUE_TEMPLATE/suggest-hot-topic.md` (new)  
+**Date:** 2026-06-24  
+**Status:** ⬜ Awaiting verification — run `npm run build && npm run serve` from `accessibility-resource/` first.
+
+### Config integrity tests (manual)
+| # | Steps | Expected | Pass/Fail |
+|---|-------|----------|-----------|
+| C1 | Open `hot-topics.config.json`, verify all 18 entries have `label`, `type`, and `link` fields | No missing fields; `type` values are one of: `tool`, `concept`, `protocol`, `use` | ⬜ |
+| C2 | Add a temporary test topic to `hot-topics.config.json`, rebuild, load `/hot-topics` | New card appears in the grid; count in live region increases by 1 | ⬜ |
+| C3 | Remove the test topic from config, rebuild | Card is gone; count returns to 18 | ⬜ |
+| C4 | Open `hot-topics.config.json`, confirm `lastReviewed` is a valid ISO date | Value is `"2026-06-24"` or later | ⬜ |
+
+### Suggest link tests (manual)
+| # | Steps | Expected | Pass/Fail |
+|---|-------|----------|-----------|
+| S4 | Browse to the "Suggest a topic" link with NVDA in reading mode | Announces "Suggest a topic, link" — no surrounding punctuation or stray characters read aloud | ⬜ |
+| S5 | Click the "Suggest a topic" link | Opens GitHub new-issue page with "Suggest a Hot Topic" template pre-selected, title pre-filled with `[Hot Topic] `, labels `hot-topics` and `content` pre-applied | ⬜ |
+
+### Issue template tests (manual — one-time)
+| # | Steps | Expected | Pass/Fail |
+|---|-------|----------|-----------|
+| T1 | Check `.github/ISSUE_TEMPLATE/suggest-hot-topic.md` exists | File present with correct frontmatter (`name`, `about`, `title`, `labels`) | ⬜ |
+| T2 | Open a real GitHub Issue using the template | Checkboxes render correctly; all four type options present (Tool, Concept, Protocol, Use Case) | ⬜ |
+
+### Open issues
+_None identified yet — pending verification._
+
+### Automation notes (defer to e2e redesign pass)
+_No new automated tests added for this change. Candidates to evaluate during the e2e redesign:_
+- C5: assert card count equals `config.topics.length` (import JSON at test time — also catches malformed JSON at load)
+- C6: assert every topic label from config renders as a visible link (thorough but brittle if topics change frequently)
+- C7: assert at least one card of each type is present via CSS class (ties tests to class naming — evaluate stability)
+- C8: assert live region on load contains the config topic total (low cost, high signal)
+- S1: assert "Suggest a topic" link is visible
+- S2: assert link href contains the GitHub Issues URL + template param
+- S3: assert link is keyboard-focusable
+- C2/C3 (edit → rebuild → verify): not automatable without a mid-test build step; keep manual.
+- S5: requires a live GitHub session; keep manual.
 
 ---
 

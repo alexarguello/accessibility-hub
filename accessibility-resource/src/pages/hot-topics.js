@@ -85,6 +85,15 @@ export default function HotTopicsPage() {
           {filterContext}
         </div>
 
+        {/* Suggest a topic */}
+        <p className={styles.suggestLink}>
+          Missing something?{' '}
+          <Link to="https://github.com/alexarguello/accessibility-hub/issues/new?template=suggest-hot-topic.md">
+            Suggest a topic
+          </Link>{' '}
+          via GitHub Issues.
+        </p>
+
         {/* Topic Cards */}
         <ul
           className={styles.topicsGrid}

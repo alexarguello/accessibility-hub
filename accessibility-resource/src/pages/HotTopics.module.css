@@ -23,6 +23,13 @@
   text-align: center;
 }
 
+.suggestLink {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .header {
   font-size: 2.2rem;
   font-weight: 700;
