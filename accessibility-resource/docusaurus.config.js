@@ -114,7 +114,7 @@ const config = {
             label: 'For Developers',
           },
           {
-            to: '/docs/hot-topics',
+            to: '/hot-topics',
             position: 'left',
             label: 'Hot Topics',
           },
@@ -138,7 +138,7 @@ const config = {
             items: [
               { label: 'Home', to: '/' },
               { label: 'Welcome', to: '/docs' },
-              { label: 'Hot Topics', to: '/docs/hot-topics' },
+              { label: 'Hot Topics', to: '/hot-topics' },
               { label: 'Use Cases', to: '/docs/use-cases' },
               { label: 'Resources', to: '/docs/resources' },
               { label: 'Browse by Tag', to: '/docs/tags' },

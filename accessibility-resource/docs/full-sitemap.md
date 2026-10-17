@@ -50,6 +50,7 @@ hide_title: true
   <li><a href="/accessibility-hub/docs/for-developers/engineering-gaps">Engineering Gaps & Design Patterns</a></li>
   <li><a href="/accessibility-hub/docs/for-developers/accessible-web-dev-checklist">Accessible Web Development Checklist</a></li>
   <li><a href="/accessibility-hub/docs/for-developers/external-resources">for Developers - External Resources</a></li>
+  <li><a href="/accessibility-hub/docs/for-developers/ai-agents-read-your-accessibility-tree">AI Agents Read Your Accessibility Tree, Not Your HTML</a></li>
   <li><a href="/accessibility-hub/docs/community">Community</a></li>
   <li><a href="/accessibility-hub/docs/community/forums">Forums or Discussions</a></li>
   <li><a href="/accessibility-hub/docs/community/events">Events & Hackathons</a></li>
@@ -76,7 +77,7 @@ hide_title: true
   <li><a href="/accessibility-hub/docs/community-contributions/whats-missing">What’s Missing?</a></li>
   <li><a href="/accessibility-hub/docs/community-contributions/getting-started">Getting Started</a></li>
   <li><a href="/accessibility-hub/docs/community-contributions/to-do-list">To-Do List</a></li>
-  <li><a href="/accessibility-hub/docs/community-contributions/FRONTMATTER_GUIDE">Metadata for Resources (Frontmatter) guide</a></li>
+  <li><a href="/accessibility-hub/docs/community-contributions/FRONTMATTER_GUIDE">Frontmatter Guide</a></li>
   <li><a href="/accessibility-hub/docs/community-contributions/TOPICS_GUIDE">Topics Guide</a></li>
   <li><a href="/accessibility-hub/docs/unmet-needs">Unmet Needs</a></li>
   <li><a href="/accessibility-hub/docs/unmet-needs/unmet-needs">Unmet Needs & Future Possibilities</a></li>
@@ -150,7 +151,7 @@ for_users_by_disability_type_speech_language_stroke_profile_questionnaire_md[["S
 for_users_by_disability_type_speech_language --> for_users_by_disability_type_speech_language_stroke_profile_questionnaire_md
 for_users_by_disability_type_vision["Vision"]
 for_users_by_disability_type --> for_users_by_disability_type_vision
-for_users_by_disability_type_vision_screen_readers_md[["Screen Readers"]]
+for_users_by_disability_type_vision_screen_readers_md["Screen Readers"]
 for_users_by_disability_type_vision --> for_users_by_disability_type_vision_screen_readers_md
 for_users_by_disability_type_vision_e_readers_md[["Accessible E-Readers"]]
 for_users_by_disability_type_vision --> for_users_by_disability_type_vision_e_readers_md
@@ -160,9 +161,9 @@ for_users_by_disability_type_vision_companies_md[["Companies Committed to Access
 for_users_by_disability_type_vision --> for_users_by_disability_type_vision_companies_md
 about["About"]
 root --> about
-about_overview_md[["Accessibility Hub Overview"]]
+about_overview_md["Accessibility Hub Overview"]
 about --> about_overview_md
-about_about_md[["About Accessibility Hub"]]
+about_about_md>"About Accessibility Hub"]
 about --> about_about_md
 about_legend_md["Map Legend"]
 about --> about_legend_md
@@ -172,9 +173,9 @@ about_dasharray_test_md["Dasharray Test"]
 about --> about_dasharray_test_md
 for_developers["For Developers"]
 root --> for_developers
-for_developers_accessible_api_design_guide_md[["Accessible API Design for Developers"]]
+for_developers_accessible_api_design_guide_md["Accessible API Design for Developers"]
 for_developers --> for_developers_accessible_api_design_guide_md
-for_developers_how_to_contribute_md[["How to contribute"]]
+for_developers_how_to_contribute_md["How to contribute"]
 for_developers --> for_developers_how_to_contribute_md
 for_developers_apis_sdks_md[["Accessibility APIs & SDKs"]]
 for_developers --> for_developers_apis_sdks_md
@@ -182,10 +183,12 @@ for_developers_case_studies_md[["Developer Case Studies"]]
 for_developers --> for_developers_case_studies_md
 for_developers_engineering_gaps_md[["Engineering Gaps & Design Patterns"]]
 for_developers --> for_developers_engineering_gaps_md
-for_developers_accessible_web_dev_checklist_md[["Accessible Web Development Checklist"]]
+for_developers_accessible_web_dev_checklist_md["Accessible Web Development Checklist"]
 for_developers --> for_developers_accessible_web_dev_checklist_md
 for_developers_external_resources_md[["for Developers - External Resources"]]
 for_developers --> for_developers_external_resources_md
+for_developers_ai_agents_read_your_accessibility_tree_md["AI Agents Read Your Accessibility Tree, Not Your HTML"]
+for_developers --> for_developers_ai_agents_read_your_accessibility_tree_md
 community["Community"]
 root --> community
 community_forums_md[["Forums or Discussions"]]
@@ -238,7 +241,7 @@ community_contributions_getting_started_md[["Getting Started"]]
 community_contributions --> community_contributions_getting_started_md
 community_contributions_to_do_list_md[["To-Do List"]]
 community_contributions --> community_contributions_to_do_list_md
-community_contributions_FRONTMATTER_GUIDE_md["Metadata for Resources (Frontmatter) guide"]
+community_contributions_FRONTMATTER_GUIDE_md["Frontmatter Guide"]
 community_contributions --> community_contributions_FRONTMATTER_GUIDE_md
 community_contributions_TOPICS_GUIDE_md["Topics Guide"]
 community_contributions --> community_contributions_TOPICS_GUIDE_md
@@ -322,6 +325,7 @@ click for_developers_case_studies_md "/accessibility-hub/docs/for-developers/cas
 click for_developers_engineering_gaps_md "/accessibility-hub/docs/for-developers/engineering-gaps"
 click for_developers_accessible_web_dev_checklist_md "/accessibility-hub/docs/for-developers/accessible-web-dev-checklist"
 click for_developers_external_resources_md "/accessibility-hub/docs/for-developers/external-resources"
+click for_developers_ai_agents_read_your_accessibility_tree_md "/accessibility-hub/docs/for-developers/ai-agents-read-your-accessibility-tree"
 click community "/accessibility-hub/docs/community"
 click community_forums_md "/accessibility-hub/docs/community/forums"
 click community_events_md "/accessibility-hub/docs/community/events"
@@ -427,7 +431,7 @@ classDef custom21 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharra
 class for_users_by_disability_type_speech_language_stroke_profile_questionnaire_md custom21;
 classDef custom22 fill:#e6fffa,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#0f766e;
 class for_users_by_disability_type_vision custom22;
-classDef custom23 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+classDef custom23 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
 class for_users_by_disability_type_vision_screen_readers_md custom23;
 classDef custom24 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
 class for_users_by_disability_type_vision_e_readers_md custom24;
@@ -437,9 +441,9 @@ classDef custom26 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharra
 class for_users_by_disability_type_vision_companies_md custom26;
 classDef custom27 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
 class about custom27;
-classDef custom28 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+classDef custom28 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
 class about_overview_md custom28;
-classDef custom29 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+classDef custom29 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
 class about_about_md custom29;
 classDef custom30 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
 class about_legend_md custom30;
@@ -449,9 +453,9 @@ classDef custom32 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharra
 class about_dasharray_test_md custom32;
 classDef custom33 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
 class for_developers custom33;
-classDef custom34 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+classDef custom34 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
 class for_developers_accessible_api_design_guide_md custom34;
-classDef custom35 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+classDef custom35 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
 class for_developers_how_to_contribute_md custom35;
 classDef custom36 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
 class for_developers_apis_sdks_md custom36;
@@ -459,106 +463,108 @@ classDef custom37 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharra
 class for_developers_case_studies_md custom37;
 classDef custom38 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
 class for_developers_engineering_gaps_md custom38;
-classDef custom39 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+classDef custom39 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
 class for_developers_accessible_web_dev_checklist_md custom39;
 classDef custom40 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
 class for_developers_external_resources_md custom40;
-classDef custom41 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class community custom41;
-classDef custom42 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_forums_md custom42;
+classDef custom41 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
+class for_developers_ai_agents_read_your_accessibility_tree_md custom41;
+classDef custom42 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class community custom42;
 classDef custom43 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_events_md custom43;
+class community_forums_md custom43;
 classDef custom44 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_success_stories_md custom44;
+class community_events_md custom44;
 classDef custom45 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_personas_md custom45;
-classDef custom46 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class resources custom46;
-classDef custom47 fill:#f3e8fd,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#5b21b6;
-class resources_learning_paths custom47;
-classDef custom48 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_learning_paths_courses_programs_md custom48;
+class community_success_stories_md custom45;
+classDef custom46 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class community_personas_md custom46;
+classDef custom47 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class resources custom47;
+classDef custom48 fill:#f3e8fd,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#5b21b6;
+class resources_learning_paths custom48;
 classDef custom49 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_learning_paths_quickstart_guide_md custom49;
-classDef custom50 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
-class resources_learning_paths_certifications_md custom50;
-classDef custom51 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class resources_research_md custom51;
+class resources_learning_paths_courses_programs_md custom49;
+classDef custom50 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
+class resources_learning_paths_quickstart_guide_md custom50;
+classDef custom51 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
+class resources_learning_paths_certifications_md custom51;
 classDef custom52 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class resources_legal_standards_md custom52;
+class resources_research_md custom52;
 classDef custom53 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class resources_tool_directory_md custom53;
-classDef custom54 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
-class resources_conferences_events_md custom54;
-classDef custom55 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_communities_groups_md custom55;
+class resources_legal_standards_md custom53;
+classDef custom54 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class resources_tool_directory_md custom54;
+classDef custom55 fill:#e6f4ea,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#205d3b;
+class resources_conferences_events_md custom55;
 classDef custom56 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class resources_free_oss_resources_md custom56;
-classDef custom57 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class use_cases custom57;
-classDef custom58 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class use_cases_work_md custom58;
+class resources_communities_groups_md custom56;
+classDef custom57 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
+class resources_free_oss_resources_md custom57;
+classDef custom58 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class use_cases custom58;
 classDef custom59 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class use_cases_home_md custom59;
+class use_cases_work_md custom59;
 classDef custom60 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class use_cases_future_md custom60;
-classDef custom61 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class community_contributions custom61;
-classDef custom62 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class community_contributions_contributing_md custom62;
-classDef custom63 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_interview_template_md custom63;
+class use_cases_home_md custom60;
+classDef custom61 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class use_cases_future_md custom61;
+classDef custom62 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class community_contributions custom62;
+classDef custom63 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class community_contributions_contributing_md custom63;
 classDef custom64 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_whats_missing_md custom64;
+class community_contributions_interview_template_md custom64;
 classDef custom65 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_getting_started_md custom65;
+class community_contributions_whats_missing_md custom65;
 classDef custom66 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class community_contributions_to_do_list_md custom66;
-classDef custom67 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class community_contributions_FRONTMATTER_GUIDE_md custom67;
+class community_contributions_getting_started_md custom66;
+classDef custom67 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class community_contributions_to_do_list_md custom67;
 classDef custom68 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
-class community_contributions_TOPICS_GUIDE_md custom68;
-classDef custom69 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class unmet_needs custom69;
-classDef custom70 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
-class unmet_needs_unmet_needs_md custom70;
-classDef custom71 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
-class hot_topics custom71;
-classDef custom72 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
-class hot_topics_accessibility_audit_md custom72;
+class community_contributions_FRONTMATTER_GUIDE_md custom68;
+classDef custom69 fill:#e6f4ea,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#205d3b;
+class community_contributions_TOPICS_GUIDE_md custom69;
+classDef custom70 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class unmet_needs custom70;
+classDef custom71 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class unmet_needs_unmet_needs_md custom71;
+classDef custom72 fill:#e7f0fd,stroke:#b6c8f3,stroke-width:1.5px,stroke-dasharray:0,color:#1e40af;
+class hot_topics custom72;
 classDef custom73 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
-class hot_topics_accessibility_testing_md custom73;
+class hot_topics_accessibility_audit_md custom73;
 classDef custom74 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
-class hot_topics_alt_text_ai_md custom74;
-classDef custom75 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_aria_roles_md custom75;
+class hot_topics_accessibility_testing_md custom74;
+classDef custom75 fill:#fff0e6,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#7c2d12;
+class hot_topics_alt_text_ai_md custom75;
 classDef custom76 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_bug_bounty_md custom76;
+class hot_topics_aria_roles_md custom76;
 classDef custom77 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_color_contrast_md custom77;
+class hot_topics_bug_bounty_md custom77;
 classDef custom78 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_dyslexia_support_md custom78;
+class hot_topics_color_contrast_md custom78;
 classDef custom79 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_github_access_tools_md custom79;
+class hot_topics_dyslexia_support_md custom79;
 classDef custom80 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_inclusive_design_md custom80;
+class hot_topics_github_access_tools_md custom80;
 classDef custom81 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_langchain4j_tools_md custom81;
-classDef custom82 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_nlp_assist_md custom82;
-classDef custom83 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_otter_ai_md custom83;
+class hot_topics_inclusive_design_md custom81;
+classDef custom82 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class hot_topics_langchain4j_tools_md custom82;
+classDef custom83 fill:#FAEEDA,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#78350f;
+class hot_topics_nlp_assist_md custom83;
 classDef custom84 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_real_time_captions_md custom84;
+class hot_topics_otter_ai_md custom84;
 classDef custom85 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_seeing_ai_md custom85;
+class hot_topics_real_time_captions_md custom85;
 classDef custom86 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
-class hot_topics_smart_homes_md custom86;
-classDef custom87 fill:#f1f5f9,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#1e293b;
-class hot_topics_springai_assistive_md custom87;
-classDef custom88 fill:#f1f5f9,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#1e293b;
-class hot_topics_voice_navigation_md custom88;
+class hot_topics_seeing_ai_md custom86;
+classDef custom87 fill:#FAEEDA,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#78350f;
+class hot_topics_smart_homes_md custom87;
+classDef custom88 fill:#f1f5f9,stroke:#b6c8f3,stroke-width:2.5px,stroke-dasharray:6 3 1 3,color:#1e293b;
+class hot_topics_springai_assistive_md custom88;
+classDef custom89 fill:#f1f5f9,stroke:#b4dfc5,stroke-width:2.5px,stroke-dasharray:1 5,color:#1e293b;
+class hot_topics_voice_navigation_md custom89;
 linkStyle default interpolate basis
 ```
 
