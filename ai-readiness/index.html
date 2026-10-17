@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>a11y-ai-readiness: Results Dashboard</title>
+<style>
+:root { color-scheme: light; }
+body { font-family: system-ui, -apple-system, sans-serif; max-width: 60rem; margin: 2rem auto; padding: 0 1.5rem; color: #1a1a1a; background: #fff; }
+header { margin-bottom: 2rem; }
+h1 { margin-bottom: 0.25rem; }
+.subtitle { color: #555; margin-top: 0; }
+h2 { border-bottom: 2px solid #eee; padding-bottom: 0.4rem; }
+.lead { color: #444; }
+.note { color: #777; font-size: 0.88em; font-style: italic; }
+section { margin-bottom: 3rem; }
+
+.headline { background: #f7f9fc; border: 1px solid #dde5f0; border-radius: 12px; padding: 1.75rem; }
+.headline .claim { font-size: 1.25rem; font-weight: 500; margin-top: 0; line-height: 1.5; }
+table.matrix { width: 100%; border-collapse: collapse; margin: 1.25rem 0; }
+table.matrix th, table.matrix td { text-align: left; padding: 0.7rem 0.6rem; border-bottom: 1px solid #dde5f0; }
+table.matrix td.consumer { font-weight: 600; }
+.matrix-badge { font-size: 0.95em; padding: 0.3rem 0.7rem; }
+.nvda-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+.nvda-card { background: #fff; border: 1px solid #dde5f0; border-radius: 8px; padding: 0.9rem 1rem; }
+.nvda-card h4 { margin: 0 0 0.4rem; font-family: ui-monospace, monospace; }
+.nvda-card p { margin: 0; color: #444; font-size: 0.92em; line-height: 1.45; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1.5rem; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 1.25rem; }
+.card h3 { margin-top: 0; text-transform: capitalize; }
+.card .model { font-weight: normal; color: #777; font-size: 0.85em; }
+.variant-row { display: grid; grid-template-columns: 6rem 1fr auto auto auto; align-items: center; gap: 0.6rem; padding: 0.5rem 0; border-top: 1px solid #f0f0f0; }
+.variant-row:first-of-type { border-top: none; }
+.variant-name { font-family: ui-monospace, monospace; font-weight: 600; }
+.metric { font-variant-numeric: tabular-nums; color: #333; }
+.cost { font-weight: 600; }
+.badge { padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.8em; font-weight: 600; display: inline-block; }
+.badge.success { background: #e3f7e8; color: #1c7a34; }
+.badge.fail { background: #fde8e8; color: #b3261e; }
+.badge.partial { background: #fff4e0; color: #a15c00; }
+.badge.missing { background: #eee; color: #777; }
+.bar-track { grid-column: 1 / -1; height: 6px; background: #f0f0f0; border-radius: 3px; overflow: hidden; }
+.bar { height: 100%; background: #0b5fff; }
+.defect-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.defect-table th, .defect-table td { text-align: left; padding: 0.7rem 0.6rem; border-bottom: 1px solid #eee; vertical-align: top; font-size: 0.92em; line-height: 1.45; }
+.defect-table td.defect { font-weight: 600; width: 22%; }
+.fix-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.fix-table th, .fix-table td { text-align: left; padding: 0.7rem 0.6rem; border-bottom: 1px solid #eee; vertical-align: top; font-size: 0.9em; line-height: 1.4; }
+.fix-table td.defect { font-weight: 600; width: 16%; }
+.fix-table th:nth-child(5), .fix-table td:nth-child(5) { width: 14%; }
+.fix-table pre { margin: 0; font-family: ui-monospace, monospace; font-size: 0.85em; white-space: pre-wrap; padding: 0.5rem; border-radius: 6px; }
+.code-bad { background: #fdecea; color: #7a1c15; }
+.code-good { background: #e3f7e8; color: #14532d; }
+.fix-table a { color: #0b5fff; }
+.h2h-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.h2h-card { border: 1px solid #ddd; border-radius: 8px; padding: 1.25rem; }
+.h2h-card h3 { margin-top: 0; font-family: ui-monospace, monospace; }
+.h2h-row { padding: 0.6rem 0; border-top: 1px solid #f0f0f0; }
+.h2h-row:first-of-type { border-top: none; }
+.h2h-top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+.h2h-metric { color: #555; font-size: 0.9em; flex: 1; }
+.h2h-value { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.h2h-ratio { color: #a15c00; font-size: 0.85em; font-weight: 600; margin-top: 0.2rem; text-align: right; }
+.tree-compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.tree-col h4 { margin: 0 0 0.4rem; font-family: ui-monospace, monospace; font-weight: 600; }
+.tree-col pre { margin: 0; padding: 0.9rem; border-radius: 8px; font-family: ui-monospace, monospace; font-size: 0.78em; line-height: 1.5; white-space: pre-wrap; word-break: break-word; max-height: 26rem; overflow-y: auto; }
+.tree-good { background: #f0f9f2; color: #14532d; border: 1px solid #cdebd5; }
+.tree-bad { background: #fdecea; color: #7a1c15; border: 1px solid #f6cdc8; }
+.tree-details { margin-top: 1.25rem; }
+.tree-details summary { cursor: pointer; color: #0b5fff; font-weight: 600; font-size: 0.92em; }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.steps-card { border: 1px solid #ddd; border-radius: 8px; padding: 1.25rem; }
+.steps-card h3 { margin-top: 0; font-family: ui-monospace, monospace; }
+.steps-table { width: 100%; border-collapse: collapse; font-size: 0.88em; }
+.steps-table th, .steps-table td { text-align: left; padding: 0.5rem 0.4rem; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+.steps-table td:last-child { color: #777; font-size: 0.9em; white-space: nowrap; }
+.axe-table { width: 100%; border-collapse: collapse; }
+.axe-table th, .axe-table td { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid #eee; }
+.axe-table tr.clean td:nth-child(2) { color: #1c7a34; font-weight: 600; }
+.axe-table tr.violations td:nth-child(2) { color: #b3261e; font-weight: 600; }
+.axe-table tr.missing { color: #999; font-style: italic; }
+footer { color: #888; font-size: 0.85em; border-top: 1px solid #eee; padding-top: 1rem; }
+code { background: #f5f5f5; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+
+
+.hubbar { border-bottom: 2px solid #ddd; margin: -1rem 0 2rem; padding-bottom: 1rem; }
+.hubbar p { margin: 0 0 .6rem; color: #555; font-size: .95rem; }
+.hubbar ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.4rem;
+             margin: 0; padding: 0; }
+.hubbar a { color: #0043CE; text-decoration: underline; text-underline-offset: 3px; }
+.hubbar a:hover { text-decoration-thickness: 2px; }
+.hubbar a:focus-visible, main a:focus-visible { outline: 3px solid #0043CE;
+             outline-offset: 2px; border-radius: 2px; }
+@media (max-width: 40rem) { .hubbar ul { gap: .9rem; flex-direction: column; } }
+</style>
+</head>
+<body>
+<nav class="hubbar" aria-label="Accessibility Hub">
+    <p>From the talk <em>Why AI Agents Struggle With Your Java Web App</em> &mdash;
+       JCON at IBM TechXchange, October 2026.</p>
+    <ul>
+        <li><a href="https://alexarguello.github.io/accessibility-hub/">Accessibility Hub home</a></li>
+        <li><a href="https://alexarguello.github.io/accessibility-hub/docs/for-developers/accessible-api-design-guide/">Accessible API design for developers</a></li>
+        <li><a href="https://alexarguello.github.io/accessibility-hub/docs/resources/">All resources</a></li>
+        <li><a href="https://github.com/alexarguello/a11y-ai-readiness">Source, and how to run it yourself</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>a11y-ai-readiness</h1>
+    <p class="subtitle">Same backend and functionality on both pages. Only the code behind them is different. Generated 2026-10-16 18:29:30 EDT</p>
+</header>
+<main>
+    <section class="headline">
+        <p class="claim">Screen readers and AI agents do not see a page the way a sighted person does. Both rely on hidden information that says what each part of the page is and does. When that information is missing, <strong>both a screen reader user and an AI agent get stuck in exactly the same way</strong>.</p>
+        <p class="lead">Both pages below look the same and do the same thing. The only difference: <code>/accessible</code> has proper labels and structure behind it, and <code>/inaccessible</code> is missing them. Every row tried the exact same task: register for a workshop.</p>
+        <table class="matrix">
+            <thead><tr><th>Who tried it</th><th>/accessible</th><th>/inaccessible</th></tr></thead>
+            <tbody>
+            <tr>
+    <td class="consumer">Screen reader (NVDA)</td>
+    <td><span class="badge matrix-badge success">&#10003; completed</span>
+</td>
+    <td><span class="badge matrix-badge fail">&#10007; failed</span>
+</td>
+</tr>
+<tr>
+    <td class="consumer">AI agent using Grok</td>
+    <td><span class="badge matrix-badge success">&#10003; completed</span>
+</td>
+    <td><span class="badge matrix-badge fail">&#10007; failed</span>
+</td>
+</tr>
+<tr>
+    <td class="consumer">AI agent using Claude</td>
+    <td><span class="badge matrix-badge success">&#10003; completed</span>
+</td>
+    <td><span class="badge matrix-badge fail">&#10007; failed</span>
+</td>
+</tr>
+
+            </tbody>
+        </table>
+        <p class="note">NVDA is free screen-reading software used by blind and low-vision people to browse the web. Grok and Claude are two unrelated AI companies' models, tested separately, so this isn't one AI's quirk.</p>
+        <div class="nvda-cards">
+        <div class="nvda-card">
+    <h4>/accessible</h4>
+    <p>Completed the whole task using only the keyboard. When the email was entered wrong, the screen reader announced the problem right away, without the user needing to search for it.</p>
+</div>
+<div class="nvda-card">
+    <h4>/inaccessible</h4>
+    <p>Using only the keyboard, the task could not even be started: after the filter box, the Tab key jumps straight past the rest of the page, with no way to reach the Register link. Even with a mouse to get into the form, the meal-preference dropdown could never be operated, and the screen reader never announced why the form kept failing to submit.</p>
+</div>
+
+        </div>
+    </section>
+    <section>
+        <h2>What the accessibility tree actually looks like</h2>
+        <p class="lead">This isn't a description of the difference between the two pages. It's the literal, unedited output of the same call (<code>ariaSnapshot()</code>) that the AI agent's only "eyes" use to read a page, captured straight from the running app. A screen reader walks the same tree.</p>
+        <div class="tree-compare">
+<div class="tree-col">
+    <h4>/accessible/register/accessible-forms</h4>
+    <pre class="tree-good">- banner:
+  - navigation "breadcrumb":
+    - link "← Back to sessions":
+      - /url: /accessible
+  - 'heading "Register: Building Accessible Forms in Java" [level=1]'
+  - paragraph: A. Rivera — Tue 10:00
+- main:
+  - text: Full name
+  - textbox "Full name"
+  - text: Email address
+  - textbox "Email address"
+  - text: Meal preference
+  - combobox "Meal preference":
+    - option "Choose one…" [selected]
+    - option "Standard"
+    - option "Vegetarian"
+    - option "Vegan"
+    - option "Gluten-free"
+  - checkbox "I accept the workshop terms and conditions"
+  - text: I accept the workshop terms and conditions
+  - button "Complete registration"</pre>
+</div>
+<div class="tree-col">
+    <h4>/inaccessible/register/accessible-forms</h4>
+    <pre class="tree-bad">- text: "← Back to sessions Register: Building Accessible Forms in Java"
+- paragraph: A. Rivera — Tue 10:00
+- textbox "Full name"
+- textbox "Email address"
+- text: Meal preference…
+- checkbox
+- text: I accept the workshop terms and conditions
+- button "Complete registration"</pre>
+</div>
+
+</div>
+<p class="note">Notice what's missing on the right: no landmarks, no heading, the whole header collapsed into one unstructured line of text, the dropdown gone entirely, and the checkbox with no name at all. Nothing here is invisible; it's exactly what gets handed to whatever is reading the tree instead of the pixels.</p>
+<details class="tree-details">
+    <summary>Also see the session list's tree</summary>
+    <div class="tree-compare">
+    <div class="tree-col">
+    <h4>/accessible</h4>
+    <pre class="tree-good">- banner:
+  - heading "JCON Workshops" [level=1]
+- main:
+  - text: Filter sessions
+  - searchbox "Filter sessions"
+  - button "Filter"
+  - table "JCON workshop sessions":
+    - caption: JCON workshop sessions
+    - rowgroup:
+      - row "Title Speaker Time Format Action":
+        - columnheader "Title"
+        - columnheader "Speaker"
+        - columnheader "Time"
+        - columnheader "Format"
+        - columnheader "Action"
+    - rowgroup:
+      - row "Building Accessible Forms in Java A. Rivera Tue 10:00 In-person session Register for Building Accessible Forms in Java":
+        - cell "Building Accessible Forms in Java"
+        - cell "A. Rivera"
+        - cell "Tue 10:00"
+        - cell "In-person session":
+          - img "In-person session"
+        - cell "Register for Building Accessible Forms in Java":
+          - link "Register for Building Accessible Forms in Java":
+            - /url: /accessible/register/accessible-forms
+      - 'row "Spring AI: Building Tool-Calling Agents J. Okafor Tue 13:30 In-person session Register for Spring AI: Building Tool-Calling Agents"':
+        - 'cell "Spring AI: Building Tool-Calling Agents"'
+        - cell "J. Okafor"
+        - cell "Tue 13:30"
+        - cell "In-person session":
+          - img "In-person session"
+        - 'cell "Register for Spring AI: Building Tool-Calling Agents"':
+          - 'link "Register for Spring AI: Building Tool-Calling Agents"':
+            - /url: /accessible/register/spring-ai-agents
+      - 'row "Playwright for Java: Role-Based Locators S. Nakamura Wed 09:00 In-person session Register for Playwright for Java: Role-Based Locators"':
+        - 'cell "Playwright for Java: Role-Based Locators"'
+        - cell "S. Nakamura"
+        - cell "Wed 09:00"
+        - cell "In-person session":
+          - img "In-person session"
+        - 'cell "Register for Playwright for Java: Role-Based Locators"':
+          - 'link "Register for Playwright for Java: Role-Based Locators"':
+            - /url: /accessible/register/playwright-java
+      - row "Virtual Threads in Production M. Lindqvist Wed 11:15 In-person session Register for Virtual Threads in Production":
+        - cell "Virtual Threads in Production"
+        - cell "M. Lindqvist"
+        - cell "Wed 11:15"
+        - cell "In-person session":
+          - img "In-person session"
+        - cell "Register for Virtual Threads in Production":
+          - link "Register for Virtual Threads in Production":
+            - /url: /accessible/register/virtual-threads
+      - 'row "Vaadin Components: Accessible by Default P. Dubois Wed 14:00 In-person session Register for Vaadin Components: Accessible by Default"':
+        - 'cell "Vaadin Components: Accessible by Default"'
+        - cell "P. Dubois"
+        - cell "Wed 14:00"
+        - cell "In-person session":
+          - img "In-person session"
+        - 'cell "Register for Vaadin Components: Accessible by Default"':
+          - 'link "Register for Vaadin Components: Accessible by Default"':
+            - /url: /accessible/register/vaadin-a11y</pre>
+</div>
+<div class="tree-col">
+    <h4>/inaccessible</h4>
+    <pre class="tree-bad">- text: JCON Workshops
+- searchbox "Filter sessions…"
+- text: Filter Title Speaker Time Format Action Building Accessible Forms in Java A. Rivera Tue 10:00
+- img
+- text: "Register Spring AI: Building Tool-Calling Agents J. Okafor Tue 13:30"
+- img
+- text: "Register Playwright for Java: Role-Based Locators S. Nakamura Wed 09:00"
+- img
+- text: Register Virtual Threads in Production M. Lindqvist Wed 11:15
+- img
+- text: "Register Vaadin Components: Accessible by Default P. Dubois Wed 14:00"
+- img
+- text: Register</pre>
+</div>
+
+    </div>
+</details>
+
+    </section>
+    <section>
+        <h2>One problem, two people it breaks</h2>
+        <p class="lead">Four real problems from the broken page, and what each one breaks. This is what "fixing accessibility also helps AI agents" looks like in practice.</p>
+        <table class="defect-table">
+            <thead><tr><th>What's missing</th><th>Screen reader</th><th>AI agent</th></tr></thead>
+            <tbody>
+            <tr>
+    <td class="defect">The "Register" link isn't a real link. It only looks like one.</td>
+    <td>Pressing Tab to move through the page skips right over it. There is no way to even open the registration form.</td>
+    <td>The AI looks for something it can recognize as a button or link named "Register" and finds nothing. One AI guessed the web address instead and got in that way; the other gave up and explained it could not find a way in.</td>
+</tr>
+<tr>
+    <td class="defect">The Name and Email boxes show hint text, but have no real label.</td>
+    <td>The screen reader can read the hint text once, but it disappears the moment typing starts, and there is no permanent label to fall back on.</td>
+    <td>The AI's normal way of finding "the field labeled Email" does not work, because there is no real label, only the same fragile hint text the screen reader also has to rely on.</td>
+</tr>
+<tr>
+    <td class="defect">The meal-preference dropdown isn't a real dropdown. It is just styled to look like one.</td>
+    <td>It cannot be reached with the keyboard at all. Even with a mouse, nothing useful is announced: no sign it is a choice to make, no list of options.</td>
+    <td>The AI tries every reasonable way to select an option, and none of them work. There is simply no way to choose a meal preference.</td>
+</tr>
+<tr>
+    <td class="defect">When something is wrong with the form, the only signal is a red border.</td>
+    <td>Confirmed live: after several failed attempts to submit, nothing was announced explaining what was wrong. The user has no way to know why the form keeps rejecting them.</td>
+    <td>When the AI submits and it fails, it gets no explanation either, just the same page again with no sign of what needs fixing.</td>
+</tr>
+
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Independent confirmation this isn't rigged</h2>
+        <p class="lead">We also ran an automated accessibility checker (the same engine behind the Lighthouse accessibility audit built into Edge and Chrome DevTools) against both pages, so this isn't just something we're claiming. It only found part of the real problem, though: it can only flag mistakes in code that at least tries to be a real button, field, or link. Code that never tries at all, like the fake dropdown above, is invisible to it. That gap is exactly why testing with a real screen reader and real AI agents still matters, which is what the rest of this page is about.</p>
+        <table class="axe-table">
+            <thead><tr><th>Page</th><th>Problems found</th><th>Elements affected</th><th>Details</th></tr></thead>
+            <tbody>
+            <tr class="clean"><td>/accessible sessions</td><td>0</td><td>0</td><td>none</td></tr>
+<tr class="clean"><td>/accessible register</td><td>0</td><td>0</td><td>none</td></tr>
+<tr class="violations"><td>/inaccessible sessions</td><td>4</td><td>9</td><td>image-alt, landmark-one-main, page-has-heading-one, region</td></tr>
+<tr class="violations"><td>/inaccessible register</td><td>4</td><td>9</td><td>label, landmark-one-main, page-has-heading-one, region</td></tr>
+
+            </tbody>
+        </table>
+        <p class="note">Run as a Lighthouse audit in Edge DevTools rather than programmatically, the broken register form scores <strong>91 out of 100</strong> for accessibility (Lighthouse 13.4.1). Be careful comparing counts: the four findings listed above for that page &mdash; a missing label, no main landmark, no level-one heading, no region &mdash; are not the same four defects this page is about. Of those four, the scan flagged only the labels, and only partly. A high score is not a tested page.</p>
+    </section>
+    <section>
+        <h2>Why it costs more when it fails</h2>
+        <p class="lead">Same task, same AI, only the page's markup is different. Every gap in cost and success below comes from that one difference.</p>
+        <p class="note">A "call" is one action the AI took, like reading the page or clicking something. "Tokens" are roughly how much text the AI had to read and write; more tokens means more time and more cost for the same task.</p>
+        <div class="cards">
+        <div class="card">
+    <h3>xai <span class="model">grok-4.6</span></h3>
+    <div class="variant-row">
+    <span class="variant-name">/accessible</span>
+    <span class="badge success">100% success (5 runs)</span>
+    <span class="metric">11 calls</span>
+    <span class="metric">36k tokens</span>
+    <span class="metric cost">$0.071</span>
+    <div class="bar-track"><div class="bar" style="width:28.9%"></div></div>
+</div>
+<div class="variant-row">
+    <span class="variant-name">/inaccessible</span>
+    <span class="badge fail">0% success (5 runs)</span>
+    <span class="metric">33 calls</span>
+    <span class="metric">127k tokens</span>
+    <span class="metric cost">$0.247</span>
+    <div class="bar-track"><div class="bar" style="width:100.0%"></div></div>
+</div>
+
+</div>
+<div class="card">
+    <h3>anthropic <span class="model">claude-sonnet-5</span></h3>
+    <div class="variant-row">
+    <span class="variant-name">/accessible</span>
+    <span class="badge success">100% success (5 runs)</span>
+    <span class="metric">11 calls</span>
+    <span class="metric">47k tokens</span>
+    <span class="metric cost">$0.104</span>
+    <div class="bar-track"><div class="bar" style="width:42.2%"></div></div>
+</div>
+<div class="variant-row">
+    <span class="variant-name">/inaccessible</span>
+    <span class="badge fail">0% success (5 runs)</span>
+    <span class="metric">3 calls</span>
+    <span class="metric">11k tokens</span>
+    <span class="metric cost">$0.027</span>
+    <div class="bar-track"><div class="bar" style="width:10.9%"></div></div>
+</div>
+
+</div>
+
+        </div>
+    </section>
+    <section>
+        <h2>Grok vs. Claude: who costs more, and where</h2>
+        <p class="lead">Two unrelated AI companies, tested separately with the same task on the same two pages. Whichever one looks "worse" completely flips depending on which page it's given, which is exactly the point: the difference is the page's markup, not the AI.</p>
+        <div class="h2h-grid">
+        <div class="h2h-card">
+    <h3>/accessible</h3>
+    <div class="h2h-row">
+    <div class="h2h-top">
+        <span class="h2h-metric">Actions taken</span>
+        <span class="h2h-value">Grok 11</span>
+        <span class="h2h-value">Claude 11</span>
+    </div>
+    <div class="h2h-ratio">about the same</div>
+</div>
+
+    <div class="h2h-row">
+    <div class="h2h-top">
+        <span class="h2h-metric">Time to finish (or give up)</span>
+        <span class="h2h-value">Grok 36s</span>
+        <span class="h2h-value">Claude 21s</span>
+    </div>
+    <div class="h2h-ratio">Grok took 1.7x longer</div>
+</div>
+
+    <div class="h2h-row">
+    <div class="h2h-top">
+        <span class="h2h-metric">Cost</span>
+        <span class="h2h-value">Grok $0.071</span>
+        <span class="h2h-value">Claude $0.104</span>
+    </div>
+    <div class="h2h-ratio">Claude cost 1.5x more</div>
+</div>
+
+</div>
+<div class="h2h-card">
+    <h3>/inaccessible</h3>
+    <div class="h2h-row">
+    <div class="h2h-top">
+        <span class="h2h-metric">Actions taken</span>
+        <span class="h2h-value">Grok 33</span>
+        <span class="h2h-value">Claude 3</span>
+    </div>
+    <div class="h2h-ratio">Grok took 11.0x more actions</div>
+</div>
+
+    <div class="h2h-row">
+    <div class="h2h-top">
+        <span class="h2h-metric">Time to finish (or give up)</span>
+        <span class="h2h-value">Grok 180s</span>
+        <span class="h2h-value">Claude 18s</span>
+    </div>
+    <div class="h2h-ratio">Grok took 10.1x longer</div>
+</div>
+
+    <div class="h2h-row">
+    <div class="h2h-top">
+        <span class="h2h-metric">Cost</span>
+        <span class="h2h-value">Grok $0.247</span>
+        <span class="h2h-value">Claude $0.027</span>
+    </div>
+    <div class="h2h-ratio">Grok cost 9.2x more</div>
+</div>
+
+</div>
+
+        </div>
+        <p class="note">Neither AI completed the broken page, but they failed in opposite ways. Claude gave up in 3 tries and 18 seconds, the cheapest outcome in this whole comparison. Grok kept trying for 33 actions and 3 minutes before running out of ideas, the most expensive outcome. Failing fast and failing slow both still mean a lost transaction; one is just quieter about it.</p>
+    </section>
+    <section>
+        <h2>Screen reader vs. AI agent: how far did each one get</h2>
+        <p class="lead">The same "register for a workshop" task, tried by a real screen reader user and by both AI agents, on both pages. All three depend on the same missing information, so all three get stuck at roughly the same place on the broken page.</p>
+        <div class="steps-grid">
+        <div class="steps-card">
+    <h3>/accessible</h3>
+    <table class="steps-table">
+        <thead><tr><th>Who tried it</th><th>Completed</th><th>Actions</th><th>Sample size</th></tr></thead>
+        <tbody>
+        <tr>
+    <td>Screen reader (NVDA)</td>
+    <td><span class="badge matrix-badge success">&#10003; completed</span>
+</td>
+    <td>61 keystrokes to a confirmation code (40 typed, 21 navigation and activation)</td>
+    <td>1 live run</td>
+</tr>
+<tr>
+    <td>Grok</td>
+    <td><span class="badge matrix-badge success">&#10003; completed</span>
+</td>
+    <td>11 tool calls to a confirmation code</td>
+    <td>median of 5 runs</td>
+</tr>
+<tr>
+    <td>Claude</td>
+    <td><span class="badge matrix-badge success">&#10003; completed</span>
+</td>
+    <td>11 tool calls to a confirmation code</td>
+    <td>median of 5 runs</td>
+</tr>
+
+        </tbody>
+    </table>
+</div>
+<div class="steps-card">
+    <h3>/inaccessible</h3>
+    <table class="steps-table">
+        <thead><tr><th>Who tried it</th><th>Completed</th><th>Actions</th><th>Sample size</th></tr></thead>
+        <tbody>
+        <tr>
+    <td>Screen reader (NVDA)</td>
+    <td><span class="badge matrix-badge fail">&#10007; failed</span>
+</td>
+    <td>8 keystrokes before the Tab key leaves the page entirely: one Tab to the filter box, six characters, and the next Tab lands in the browser’s own toolbar. The filter box is the only control on the page a keyboard can reach</td>
+    <td>1 live run</td>
+</tr>
+<tr>
+    <td>Grok</td>
+    <td><span class="badge matrix-badge fail">&#10007; failed</span>
+</td>
+    <td>33 tool calls before giving up</td>
+    <td>median of 5 runs</td>
+</tr>
+<tr>
+    <td>Claude</td>
+    <td><span class="badge matrix-badge fail">&#10007; failed</span>
+</td>
+    <td>3 tool calls before giving up</td>
+    <td>median of 5 runs</td>
+</tr>
+
+        </tbody>
+    </table>
+</div>
+
+        </div>
+        <p class="note">A screen reader keystroke and an AI tool call aren't the same unit of work; an AI action like "fill in this field" can stand in for several keystrokes. Read these side by side as "how far did each one get," not as a precise multiplier between them. The screen reader numbers also come from a single live run, not a five-run median like the AI numbers, since a human test isn't repeated the same way an API call is.</p>
+    </section>
+    <section>
+        <h2>The fixes, and who requires them</h2>
+        <p class="lead">None of this is a matter of taste. Every fix below is required or recommended by the Web Content Accessibility Guidelines (WCAG), the standard most accessibility law and policy is built on. This is the "smallest fixes that restore reliability" this whole project is about, and it's what closes every gap shown above. Six fixes are listed: the four on the register form that everything above is measured against, plus two on the session list &mdash; the icon with no text alternative, and the page title and main content being styled <code>div</code>s.</p>
+        <table class="fix-table">
+            <thead><tr><th>Problem</th><th>Before</th><th>After</th><th>Required or recommended by</th><th>Caught by the automated scan</th></tr></thead>
+            <tbody>
+            <tr>
+    <td class="defect">The "Register" action isn't a real link</td>
+    <td><pre class="code-bad">&lt;span onclick="…"&gt;
+  Register
+&lt;/span&gt;</pre></td>
+    <td><pre class="code-good">&lt;a href="/register/123"&gt;
+  Register
+&lt;/a&gt;</pre></td>
+    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" target="_blank" rel="noopener">2.1.1 Keyboard</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener">4.1.2 Name, Role, Value</a></td>
+    <td>No</td>
+</tr>
+<tr>
+    <td class="defect">Name/email fields have no real label</td>
+    <td><pre class="code-bad">&lt;input type="text"
+  placeholder="Full name"&gt;</pre></td>
+    <td><pre class="code-good">&lt;label for="name"&gt;Full name&lt;/label&gt;
+&lt;input type="text" id="name"&gt;</pre></td>
+    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html" target="_blank" rel="noopener">3.3.2 Labels or Instructions</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener">1.3.1 Info and Relationships</a></td>
+    <td>Partly (only caught the checkbox, not the text fields)</td>
+</tr>
+<tr>
+    <td class="defect">The meal-preference picker isn't a real dropdown</td>
+    <td><pre class="code-bad">&lt;div class="dropdown"&gt;
+  Meal preference…
+&lt;/div&gt;</pre></td>
+    <td><pre class="code-good">&lt;select&gt;
+  &lt;option&gt;Vegetarian&lt;/option&gt;
+&lt;/select&gt;</pre></td>
+    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener">4.1.2 Name, Role, Value</a></td>
+    <td>No</td>
+</tr>
+<tr>
+    <td class="defect">Form errors are shown by colour alone</td>
+    <td><pre class="code-bad">&lt;input class="has-error"&gt;
+&lt;!-- red border is the only signal --&gt;</pre></td>
+    <td><pre class="code-good">&lt;div role="alert"&gt;
+  Enter a valid email address.
+&lt;/div&gt;</pre></td>
+    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html" target="_blank" rel="noopener">3.3.1 Error Identification</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html" target="_blank" rel="noopener">4.1.3 Status Messages</a></td>
+    <td>No</td>
+</tr>
+<tr>
+    <td class="defect">An icon image has no text alternative</td>
+    <td><pre class="code-bad">&lt;img src="icon.svg"&gt;</pre></td>
+    <td><pre class="code-good">&lt;img src="icon.svg"
+  alt="In-person session"&gt;</pre></td>
+    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank" rel="noopener">1.1.1 Non-text Content</a></td>
+    <td>Yes</td>
+</tr>
+<tr>
+    <td class="defect">The page title and main content are just styled text</td>
+    <td><pre class="code-bad">&lt;div class="h1"&gt;JCON Workshops&lt;/div&gt;
+&lt;div class="main"&gt;…&lt;/div&gt;</pre></td>
+    <td><pre class="code-good">&lt;h1&gt;JCON Workshops&lt;/h1&gt;
+&lt;main&gt;…&lt;/main&gt;</pre></td>
+    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener">1.3.1 Info and Relationships</a></td>
+    <td>Yes</td>
+</tr>
+
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer>
+    <p>Every number on this page comes from an actual recorded test run. Nothing here was typed in by hand.</p>
+</footer>
+</body>
+</html>
