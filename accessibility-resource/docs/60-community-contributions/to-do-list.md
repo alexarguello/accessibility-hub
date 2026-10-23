@@ -23,7 +23,7 @@ author:
 eta: 2025-12-31
 ---
 
-- [ ] Research AI accessibility tools.  
-- [ ] user interviews.  
-- [ ] Prototype smart-reader assistant.  
-- [ ] Plan training content.  
+- Research AI accessibility tools.  
+- user interviews.  
+- Prototype smart-reader assistant.  
+- Plan training content.  

@@ -107,7 +107,7 @@ const config = {
           dark: 'dark',
         },
       },
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/a11yhub-social-card.png',
       navbar: {
         title: 'Home',
         logo: {

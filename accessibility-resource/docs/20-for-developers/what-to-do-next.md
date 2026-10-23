@@ -2,6 +2,7 @@
 title: "What to Do Next: Six Steps for Your Own App"
 sidebar_label: "What to do next"
 sidebar_position: 7
+image: /img/ai-agents-a11y-tree-card.png
 description: "Six short steps to check your own app the way screen readers and AI agents see it — the accessibility tree, the keyboard, a screen reader, role-based tests, a scanner, and the WCAG rules behind the fixes."
 level: beginner
 type: guide
@@ -132,7 +133,14 @@ with copy-paste Java recipes.
   [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/). Most of the time a native
   HTML element already does the job, with keyboard support included.
 
+## Tell us what to add next
+
+Was this useful? What would you like to see on A11YHub next: a framework guide, a testing recipe,
+a topic you're stuck on? [Share your idea on GitHub Discussions](https://github.com/alexarguello/accessibility-hub/discussions),
+or [open an issue](https://github.com/alexarguello/accessibility-hub/issues) if something on the site
+doesn't work for you.
+
 ## Keep going
 
-- Share what you find, or suggest a page: see [How to Contribute](./how-to-contribute.md).
+- Share what you find, or write a page yourself: see [How to Contribute](./how-to-contribute.md).
 - Explore the rest of the [For Developers](./index.md) section.

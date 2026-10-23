@@ -26,8 +26,8 @@ author:
 eta: 2025-12-31
 ---
 
-- [ ] Add tool reviews by disability.  
-- [ ] Flatmaps per category.  
-- [ ] Contributor dashboards.  
-- [ ] Feedback integration.  
-- [ ] Beginner tutorials.  
+- Add tool reviews by disability.  
+- Flatmaps per category.  
+- Contributor dashboards.  
+- Feedback integration.  
+- Beginner tutorials.  

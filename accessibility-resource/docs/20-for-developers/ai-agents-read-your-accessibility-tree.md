@@ -2,6 +2,7 @@
 title: "AI Agents Read Your Accessibility Tree, Not Your HTML"
 sidebar_label: "AI agents and the a11y tree"
 sidebar_position: 6
+image: /img/ai-agents-a11y-tree-card.png
 description: "A Spring Boot app served in two variants with identical backend and CSS but different markup, and what that one difference does to screen readers and AI agents."
 level: intermediate
 type: reference
