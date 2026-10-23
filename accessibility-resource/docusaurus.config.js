@@ -2,6 +2,24 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkStripHeadingEmojis from './plugins/remark-strip-heading-emojis.js';
 
+// Code highlighting themes adjusted to meet WCAG 1.4.3 (4.5:1 contrast).
+// No built-in prism light theme passes; vsLight is closest, with two colors darkened.
+const lightCodeTheme = {
+  ...prismThemes.vsLight,
+  styles: [
+    ...prismThemes.vsLight.styles,
+    { types: ['attr-name'], style: { color: '#c00000' } },
+    { types: ['class-name'], style: { color: '#1a6e80' } },
+  ],
+};
+const darkCodeTheme = {
+  ...prismThemes.dracula,
+  styles: [
+    ...prismThemes.dracula.styles,
+    { types: ['comment', 'prolog', 'doctype', 'cdata'], style: { color: '#a3acd6' } },
+  ],
+};
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Home',
@@ -36,6 +54,9 @@ const config = {
   },
 
   // ✅ Mermaid theme + search plugin
+  // Makes wide tables keyboard-scrollable (WCAG 2.1.1)
+  clientModules: ['./src/clientModules/scrollableTables.js'],
+
   themes: [
     '@docusaurus/theme-mermaid',
     [
@@ -180,8 +201,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} A11YHub. Built with Docusaurus.`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
       },
     }),
 };

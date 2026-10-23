@@ -30,6 +30,12 @@
   margin-bottom: 0.5rem;
 }
 
+/* Underline the link so it doesn't rely on color alone (WCAG 1.4.1) */
+.suggestLink a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .header {
   font-size: 2.2rem;
   font-weight: 700;

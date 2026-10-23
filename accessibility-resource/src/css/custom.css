@@ -6,13 +6,14 @@
 
 /* === Infima Root === */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Darkened from the Docusaurus default #2e8555 (4.07:1 on #f2f2f2) to meet WCAG 1.4.3 */
+  --ifm-color-primary: #1a6b40;
+  --ifm-color-primary-dark: #176039;
+  --ifm-color-primary-darker: #165b36;
+  --ifm-color-primary-darkest: #124b2d;
+  --ifm-color-primary-light: #1d7647;
+  --ifm-color-primary-lighter: #1e7b4a;
+  --ifm-color-primary-lightest: #1f8150;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -249,3 +250,22 @@
   flex-wrap: wrap;
 }
 
+
+/* === Accessibility fixes (WCAG 2.2 AA) === */
+
+/* Links inside page text are underlined, so they don't rely on color alone (WCAG 1.4.1). */
+.markdown a:not(.hash-link):not(.card) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Search box keyboard hint ("ctrl K"): default gray was 1.51:1 (WCAG 1.4.3). */
+[data-theme='light'] [class*='searchHint'] {
+  color: #444950;
+}
+
+/* Wide tables that scroll sideways get a visible focus ring (see clientModules/scrollableTables.js). */
+.markdown table[tabindex='0']:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}

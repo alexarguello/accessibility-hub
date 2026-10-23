@@ -1,6 +1,7 @@
 ---
 title: "AI Agents Read Your Accessibility Tree, Not Your HTML"
 sidebar_label: "AI agents and the a11y tree"
+sidebar_position: 6
 description: "A Spring Boot app served in two variants with identical backend and CSS but different markup, and what that one difference does to screen readers and AI agents."
 level: intermediate
 type: reference
@@ -28,6 +29,8 @@ author:
 
 **Repo:** [a11y-ai-readiness](https://github.com/alexarguello/a11y-ai-readiness) ·
 **Live results dashboard:** [view the live results](https://alexarguello.github.io/accessibility-hub/ai-readiness/)
+
+**Came here from the talk?** [What to do next](./what-to-do-next.md) has six steps you can start with tomorrow.
 
 A Spring Boot web app that serves one flow — *register for a workshop* — from two sets of
 templates. Same controller, same validation, same stylesheet, same data. Only the markup
@@ -57,9 +60,9 @@ Three independent consumers, same task, both variants:
 
 | Who tried it | `/accessible` | `/inaccessible` |
 |---|---|---|
-| NVDA (screen reader, keyboard only) | ✅ completed | ❌ failed |
-| AI agent — Grok (`grok-4.6`) | ✅ completed | ❌ failed |
-| AI agent — Claude (`claude-sonnet-5`) | ✅ completed | ❌ failed |
+| NVDA (screen reader, keyboard only) | Completed | **Failed** |
+| AI agent — Grok (`grok-4.6`) | Completed | **Failed** |
+| AI agent — Claude (`claude-sonnet-5`) | Completed | **Failed** |
 
 Two unrelated vendors' models, tested separately, so this isn't one model's quirk.
 
@@ -124,6 +127,16 @@ styled `<div>`s instead of `<h1>` and `<main>` (1.1.1, 1.3.1).
 `div:nth-child(4) > span` selectors in your E2E tests instead of
 [`getByRole`](https://playwright.dev/java/docs/locators). Brittle Playwright or Testing Library
 locators are a symptom of a thin accessibility tree, not bad luck.
+
+## What to do next
+
+You don't need a big project to start. [What to Do Next](./what-to-do-next.md) walks you through
+six short steps on one flow of your own app: look at the accessibility tree, use only the keyboard,
+listen with a screen reader, find controls by role in your tests, keep a scanner in CI, and learn
+the WCAG rules behind each fix.
+
+To see which kind of test catches which defect, read
+[Test What Scanners Miss](./test-what-scanners-miss.md).
 
 ## Running it yourself
 
