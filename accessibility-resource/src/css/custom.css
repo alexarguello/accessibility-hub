@@ -269,3 +269,43 @@
   outline: 2px solid var(--ifm-color-primary);
   outline-offset: 2px;
 }
+
+/* Tag pages: "View all tags" link sits outside .markdown (WCAG 1.4.1). */
+main header a[href$='/docs/tags/'] {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Printable checklists (e.g. the stroke profile questionnaire): each list item
+   gets an empty box to tick on paper. The box is decoration only, so screen
+   readers skip it and there is no unlabeled form control. */
+.print-checklist ul {
+  list-style: none;
+  padding-left: 0.25rem;
+}
+.print-checklist li::before {
+  content: '';
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  margin-right: 0.6em;
+  vertical-align: -0.12em;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+}
+
+/* Print: show where each link goes, since a printed link can't be clicked. */
+@media print {
+  .markdown a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.85em;
+    color: #444;
+    word-break: break-all;
+  }
+  .markdown a[href^='/accessibility-hub/']::after {
+    content: ' (alexarguello.github.io' attr(href) ')';
+    font-size: 0.85em;
+    color: #444;
+    word-break: break-all;
+  }
+}
