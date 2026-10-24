@@ -92,6 +92,25 @@ code { background: #f5f5f5; padding: 0.1em 0.35em; border-radius: 4px; font-size
 .hubbar a:focus-visible, main a:focus-visible { outline: 3px solid #0043CE;
              outline-offset: 2px; border-radius: 2px; }
 @media (max-width: 40rem) { .hubbar ul { gap: .9rem; flex-direction: column; } }
+.papers { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+.paper-card { border: 1px solid #ddd; border-radius: 8px; padding: 1.25rem 1.4rem; }
+.paper-card h3 { margin: 0 0 0.3rem; font-size: 1.08em; }
+.paper-meta { margin: 0 0 0.9rem; color: #777; font-size: 0.86em; line-height: 1.45; }
+.paper-card p { line-height: 1.55; }
+.paper-card .finding { margin: 0 0 0.9rem; color: #333; }
+.paper-card .finding strong { color: #1a1a1a; }
+.paper-card ul { margin: 0 0 0.9rem; padding-left: 1.2rem; color: #333; line-height: 1.55; }
+.paper-card ul li { margin-bottom: 0.3rem; }
+.paper-card .caveat { margin: 0.9rem 0 0; padding-top: 0.8rem; border-top: 1px solid #f0f0f0;
+             color: #a15c00; font-size: 0.88em; line-height: 1.5; }
+.paper-card .read { margin: 0; font-size: 0.92em; }
+.paper-card a { color: #0043CE; text-decoration: underline; text-underline-offset: 3px; }
+.paper-card a:hover { text-decoration-thickness: 2px; }
+.disagreement { background: #f7f9fc; border: 1px solid #dde5f0; border-radius: 12px;
+             padding: 1.4rem 1.6rem; margin-top: 1.5rem; }
+.disagreement h3 { margin-top: 0; }
+.disagreement p { color: #333; line-height: 1.55; }
+.disagreement p:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -580,6 +599,87 @@ code { background: #f5f5f5; padding: 0.1em 0.35em; border-radius: 4px; font-size
 
             </tbody>
         </table>
+    </section>
+    <section>
+        <h2>What other people measured, and where they disagree</h2>
+        <p class="lead">This dashboard tests one small application, so it can only show that the problem is real &mdash; not how common it is. Published research has measured the same thing at much larger scale, on real websites. Here is what those papers found, in plain language, with a link to each original. Every number below was read out of the paper's own text or results tables.</p>
+
+        <div class="papers">
+
+            <article class="paper-card">
+                <h3>One invisible line of text took agents from never clicking to almost always clicking</h3>
+                <p class="paper-meta">Nitu, M&uuml;hle, St&ouml;ckl &mdash; <em>Machine-Readable Ads: Accessibility and Trust Patterns for AI Web Agents interacting with Online Advertisements</em> (2025, revised 2026). Preprint.</p>
+                <p class="finding">The researchers cloned a real news site, put an ordinary picture advert on it, and gave AI agents realistic shopping tasks. With the picture alone, the agents clicked the advert in <strong>0 out of 10 tries</strong>. The researchers then added a single off-screen <code>&lt;span&gt;</code> describing it &mdash; invisible to a person looking at the page, readable to anything reading the code. On a <em>visually identical</em> advert, the agents then clicked it in <strong>9 out of 10 tries</strong> (Claude 3.7 Sonnet) and <strong>10 out of 10</strong> (GPT-4o and Gemini 2.0 Flash).</p>
+                <p class="finding">Two other findings from the same runs: the agents never scrolled beyond about two screenfuls, and they ignored calls to action that existed only as a picture.</p>
+                <p class="finding">This is the closest match to what this dashboard shows. One piece of markup, nothing visual changed, and the outcome flipped.</p>
+                <p class="caveat">Worth knowing: this is a preprint, so it has not been through peer review, and the study is specifically about advertisements. Reading it as a general rule about interface code is a reasonable step, but it is a step beyond what was measured.</p>
+                <p class="read"><a href="https://arxiv.org/abs/2507.12844" target="_blank" rel="noopener">Read the paper (arXiv:2507.12844)</a></p>
+            </article>
+
+            <article class="paper-card">
+                <h3>When the page's structure is unreadable, the model invents controls that aren't there</h3>
+                <p class="paper-meta">Zheng, Gou, Kil, Sun, Su &mdash; <em>GPT-4V(ision) is a Generalist Web Agent, if Grounded</em> (2024). Published on arXiv.</p>
+                <p class="finding">This study asked a question we care about directly: once an AI has decided what it wants to do, how does it find the thing to click? The researchers compared working from the page's own code against working from a screenshot with numbered boxes drawn on top of the controls.</p>
+                <ul>
+                    <li>Picking the right element from text derived from the page's code: <strong>39.1%</strong> correct. From the annotated screenshot: <strong>20.3%</strong>.</li>
+                    <li>Finishing whole tasks on live websites: <strong>37.8%</strong>, against <strong>13.3%</strong> for a text-only GPT-4 with no grounding help.</li>
+                    <li>The detail that matters most here: on complicated pages, in <strong>54% of its failures</strong> the model &ldquo;falsely assumes the presence of a bounding box and makes up a label&rdquo; &mdash; it reported clicking a control that did not exist.</li>
+                </ul>
+                <p class="finding">That is the same failure shape as the fake dropdown on this page. When the structure is not legible, the AI does not stop. It guesses, confidently.</p>
+                <p class="caveat">Worth knowing: the paper's best approach is not &ldquo;text beats pictures.&rdquo; It links each element in the code to how that element actually renders on screen &mdash; a combination of both. This paper is often cited as ICML 2024; the arXiv record does not state a venue, so we cite it as arXiv.</p>
+                <p class="read"><a href="https://arxiv.org/abs/2401.01614" target="_blank" rel="noopener">Read the paper (arXiv:2401.01614)</a></p>
+            </article>
+
+            <article class="paper-card">
+                <h3>A screenshot-driven agent completed 59.1% of tasks on live websites</h3>
+                <p class="paper-meta">He, Yao, Ma, Yu, Dai, Zhang, Lan, Yu &mdash; <em>WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models</em>. ACL 2024.</p>
+                <p class="finding">This team built a complete agent that works from screenshots together with page text, and turned it loose on real, live websites. It finished <strong>59.1%</strong> of tasks, beating both GPT-4 with all tools enabled and the team's own text-only version of the same agent. They also checked their own marking: their automatic grader agreed with human judgement <strong>85.3%</strong> of the time.</p>
+                <p class="finding">Read alongside the study above, this is the interesting tension: here, adding vision helped.</p>
+                <p class="caveat">Worth knowing: a figure of 40.1% for their text-only version circulates widely. The paper states the direction clearly &mdash; text-only was &ldquo;significantly&rdquo; worse &mdash; but we could not confirm that exact number in a primary source, so we do not repeat it.</p>
+                <p class="read"><a href="https://aclanthology.org/2024.acl-long.371/" target="_blank" rel="noopener">Read the paper (ACL Anthology)</a> &middot; <a href="https://arxiv.org/abs/2401.13919" target="_blank" rel="noopener">arXiv:2401.13919</a></p>
+            </article>
+
+            <article class="paper-card">
+                <h3>Every machine setup scored far below a person: 16% at best, against 89%</h3>
+                <p class="paper-meta">Koh, Lo, Jang, Duvvur, Lim, Huang, Neubig, Zhou, Salakhutdinov, Fried &mdash; <em>VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks</em>. ACL 2024.</p>
+                <p class="finding">A benchmark of realistic web tasks that need both reading and looking. The researchers measured the same tasks under four machine setups and with people:</p>
+                <ul>
+                    <li>Text-only GPT-4: <strong>7.25%</strong> of tasks completed.</li>
+                    <li>Text plus automatic image descriptions: <strong>12.75%</strong>.</li>
+                    <li>GPT-4V working from the screenshot: <strong>15.05%</strong>.</li>
+                    <li>GPT-4V with numbered boxes drawn on the controls: <strong>16.37%</strong>.</li>
+                    <li>People doing the same tasks: <strong>88.70%</strong>.</li>
+                </ul>
+                <p class="finding">So vision adds something, steadily but modestly. The headline is the gap at the bottom of that list: the best machine configuration finished fewer than one task in five.</p>
+                <p class="read"><a href="https://arxiv.org/abs/2401.13649" target="_blank" rel="noopener">Read the paper (arXiv:2401.13649)</a></p>
+            </article>
+
+            <article class="paper-card">
+                <h3>The dataset most of this research is built on</h3>
+                <p class="paper-meta">Deng, Gu, Zheng, Chen, Stevens, Wang, Sun, Su &mdash; <em>Mind2Web: Towards a Generalist Agent for the Web</em>. NeurIPS 2023.</p>
+                <p class="finding">Background rather than a finding. Mind2Web collected <strong>over 2,000 open-ended tasks across 137 real websites in 31 domains</strong> &mdash; booking, shopping, government forms, travel, and more. Most of the later work on this page, including the grounding study above, is measured on top of it. If you want to know what &ldquo;an agent task&rdquo; means in these papers, this is where the definition comes from.</p>
+                <p class="read"><a href="https://arxiv.org/abs/2306.06070" target="_blank" rel="noopener">Read the paper (arXiv:2306.06070)</a></p>
+            </article>
+
+            <article class="paper-card">
+                <h3>A proposal to treat the accessibility layer as the thing agents read</h3>
+                <p class="paper-meta">Thota &mdash; <em>LUMOS: A Semantic Operating-System Layer for Accessibility-Grounded AI Agents</em> (2026). Preprint, single author.</p>
+                <p class="finding">This one is an architecture proposal, not an experiment, and it is here for the idea rather than for any number. It argues that the accessibility information your operating system and browser already expose is exactly what AI agents should be reading, and describes converting &ldquo;native accessibility metadata and browser UI structures into machine readable semantic blueprints with stable identifiers, roles, names, values, bounds, and action affordances.&rdquo;</p>
+                <p class="finding">That is the same claim this dashboard makes from the other direction: roles, names and values were never only for screen readers.</p>
+                <p class="caveat">Worth knowing: unreviewed, single-author, and a design proposal with no results, so nothing here should be quoted as a measurement.</p>
+                <p class="read"><a href="https://arxiv.org/abs/2606.30697" target="_blank" rel="noopener">Read the paper (arXiv:2606.30697)</a></p>
+            </article>
+
+        </div>
+
+        <div class="disagreement">
+            <h3>These papers do not all agree &mdash; and that is useful</h3>
+            <p>One study found that drawing boxes on a screenshot made things worse, and that text taken from the page's code worked far better. Another found that its screenshot-based agent beat its own text-only agent. A third found that vision helps, but only a little. Taken as headlines, those look like a contradiction.</p>
+            <p>They are mostly not. They answer different questions. The first compares <em>ways of turning a decision into a click</em> inside one agent. The second compares <em>whole agent designs</em> against each other. The third measures <em>how much vision adds</em> on a fixed set of tasks. Different thing measured, different answer &mdash; which is worth remembering whenever a single benchmark number gets quoted as settled fact.</p>
+            <p>What all of them do agree on is the part that matters for your application: every machine setup lands far below a person, and how clearly a page exposes its own structure changes the result substantially.</p>
+        </div>
+
+        <p class="note">Two numbers you may have seen elsewhere are deliberately not on this page. A &ldquo;78% versus 42% under keyboard-only simulation&rdquo; figure attributed to a Berkeley and Michigan study could not be found in any primary source, so we treat it as unreliable. The 40.1% text-only baseline often attributed to WebVoyager is noted above as unconfirmed. Where a figure could not be read out of the paper itself, it is described in words instead.</p>
     </section>
 </main>
 <footer>
