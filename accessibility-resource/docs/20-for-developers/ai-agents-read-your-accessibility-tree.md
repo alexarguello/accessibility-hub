@@ -3,7 +3,7 @@ title: "AI Agents Read Your Accessibility Tree, Not Your HTML"
 sidebar_label: "AI agents and the a11y tree"
 sidebar_position: 6
 image: /img/ai-agents-a11y-tree-card.png
-description: "A Spring Boot app served in two variants with identical backend and CSS but different markup, and what that one difference does to screen readers and AI agents."
+description: "Results from a Spring Boot app served in two variants with identical backend and CSS but different markup, and what that one difference did to a screen reader and two AI agents."
 level: intermediate
 type: reference
 status: published
@@ -28,36 +28,25 @@ author:
 
 # AI Agents Read Your Accessibility Tree, Not Your HTML
 
-**Repo:** [a11y-ai-readiness](https://github.com/alexarguello/a11y-ai-readiness) ·
-**Live results dashboard:** [view the live results](https://alexarguello.github.io/accessibility-hub/ai-readiness/)
+**The data:** [results dashboard](https://alexarguello.github.io/accessibility-hub/ai-readiness/) ·
+[source repository](https://github.com/alexarguello/a11y-ai-readiness) ·
+[raw run data](https://github.com/alexarguello/a11y-ai-readiness/tree/main/results) ·
+[NVDA run sheet and transcripts](https://github.com/alexarguello/a11y-ai-readiness/blob/main/docs/nvda-run-sheet.md)
 
 **Came here from the talk?** [What to do next](./what-to-do-next.md) has six steps you can start with tomorrow.
 
-A Spring Boot web app that serves one flow — *register for a workshop* — from two sets of
-templates. Same controller, same validation, same stylesheet, same data. Only the markup
-differs. The session list is asserted pixel-identical by a test; the registration form, where
-the testing happened, looks and behaves the same to a sighted mouse user.
+This page is the results record for the experiment. A Spring Boot app serves one flow — *register
+for a workshop* — from two sets of templates, with the same controller, validation, stylesheet and
+data. Only the markup differs, and the session list is asserted pixel-identical by a test.
 
-That one difference decides whether a screen reader user or an AI agent can complete the task
-at all.
-
-## Why a developer should care
-
-Your UI has two consumers you probably don't test: assistive technology, and software acting on
-a user's behalf. Neither reads your HTML or your CSS. Both read the
+Both assistive technology and software acting on a user's behalf read the
 [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) the
-browser builds from your markup — roles, names, states.
+browser builds from your markup — roles, names and states — rather than your HTML or CSS. So
+the same markup difference decides whether either one can finish the task.
 
-An agent driving a browser asks that tree "what's on this page, and what can I do to it?" A
-screen reader asks the identical question. So a `<div onclick>` that looks like a button isn't a
-styling choice — it's a control that neither one can find.
+## Who tried it
 
-There is no separate "make it AI-ready" project. It's the same work, and it's already in your
-backlog as an accessibility ticket.
-
-## What was measured
-
-Three independent consumers, same task, both variants:
+Three independent consumers, same task, both variants. Runs made **20 September 2026**.
 
 | Who tried it | `/accessible` | `/inaccessible` |
 |---|---|---|
@@ -67,34 +56,41 @@ Three independent consumers, same task, both variants:
 
 Two unrelated vendors' models, tested separately, so this isn't one model's quirk.
 
-**Agent runs — 5 runs per variant per provider, medians:**
+## Agent runs
+
+Five runs per variant per provider. Medians, with the full range across the five runs.
 
 | Provider | Variant | Success | Tool calls | Tokens | Cost/run |
 |---|---|---|---|---|---|
-| Grok `grok-4.6` | `/accessible` | 100% | 11 | 36k | $0.071 |
-| Grok `grok-4.6` | `/inaccessible` | **0%** | 33 | 127k | $0.247 |
-| Claude `claude-sonnet-5` | `/accessible` | 100% | 11 | 47k | $0.104 |
-| Claude `claude-sonnet-5` | `/inaccessible` | **0%** | 3 | 11k | $0.027 |
+| Grok `grok-4.6` | `/accessible` | 5/5 | 11 (11–12) | 36.2k (33.2–45.0k) | $0.071 |
+| Grok `grok-4.6` | `/inaccessible` | **0/5** | 33 (23–34) | 127.3k (108.4–210.3k) | $0.247 |
+| Claude `claude-sonnet-5` | `/accessible` | 5/5 | 11 (11–11) | 46.6k (46.5–47.6k) | $0.104 |
+| Claude `claude-sonnet-5` | `/inaccessible` | **0/5** | 3 (3–6) | 10.6k (10.4–24.2k) | $0.027 |
 
-Note the two shapes of failure. Grok kept hunting — 3× the calls, 3.5× the tokens, 3.5× the cost,
-and still no confirmation code. Claude recognised there was no reachable control and gave up after
-three calls. **Cheap is not good news here: the transaction is lost either way.** If that flow were
-a checkout, a booking, or a claim submission, an inaccessible UI is one your customer's agent
-cannot buy from.
+The two failures have different shapes: Grok kept retrying and Claude stopped early. Neither
+obtained a confirmation code on any run.
 
-The agent perceives the page *only* through accessibility-tree primitives — Playwright's
-`ariaSnapshot()` to look, role/name lookups to act. Nothing in its toolset reads raw HTML or CSS,
-which is what makes the comparison meaningful.
+## Screen reader runs
 
-**Screen reader (NVDA, keyboard only):** on `/accessible`, 61 keystrokes to a confirmation code,
-with the validation error announced immediately. On `/inaccessible` the task couldn't be *started*:
-after the filter box, Tab leaves the page entirely — the filter box is the only reachable control.
-With a mouse, the meal-preference dropdown still could not be operated, and nothing was ever
-announced to explain why submission kept failing.
+NVDA on Firefox, captured with the Speech Viewer. Verbatim transcripts and the counts derived from
+them are in the
+[run sheet](https://github.com/alexarguello/a11y-ai-readiness/blob/main/docs/nvda-run-sheet.md).
 
-## Automated scans only catch part of it
+| | `/accessible` | `/inaccessible`, keyboard | `/inaccessible`, mouse + NVDA |
+|---|---|---|---|
+| Task completed | Yes — code `JCON-C7ED97` | **No** | **No**, even with a mouse |
+| Where it stopped | — | After the filter field; Tab leaves the page | Silent resubmission loop on meal preference |
+| Validation error announced | Yes — `role="alert"`, immediately | Never reached the form | **No** |
+| Characters typed | 40 | 6 | 54 |
+| `alert` announcements | 2 | 0 | **0** |
 
-axe-core runs against both pages in the test suite:
+One precision worth keeping: on `/inaccessible` the *email* error **was** announced, because the
+browser's native `type="email"` validity leaks through. The *meal preference* failure, the one that
+blocked the task, was announced never.
+
+## Scanner results
+
+axe-core, run against both pages of both variants in the test suite:
 
 | Page | Violations | Rules |
 |---|---|---|
@@ -102,12 +98,12 @@ axe-core runs against both pages in the test suite:
 | `/inaccessible` sessions | 4 (9 nodes) | `image-alt`, `landmark-one-main`, `page-has-heading-one`, `region` |
 | `/inaccessible` register | 4 (9 nodes) | `label`, `landmark-one-main`, `page-has-heading-one`, `region` |
 
-Run as a Lighthouse audit in Edge DevTools, the broken register form still scores **91/100** for
-accessibility. Those four findings are largely *not* the four defects that actually broke every
-consumer. A scanner can only flag code that at least tries to be a button, field, or link; code
-that never tries — the fake `<div>` dropdown — is invisible to it.
+Audited as a Lighthouse accessibility run in Edge DevTools, the broken register form scores
+**91/100**.
 
-**A high score is not a tested page.** Keep the scanner in CI, but it is a floor, not a verdict.
+None of those findings names the fake dropdown, the role-less Register control or the colour-only
+error — the three defects that stopped every consumer. For which kind of test does catch which
+defect, see [Test What Scanners Miss](./test-what-scanners-miss.md).
 
 ## The four defects, and the fixes
 
@@ -124,10 +120,40 @@ time.
 Plus two on the session list: an `<img>` with no `alt`, and a page title and main region that are
 styled `<div>`s instead of `<h1>` and `<main>` (1.1.1, 1.3.1).
 
-**A side effect worth the ticket on its own:** missing roles and names are exactly what forces
-`div:nth-child(4) > span` selectors in your E2E tests instead of
-[`getByRole`](https://playwright.dev/java/docs/locators). Brittle Playwright or Testing Library
-locators are a symptom of a thin accessibility tree, not bad luck.
+## How it was measured
+
+- **Variants.** One flow, two template sets, same controller, validation, stylesheet and data.
+  `VisualParityTest` asserts the session list is pixel-identical. The register form shares the same
+  stylesheet and is not separately screenshot-tested.
+- **What the agent can see.** Accessibility-tree primitives only — Playwright's `ariaSnapshot()` to
+  look, role and name lookups to act. Nothing in its toolset reads raw HTML, the DOM or CSS, and it
+  cannot take a screenshot. This isolates the tree as the channel under test.
+- **Run order.** Five runs per variant per provider, alternating A-B-B-A so neither variant benefits
+  from going first or last.
+- **Tool-call cap.** 40. The highest run in this data used 34, so no published run was cut off.
+- **Excluded data.** An earlier pass capped tool calls at 15. All five of Grok's `/inaccessible`
+  runs hit that cap, which makes their counts the cap rather than a measurement, so they are
+  excluded as spoiled and kept in `results/` flagged `budgetExhausted` rather than deleted. Raising
+  the cap to 40 gave the broken variant more room, not less.
+- **Costs** are computed, not observed on an invoice, from the rates each vendor published as of
+  **20 September 2026**, the day of the runs: $2.00 per million input tokens and $6.00 output for
+  `grok-4.6`, $2.00 input and $10.00 output for `claude-sonnet-5`. They also depend on how long a
+  model keeps trying before giving up. Treat them as an order of magnitude at that date.
+- **Provenance.** Every figure on this page is derived from committed artefacts by a script: the
+  screen-reader counts from the transcripts, the agent figures from one JSON file per run.
+
+To run it yourself, or to regenerate the dashboard, see the
+[repository README](https://github.com/alexarguello/a11y-ai-readiness#readme). It needs JDK 25 and
+nothing else; the agent runs on your own API key.
+
+## What other people measured
+
+This experiment tests one small application, so it can show that the problem is real but not how
+common it is. Published research has measured related questions at larger scale — including a study
+in which one off-screen `<span>` took agent click-through on a visually identical advert from 0 of
+10 tries to 9 or 10 of 10 across three models. Those papers, what each one found, and where they
+disagree are summarised on the
+[results dashboard](https://alexarguello.github.io/accessibility-hub/ai-readiness/).
 
 ## What to do next
 
@@ -138,43 +164,6 @@ the WCAG rules behind each fix.
 
 To see which kind of test catches which defect, read
 [Test What Scanners Miss](./test-what-scanners-miss.md).
-
-## Running it yourself
-
-Needs **JDK 25** — nothing else. The Maven wrapper fetches its own Maven, and there is no
-Node/npm step.
-
-```bash
-./mvnw spring-boot:run
-```
-
-Then open [http://localhost:8080/](http://localhost:8080/), which links to both variants. Open DevTools' accessibility
-tree on each and compare — that is the whole demo in thirty seconds.
-
-The agent never runs during `spring-boot:run` or `mvn test`. To run it (needs `xai.api.key` /
-`XAI_API_KEY` or `anthropic.api.key` / `ANTHROPIC_API_KEY`, see `secrets.properties.example`):
-
-```bash
-./mvnw spring-boot:run -Dspring-boot.run.arguments="--agent.run=true --variant=accessible --provider=xai"
-```
-
-Add `--runs=5` to run both variants N times each in alternating A-B-B-A order and write a summary
-with medians and ranges. Each run writes a `results/*.json` with tool calls, tokens, estimated
-cost, and the action log. `DashboardGeneratorTest` regenerates `results/dashboard.html` from
-whatever is in `results/` — no server or browser needed to view it.
-
-## Stack
-
-| Piece | Choice |
-|---|---|
-| Language / JDK | Java 25 |
-| Framework | Spring Boot 4.1.1, Spring MVC |
-| Templates | Thymeleaf, server-rendered — no frontend build |
-| Validation | Jakarta Bean Validation |
-| JS | ~30 lines of vanilla JS (live-region errors; the broken variant's mouse-only widgets) |
-| AI agent | [Spring AI](https://docs.spring.io/spring-ai/reference/) 2.0.1 — xAI via the OpenAI-compatible client, Anthropic via its own; tools backed by Playwright 1.62 |
-| Scanner | [axe-core](https://github.com/dequelabs/axe-core) in the test suite |
-| Data | In-memory repository, no database |
 
 ## Further reading
 
