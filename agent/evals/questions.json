@@ -26,7 +26,7 @@
     {"id": "en-23", "lang": "en", "question": "How do I test accessibility beyond automated scanners?", "expect": ["docs/for-developers/test-what-scanners-miss/", "docs/hot-topics/accessibility-testing/"]},
     {"id": "en-24", "lang": "en", "question": "I finished an accessibility audit of my app. What should I do next?", "expect": ["docs/for-developers/what-to-do-next/"]},
     {"id": "en-25", "lang": "en", "question": "Open source tools and patterns for accessibility", "expect": ["docs/resources/free-oss-resources/"]},
-    {"id": "en-26", "lang": "en", "question": "I'm not a developer explain how can I contribute?", "expect": ["docs/community-contributions/FRONTMATTER_GUIDE/"]},
+    {"id": "en-26", "lang": "en", "question": "I'm not a developer explain how can I contribute?", "expect": ["docs/community-contributions/contributing/", "docs/community-contributions/"]},
     {"id": "en-27", "lang": "en", "question": "Are there case studies of developers fixing accessibility problems?", "expect": ["docs/for-developers/case-studies/"]},
     {"id": "en-28", "lang": "en", "question": "Which accessibility needs are still unmet?", "expect": ["docs/unmet-needs/unmet-needs/", "docs/unmet-needs/"]},
     {"id": "en-29", "lang": "en", "question": "Help for someone with memory problems or a cognitive disability", "expect": ["docs/for-users/by-disability-type/cognitive/", "docs/for-users/by-disability-type/cognitive/external-resources/"]},

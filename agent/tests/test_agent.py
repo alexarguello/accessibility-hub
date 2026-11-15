@@ -184,6 +184,13 @@ class GroundingTests(unittest.TestCase):
         self.assertEqual(links["unknown_links"], [f"{SITE}/docs/vision/braille/"])
         self.assertEqual(links["external_links"], ["https://www.w3.org/WAI/"])
 
+    def test_extra_prefixes_cover_site_areas_left_out_of_the_index(self):
+        config = {**CONFIG, "extraPrefixes": ["docs/contribute"]}
+        answer = f"See {SITE}/docs/contribute and {SITE}/docs/contribute/page-a/ but not {SITE}/docs/contributeX/."
+        links = check_links(answer, make_index(), config)
+        self.assertEqual(links["site_links"], [f"{SITE}/docs/contribute", f"{SITE}/docs/contribute/page-a/"])
+        self.assertEqual(links["unknown_links"], [f"{SITE}/docs/contributeX/"])
+
 
 class PromptTests(unittest.TestCase):
     def test_prompt_uses_config_and_lists_top_level_pages(self):

@@ -15,6 +15,8 @@ def check_links(answer: str, site_index: SiteIndex, config: dict) -> dict:
     """
     base = config["siteUrl"].rstrip("/")
     extra = {f"{base}/{page}".rstrip("/") for page in config.get("extraPages", [])}
+    # Real parts of the site that are left out of the index on purpose.
+    prefixes = tuple(f"{base}/{prefix}".rstrip("/") for prefix in config.get("extraPrefixes", []))
     site_links, unknown_links, external_links = [], [], []
 
     for raw in dict.fromkeys(URL_PATTERN.findall(answer)):
@@ -23,7 +25,8 @@ def check_links(answer: str, site_index: SiteIndex, config: dict) -> dict:
             external_links.append(url)
             continue
         clean = url.split("#")[0].split("?")[0].rstrip("/")
-        if site_index.has_url(clean) or clean in extra:
+        in_prefix = any(clean == p or clean.startswith(p + "/") for p in prefixes)
+        if site_index.has_url(clean) or clean in extra or in_prefix:
             site_links.append(url)
         else:
             unknown_links.append(url)

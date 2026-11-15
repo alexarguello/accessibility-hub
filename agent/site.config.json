@@ -4,6 +4,7 @@
   "siteUrl": "https://alexarguello.github.io/accessibility-hub/",
   "indexDir": "../accessibility-resource/static/agent",
   "extraPages": ["", "hot-topics/", "ai-readiness/", "search/"],
+  "extraPrefixes": ["docs/contribute"],
   "languages": ["English", "Spanish"],
   "feedbackUrl": "https://github.com/alexarguello/accessibility-hub/issues",
   "defaultModel": "nvidia/nemotron-3.5-super-vl:free"
