@@ -12,6 +12,10 @@ docs/**/index.md
 static/agent
 static/llms.txt
 
+# Playwright output
+test-results/
+playwright-report/
+
 # Misc
 .DS_Store
 .env.local
