@@ -324,6 +324,7 @@ _None identified yet — pending verification._
 - HOT-002 F2 (`aria-pressed="false"` on 4 buttons at load): still valid, re-run to confirm
 - HOT-002 K1 (Space activates filter): still valid
 - No HOT-002 tests check the exact `aria-label` text, so the label format change in HOT-003 does not break the automated suite
+  - **Correction 2026-11-15:** this was wrong. Four tests located the buttons by the old label text ("Filter by category: Tool") and failed in CI from HOT-003 onward. Locators in `e2e/hot-topics.spec.js` now match the start of the current label (`/^Filter by Tool/i`).
 - V8 above: automate with Playwright `evaluate()` to assert `clip-path` contains `polygon`
 
 ---

@@ -38,7 +38,8 @@ test.describe('Hot Topics page', () => {
   });
 
   test('filter buttons are present and have correct ARIA', async ({ page }) => {
-    const buttons = page.getByRole('button', { name: /Filter by category/i });
+    // Button names are "Filter by <category> (<shape description>)"; match the stable start only.
+    const buttons = page.getByRole('button', { name: /^Filter by /i });
     await expect(buttons).toHaveCount(4);
 
     for (const btn of await buttons.all()) {
@@ -55,14 +56,14 @@ test.describe('Hot Topics page', () => {
   // ── Filter behaviour ────────────────────────────────────────────────────────
 
   test('activating a filter updates aria-pressed and live region', async ({ page }) => {
-    const toolBtn = page.getByRole('button', { name: /Filter by category: Tool/i });
+    const toolBtn = page.getByRole('button', { name: /^Filter by Tool/i });
     await toolBtn.click();
     await expect(toolBtn).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('#filter-context')).not.toBeEmpty();
   });
 
   test('deactivating all filters restores full list', async ({ page }) => {
-    const toolBtn = page.getByRole('button', { name: /Filter by category: Tool/i });
+    const toolBtn = page.getByRole('button', { name: /^Filter by Tool/i });
     await toolBtn.click();
     await toolBtn.click();
     await expect(toolBtn).toHaveAttribute('aria-pressed', 'false');
@@ -72,7 +73,7 @@ test.describe('Hot Topics page', () => {
   // ── Keyboard accessibility ──────────────────────────────────────────────────
 
   test('filter button is keyboard-activatable with Space', async ({ page }) => {
-    const toolBtn = page.getByRole('button', { name: /Filter by category: Tool/i });
+    const toolBtn = page.getByRole('button', { name: /^Filter by Tool/i });
     await toolBtn.focus();
     await page.keyboard.press('Space');
     await expect(toolBtn).toHaveAttribute('aria-pressed', 'true');
