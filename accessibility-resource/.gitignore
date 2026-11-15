@@ -9,6 +9,8 @@ build
 .cache-loader
 docs/99-contribute
 docs/**/index.md
+static/agent
+static/llms.txt
 
 # Misc
 .DS_Store
