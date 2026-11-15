@@ -1,5 +1,6 @@
 ---
 title: Hearing
+description: "Hearing loss explained: types, common causes, assistive technologies, emerging trends, and where to learn more."
 sidebar_position: 1
 hide_title: true
 level: beginner

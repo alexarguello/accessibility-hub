@@ -1,5 +1,6 @@
 ---
 title: Understanding Visual Impairments
+description: "The types of visual impairment, from low vision to color blindness, and their causes, in a screen reader-friendly guide."
 sidebar_position: 1
 hide_title: true
 level: beginner

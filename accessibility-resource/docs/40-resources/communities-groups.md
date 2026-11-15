@@ -1,5 +1,6 @@
 ---
 title: Communities & Groups
+description: "Online forums, mailing lists and meetups where you can ask accessibility questions and share knowledge."
 sidebar_position: 5
 level: beginner
 type: resource-list

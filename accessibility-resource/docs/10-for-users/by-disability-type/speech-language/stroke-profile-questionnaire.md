@@ -1,5 +1,6 @@
 ---
 title: Stroke Communication Profile Questionnaire
+description: "A questionnaire that profiles a stroke survivor's motor, sensory, cognitive and speech abilities, to match AAC tools and caregiver supports."
 sidebar_position: 5
 level: beginner
 type: checklist

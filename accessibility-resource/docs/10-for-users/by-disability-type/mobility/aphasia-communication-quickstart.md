@@ -1,5 +1,6 @@
 ---
 title: Aphasia Communication Quick Start for Caregivers
+description: "A caregiver's quick start for communicating with someone who has aphasia after a stroke: strategies, apps, therapy, support, and a checklist. Not medical advice."
 level: beginner
 type: guide
 status: published

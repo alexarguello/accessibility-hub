@@ -1,5 +1,6 @@
 ---
 title: AAC Tools for Stroke Recovery
+description: "AAC tools for stroke survivors: speech-generating apps, cognitive and listening apps, emotional support apps, and low-tech options."
 sidebar_position: 3
 level: beginner
 type: resource-list

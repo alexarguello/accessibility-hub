@@ -1,5 +1,6 @@
 ---
 title: Caregiver Guide for Post-Stroke Communication
+description: "How to support a loved one's communication after a stroke: what to expect, communication tips, tools, and emotional support."
 sidebar_position: 4
 level: beginner
 type: guide

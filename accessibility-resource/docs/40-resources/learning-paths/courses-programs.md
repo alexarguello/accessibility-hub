@@ -1,5 +1,6 @@
 ---
 title: Courses & Programs
+description: "Free and paid accessibility courses from trusted organizations, from foundational introductions to comprehensive programs."
 sidebar_position: 2
 level: beginner
 type: reference

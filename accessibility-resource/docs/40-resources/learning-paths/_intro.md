@@ -1,5 +1,6 @@
 ---
 title: Accessibility Learning Paths
+description: "Where to start and how to advance in accessibility: a quick-start plan, courses, certifications, and learning paths by role."
 sidebar_position: 1
 hide_title: true
 level: beginner

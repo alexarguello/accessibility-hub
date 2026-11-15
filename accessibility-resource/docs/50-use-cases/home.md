@@ -1,5 +1,6 @@
 ---
 title: Home and Daily Life Scenarios
+description: "Examples of using AI apps such as Be My Eyes and Seeing AI at home: describing a room, and reading prescriptions, receipts and documents."
 sidebar_position: 2
 hide_title: true
 level: beginner

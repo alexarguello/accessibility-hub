@@ -1,5 +1,6 @@
 ---
 title: Quickstart Guide with FOSS
+description: "A 7-day plan to learn core accessibility concepts hands-on with free and open source tools."
 sidebar_position: 2
 level: beginner
 type: guide

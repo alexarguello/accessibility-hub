@@ -1,5 +1,6 @@
 ---
 title: Stroke Communication Needs Checklist
+description: "A checklist for caregivers and professionals to assess a stroke survivor's communication abilities and choose AAC tools and therapy strategies."
 sidebar_position: 2
 level: beginner
 type: checklist
