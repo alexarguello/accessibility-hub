@@ -20,6 +20,10 @@ const darkCodeTheme = {
   ],
 };
 
+// Spanish is being prepared and stays off in production until it is ready.
+// To build or preview it locally, set A11YHUB_ENABLE_ES=true.
+const spanishEnabled = process.env.A11YHUB_ENABLE_ES === 'true';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Home',
@@ -42,7 +46,11 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: spanishEnabled ? ['en', 'es'] : ['en'],
+    localeConfigs: {
+      en: { label: 'English', htmlLang: 'en' },
+      es: { label: 'Español', htmlLang: 'es' },
+    },
   },
 
   // ✅ Mermaid + broken link hook (onBrokenMarkdownLinks moved here per v4 deprecation)
@@ -63,7 +71,7 @@ const config = {
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
-        language: ['en'],
+        language: spanishEnabled ? ['en', 'es'] : ['en'],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
         docsRouteBasePath: 'docs',
@@ -149,6 +157,7 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          ...(spanishEnabled ? [{ type: 'localeDropdown', position: 'right' }] : []),
         ],
       },
       footer: {
