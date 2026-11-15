@@ -1,5 +1,6 @@
 ---
 title: Applications
+description: "Apps that help with everyday tasks, such as Be My Eyes and Seeing AI for visual assistance, plus open source options."
 sidebar_position: 2
 hide_title: true
 level: beginner

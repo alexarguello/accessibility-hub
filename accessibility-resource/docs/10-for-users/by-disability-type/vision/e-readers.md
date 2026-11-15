@@ -1,5 +1,6 @@
 ---
 title: Accessible E-Readers
+description: "Common problems people with vision loss report with accessible e-readers, such as limited book formats, Braille support and cost."
 sidebar_position: 2
 hide_title: true
 level: beginner

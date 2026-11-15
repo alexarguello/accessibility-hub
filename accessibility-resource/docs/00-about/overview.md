@@ -1,5 +1,6 @@
 ---
 title: Accessibility Hub Overview
+description: "What the Accessibility Hub is, who it is for, how it is organized, and how to start using or contributing to it."
 sidebar_position: 1
 hide_title: true
 level: beginner

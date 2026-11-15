@@ -1,5 +1,6 @@
 ---
 title: Frontmatter Guide
+description: "Reference for the YAML frontmatter every docs page needs: required and optional fields and their allowed values."
 type: reference
 level: beginner
 status: published
@@ -28,6 +29,7 @@ Every Markdown file in `/docs/` must include a YAML frontmatter block at the top
 ```yaml
 ---
 title: Your Resource Title
+description: "One sentence on what this page answers and for whom."
 sidebar_position: 1
 hide_title: true
 level: beginner
@@ -56,6 +58,20 @@ For the full template with all optional fields, copy `docs/.template.md`.
 ### `title` · string
 
 Concise display title shown in the sidebar, flatmap nodes, and search results.
+
+### `description` · string
+
+One sentence, about 160 characters, that says what the page answers and for whom. Describe what the page contains today, not what it may contain later.
+
+It is used as the page summary in search engines and link previews, in `llms.txt`, and by the site's AI guide to decide whether the page answers a question. Without it, those fall back to the first paragraph of the page.
+
+Put it in double quotes, and do not use double quotes inside it:
+
+```yaml
+description: "Free and paid accessibility courses from trusted organizations, from foundational introductions to comprehensive programs."
+```
+
+For a section page, set it in that folder's `_intro.md`.
 
 ```yaml
 title: Introduction to Screen Readers

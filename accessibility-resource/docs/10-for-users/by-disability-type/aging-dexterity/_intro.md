@@ -1,5 +1,6 @@
 ---
 title: Aging & Dexterity
+description: "Dexterity impairments from aging or conditions such as arthritis and Parkinson's: tremors and reduced grip, and assistive technologies such as adaptive keyboards and voice control."
 sidebar_position: 1
 hide_title: true
 level: beginner

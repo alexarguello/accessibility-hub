@@ -1,5 +1,6 @@
 ---
 title: How to contribute
+description: "Six ways developers can make digital products more accessible: standards, inclusive design, testing, semantic HTML, accessible libraries and advocacy."
 sidebar_position: 1
 hide_title: true
 level: beginner

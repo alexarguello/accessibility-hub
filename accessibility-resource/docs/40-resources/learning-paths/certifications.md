@@ -1,5 +1,6 @@
 ---
 title: Certifications
+description: "Industry-recognized accessibility certifications, including the IAAP's CPACC and WAS, plus government and organizational credentials."
 sidebar_position: 3
 level: intermediate
 type: reference

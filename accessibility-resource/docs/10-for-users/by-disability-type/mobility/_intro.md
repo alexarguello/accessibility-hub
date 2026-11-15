@@ -1,5 +1,6 @@
 ---
 title: Mobility
+description: "Mobility impairments explained: types and causes, assistive technologies such as wheelchairs, and where to learn more."
 sidebar_position: 1
 hide_title: true
 level: beginner

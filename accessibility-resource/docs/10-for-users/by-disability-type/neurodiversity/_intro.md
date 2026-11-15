@@ -1,5 +1,6 @@
 ---
 title: Neurodiversity
+description: "Neurodiversity explained: autism, ADHD, dyslexia and dyspraxia as natural variations, with support approaches and assistive technologies."
 sidebar_position: 1
 hide_title: true
 level: beginner

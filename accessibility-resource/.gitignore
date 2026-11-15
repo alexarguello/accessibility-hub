@@ -9,6 +9,12 @@ build
 .cache-loader
 docs/99-contribute
 docs/**/index.md
+static/agent
+static/llms.txt
+
+# Playwright output
+test-results/
+playwright-report/
 
 # Misc
 .DS_Store

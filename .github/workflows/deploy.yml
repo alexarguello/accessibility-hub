@@ -33,6 +33,7 @@ jobs:
         run: |
           python3 flatmap-tools/generate_mermaids.py
           python3 flatmap-tools/generate_contribute_dashboard.py
+          python3 flatmap-tools/generate_site_index.py
 
       - name: Build Docusaurus site
         run: npm run build

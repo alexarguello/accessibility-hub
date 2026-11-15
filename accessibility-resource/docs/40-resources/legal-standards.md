@@ -1,5 +1,6 @@
 ---
 title: Legal standards
+description: "The main accessibility standards and laws, including WCAG and the ADA, with a link to each."
 sidebar_position: 3
 hide_title: true
 level: beginner

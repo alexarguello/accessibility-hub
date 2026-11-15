@@ -1,5 +1,6 @@
 ---
 title: Conferences & Events
+description: "Accessibility conferences and events to follow, such as axe-con and CSUN; many are free online or publish recordings."
 sidebar_position: 4
 level: intermediate
 type: resource-list

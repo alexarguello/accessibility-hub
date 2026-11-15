@@ -1,5 +1,6 @@
 ---
 title: About Accessibility Hub
+description: "The Accessibility Hub's mission, the people it serves, and the problem it sets out to solve."
 sidebar_position: 2
 hide_title: true
 level: beginner

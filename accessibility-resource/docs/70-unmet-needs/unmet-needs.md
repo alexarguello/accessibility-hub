@@ -1,5 +1,6 @@
 ---
 title: Unmet Needs & Future Possibilities
+description: "Accessibility needs that current tools do not meet yet, such as accessible statistical graphs and advanced reading workflows for scientists."
 sidebar_position: 1
 hide_title: true
 level: intermediate

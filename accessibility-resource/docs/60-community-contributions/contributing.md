@@ -1,5 +1,6 @@
 ---
 title: Contributing to the Accessibility Hub
+description: "How to contribute to the Accessibility Hub: find current needs, add or improve a page, write the frontmatter, and submit a pull request."
 sidebar_position: 1
 hide_title: true
 level: intermediate

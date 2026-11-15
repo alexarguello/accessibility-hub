@@ -1,5 +1,6 @@
 ---
 title: Topics Guide
+description: "The topic keywords and prefixes to use in page frontmatter, grouped by category."
 level: beginner
 type: reference
 status: published

@@ -1,5 +1,6 @@
 ---
 title: Cognitive
+description: "Cognitive disabilities explained: types such as learning disabilities, ADHD and dementia, common causes, and the assistive technologies that help."
 sidebar_position: 1
 hide_title: true
 level: beginner

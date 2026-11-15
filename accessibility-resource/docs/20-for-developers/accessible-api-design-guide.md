@@ -1,5 +1,6 @@
 ---
 title: Accessible API Design for Developers
+description: "How Java developers can design APIs and schemas that work well with assistive technologies: naming, readability and documentation practices."
 sidebar_position: 1
 hide_title: true
 level: intermediate

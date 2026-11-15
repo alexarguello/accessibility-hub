@@ -1,5 +1,6 @@
 ---
 title: Screen Readers
+description: "What screen readers are, which to try on each platform (including the free NVDA), a feature comparison, and where to learn more."
 sidebar_position: 1
 hide_title: true
 level: beginner

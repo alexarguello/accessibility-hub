@@ -1,5 +1,6 @@
 ---
 title: Speech & Language
+description: "Speech and language disorders explained: types, causes, therapy and AAC, and the assistive technologies that support communication."
 sidebar_position: 1
 hide_title: true
 level: beginner

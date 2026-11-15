@@ -1,5 +1,6 @@
 ---
 title: Guides, Open source Tools and Patterns
+description: "A curated list of free guides, open source testing tools, patterns and knowledge bases for accessibility work."
 sidebar_position: 6
 level: beginner
 type: resource-list
