@@ -111,6 +111,10 @@ You can add a Mermaid diagram in a fenced `mermaid` code block. A diagram must n
 ### 5. Submit a Pull Request
 Create a Pull Request (PR) in our GitHub repository. Include a summary of your changes, why they're important, and mention any related GitHub issues.
 
+- Start a new branch from `main` for each change, and open the pull request against `main`.
+- Keep one change per pull request. Small pull requests are reviewed faster and are easier to trace later.
+- The automated checks run on every pull request to `main`. The site is published when the pull request is merged.
+
 ## About `_intro.md` Pages
 Each directory in `/docs/` can have an `_intro.md` as a **topic landing page**.
 ### Guidelines for `_intro.md` Files
