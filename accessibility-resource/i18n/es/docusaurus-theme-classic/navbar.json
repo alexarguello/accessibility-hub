@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Inicio",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "A11YHub",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.About": {
+    "message": "Acerca de",
+    "description": "Navbar item with label About"
+  },
+  "item.label.For Users": {
+    "message": "Para usuarios",
+    "description": "Navbar item with label For Users"
+  },
+  "item.label.For Developers": {
+    "message": "Para desarrolladores",
+    "description": "Navbar item with label For Developers"
+  },
+  "item.label.Hot Topics": {
+    "message": "Temas de actualidad",
+    "description": "Navbar item with label Hot Topics"
+  },
+  "item.label.Resources": {
+    "message": "Recursos",
+    "description": "Navbar item with label Resources"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

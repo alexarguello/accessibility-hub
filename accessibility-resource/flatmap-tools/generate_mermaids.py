@@ -7,6 +7,8 @@ Run from accessibility-resource/flatmap-tools/:
     python generate_mermaids.py
 """
 import os
+import posixpath
+import re
 
 from util import get_docs_root_dir, load_style_config, get_docs_url
 from flatmap_frontmatter import parse_frontmatter, extract_tags_from_frontmatter
@@ -34,6 +36,30 @@ from flatmap_nodes import (
 ROOT_DIR = get_docs_root_dir()
 DO_NOT_EDIT = "<!-- AUTO-GENERATED FILE — DO NOT EDIT. Regenerated on merge -->"
 LEGEND_URL = get_docs_url("about/legend")
+DOCS_URL = get_docs_url("")
+_DOCS_LINK = re.compile("([\"'])" + re.escape(DOCS_URL) + "(/[^\"'#]*)?(#[^\"']*)?" + "\\1")
+
+
+def relativize_docs_links(content, page_route):
+    """Rewrite absolute links to docs pages as links relative to this page.
+
+    The generated pages are also served under each translated locale
+    (for example /es/docs/...). An absolute link would always lead to the
+    default-language site; a relative one stays in the reader's language.
+    Relies on `trailingSlash: true`, so every page URL ends in a slash.
+
+    page_route is this page's route under /docs, without slashes at the ends
+    ('' for the docs root).
+    """
+    start = "/" + page_route if page_route else "/"
+
+    def swap(match):
+        quote, path, anchor = match.group(1), match.group(2) or "/", match.group(3) or ""
+        relative = posixpath.relpath(path.rstrip("/") or "/", start)
+        relative = "./" if relative == "." else relative + "/"
+        return quote + relative + anchor + quote
+
+    return _DOCS_LINK.sub(swap, content)
 
 
 def get_max_depth():
@@ -217,8 +243,9 @@ def generate_index_md(folder_path, rel_path):
     output += _mermaid_block(lines, clicks, class_lines)
     output += create_mini_legend(LEGEND_URL)
 
+    page_route = "/".join(strip_order_prefix(p) for p in rel_path.split(os.sep)) if rel_path else ""
     with open(os.path.join(folder_path, "index.md"), "w", encoding="utf-8") as f:
-        f.write("\n".join(output))
+        f.write(relativize_docs_links("\n".join(output), page_route))
     print("Wrote: {}".format(os.path.join(folder_path, "index.md")))
 
 
@@ -248,7 +275,7 @@ def generate_root_index_md():
 
     path = os.path.join(ROOT_DIR, "index.md")
     with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(output))
+        f.write(relativize_docs_links("\n".join(output), ""))
     print("Wrote root flatmap: {}".format(path))
 
 
@@ -280,7 +307,7 @@ def generate_full_sitemap():
 
     path = os.path.join(ROOT_DIR, "full-sitemap.md")
     with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(output))
+        f.write(relativize_docs_links("\n".join(output), "full-sitemap"))
     print("Wrote full sitemap: {}".format(path))
 
 

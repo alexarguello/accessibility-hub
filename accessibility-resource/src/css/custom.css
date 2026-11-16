@@ -309,3 +309,11 @@ main header a[href$='/docs/tags/'] {
     word-break: break-all;
   }
 }
+
+/* ─── Notice above a page with no translation in the current language ───── */
+.untranslated-notice {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid currentColor;
+  background: var(--ifm-color-emphasis-100);
+}

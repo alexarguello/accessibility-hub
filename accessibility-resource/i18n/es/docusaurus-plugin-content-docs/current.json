@@ -1,0 +1,78 @@
+{
+  "version.label": {
+    "message": "Próxima",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.About": {
+    "message": "Acerca de",
+    "description": "The label for category 'About' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.For Users": {
+    "message": "Para usuarios",
+    "description": "The label for category 'For Users' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.By Disability Type": {
+    "message": "Por tipo de discapacidad",
+    "description": "The label for category 'By Disability Type' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Aging & Dexterity": {
+    "message": "Envejecimiento y destreza",
+    "description": "The label for category 'Aging & Dexterity' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Cognitive": {
+    "message": "Cognitiva",
+    "description": "The label for category 'Cognitive' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Hearing": {
+    "message": "Auditiva",
+    "description": "The label for category 'Hearing' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Mobility": {
+    "message": "Movilidad",
+    "description": "The label for category 'Mobility' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Neurodiversity": {
+    "message": "Neurodiversidad",
+    "description": "The label for category 'Neurodiversity' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Speech & Language": {
+    "message": "Habla y lenguaje",
+    "description": "The label for category 'Speech & Language' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Understanding Visual Impairments": {
+    "message": "Discapacidad visual",
+    "description": "The label for category 'Understanding Visual Impairments' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.For Developers": {
+    "message": "Para desarrolladores",
+    "description": "The label for category 'For Developers' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Community": {
+    "message": "Comunidad",
+    "description": "The label for category 'Community' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Resources": {
+    "message": "Recursos",
+    "description": "The label for category 'Resources' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Accessibility Learning Paths": {
+    "message": "Rutas de aprendizaje de accesibilidad",
+    "description": "The label for category 'Accessibility Learning Paths' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Use Cases": {
+    "message": "Casos de uso",
+    "description": "The label for category 'Use Cases' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Community Contributions": {
+    "message": "Contribuciones de la comunidad",
+    "description": "The label for category 'Community Contributions' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Unmet Needs": {
+    "message": "Necesidades sin resolver",
+    "description": "The label for category 'Unmet Needs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Hot Topics": {
+    "message": "Temas de actualidad",
+    "description": "The label for category 'Hot Topics' in sidebar 'tutorialSidebar'"
+  }
+}
