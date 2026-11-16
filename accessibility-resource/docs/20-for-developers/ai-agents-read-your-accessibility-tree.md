@@ -128,6 +128,10 @@ styled `<div>`s instead of `<h1>` and `<main>` (1.1.1, 1.3.1).
 - **What the agent can see.** Accessibility-tree primitives only — Playwright's `ariaSnapshot()` to
   look, role and name lookups to act. Nothing in its toolset reads raw HTML, the DOM or CSS, and it
   cannot take a screenshot. This isolates the tree as the channel under test.
+- **Stack.** Playwright 1.62.0 and the Chromium build it bundles, Spring AI 2.0.1, Spring Boot
+  4.1.1, JDK 25. `ariaSnapshot()`'s output format decides how many tokens a page costs to read, so
+  the token counts belong to this stack as much as to the models. The model names are vendor
+  aliases, not dated snapshots, which is why every figure here carries the run date.
 - **Run order.** Five runs per variant per provider, alternating A-B-B-A so neither variant benefits
   from going first or last.
 - **Tool-call cap.** 40. The highest run in this data used 34, so no published run was cut off.
