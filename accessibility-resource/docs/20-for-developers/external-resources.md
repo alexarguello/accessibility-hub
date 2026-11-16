@@ -1,7 +1,7 @@
 ---
 title: External Resources for Developers
 sidebar_label: External Resources
-sidebar_position: 9
+sidebar_position: 10
 hide_title: true
 description: "A curated list of the standards, guides, testing tools and learning resources developers actually need for accessibility work, grouped by what you're trying to do."
 level: beginner
