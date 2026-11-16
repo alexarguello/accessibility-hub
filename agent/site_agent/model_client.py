@@ -31,7 +31,7 @@ def _http_post(url: str, headers: dict, body: bytes, timeout: float) -> tuple[in
 
 class ChatClient:
     def __init__(self, api_key: str, model: str, base_url: str = DEFAULT_BASE_URL,
-                 temperature: float = 0.2, max_tokens: int = 900, max_retries: int = 3,
+                 temperature: float = 0.2, max_tokens: int = 1500, max_retries: int = 3,
                  timeout: float = 90, transport: Callable = _http_post,
                  sleep: Callable[[float], None] = time.sleep):
         if not api_key:
