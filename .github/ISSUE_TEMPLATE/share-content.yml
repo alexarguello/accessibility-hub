@@ -1,0 +1,88 @@
+name: Share something for the hub
+description: Share a tool, a tip or your experience in plain words. No technical skills needed.
+title: "[Share] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sharing. You only need to write in your own words.
+
+        **What happens next**
+        1. A reviewer reads what you wrote.
+        2. The reviewer checks the facts and links, and may ask you a question here.
+        3. The reviewer turns it into a page and adds the technical details for you.
+        4. You get a link to check it before it is published.
+        5. The page is published with your name, if you want it there.
+
+        **Please note:** everything you write here is public. Do not share private details about yourself or anyone else.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you sharing?
+      options:
+        - A tool or app that helps
+        - A tip or how-to
+        - My own experience
+        - A useful link or resource
+        - A correction to a page on the site
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: subject
+    attributes:
+      label: Give it a short title
+      placeholder: "Example: How I read printed mail with my phone"
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Write it here
+      description: Use your own words, in English or Spanish. Any length is fine. You do not need to format anything.
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who would this help?
+      description: Choose all that fit. You can skip this.
+      multiple: true
+      options:
+        - People who are blind or have low vision
+        - People who are deaf or hard of hearing
+        - People with limited movement or hand control
+        - People with a cognitive or learning disability
+        - People with a speech or language disability
+        - Neurodivergent people
+        - Older people
+        - Caregivers and family
+        - Developers and designers
+        - Everyone
+    validations:
+      required: false
+  - type: textarea
+    id: sources
+    attributes:
+      label: Links or sources
+      description: If you mention a tool, a study or a website, paste the link here. You can skip this.
+    validations:
+      required: false
+  - type: input
+    id: credit
+    attributes:
+      label: How should we credit you?
+      description: A name, a nickname, or "anonymous".
+      placeholder: anonymous
+    validations:
+      required: false
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Before you send
+      options:
+        - label: I agree that my text can be edited for clarity and published on the site under its documentation licence (CC BY 4.0).
+          required: true
+        - label: I am not sharing private information about another person without their permission.
+          required: true
