@@ -602,4 +602,4 @@ linkStyle default interpolate basis
 <text x="497" y="57" dominant-baseline="middle" font-size="11" font-family="sans-serif" fill="#334155">Expert</text>
 </svg>
 
-<p class="flatmap-legend-link"><small><a href="/accessibility-hub/docs/about/legend">How to read this map — full legend</a></small></p>
+<p class="flatmap-legend-link"><small><a href="../about/legend/">How to read this map — full legend</a></small></p>

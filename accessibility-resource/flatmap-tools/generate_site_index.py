@@ -16,6 +16,7 @@ Standard library only. Output is deterministic: the same docs give the same byte
 """
 import json
 import os
+import posixpath
 import re
 import shutil
 import sys
@@ -221,6 +222,12 @@ def resolve_link(target, rel_path, routes_by_file, site_url, base_url):
         route = routes_by_file.get(joined)
         if route is not None:
             return f"{site_url}{route_to_url(base_url, route)}{anchor}"
+    # Generated section pages link to other pages relative to their own URL ("applications/", "../").
+    page_route = routes_by_file.get(rel_path.replace("\\", "/"))
+    if page_route is not None and (path.endswith("/") or path in (".", "..")):
+        joined = posixpath.normpath(posixpath.join("/" + page_route, path)).strip("/")
+        if joined in routes_by_file.values():
+            return f"{site_url}{route_to_url(base_url, joined)}{anchor}"
     return target
 
 
