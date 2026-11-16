@@ -1,0 +1,29 @@
+name: Link Check
+
+# Checks every link in the docs, including external sites. It takes about
+# 40 minutes, so it runs only when started by hand:
+#   Actions tab -> Link Check -> Run workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    name: Check markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: accessibility-resource/package-lock.json
+
+      - name: Install dependencies
+        working-directory: accessibility-resource
+        run: npm ci
+
+      - name: Run link checker
+        working-directory: accessibility-resource
+        run: npm run lint:links
