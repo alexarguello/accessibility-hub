@@ -68,6 +68,12 @@ topics:
 - `tool:sdk`
 - `engineering-gaps`
 - `design-patterns`
+- `accessibility-testing`
+- `continuous-integration`
+- `tool:Playwright`
+- `tool:axe`
+- `tool:pa11y`
+- `tool:GitHub-Actions`
 - `ai`
 - `tool:vision-api`
 - `tool:llm`

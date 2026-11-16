@@ -64,7 +64,7 @@ Have your own idea? Follow these steps:
 - Copy the [`/docs/.template.md`](https://github.com/alexarguello/accessibility-hub/blob/main/accessibility-resource/docs/.template.md) file as a starting point for your new resource.
 - Rename your file (e.g., `screen-readers.md`, `dos-and-donts.md`).
 
-⚠️ Do not name files `intro.md` or `index.md` — these are reserved for folder landing pages.
+⚠️ Do not name files `_intro.md` or `index.md` — these are reserved for folder landing pages.
 
 ### 3. Write and Format the Frontmatter
 At the top of every Markdown file, include your **frontmatter** to classify, tag, and describe the resource. 
@@ -83,12 +83,41 @@ Frontmatter is essential YAML metadata included in every resource file to ensure
 
 For the full guide, refer to [FRONTMATTER_GUIDE](/docs/community-contributions/FRONTMATTER_GUIDE).
 
-### 4. Submit a Pull Request
+The required fields are `title`, `description`, `level`, `type`, `status`, `content_status`, `audience` and `disability_type`. The guide lists the allowed values for each.
+
+### 4. Check Your Page Locally
+Run these from the `accessibility-resource` folder before you open a pull request:
+
+```bash
+npm ci
+python flatmap-tools/generate_mermaids.py
+npx remark docs/your-folder/your-page.md --frail --quiet --use ./remark/no-heading-emojis.mjs
+npx markdown-link-check --config .mlc-config.json --quiet docs/your-folder/your-page.md
+npm run build
+npm run serve
+```
+
+- The generator adds your page to the section maps. Run it again after you add or rename a page.
+- The link check reports dead links. Fix them before you submit.
+- `npm run serve` shows the built site at `http://localhost:3000/accessibility-hub/`. Open your page and read it once.
+
+### Diagrams
+You can add a Mermaid diagram in a fenced `mermaid` code block. A diagram must never be the only place the information lives:
+
+- Write the same content as a numbered list or a table **before** the diagram, and say that the diagram repeats it.
+- Give the diagram an `accTitle:` and an `accDescr:` line so screen readers announce what it is.
+- Do not use emojis in node labels.
+
+### 5. Submit a Pull Request
 Create a Pull Request (PR) in our GitHub repository. Include a summary of your changes, why they're important, and mention any related GitHub issues.
 
-## About `intro.md` Pages
-Each directory in `/docs/` can have an `intro.md` as a **topic landing page**.
-### Guidelines for `intro.md` Files
+- Start a new branch from `main` for each change, and open the pull request against `main`.
+- Keep one change per pull request. Small pull requests are reviewed faster and are easier to trace later.
+- The automated checks run on every pull request to `main`. The site is published when the pull request is merged.
+
+## About `_intro.md` Pages
+Each directory in `/docs/` can have an `_intro.md` as a **topic landing page**.
+### Guidelines for `_intro.md` Files
 - Keep it **short and clear** (max 2–3 paragraphs).
 - Define the purpose of the section and direct users to subtopics.
 - Mention the expected audience, whether beginners, experienced developers, end-users, or educators.
@@ -101,10 +130,11 @@ When submitting a PR, ensure:
 - Files are placed in the correct folder within `/docs/`.
 - Your content aligns with our **accessibility-first values**.
 
-Our automated PR checks will validate:
-- Proper metadata format and values.
-- Required fields like `title`, `type`, `level`, and `topics`.
-- **For planned or in-progress resources**: an `eta` field (completion date) must be included.
+Automated checks run on pull requests to `main`: a link check, a site build, the end-to-end tests and an accessibility scan. The build and the end-to-end tests must pass.
+
+Frontmatter is not validated automatically yet. Check it against the [FRONTMATTER_GUIDE](/docs/community-contributions/FRONTMATTER_GUIDE) yourself:
+- Required fields are present and use the allowed values.
+- **For planned or in-progress resources**: an `eta` field (completion date) is included.
 
 ⚠️ **Tip**: If there’s an issue or discussion related to your PR, reference it in the description!
 

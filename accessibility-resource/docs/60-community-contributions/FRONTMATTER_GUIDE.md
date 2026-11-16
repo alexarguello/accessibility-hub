@@ -45,7 +45,6 @@ tags:
 topics:
   - tool:example
 author: ["Your Name (https://github.com/your-profile)"]
-eta: 2025-12-31
 ---
 ```
 
