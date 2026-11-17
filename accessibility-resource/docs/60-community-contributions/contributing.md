@@ -31,10 +31,18 @@ eta: 2025-12-31
 ---
 
 # Contributing to the Accessibility Hub
+
+## Choose How You Want to Help
+
+There are two ways to contribute. Pick the one that fits you.
+
+- **I want to share in my own words.** No technical skills needed. You fill in one form, and a reviewer turns it into a page and credits you. Go to [Share Your Knowledge, No Technical Skills Needed](./share-your-knowledge.md).
+- **I want to add or edit pages myself.** You are comfortable with Git and Markdown, or want to learn. Keep reading this page, or jump to [How to Contribute](#how-to-contribute).
+
+## About This Guide
 Thank you for your interest in contributing to our **Accessibility Hub**!
 Our mission is to create the **most reliable, well-organized, and user-friendly resource** for anyone involved in making the world more accessible. This includes tools, guidelines, and resources for improving digital accessibility in areas such as screen readers, assistive technologies, visual impairments, and more.
 By contributing, you help developers, individuals with disabilities, accessibility testers, educators, and advocates find the resources they need to support accessible technology.
-
 ## Goals of the Accessibility Hub
 1. **Promote Awareness**: Provide actionable and relatable accessibility information.
 2. **Serve All Skill Levels**: Create resources for **beginners, experienced professionals, educators**, and **end users**.
@@ -130,7 +138,9 @@ When submitting a PR, ensure:
 - Files are placed in the correct folder within `/docs/`.
 - Your content aligns with our **accessibility-first values**.
 
-Automated checks run on pull requests to `main`: a link check, a site build, the end-to-end tests and an accessibility scan. The build and the end-to-end tests must pass.
+Automated checks run on pull requests to `main`: a site build, the end-to-end tests and an accessibility scan. The build and the end-to-end tests must pass.
+
+Links are not checked automatically on pull requests, because checking every page takes about 40 minutes. Check the links of your own page locally (step 4). Maintainers run the full link check by hand from the repository's Actions tab.
 
 Frontmatter is not validated automatically yet. Check it against the [FRONTMATTER_GUIDE](/docs/community-contributions/FRONTMATTER_GUIDE) yourself:
 - Required fields are present and use the allowed values.

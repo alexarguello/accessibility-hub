@@ -81,6 +81,9 @@ Our tag system helps you quickly identify and filter resources by type, audience
 
 Your contributions make the Accessibility Hub better for everyone! We welcome:
 
+### Sharing in Your Own Words (No Technical Skills Needed)
+Use a tool that helps you, or have a tip or an experience to share? Fill in the [sharing form](https://github.com/alexarguello/accessibility-hub/issues/new?template=share-content.yml). A reviewer turns it into a page and credits you. How it works: [Share Your Knowledge](https://alexarguello.github.io/accessibility-hub/docs/community-contributions/share-your-knowledge/).
+
 ### Adding New Resources
 Submit guides, tools, case studies, or links that help make technology more accessible. See [`CONTRIBUTING.md`](accessibility-resource/docs/60-community-contributions/contributing.md) for:
 - Where to place your file
