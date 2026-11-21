@@ -1,0 +1,128 @@
+# A11YHub
+
+> Open-source accessibility knowledge base: tools and practices for people with disabilities, and guidance for the developers who build inclusive technology.
+
+Full machine-readable index: https://alexarguello.github.io/accessibility-hub/agent/site-index.json
+
+## Start here
+
+- [Site Overview](https://alexarguello.github.io/accessibility-hub/agent/pages/index.md): Here's an overview of the first layers of this resource. Simply click on the boxes to get directly to your article of choice, or use the sidebar to navigate.
+- [About](https://alexarguello.github.io/accessibility-hub/agent/pages/about.md): How to read this map — full legend
+- [Community](https://alexarguello.github.io/accessibility-hub/agent/pages/community.md): How to read this map — full legend
+- [Community Contributions](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions.md): How to read this map — full legend
+- [For Developers](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers.md): How to read this map — full legend
+- [For Users](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users.md): Guides, reviews, and resources for people with disabilities to discover, use, and rate accessibility tools.
+- [Full Site Map](https://alexarguello.github.io/accessibility-hub/agent/pages/full-sitemap.md): Complete overview of all content in this resource. This map shows everything at maximum depth - it's quite detailed!
+- [Hot Topics](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics.md): How to read this map — full legend
+- [Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/resources.md): How to read this map — full legend
+- [Unmet Needs](https://alexarguello.github.io/accessibility-hub/agent/pages/unmet-needs.md): How to read this map — full legend
+- [Use Cases](https://alexarguello.github.io/accessibility-hub/agent/pages/use-cases.md): How to read this map — full legend
+
+## About
+
+- [About Accessibility Hub](https://alexarguello.github.io/accessibility-hub/agent/pages/about/about.md): The Accessibility Hub's mission, the people it serves, and the problem it sets out to solve.
+- [Map Legend](https://alexarguello.github.io/accessibility-hub/agent/pages/about/legend.md): Every section page shows a clickable map of its content. Each node encodes three pieces of information:
+- [Accessibility Hub Overview](https://alexarguello.github.io/accessibility-hub/agent/pages/about/overview.md): What the Accessibility Hub is, who it is for, how it is organized, and how to start using or contributing to it.
+- [Roadmap](https://alexarguello.github.io/accessibility-hub/agent/pages/about/roadmap.md)
+
+## Community
+
+- [Events & Hackathons](https://alexarguello.github.io/accessibility-hub/agent/pages/community/events.md): Calendar of upcoming accessibility events, hackathons, and webinars.
+- [Forums or Discussions](https://alexarguello.github.io/accessibility-hub/agent/pages/community/forums.md): Open forums for sharing experiences, troubleshooting, and networking.
+- [User Personas](https://alexarguello.github.io/accessibility-hub/agent/pages/community/personas.md): Needs efficient screen-reader workflows, accessible IDE; uses NVDA, Copilot, Seeing AI.
+- [Success Stories](https://alexarguello.github.io/accessibility-hub/agent/pages/community/success-stories.md): Real-world examples of accessibility breakthroughs and user impact.
+
+## Community Contributions
+
+- [Frontmatter Guide](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/FRONTMATTER_GUIDE.md): Reference for the YAML frontmatter every docs page needs: required and optional fields and their allowed values.
+- [Topics Guide](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/TOPICS_GUIDE.md): The topic keywords and prefixes to use in page frontmatter, grouped by category.
+- [Contributing to the Accessibility Hub](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/contributing.md): How to contribute to the Accessibility Hub: find current needs, add or improve a page, write the frontmatter, and submit a pull request.
+- [Getting Started](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/getting-started.md)
+- [Testimony Interview Template](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/interview-template.md): Accessibility Testimony Interview Template
+- [Share Your Knowledge, No Technical Skills Needed](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/share-your-knowledge.md): How anyone can share a tool, a tip or their own experience with the Accessibility Hub by filling in one form, without Git, Markdown or frontmatter.
+- [To-Do List](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/to-do-list.md)
+- [What’s Missing?](https://alexarguello.github.io/accessibility-hub/agent/pages/community-contributions/whats-missing.md): Help us grow! Reviews, benchmarks, tutorials, case studies, open-source tests.
+
+## For Developers
+
+- [Enforce Accessibility with Playwright Tests in CI](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/accessibility-tests-in-ci.md): How to run Playwright end-to-end tests in a CI pipeline so accessibility regressions block a merge: why, when to use it, a working GitHub Actions setup, and how it helps AI agents.
+- [Accessible API Design for Developers](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/accessible-api-design-guide.md): How Java developers can design APIs and schemas that work well with assistive technologies: naming, readability and documentation practices.
+- [Accessible Web Development Checklist](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/accessible-web-dev-checklist.md): A practical WCAG 2.2 Level AA checklist for developers. Every item links to the WCAG rule behind it and says how to check it in a few minutes.
+- [AI Agents Read Your Accessibility Tree, Not Your HTML](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/ai-agents-read-your-accessibility-tree.md): Results from a Spring Boot app served in two variants with identical backend and CSS but different markup, and what that one difference did to a screen reader and two AI agents.
+- [Accessibility APIs & SDKs](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/apis-sdks.md): APIs and SDKs for accessibility development. (Content to be expanded based on future contributions and curation.)
+- [Developer Case Studies](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/case-studies.md): Real accessibility experiments and fixes from developers: what was built, how it was tested, what broke, and what fixed it.
+- [Engineering Gaps & Design Patterns](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/engineering-gaps.md)
+- [External Resources for Developers](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/external-resources.md): A curated list of the standards, guides, testing tools and learning resources developers actually need for accessibility work, grouped by what you're trying to do.
+- [How to contribute](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/how-to-contribute.md): Six ways developers can make digital products more accessible: standards, inclusive design, testing, semantic HTML, accessible libraries and advocacy.
+- [Test What Scanners Miss](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/test-what-scanners-miss.md): Why a high Lighthouse score is not a tested page, and the layers of testing that do catch the defects that block screen reader users and AI agents — with Java recipes for axe-core, role-based locators, aria snapshots and keyboard tests.
+- [What to Do Next: Six Steps for Your Own App](https://alexarguello.github.io/accessibility-hub/agent/pages/for-developers/what-to-do-next.md): Six short steps to check your own app the way screen readers and AI agents see it — the accessibility tree, the keyboard, a screen reader, role-based tests, a scanner, and the WCAG rules behind the fixes.
+
+## For Users
+
+- [Applications](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/applications.md): Apps that help with everyday tasks, such as Be My Eyes and Seeing AI for visual assistance, plus open source options.
+- [By Disability Type](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type.md): How to read this map — full legend
+- [Aging & Dexterity](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/aging-dexterity.md): Dexterity impairments from aging or conditions such as arthritis and Parkinson's: tremors and reduced grip, and assistive technologies such as adaptive keyboards and voice control.
+- [Aging & Dexterity - External Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/aging-dexterity/external-resources.md)
+- [Cognitive](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/cognitive.md): Cognitive disabilities explained: types such as learning disabilities, ADHD and dementia, common causes, and the assistive technologies that help.
+- [Cognitive - External Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/cognitive/external-resources.md)
+- [Hearing](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/hearing.md): Hearing loss explained: types, common causes, assistive technologies, emerging trends, and where to learn more.
+- [Hearing - External Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/hearing/external-resources.md)
+- [Mobility](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/mobility.md): Mobility impairments explained: types and causes, assistive technologies such as wheelchairs, and where to learn more.
+- [Aphasia Communication Quick Start for Caregivers](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/mobility/aphasia-communication-quickstart.md): A caregiver's quick start for communicating with someone who has aphasia after a stroke: strategies, apps, therapy, support, and a checklist. Not medical advice.
+- [Mobility - External Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/mobility/external-resources.md): -
+- [Neurodiversity](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/neurodiversity.md): Neurodiversity explained: autism, ADHD, dyslexia and dyspraxia as natural variations, with support approaches and assistive technologies.
+- [Neurodiversity - External Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/neurodiversity/external-resources.md)
+- [Speech & Language](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language.md): Speech and language disorders explained: types, causes, therapy and AAC, and the assistive technologies that support communication.
+- [Speech & Language - External Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/external-resources.md)
+- [AAC Tools for Stroke Recovery](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-aac-tools.md): AAC tools for stroke survivors: speech-generating apps, cognitive and listening apps, emotional support apps, and low-tech options.
+- [Caregiver Guide for Post-Stroke Communication](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-caregiver-guide.md): How to support a loved one's communication after a stroke: what to expect, communication tips, tools, and emotional support.
+- [Stroke Communication Needs Checklist](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-communication-checklist.md): A checklist for caregivers and professionals to assess a stroke survivor's communication abilities and choose AAC tools and therapy strategies.
+- [Stroke Communication Profile Questionnaire](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-profile-questionnaire.md): A questionnaire that profiles a stroke survivor's motor, sensory, cognitive and speech abilities, to match AAC tools and caregiver supports.
+- [Understanding Visual Impairments](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/vision.md): The types of visual impairment, from low vision to color blindness, and their causes, in a screen reader-friendly guide.
+- [Companies Committed to Accessibility (Vision)](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/vision/companies.md): A leading company that develops assistive technology products for people who are blind or visually impaired, best known for the JAWS screen reader.
+- [Accessible E-Readers](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/vision/e-readers.md): Common problems people with vision loss report with accessible e-readers, such as limited book formats, Braille support and cost.
+- [Vision - External Resources](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/vision/external-resources.md)
+- [Screen Readers](https://alexarguello.github.io/accessibility-hub/agent/pages/for-users/by-disability-type/vision/screen-readers.md): What screen readers are, which to try on each platform (including the free NVDA), a feature comparison, and where to learn more.
+
+## Hot Topics
+
+- [Accessibility Audit](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/accessibility-audit.md): Accessibility Audit covers the process and tools for evaluating digital content for accessibility compliance. This page will be expanded and curated with more detailed guidance and resources in the future.
+- [Accessibility Testing](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/accessibility-testing.md): An overview of accessibility testing: what automated scanners catch, what they miss, and the manual and code-based tests that fill the gap.
+- [Alt Text AI](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/alt-text-ai.md): Alt Text AI is a tool or concept related to generating or improving alternative text for images using artificial intelligence. This page will be expanded and curated with more detailed content in the future to help users understand and leverage AI for accessible image...
+- [ARIA Roles](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/aria-roles.md): What ARIA roles do in the accessibility tree, why native HTML comes first, which roles you actually need, and the most common ARIA mistakes.
+- [Bug Bounty](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/bug-bounty.md): Bug Bounty programs encourage the discovery and reporting of accessibility issues. More curated content and examples will be added to this page in the future.
+- [Color Contrast](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/color-contrast.md): Color Contrast is essential for readability and accessibility, especially for users with visual impairments. This page will be expanded and curated with more information and best practices in the future.
+- [Dyslexia Support](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/dyslexia-support.md): Dyslexia Support covers tools and strategies to assist individuals with dyslexia. This page will be expanded and curated with more resources and best practices in the future.
+- [GitHub Access Tools](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/github-access-tools.md): GitHub Access Tools are resources and utilities to improve accessibility for developers and users on GitHub. This page will be expanded and curated with more information in the future.
+- [Inclusive Design](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/inclusive-design.md): Inclusive Design is about creating products and experiences that are accessible to as many people as possible. This page will be expanded and curated with more resources and examples in the future.
+- [LangChain4J Tools](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/langchain4j-tools.md): LangChain4J Tools are resources for integrating language models and AI into Java applications. This page will be expanded and curated with more information and examples in the future.
+- [NLP Assist](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/nlp-assist.md): NLP Assist refers to the use of Natural Language Processing to support accessibility and user interaction. More curated content and examples will be added to this page in the future.
+- [Otter.ai](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/otter-ai.md): Otter.ai is a tool for real-time transcription and captioning. More curated content and practical guidance will be added to this page in the future.
+- [Real-time Captions](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/real-time-captions.md): Real-time Captions provide instant text transcriptions of spoken content, improving accessibility for users who are deaf or hard of hearing. This page will be expanded and curated with more information and resources in the future.
+- [Seeing AI](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/seeing-ai.md): Seeing AI is a Microsoft app that narrates the world for people with visual impairments. More curated content and practical guidance will be added to this page in the future.
+- [Smart Homes](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/smart-homes.md): Smart Homes leverage technology to improve accessibility and independence for people with disabilities. More curated content and practical guidance will be added to this page in the future.
+- [SpringAI Assistive](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/springai-assistive.md): SpringAI Assistive is a framework or tool for integrating AI-powered accessibility features. More curated content and examples will be added to this page in the future.
+- [Voice Navigation](https://alexarguello.github.io/accessibility-hub/agent/pages/hot-topics/voice-navigation.md): Voice Navigation explores the use of voice commands and speech recognition to navigate digital interfaces. More content will be added and curated in the future to provide comprehensive guidance and resources on this topic.
+
+## Resources
+
+- [Communities & Groups](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/communities-groups.md): Online forums, mailing lists and meetups where you can ask accessibility questions and share knowledge.
+- [Conferences & Events](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/conferences-events.md): Accessibility conferences and events to follow, such as axe-con and CSUN; many are free online or publish recordings.
+- [Guides, Open source Tools and Patterns](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/free-oss-resources.md): A curated list of free guides, open source testing tools, patterns and knowledge bases for accessibility work.
+- [Accessibility Learning Paths](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/learning-paths.md): Where to start and how to advance in accessibility: a quick-start plan, courses, certifications, and learning paths by role.
+- [Certifications](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/learning-paths/certifications.md): Industry-recognized accessibility certifications, including the IAAP's CPACC and WAS, plus government and organizational credentials.
+- [Courses & Programs](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/learning-paths/courses-programs.md): Free and paid accessibility courses from trusted organizations, from foundational introductions to comprehensive programs.
+- [Quickstart Guide with FOSS](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/learning-paths/quickstart-guide.md): A 7-day plan to learn core accessibility concepts hands-on with free and open source tools.
+- [Legal standards](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/legal-standards.md): The main accessibility standards and laws, including WCAG and the ADA, with a link to each.
+- [Research & Whitepapers](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/research.md): Research and whitepapers on accessibility, AI, and assistive technology. (Content to be expanded based on future contributions and curation.)
+- [Tool Directory](https://alexarguello.github.io/accessibility-hub/agent/pages/resources/tool-directory.md)
+
+## Unmet Needs
+
+- [Unmet Needs & Future Possibilities](https://alexarguello.github.io/accessibility-hub/agent/pages/unmet-needs/unmet-needs.md): Accessibility needs that current tools do not meet yet, such as accessible statistical graphs and advanced reading workflows for scientists.
+
+## Use Cases
+
+- [Hypothetical/Future Scenarios](https://alexarguello.github.io/accessibility-hub/agent/pages/use-cases/future.md)
+- [Home and Daily Life Scenarios](https://alexarguello.github.io/accessibility-hub/agent/pages/use-cases/home.md): Examples of using AI apps such as Be My Eyes and Seeing AI at home: describing a room, and reading prescriptions, receipts and documents.
+- [Work-Related Use Cases](https://alexarguello.github.io/accessibility-hub/agent/pages/use-cases/work.md)
