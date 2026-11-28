@@ -1,0 +1,3615 @@
+{
+ "site": "https://alexarguello.github.io/accessibility-hub/",
+ "page_count": 93,
+ "pages": [
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/",
+   "path": "/accessibility-hub/docs/",
+   "text": "/accessibility-hub/agent/pages/index.md",
+   "title": "Site Overview",
+   "section": [],
+   "description": "Here's an overview of the first layers of this resource. Simply click on the boxes to get directly to your article of choice, or use the sidebar to navigate.",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Welcome"
+   ],
+   "words": 1078,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/about/",
+   "path": "/accessibility-hub/docs/about/",
+   "text": "/accessibility-hub/agent/pages/about.md",
+   "title": "About",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "About"
+   ],
+   "words": 69,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/about/about/",
+   "path": "/accessibility-hub/docs/about/about/",
+   "text": "/accessibility-hub/agent/pages/about/about.md",
+   "title": "About Accessibility Hub",
+   "section": [
+    "About"
+   ],
+   "description": "The Accessibility Hub's mission, the people it serves, and the problem it sets out to solve.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "wip",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 196,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "developer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility",
+    "inclusive-design",
+    "ai-accessibility"
+   ],
+   "topics": [
+    "accessibility",
+    "mission",
+    "vision"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/about/legend/",
+   "path": "/accessibility-hub/docs/about/legend/",
+   "text": "/accessibility-hub/agent/pages/about/legend.md",
+   "title": "Map Legend",
+   "section": [
+    "About"
+   ],
+   "description": "Every section page shows a clickable map of its content. Each node encodes three pieces of information:",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "reference",
+   "status": "published",
+   "content_status": "",
+   "headings": [
+    "Map Legend",
+    "Status — read the shape",
+    "Level — read the border pattern",
+    "Folder colors — depth in the hierarchy",
+    "When a page has both"
+   ],
+   "words": 254,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/about/overview/",
+   "path": "/accessibility-hub/docs/about/overview/",
+   "text": "/accessibility-hub/agent/pages/about/overview.md",
+   "title": "Accessibility Hub Overview",
+   "section": [
+    "About"
+   ],
+   "description": "What the Accessibility Hub is, who it is for, how it is organized, and how to start using or contributing to it.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Accessibility Hub Overview",
+    "Purpose — Who this is for",
+    "Mission",
+    "How the Hub is organized",
+    "Key capabilities",
+    "Quick start",
+    "Future vision",
+    "What you can expect",
+    "Contribute"
+   ],
+   "words": 469,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "developer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility",
+    "inclusive-design",
+    "ai-accessibility"
+   ],
+   "topics": [
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/about/roadmap/",
+   "path": "/accessibility-hub/docs/about/roadmap/",
+   "text": "/accessibility-hub/agent/pages/about/roadmap.md",
+   "title": "Roadmap",
+   "section": [
+    "About"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 14,
+   "audience": [
+    "end-user",
+    "developer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility",
+    "open-source"
+   ],
+   "topics": [
+    "roadmap",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community/",
+   "path": "/accessibility-hub/docs/community/",
+   "text": "/accessibility-hub/agent/pages/community.md",
+   "title": "Community",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Community"
+   ],
+   "words": 69,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/",
+   "path": "/accessibility-hub/docs/community-contributions/",
+   "text": "/accessibility-hub/agent/pages/community-contributions.md",
+   "title": "Community Contributions",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Community Contributions"
+   ],
+   "words": 120,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/FRONTMATTER_GUIDE/",
+   "path": "/accessibility-hub/docs/community-contributions/FRONTMATTER_GUIDE/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/FRONTMATTER_GUIDE.md",
+   "title": "Frontmatter Guide",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "Reference for the YAML frontmatter every docs page needs: required and optional fields and their allowed values.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "reference",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Quick Template",
+    "Required Fields",
+    "title · string",
+    "description · string",
+    "status · enum",
+    "level · enum",
+    "type · enum",
+    "contentstatus · enum",
+    "audience · array of enum",
+    "disabilitytype · array of enum",
+    "Optional Fields",
+    "tags · array of string",
+    "topics · array of string",
+    "author · array of string",
+    "eta · date (YYYY-MM-DD)",
+    "sidebarposition · integer"
+   ],
+   "words": 836,
+   "audience": [
+    "developer",
+    "educator",
+    "researcher"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "documentation",
+    "accessibility"
+   ],
+   "topics": [
+    "contribution",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/TOPICS_GUIDE/",
+   "path": "/accessibility-hub/docs/community-contributions/TOPICS_GUIDE/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/TOPICS_GUIDE.md",
+   "title": "Topics Guide",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "The topic keywords and prefixes to use in page frontmatter, grouped by category.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "reference",
+   "status": "published",
+   "content_status": "needs-update",
+   "headings": [
+    "1. List of Existing Keywords/Topics",
+    "Disability-Specific Categories",
+    "General Accessibility Categories",
+    "Developer-Focused Categories",
+    "Community Categories",
+    "Resource Categories",
+    "Future & Innovation Categories",
+    "2. Suggested Additional Categories",
+    "Legal & Compliance",
+    "Content Types",
+    "User Experience"
+   ],
+   "words": 159,
+   "audience": [
+    "developer",
+    "educator",
+    "researcher"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "documentation",
+    "accessibility"
+   ],
+   "topics": [
+    "contribution",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/contributing/",
+   "path": "/accessibility-hub/docs/community-contributions/contributing/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/contributing.md",
+   "title": "Contributing to the Accessibility Hub",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "How to contribute to the Accessibility Hub: find current needs, add or improve a page, write the frontmatter, and submit a pull request.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "needs-update",
+   "headings": [
+    "Choose How You Want to Help",
+    "About This Guide",
+    "Goals of the Accessibility Hub",
+    "Accessible Emoji Policy (Docs and Readme)",
+    "How to Contribute",
+    "1. Browse Current Needs",
+    "2. Add or Improve Resources",
+    "3. Write and Format the Frontmatter",
+    "4. Check Your Page Locally",
+    "Diagrams",
+    "5. Submit a Pull Request",
+    "About intro.md Pages",
+    "Guidelines for intro.md Files",
+    "Pull Request Guidelines",
+    "Available Topics and Prefixes",
+    "General Categories",
+    "Tools (Prefix: tool:)",
+    "Providers (Prefix: provider:)",
+    "Formatting and Writing Guidelines",
+    "Contributor Responsibilities",
+    "“Planned” or “Work in Progress” Resources"
+   ],
+   "words": 1396,
+   "audience": [
+    "developer",
+    "educator",
+    "researcher",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "wcag",
+    "aria",
+    "open-source"
+   ],
+   "topics": [
+    "contribution",
+    "accessibility",
+    "wcag",
+    "aria"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/getting-started/",
+   "path": "/accessibility-hub/docs/community-contributions/getting-started/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/getting-started.md",
+   "title": "Getting Started",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "tutorial",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 23,
+   "audience": [
+    "developer",
+    "educator",
+    "researcher",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "open-source",
+    "accessibility"
+   ],
+   "topics": [
+    "contribution",
+    "onboarding"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/interview-template/",
+   "path": "/accessibility-hub/docs/community-contributions/interview-template/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/interview-template.md",
+   "title": "Testimony Interview Template",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "Accessibility Testimony Interview Template",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "checklist",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 46,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "educator",
+    "researcher"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "user-research"
+   ],
+   "topics": [
+    "contribution",
+    "interview"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/share-your-knowledge/",
+   "path": "/accessibility-hub/docs/community-contributions/share-your-knowledge/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/share-your-knowledge.md",
+   "title": "Share Your Knowledge, No Technical Skills Needed",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "How anyone can share a tool, a tip or their own experience with the Accessibility Hub by filling in one form, without Git, Markdown or frontmatter.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "current",
+   "headings": [
+    "What you can share",
+    "How to share",
+    "What happens after you send it",
+    "Things to know",
+    "For reviewers"
+   ],
+   "words": 492,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "educator"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "accessibility"
+   ],
+   "topics": [
+    "contribution",
+    "community-contributions",
+    "onboarding"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/to-do-list/",
+   "path": "/accessibility-hub/docs/community-contributions/to-do-list/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/to-do-list.md",
+   "title": "To-Do List",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "reference",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 12,
+   "audience": [
+    "developer",
+    "researcher"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "accessibility"
+   ],
+   "topics": [
+    "contribution",
+    "planning"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community-contributions/whats-missing/",
+   "path": "/accessibility-hub/docs/community-contributions/whats-missing/",
+   "text": "/accessibility-hub/agent/pages/community-contributions/whats-missing.md",
+   "title": "What’s Missing?",
+   "section": [
+    "Community Contributions"
+   ],
+   "description": "Help us grow! Reviews, benchmarks, tutorials, case studies, open-source tests.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "reference",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 10,
+   "audience": [
+    "developer",
+    "educator",
+    "researcher",
+    "designer",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "contribution",
+    "innovation",
+    "accessibility"
+   ],
+   "topics": [
+    "contribution",
+    "feedback"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community/events/",
+   "path": "/accessibility-hub/docs/community/events/",
+   "text": "/accessibility-hub/agent/pages/community/events.md",
+   "title": "Events & Hackathons",
+   "section": [
+    "Community"
+   ],
+   "description": "Calendar of upcoming accessibility events, hackathons, and webinars.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 8,
+   "audience": [
+    "end-user",
+    "developer",
+    "educator",
+    "researcher",
+    "caregiver",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "community",
+    "accessibility",
+    "events"
+   ],
+   "topics": [
+    "events",
+    "hackathons"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community/forums/",
+   "path": "/accessibility-hub/docs/community/forums/",
+   "text": "/accessibility-hub/agent/pages/community/forums.md",
+   "title": "Forums or Discussions",
+   "section": [
+    "Community"
+   ],
+   "description": "Open forums for sharing experiences, troubleshooting, and networking.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 8,
+   "audience": [
+    "end-user",
+    "developer",
+    "educator",
+    "researcher",
+    "caregiver",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "community",
+    "accessibility"
+   ],
+   "topics": [
+    "forums",
+    "community"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community/personas/",
+   "path": "/accessibility-hub/docs/community/personas/",
+   "text": "/accessibility-hub/agent/pages/community/personas.md",
+   "title": "User Personas",
+   "section": [
+    "Community"
+   ],
+   "description": "Needs efficient screen-reader workflows, accessible IDE; uses NVDA, Copilot, Seeing AI.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "reference",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Blind Developer",
+    "Scientist - Educator (Low Vision)"
+   ],
+   "words": 24,
+   "audience": [
+    "developer",
+    "designer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "visual",
+    "general"
+   ],
+   "tags": [
+    "inclusive-design",
+    "user-research",
+    "accessibility"
+   ],
+   "topics": [
+    "personas",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/community/success-stories/",
+   "path": "/accessibility-hub/docs/community/success-stories/",
+   "text": "/accessibility-hub/agent/pages/community/success-stories.md",
+   "title": "Success Stories",
+   "section": [
+    "Community"
+   ],
+   "description": "Real-world examples of accessibility breakthroughs and user impact.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "reference",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 8,
+   "audience": [
+    "end-user",
+    "developer",
+    "educator",
+    "researcher",
+    "caregiver",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "community",
+    "accessibility"
+   ],
+   "topics": [
+    "success-stories",
+    "community"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/",
+   "path": "/accessibility-hub/docs/for-developers/",
+   "text": "/accessibility-hub/agent/pages/for-developers.md",
+   "title": "For Developers",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "For Developers"
+   ],
+   "words": 174,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/accessibility-tests-in-ci/",
+   "path": "/accessibility-hub/docs/for-developers/accessibility-tests-in-ci/",
+   "text": "/accessibility-hub/agent/pages/for-developers/accessibility-tests-in-ci.md",
+   "title": "Enforce Accessibility with Playwright Tests in CI",
+   "section": [
+    "For Developers"
+   ],
+   "description": "How to run Playwright end-to-end tests in a CI pipeline so accessibility regressions block a merge: why, when to use it, a working GitHub Actions setup, and how it helps AI agents.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Why run accessibility tests in CI",
+    "The example: this site",
+    "How the pipeline works",
+    "What the tests check",
+    "The workflow",
+    "Blocking and non-blocking jobs",
+    "A real failure on this site",
+    "When to use it, and when not",
+    "How this helps AI agents",
+    "Start in an afternoon",
+    "Resources"
+   ],
+   "words": 2120,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility-testing",
+    "continuous-integration",
+    "keyboard-accessibility",
+    "wcag",
+    "ai-accessibility"
+   ],
+   "topics": [
+    "accessibility-testing",
+    "continuous-integration",
+    "wcag",
+    "tool:Playwright",
+    "tool:axe",
+    "tool:pa11y",
+    "tool:GitHub-Actions"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/accessible-api-design-guide/",
+   "path": "/accessibility-hub/docs/for-developers/accessible-api-design-guide/",
+   "text": "/accessibility-hub/agent/pages/for-developers/accessible-api-design-guide.md",
+   "title": "Accessible API Design for Developers",
+   "section": [
+    "For Developers"
+   ],
+   "description": "How Java developers can design APIs and schemas that work well with assistive technologies: naming, readability and documentation practices.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "api-doc",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Quick Start",
+    "Quick Links",
+    "1. Use Clear Word Separators",
+    "Recommended Naming Conventions:",
+    "Avoid:",
+    "2. Avoid Abbreviations",
+    "Use Full Words:",
+    "Avoid:",
+    "3. Design for Readability in Identifiers",
+    "Watch out for:",
+    "4. Document Clearly and Consistently",
+    "5. Consider Tooling Compatibility",
+    "6. Test with Assistive Technologies",
+    "7. Embed Accessibility at the Source",
+    "Example:",
+    "8. Deliver Structured Content, Not HTML Blobs",
+    "Example:",
+    "9. Provide Structural Metadata to Support ARIA in UIs",
+    "Example:",
+    "10. Provide Metadata for Media",
+    "Example:",
+    "11. Make API Documentation Accessible",
+    "Best Practices:",
+    "12. Improve Error Handling for Accessibility",
+    "Example:",
+    "13. Integrate Accessibility Testing into CI/CD",
+    "Checklist:",
+    "14. Use Contract Testing for Accessibility",
+    "Spring Cloud Contract",
+    "Pact",
+    "15. Perform Manual Quality Checks",
+    "What to review",
+    "Quick checklist",
+    "Helpful references (authoritative)",
+    "16. Plan for Graceful Degradation",
+    "API strategies",
+    "Consumer (frontend) strategies",
+    "References (authoritative)",
+    "17. Foster Cross-Team Collaboration",
+    "Practical actions",
+    "References (authoritative)",
+    "Further Reading"
+   ],
+   "words": 2419,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "api-design",
+    "wcag",
+    "aria",
+    "accessibility-testing"
+   ],
+   "topics": [
+    "api",
+    "wcag",
+    "accessibility-testing",
+    "provider:w3c",
+    "tool:NVDA",
+    "tool:JAWS",
+    "tool:VoiceOver"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/accessible-web-dev-checklist/",
+   "path": "/accessibility-hub/docs/for-developers/accessible-web-dev-checklist/",
+   "text": "/accessibility-hub/agent/pages/for-developers/accessible-web-dev-checklist.md",
+   "title": "Accessible Web Development Checklist",
+   "section": [
+    "For Developers"
+   ],
+   "description": "A practical WCAG 2.2 Level AA checklist for developers. Every item links to the WCAG rule behind it and says how to check it in a few minutes.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "checklist",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Structure & Semantics",
+    "Keyboard Accessibility",
+    "Screen Reader Support",
+    "Visual Design & Contrast",
+    "Images & Media",
+    "Forms & Inputs",
+    "Responsive & Mobile",
+    "JavaScript & Dynamic Content",
+    "Testing & Validation"
+   ],
+   "words": 2168,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "wcag",
+    "aria",
+    "color-contrast",
+    "keyboard-accessibility"
+   ],
+   "topics": [
+    "wcag",
+    "semantic-html",
+    "aria",
+    "color-contrast",
+    "keyboard-accessibility",
+    "tool:axe",
+    "tool:Lighthouse",
+    "tool:WAVE"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/ai-agents-read-your-accessibility-tree/",
+   "path": "/accessibility-hub/docs/for-developers/ai-agents-read-your-accessibility-tree/",
+   "text": "/accessibility-hub/agent/pages/for-developers/ai-agents-read-your-accessibility-tree.md",
+   "title": "AI Agents Read Your Accessibility Tree, Not Your HTML",
+   "section": [
+    "For Developers"
+   ],
+   "description": "Results from a Spring Boot app served in two variants with identical backend and CSS but different markup, and what that one difference did to a screen reader and two AI agents.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "reference",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Who tried it",
+    "Agent runs",
+    "Screen reader runs",
+    "Scanner results",
+    "The four defects, and the fixes",
+    "How it was measured",
+    "What other people measured",
+    "What to do next",
+    "Further reading"
+   ],
+   "words": 1404,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "ai-accessibility",
+    "screen-readers",
+    "accessibility-testing",
+    "wcag"
+   ],
+   "topics": [
+    "ai",
+    "accessibility-testing",
+    "tool:NVDA",
+    "wcag"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/apis-sdks/",
+   "path": "/accessibility-hub/docs/for-developers/apis-sdks/",
+   "text": "/accessibility-hub/agent/pages/for-developers/apis-sdks.md",
+   "title": "Accessibility APIs & SDKs",
+   "section": [
+    "For Developers"
+   ],
+   "description": "APIs and SDKs for accessibility development. (Content to be expanded based on future contributions and curation.)",
+   "description_source": "excerpt",
+   "level": "intermediate",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 16,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "api-design",
+    "accessibility",
+    "developer-tools"
+   ],
+   "topics": [
+    "api",
+    "sdk",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/case-studies/",
+   "path": "/accessibility-hub/docs/for-developers/case-studies/",
+   "text": "/accessibility-hub/agent/pages/for-developers/case-studies.md",
+   "title": "Developer Case Studies",
+   "section": [
+    "For Developers"
+   ],
+   "description": "Real accessibility experiments and fixes from developers: what was built, how it was tested, what broke, and what fixed it.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "reference",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Case study 1: Same app, two markups — screen readers and AI agents",
+    "The question",
+    "What was built",
+    "How it was tested",
+    "What happened",
+    "What broke it",
+    "What fixed it",
+    "Lessons for developers",
+    "Add your case study",
+    "More case studies elsewhere"
+   ],
+   "words": 681,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "inclusive-design",
+    "accessibility",
+    "accessibility-testing",
+    "ai-accessibility"
+   ],
+   "topics": [
+    "case-studies",
+    "accessibility",
+    "accessibility-testing"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/engineering-gaps/",
+   "path": "/accessibility-hub/docs/for-developers/engineering-gaps/",
+   "text": "/accessibility-hub/agent/pages/for-developers/engineering-gaps.md",
+   "title": "Engineering Gaps & Design Patterns",
+   "section": [
+    "For Developers"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "intermediate",
+   "type": "reference",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 52,
+   "audience": [
+    "developer",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "ai-accessibility",
+    "inclusive-design",
+    "innovation"
+   ],
+   "topics": [
+    "engineering-gaps",
+    "design-patterns",
+    "ai",
+    "tool:vision-api",
+    "tool:llm"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/external-resources/",
+   "path": "/accessibility-hub/docs/for-developers/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-developers/external-resources.md",
+   "title": "External Resources for Developers",
+   "section": [
+    "For Developers"
+   ],
+   "description": "A curated list of the standards, guides, testing tools and learning resources developers actually need for accessibility work, grouped by what you're trying to do.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Understand the rules",
+    "Understand the accessibility tree",
+    "Build components the right way",
+    "Test your work",
+    "Use a screen reader",
+    "Keep learning",
+    "Design accessible APIs and developer tools"
+   ],
+   "words": 926,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "api-design",
+    "accessibility",
+    "developer-tools",
+    "wcag",
+    "accessibility-testing"
+   ],
+   "topics": [
+    "api",
+    "accessibility",
+    "wcag",
+    "accessibility-testing",
+    "tool:axe",
+    "tool:NVDA"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/how-to-contribute/",
+   "path": "/accessibility-hub/docs/for-developers/how-to-contribute/",
+   "text": "/accessibility-hub/agent/pages/for-developers/how-to-contribute.md",
+   "title": "How to contribute",
+   "section": [
+    "For Developers"
+   ],
+   "description": "Six ways developers can make digital products more accessible: standards, inclusive design, testing, semantic HTML, accessible libraries and advocacy.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "1. Learn and Apply Accessibility Standards 🧠",
+    "2. Build with Inclusive Design Principles 🛠️",
+    "3. Test for Accessibility 🧪",
+    "4. Use Semantic HTML 🧩",
+    "5. Leverage Accessible Frameworks and Libraries 🧰",
+    "6. Advocate and Educate 🌍",
+    "Resources for Developers 📚"
+   ],
+   "words": 288,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "wcag",
+    "aria",
+    "accessibility-testing",
+    "open-source"
+   ],
+   "topics": [
+    "contribution",
+    "wcag",
+    "aria",
+    "semantic-html",
+    "accessibility-testing"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/test-what-scanners-miss/",
+   "path": "/accessibility-hub/docs/for-developers/test-what-scanners-miss/",
+   "text": "/accessibility-hub/agent/pages/for-developers/test-what-scanners-miss.md",
+   "title": "Test What Scanners Miss",
+   "section": [
+    "For Developers"
+   ],
+   "description": "Why a high Lighthouse score is not a tested page, and the layers of testing that do catch the defects that block screen reader users and AI agents — with Java recipes for axe-core, role-based locators, aria snapshots and keyboard tests.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Why a high score is not a tested page",
+    "The layers of testing",
+    "Which test catches which defect",
+    "Recipes for Java",
+    "Layer 1: axe-core in a test",
+    "Layer 2: find controls by role and name",
+    "Layer 2: check that errors are announced",
+    "Layer 2: snapshot the accessibility tree",
+    "Layer 3: script the Tab order",
+    "The same tools in JavaScript",
+    "A 5-minute keyboard check",
+    "A 10-minute screen reader check",
+    "If you only do two things",
+    "Further reading"
+   ],
+   "words": 1870,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility-testing",
+    "screen-readers",
+    "keyboard-accessibility",
+    "wcag",
+    "ai-accessibility"
+   ],
+   "topics": [
+    "accessibility-testing",
+    "wcag",
+    "tool:axe",
+    "tool:Lighthouse",
+    "tool:NVDA",
+    "tool:Playwright"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-developers/what-to-do-next/",
+   "path": "/accessibility-hub/docs/for-developers/what-to-do-next/",
+   "text": "/accessibility-hub/agent/pages/for-developers/what-to-do-next.md",
+   "title": "What to Do Next: Six Steps for Your Own App",
+   "section": [
+    "For Developers"
+   ],
+   "description": "Six short steps to check your own app the way screen readers and AI agents see it — the accessibility tree, the keyboard, a screen reader, role-based tests, a scanner, and the WCAG rules behind the fixes.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "1. Look at your own accessibility tree (5 minutes)",
+    "2. Put the mouse away (5 minutes)",
+    "3. Listen to it with a screen reader (10 minutes)",
+    "4. Find one control by role in your tests",
+    "5. Keep a scanner in CI, as a minimum",
+    "6. Learn the rules behind the fixes",
+    "Tell us what to add next",
+    "Keep going"
+   ],
+   "words": 891,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility-testing",
+    "screen-readers",
+    "keyboard-accessibility",
+    "wcag"
+   ],
+   "topics": [
+    "accessibility-testing",
+    "wcag",
+    "tool:NVDA",
+    "tool:axe"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/",
+   "path": "/accessibility-hub/docs/for-users/",
+   "text": "/accessibility-hub/agent/pages/for-users.md",
+   "title": "For Users",
+   "section": [],
+   "description": "Guides, reviews, and resources for people with disabilities to discover, use, and rate accessibility tools.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "What's in this chapter?",
+    "For Users"
+   ],
+   "words": 412,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "assistive-technology",
+    "accessibility"
+   ],
+   "topics": [
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/applications/",
+   "path": "/accessibility-hub/docs/for-users/applications/",
+   "text": "/accessibility-hub/agent/pages/for-users/applications.md",
+   "title": "Applications",
+   "section": [
+    "For Users"
+   ],
+   "description": "Apps that help with everyday tasks, such as Be My Eyes and Seeing AI for visual assistance, plus open source options.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "For visual",
+    "Open Source",
+    "What's in this chapter?",
+    "Applications"
+   ],
+   "words": 185,
+   "audience": [
+    "end-user"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "screen-readers",
+    "visual-impairment",
+    "assistive-technology"
+   ],
+   "topics": [
+    "tool:be-my-eyes",
+    "tool:seeing-ai",
+    "tool:copilot",
+    "provider:applevis",
+    "provider:bookshare",
+    "provider:nls-bard"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type.md",
+   "title": "By Disability Type",
+   "section": [
+    "For Users"
+   ],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "By Disability Type"
+   ],
+   "words": 311,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/aging-dexterity.md",
+   "title": "Aging & Dexterity",
+   "section": [
+    "For Users",
+    "By Disability Type"
+   ],
+   "description": "Dexterity impairments from aging or conditions such as arthritis and Parkinson's: tremors and reduced grip, and assistive technologies such as adaptive keyboards and voice control.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Medical Definition",
+    "Common Causes",
+    "Examples",
+    "Assistive Technologies",
+    "AI potential:",
+    "Resources",
+    "Learn More",
+    "What's in this chapter?",
+    "Aging Dexterity"
+   ],
+   "words": 137,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "aging"
+   ],
+   "tags": [
+    "aging",
+    "motor-impairment",
+    "assistive-technology"
+   ],
+   "topics": [
+    "aging",
+    "dexterity",
+    "provider:aarp",
+    "provider:nia"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity/external-resources/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/aging-dexterity/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/aging-dexterity/external-resources.md",
+   "title": "Aging & Dexterity - External Resources",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Aging & Dexterity"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 36,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "aging"
+   ],
+   "tags": [
+    "aging",
+    "motor-impairment",
+    "assistive-technology"
+   ],
+   "topics": [
+    "aging",
+    "dexterity",
+    "provider:aarp",
+    "provider:nia",
+    "provider:eldercare",
+    "provider:abilitynet"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/cognitive/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/cognitive/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/cognitive.md",
+   "title": "Cognitive",
+   "section": [
+    "For Users",
+    "By Disability Type"
+   ],
+   "description": "Cognitive disabilities explained: types such as learning disabilities, ADHD and dementia, common causes, and the assistive technologies that help.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Medical Definition",
+    "Types:",
+    "Support:",
+    "Common Causes",
+    "Examples",
+    "Assistive Technologies",
+    "AI applications:",
+    "Resources",
+    "Learn More",
+    "What's in this chapter?",
+    "Cognitive"
+   ],
+   "words": 181,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "educator"
+   ],
+   "disability_type": [
+    "cognitive"
+   ],
+   "tags": [
+    "cognitive-accessibility",
+    "dyslexia",
+    "neurodiversity"
+   ],
+   "topics": [
+    "cognitive",
+    "provider:w3c",
+    "provider:cast",
+    "provider:ncld"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/cognitive/external-resources/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/cognitive/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/cognitive/external-resources.md",
+   "title": "Cognitive - External Resources",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Cognitive"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 38,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "educator"
+   ],
+   "disability_type": [
+    "cognitive"
+   ],
+   "tags": [
+    "cognitive-accessibility",
+    "dyslexia",
+    "neurodiversity"
+   ],
+   "topics": [
+    "cognitive",
+    "provider:w3c",
+    "provider:cast",
+    "provider:ncld",
+    "provider:mencap"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/hearing/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/hearing/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/hearing.md",
+   "title": "Hearing",
+   "section": [
+    "For Users",
+    "By Disability Type"
+   ],
+   "description": "Hearing loss explained: types, common causes, assistive technologies, emerging trends, and where to learn more.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Medical Definition",
+    "Types:",
+    "Common Causes",
+    "Examples",
+    "Assistive Technologies",
+    "Emerging trends:",
+    "Resources",
+    "Learn More",
+    "What's in this chapter?",
+    "Hearing"
+   ],
+   "words": 208,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "hearing"
+   ],
+   "tags": [
+    "captions",
+    "hearing-loss",
+    "deaf-accessibility"
+   ],
+   "topics": [
+    "hearing"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/hearing/external-resources/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/hearing/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/hearing/external-resources.md",
+   "title": "Hearing - External Resources",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Hearing"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 65,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "hearing"
+   ],
+   "tags": [
+    "captions",
+    "hearing-loss",
+    "deaf-accessibility"
+   ],
+   "topics": [
+    "hearing",
+    "provider:nad",
+    "provider:hlaa",
+    "provider:dcmp",
+    "provider:who",
+    "provider:fcc"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/mobility/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/mobility/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/mobility.md",
+   "title": "Mobility",
+   "section": [
+    "For Users",
+    "By Disability Type"
+   ],
+   "description": "Mobility impairments explained: types and causes, assistive technologies such as wheelchairs, and where to learn more.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Medical Definition",
+    "Types:",
+    "Common Causes",
+    "Examples",
+    "Assistive Technologies",
+    "Support:",
+    "AI enhancements:",
+    "Resources",
+    "Learn More",
+    "What's in this chapter?",
+    "Mobility"
+   ],
+   "words": 166,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "mobility"
+   ],
+   "tags": [
+    "motor-impairment",
+    "switch-access",
+    "keyboard-accessibility"
+   ],
+   "topics": [
+    "mobility",
+    "provider:united-spinal",
+    "provider:reeve-foundation"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/mobility/aphasia-communication-quickstart/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/mobility/aphasia-communication-quickstart/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/mobility/aphasia-communication-quickstart.md",
+   "title": "Aphasia Communication Quick Start for Caregivers",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Mobility"
+   ],
+   "description": "A caregiver's quick start for communicating with someone who has aphasia after a stroke: strategies, apps, therapy, support, and a checklist. Not medical advice.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "What is Aphasia?",
+    "Immediate Communication Strategies",
+    "Technology Tools & Apps",
+    "Therapy & Professional Support",
+    "Emotional & Community Support",
+    "Additional Helpful Tips",
+    "Questions to Help Tailor Support",
+    "Quick Start Checklist",
+    "Useful Links"
+   ],
+   "words": 1111,
+   "audience": [
+    "caregiver",
+    "end-user"
+   ],
+   "disability_type": [
+    "speech",
+    "mobility"
+   ],
+   "tags": [
+    "aac",
+    "stroke",
+    "aphasia"
+   ],
+   "topics": [
+    "aphasia",
+    "stroke",
+    "communication",
+    "aac",
+    "provider:asha",
+    "provider:aphasia.org",
+    "tool:cboard",
+    "tool:proloquo2go",
+    "tool:live-transcribe"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/mobility/external-resources/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/mobility/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/mobility/external-resources.md",
+   "title": "Mobility - External Resources",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Mobility"
+   ],
+   "description": "-",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 30,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "mobility"
+   ],
+   "tags": [
+    "motor-impairment",
+    "keyboard-accessibility",
+    "assistive-technology"
+   ],
+   "topics": [
+    "mobility",
+    "provider:united-spinal",
+    "provider:reeve-foundation",
+    "provider:abilitynet",
+    "provider:microsoft"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/neurodiversity/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/neurodiversity/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/neurodiversity.md",
+   "title": "Neurodiversity",
+   "section": [
+    "For Users",
+    "By Disability Type"
+   ],
+   "description": "Neurodiversity explained: autism, ADHD, dyslexia and dyspraxia as natural variations, with support approaches and assistive technologies.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Medical Definition",
+    "Types:",
+    "Support:",
+    "Common Causes",
+    "Examples",
+    "Assistive Technologies",
+    "AI role:",
+    "Resources",
+    "Learn More",
+    "What's in this chapter?",
+    "Neurodiversity"
+   ],
+   "words": 157,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "educator"
+   ],
+   "disability_type": [
+    "neurological"
+   ],
+   "tags": [
+    "neurodiversity",
+    "autism",
+    "adhd",
+    "cognitive-accessibility"
+   ],
+   "topics": [
+    "neurodiversity",
+    "provider:autistic-advocacy",
+    "provider:adhd-foundation"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/neurodiversity/external-resources/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/neurodiversity/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/neurodiversity/external-resources.md",
+   "title": "Neurodiversity - External Resources",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Neurodiversity"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 30,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "educator"
+   ],
+   "disability_type": [
+    "neurological"
+   ],
+   "tags": [
+    "neurodiversity",
+    "dyslexia",
+    "autism",
+    "adhd"
+   ],
+   "topics": [
+    "neurodiversity",
+    "provider:autistic-advocacy",
+    "provider:adhd-foundation",
+    "provider:bdadyslexia",
+    "provider:understood"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/speech-language/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/speech-language/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language.md",
+   "title": "Speech & Language",
+   "section": [
+    "For Users",
+    "By Disability Type"
+   ],
+   "description": "Speech and language disorders explained: types, causes, therapy and AAC, and the assistive technologies that support communication.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Speech & Language Medical Definition",
+    "Types",
+    "Causes",
+    "Support",
+    "Examples",
+    "Assistive Technologies",
+    "AI Trends",
+    "Resources",
+    "Learn More",
+    "What's in this chapter?",
+    "Speech Language"
+   ],
+   "words": 225,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "speech"
+   ],
+   "tags": [
+    "speech-accessibility",
+    "aac",
+    "voice-control"
+   ],
+   "topics": [
+    "speech",
+    "aac",
+    "provider:asha",
+    "provider:speech-accessibility-project"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/speech-language/external-resources/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/speech-language/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/external-resources.md",
+   "title": "Speech & Language - External Resources",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Speech & Language"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 33,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "speech"
+   ],
+   "tags": [
+    "speech-accessibility",
+    "aac",
+    "voice-control"
+   ],
+   "topics": [
+    "speech",
+    "aac",
+    "provider:asha",
+    "provider:cdacanada",
+    "provider:aacinstitute",
+    "provider:speech-accessibility-project"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-aac-tools/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-aac-tools/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-aac-tools.md",
+   "title": "AAC Tools for Stroke Recovery",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Speech & Language"
+   ],
+   "description": "AAC tools for stroke survivors: speech-generating apps, cognitive and listening apps, emotional support apps, and low-tech options.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Speech-Generating Apps 🔊",
+    "Cognitive & Listening Apps 🧠",
+    "Emotional Support Apps 🧘",
+    "Low-Tech AAC Options 🧩",
+    "Resource 📎"
+   ],
+   "words": 149,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "speech",
+    "mobility"
+   ],
+   "tags": [
+    "aac",
+    "stroke",
+    "speech-accessibility"
+   ],
+   "topics": [
+    "stroke",
+    "aac",
+    "provider:spokenaac",
+    "provider:tactustherapy",
+    "provider:lingraphica",
+    "provider:tobii-dynavox"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-caregiver-guide/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-caregiver-guide/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-caregiver-guide.md",
+   "title": "Caregiver Guide for Post-Stroke Communication",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Speech & Language"
+   ],
+   "description": "How to support a loved one's communication after a stroke: what to expect, communication tips, tools, and emotional support.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Understand the Impact 🧠",
+    "Communication Tips 🗣️",
+    "Tools & Techniques 🧰",
+    "Emotional Support 🤝",
+    "Resource 📎"
+   ],
+   "words": 143,
+   "audience": [
+    "caregiver"
+   ],
+   "disability_type": [
+    "speech",
+    "mobility"
+   ],
+   "tags": [
+    "stroke",
+    "aac",
+    "caregiving"
+   ],
+   "topics": [
+    "stroke",
+    "communication",
+    "aac",
+    "provider:asha"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-communication-checklist/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-communication-checklist/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-communication-checklist.md",
+   "title": "Stroke Communication Needs Checklist",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Speech & Language"
+   ],
+   "description": "A checklist for caregivers and professionals to assess a stroke survivor's communication abilities and choose AAC tools and therapy strategies.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "checklist",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Physical & Sensory Abilities",
+    "Cognitive & Language Abilities",
+    "Speech & Communication",
+    "Emotional & Behavioral Considerations",
+    "Resource"
+   ],
+   "words": 180,
+   "audience": [
+    "caregiver",
+    "end-user"
+   ],
+   "disability_type": [
+    "speech",
+    "mobility"
+   ],
+   "tags": [
+    "stroke",
+    "aac",
+    "communication"
+   ],
+   "topics": [
+    "stroke",
+    "communication",
+    "aac",
+    "provider:asha",
+    "provider:lingraphica"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/speech-language/stroke-profile-questionnaire/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/speech-language/stroke-profile-questionnaire.md",
+   "title": "Stroke Communication Profile Questionnaire",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Speech & Language"
+   ],
+   "description": "A questionnaire that profiles a stroke survivor's motor, sensory, cognitive and speech abilities, to match AAC tools and caregiver supports.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "checklist",
+   "status": "draft",
+   "content_status": "current",
+   "headings": [
+    "Physical & Motor Abilities 🔧",
+    "Sensory Abilities 👀",
+    "Cognitive & Comprehension Skills 🧠",
+    "Speech & Language Function 📣",
+    "Technology Access & Experience 📱",
+    "Communication Goals 💬",
+    "How to Use This Questionnaire 📎"
+   ],
+   "words": 276,
+   "audience": [
+    "caregiver",
+    "end-user"
+   ],
+   "disability_type": [
+    "speech",
+    "mobility"
+   ],
+   "tags": [
+    "stroke",
+    "aac",
+    "communication"
+   ],
+   "topics": [
+    "stroke",
+    "communication",
+    "aac",
+    "assessment",
+    "provider:asha"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/vision/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/vision/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/vision.md",
+   "title": "Understanding Visual Impairments",
+   "section": [
+    "For Users",
+    "By Disability Type"
+   ],
+   "description": "The types of visual impairment, from low vision to color blindness, and their causes, in a screen reader-friendly guide.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "What is Visual Impairment? 🌟",
+    "Types of Visual Impairments 🔍",
+    "1. Low Vision",
+    "2. Complete Blindness",
+    "3. Legal Blindness",
+    "4. Congenital Blindness",
+    "5. Cortical Visual Impairment (CVI)",
+    "6. Color Vision Deficiency (Color Blindness)",
+    "7. Nutritional Blindness",
+    "8. Acquired Blindness",
+    "Causes of Visual Impairments 🧠",
+    "Assistive Technologies 🛠️",
+    "Final Thoughts 💡",
+    "What's in this chapter?",
+    "Vision"
+   ],
+   "words": 457,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "educator"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "screen-readers",
+    "visual-impairment",
+    "braille"
+   ],
+   "topics": [
+    "vision",
+    "visual-impairment",
+    "tool:JAWS",
+    "tool:NVDA",
+    "tool:VoiceOver",
+    "provider:afb",
+    "provider:nv-access"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/vision/companies/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/vision/companies/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/vision/companies.md",
+   "title": "Companies Committed to Accessibility (Vision)",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Understanding Visual Impairments"
+   ],
+   "description": "A leading company that develops assistive technology products for people who are blind or visually impaired, best known for the JAWS screen reader.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Companies committed to accessibility"
+   ],
+   "words": 73,
+   "audience": [
+    "end-user",
+    "developer",
+    "business"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "screen-readers",
+    "visual-impairment",
+    "assistive-technology"
+   ],
+   "topics": [
+    "vision",
+    "provider:freedom-scientific",
+    "provider:nv-access",
+    "provider:apple",
+    "provider:microsoft"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/vision/e-readers/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/vision/e-readers/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/vision/e-readers.md",
+   "title": "Accessible E-Readers",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Understanding Visual Impairments"
+   ],
+   "description": "Common problems people with vision loss report with accessible e-readers, such as limited book formats, Braille support and cost.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "reference",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 178,
+   "audience": [
+    "end-user"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "e-readers",
+    "braille",
+    "text-to-speech",
+    "visual-impairment"
+   ],
+   "topics": [
+    "e-readers",
+    "vision",
+    "tool:braille",
+    "tool:text-to-speech",
+    "provider:bookshare",
+    "provider:nls-bard"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/vision/external-resources/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/vision/external-resources/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/vision/external-resources.md",
+   "title": "Vision - External Resources",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Understanding Visual Impairments"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 29,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "screen-readers",
+    "visual-impairment",
+    "braille"
+   ],
+   "topics": [
+    "vision",
+    "provider:afb",
+    "provider:bookshare",
+    "provider:nls-bard",
+    "provider:apple"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/for-users/by-disability-type/vision/screen-readers/",
+   "path": "/accessibility-hub/docs/for-users/by-disability-type/vision/screen-readers/",
+   "text": "/accessibility-hub/agent/pages/for-users/by-disability-type/vision/screen-readers.md",
+   "title": "Screen Readers",
+   "section": [
+    "For Users",
+    "By Disability Type",
+    "Understanding Visual Impairments"
+   ],
+   "description": "What screen readers are, which to try on each platform (including the free NVDA), a feature comparison, and where to learn more.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Quick Start",
+    "Feature Comparison",
+    "Highlights & Gaps 🔍",
+    "Learn More & Get Involved 🌐",
+    "Community & Support 🤝"
+   ],
+   "words": 344,
+   "audience": [
+    "end-user",
+    "developer"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "screen-readers",
+    "visual-impairment",
+    "nvda",
+    "jaws"
+   ],
+   "topics": [
+    "screen-readers",
+    "vision",
+    "tool:JAWS",
+    "tool:NVDA",
+    "tool:VoiceOver",
+    "tool:Narrator",
+    "tool:Orca",
+    "provider:freedom-scientific",
+    "provider:nv-access",
+    "provider:apple",
+    "provider:microsoft"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/full-sitemap/",
+   "path": "/accessibility-hub/docs/full-sitemap/",
+   "text": "/accessibility-hub/agent/pages/full-sitemap.md",
+   "title": "Full Site Map",
+   "section": [],
+   "description": "Complete overview of all content in this resource. This map shows everything at maximum depth - it's quite detailed!",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Full Site Map"
+   ],
+   "words": 1069,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/",
+   "path": "/accessibility-hub/docs/hot-topics/",
+   "text": "/accessibility-hub/agent/pages/hot-topics.md",
+   "title": "Hot Topics",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Hot Topics"
+   ],
+   "words": 202,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/accessibility-audit/",
+   "path": "/accessibility-hub/docs/hot-topics/accessibility-audit/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/accessibility-audit.md",
+   "title": "Accessibility Audit",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Accessibility Audit covers the process and tools for evaluating digital content for accessibility compliance. This page will be expanded and curated with more detailed guidance and resources in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "wip",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 32,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility-testing",
+    "wcag",
+    "inclusive-design"
+   ],
+   "topics": [
+    "accessibility-testing",
+    "wcag"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/accessibility-testing/",
+   "path": "/accessibility-hub/docs/hot-topics/accessibility-testing/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/accessibility-testing.md",
+   "title": "Accessibility Testing",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "An overview of accessibility testing: what automated scanners catch, what they miss, and the manual and code-based tests that fill the gap.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Scanners are a minimum, not a result",
+    "What to test, and how",
+    "Go deeper"
+   ],
+   "words": 313,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility-testing",
+    "wcag",
+    "aria"
+   ],
+   "topics": [
+    "accessibility-testing",
+    "wcag",
+    "tool:axe",
+    "tool:WAVE"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/alt-text-ai/",
+   "path": "/accessibility-hub/docs/hot-topics/alt-text-ai/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/alt-text-ai.md",
+   "title": "Alt Text AI",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Alt Text AI is a tool or concept related to generating or improving alternative text for images using artificial intelligence. This page will be expanded and curated with more detailed content in the future to help users understand and leverage AI for accessible image...",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "wip",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 48,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "alt-text",
+    "ai-accessibility",
+    "visual-impairment"
+   ],
+   "topics": [
+    "alt-text",
+    "ai",
+    "tool:seeing-ai"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/aria-roles/",
+   "path": "/accessibility-hub/docs/hot-topics/aria-roles/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/aria-roles.md",
+   "title": "ARIA Roles",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "What ARIA roles do in the accessibility tree, why native HTML comes first, which roles you actually need, and the most common ARIA mistakes.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "reference",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "The first rule: use native HTML",
+    "Roles you get for free",
+    "When you do need ARIA",
+    "Common mistakes",
+    "How to check your ARIA",
+    "Learn more"
+   ],
+   "words": 1080,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "aria",
+    "wcag",
+    "semantic-html"
+   ],
+   "topics": [
+    "aria",
+    "wcag",
+    "semantic-html"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/bug-bounty/",
+   "path": "/accessibility-hub/docs/hot-topics/bug-bounty/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/bug-bounty.md",
+   "title": "Bug Bounty",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Bug Bounty programs encourage the discovery and reporting of accessibility issues. More curated content and examples will be added to this page in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 27,
+   "audience": [
+    "developer",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "accessibility-testing",
+    "community",
+    "open-source"
+   ],
+   "topics": [
+    "accessibility-testing",
+    "bug-bounty"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/color-contrast/",
+   "path": "/accessibility-hub/docs/hot-topics/color-contrast/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/color-contrast.md",
+   "title": "Color Contrast",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Color Contrast is essential for readability and accessibility, especially for users with visual impairments. This page will be expanded and curated with more information and best practices in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 32,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "color-contrast",
+    "wcag",
+    "visual-design"
+   ],
+   "topics": [
+    "color-contrast",
+    "wcag",
+    "visual-design",
+    "tool:WAVE"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/dyslexia-support/",
+   "path": "/accessibility-hub/docs/hot-topics/dyslexia-support/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/dyslexia-support.md",
+   "title": "Dyslexia Support",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Dyslexia Support covers tools and strategies to assist individuals with dyslexia. This page will be expanded and curated with more resources and best practices in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 29,
+   "audience": [
+    "end-user",
+    "developer",
+    "designer",
+    "educator"
+   ],
+   "disability_type": [
+    "cognitive"
+   ],
+   "tags": [
+    "dyslexia",
+    "cognitive-accessibility",
+    "reading"
+   ],
+   "topics": [
+    "dyslexia",
+    "cognitive-accessibility",
+    "reading"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/github-access-tools/",
+   "path": "/accessibility-hub/docs/hot-topics/github-access-tools/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/github-access-tools.md",
+   "title": "GitHub Access Tools",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "GitHub Access Tools are resources and utilities to improve accessibility for developers and users on GitHub. This page will be expanded and curated with more information in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 32,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "developer-tools",
+    "accessibility",
+    "open-source"
+   ],
+   "topics": [
+    "github",
+    "developer-tools",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/inclusive-design/",
+   "path": "/accessibility-hub/docs/hot-topics/inclusive-design/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/inclusive-design.md",
+   "title": "Inclusive Design",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Inclusive Design is about creating products and experiences that are accessible to as many people as possible. This page will be expanded and curated with more resources and examples in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 34,
+   "audience": [
+    "developer",
+    "designer",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "inclusive-design",
+    "accessibility",
+    "design"
+   ],
+   "topics": [
+    "inclusive-design",
+    "design-principles"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/langchain4j-tools/",
+   "path": "/accessibility-hub/docs/hot-topics/langchain4j-tools/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/langchain4j-tools.md",
+   "title": "LangChain4J Tools",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "LangChain4J Tools are resources for integrating language models and AI into Java applications. This page will be expanded and curated with more information and examples in the future.",
+   "description_source": "excerpt",
+   "level": "intermediate",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 30,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "ai-accessibility",
+    "java",
+    "llm"
+   ],
+   "topics": [
+    "langchain4j",
+    "ai",
+    "java",
+    "llm"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/nlp-assist/",
+   "path": "/accessibility-hub/docs/hot-topics/nlp-assist/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/nlp-assist.md",
+   "title": "NLP Assist",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "NLP Assist refers to the use of Natural Language Processing to support accessibility and user interaction. More curated content and examples will be added to this page in the future.",
+   "description_source": "excerpt",
+   "level": "intermediate",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 32,
+   "audience": [
+    "developer",
+    "researcher"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "ai-accessibility",
+    "nlp",
+    "assistive-technology"
+   ],
+   "topics": [
+    "nlp",
+    "ai",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/otter-ai/",
+   "path": "/accessibility-hub/docs/hot-topics/otter-ai/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/otter-ai.md",
+   "title": "Otter.ai",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Otter.ai is a tool for real-time transcription and captioning. More curated content and practical guidance will be added to this page in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 27,
+   "audience": [
+    "end-user",
+    "developer",
+    "educator",
+    "researcher",
+    "caregiver",
+    "business"
+   ],
+   "disability_type": [
+    "hearing"
+   ],
+   "tags": [
+    "captions",
+    "hearing-loss",
+    "ai-accessibility"
+   ],
+   "topics": [
+    "real-time-captions",
+    "hearing",
+    "tool:otter-ai"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/real-time-captions/",
+   "path": "/accessibility-hub/docs/hot-topics/real-time-captions/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/real-time-captions.md",
+   "title": "Real-time Captions",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Real-time Captions provide instant text transcriptions of spoken content, improving accessibility for users who are deaf or hard of hearing. This page will be expanded and curated with more information and resources in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 37,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "developer",
+    "educator"
+   ],
+   "disability_type": [
+    "hearing",
+    "speech"
+   ],
+   "tags": [
+    "captions",
+    "hearing-loss",
+    "real-time"
+   ],
+   "topics": [
+    "real-time-captions",
+    "hearing",
+    "tool:otter-ai",
+    "tool:live-transcribe"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/seeing-ai/",
+   "path": "/accessibility-hub/docs/hot-topics/seeing-ai/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/seeing-ai.md",
+   "title": "Seeing AI",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Seeing AI is a Microsoft app that narrates the world for people with visual impairments. More curated content and practical guidance will be added to this page in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 32,
+   "audience": [
+    "end-user",
+    "caregiver"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "visual-impairment",
+    "ai-accessibility",
+    "alt-text"
+   ],
+   "topics": [
+    "visual-impairment",
+    "ai",
+    "tool:seeing-ai",
+    "provider:microsoft"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/smart-homes/",
+   "path": "/accessibility-hub/docs/hot-topics/smart-homes/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/smart-homes.md",
+   "title": "Smart Homes",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Smart Homes leverage technology to improve accessibility and independence for people with disabilities. More curated content and practical guidance will be added to this page in the future.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 30,
+   "audience": [
+    "end-user",
+    "caregiver",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "mobility",
+    "aging",
+    "general"
+   ],
+   "tags": [
+    "smart-home",
+    "voice-control",
+    "motor-impairment"
+   ],
+   "topics": [
+    "smart-home",
+    "iot",
+    "voice-control",
+    "independence"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/springai-assistive/",
+   "path": "/accessibility-hub/docs/hot-topics/springai-assistive/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/springai-assistive.md",
+   "title": "SpringAI Assistive",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "SpringAI Assistive is a framework or tool for integrating AI-powered accessibility features. More curated content and examples will be added to this page in the future.",
+   "description_source": "excerpt",
+   "level": "intermediate",
+   "type": "guide",
+   "status": "planned",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 28,
+   "audience": [
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "ai-accessibility",
+    "java",
+    "assistive-technology"
+   ],
+   "topics": [
+    "spring-ai",
+    "java",
+    "ai",
+    "accessibility"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/hot-topics/voice-navigation/",
+   "path": "/accessibility-hub/docs/hot-topics/voice-navigation/",
+   "text": "/accessibility-hub/agent/pages/hot-topics/voice-navigation.md",
+   "title": "Voice Navigation",
+   "section": [
+    "Hot Topics"
+   ],
+   "description": "Voice Navigation explores the use of voice commands and speech recognition to navigate digital interfaces. More content will be added and curated in the future to provide comprehensive guidance and resources on this topic.",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "guide",
+   "status": "planned",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 36,
+   "audience": [
+    "end-user",
+    "developer"
+   ],
+   "disability_type": [
+    "mobility",
+    "visual"
+   ],
+   "tags": [
+    "voice-control",
+    "motor-impairment",
+    "navigation"
+   ],
+   "topics": [
+    "voice-control",
+    "speech-recognition",
+    "navigation"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/",
+   "path": "/accessibility-hub/docs/resources/",
+   "text": "/accessibility-hub/agent/pages/resources.md",
+   "title": "Resources",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Resources"
+   ],
+   "words": 136,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/communities-groups/",
+   "path": "/accessibility-hub/docs/resources/communities-groups/",
+   "text": "/accessibility-hub/agent/pages/resources/communities-groups.md",
+   "title": "Communities & Groups",
+   "section": [
+    "Resources"
+   ],
+   "description": "Online forums, mailing lists and meetups where you can ask accessibility questions and share knowledge.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Online Forums & Groups",
+    "Meetups",
+    "URL Reference List"
+   ],
+   "words": 217,
+   "audience": [
+    "end-user",
+    "developer",
+    "educator",
+    "researcher",
+    "caregiver",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "community",
+    "accessibility",
+    "open-source"
+   ],
+   "topics": [
+    "community",
+    "provider:a11yproject",
+    "provider:webaim",
+    "provider:w3c"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/conferences-events/",
+   "path": "/accessibility-hub/docs/resources/conferences-events/",
+   "text": "/accessibility-hub/agent/pages/resources/conferences-events.md",
+   "title": "Conferences & Events",
+   "section": [
+    "Resources"
+   ],
+   "description": "Accessibility conferences and events to follow, such as axe-con and CSUN; many are free online or publish recordings.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "resource-list",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "URL Reference List"
+   ],
+   "words": 197,
+   "audience": [
+    "developer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "community",
+    "conferences",
+    "accessibility"
+   ],
+   "topics": [
+    "conferences",
+    "community",
+    "provider:deque",
+    "provider:csun",
+    "provider:w3c"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/free-oss-resources/",
+   "path": "/accessibility-hub/docs/resources/free-oss-resources/",
+   "text": "/accessibility-hub/agent/pages/resources/free-oss-resources.md",
+   "title": "Guides, Open source Tools and Patterns",
+   "section": [
+    "Resources"
+   ],
+   "description": "A curated list of free guides, open source testing tools, patterns and knowledge bases for accessibility work.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Official Documentation & Guides",
+    "Community Guides & Patterns",
+    "Free Testing Tools",
+    "Knowledge Bases",
+    "URL Reference List"
+   ],
+   "words": 442,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "wcag",
+    "accessibility-testing",
+    "open-source"
+   ],
+   "topics": [
+    "wcag",
+    "open-source",
+    "tool:axe",
+    "tool:AccessibilityInsights",
+    "tool:WAVE",
+    "tool:NVDA",
+    "provider:w3c",
+    "provider:webaim",
+    "provider:a11yproject",
+    "provider:deque"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/learning-paths/",
+   "path": "/accessibility-hub/docs/resources/learning-paths/",
+   "text": "/accessibility-hub/agent/pages/resources/learning-paths.md",
+   "title": "Accessibility Learning Paths",
+   "section": [
+    "Resources"
+   ],
+   "description": "Where to start and how to advance in accessibility: a quick-start plan, courses, certifications, and learning paths by role.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Role-Based Learning Paths",
+    "What's in this chapter?",
+    "Learning Paths"
+   ],
+   "words": 415,
+   "audience": [
+    "developer",
+    "designer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "education",
+    "wcag",
+    "accessibility"
+   ],
+   "topics": [
+    "education",
+    "wcag",
+    "provider:w3c",
+    "provider:mdn",
+    "provider:deque"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/learning-paths/certifications/",
+   "path": "/accessibility-hub/docs/resources/learning-paths/certifications/",
+   "text": "/accessibility-hub/agent/pages/resources/learning-paths/certifications.md",
+   "title": "Certifications",
+   "section": [
+    "Resources",
+    "Accessibility Learning Paths"
+   ],
+   "description": "Industry-recognized accessibility certifications, including the IAAP's CPACC and WAS, plus government and organizational credentials.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "reference",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "International Association of Accessibility Professionals (IAAP)",
+    "Government & Organizational",
+    "URL Reference List"
+   ],
+   "words": 204,
+   "audience": [
+    "developer",
+    "designer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "certifications",
+    "education",
+    "accessibility"
+   ],
+   "topics": [
+    "certifications",
+    "education",
+    "provider:IAAP",
+    "provider:DHS"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/learning-paths/courses-programs/",
+   "path": "/accessibility-hub/docs/resources/learning-paths/courses-programs/",
+   "text": "/accessibility-hub/agent/pages/resources/learning-paths/courses-programs.md",
+   "title": "Courses & Programs",
+   "section": [
+    "Resources",
+    "Accessibility Learning Paths"
+   ],
+   "description": "Free and paid accessibility courses from trusted organizations, from foundational introductions to comprehensive programs.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "reference",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "Foundational (Often Free)",
+    "Comprehensive (Often Paid)",
+    "Regional & Government",
+    "URL Reference List"
+   ],
+   "words": 719,
+   "audience": [
+    "developer",
+    "designer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "education",
+    "wcag",
+    "accessibility"
+   ],
+   "topics": [
+    "education",
+    "courses",
+    "provider:W3C",
+    "provider:MDN",
+    "provider:Google",
+    "provider:Microsoft",
+    "provider:Deque",
+    "provider:TPGi"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/learning-paths/quickstart-guide/",
+   "path": "/accessibility-hub/docs/resources/learning-paths/quickstart-guide/",
+   "text": "/accessibility-hub/agent/pages/resources/learning-paths/quickstart-guide.md",
+   "title": "Quickstart Guide with FOSS",
+   "section": [
+    "Resources",
+    "Accessibility Learning Paths"
+   ],
+   "description": "A 7-day plan to learn core accessibility concepts hands-on with free and open source tools.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "guide",
+   "status": "published",
+   "content_status": "current",
+   "headings": [
+    "URL Reference List"
+   ],
+   "words": 804,
+   "audience": [
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "wcag",
+    "accessibility-testing",
+    "screen-readers"
+   ],
+   "topics": [
+    "wcag",
+    "tool:WAVE",
+    "tool:Lighthouse",
+    "tool:NVDA",
+    "tool:VoiceOver",
+    "tool:axe",
+    "provider:w3c",
+    "provider:a11yproject"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/legal-standards/",
+   "path": "/accessibility-hub/docs/resources/legal-standards/",
+   "text": "/accessibility-hub/agent/pages/resources/legal-standards.md",
+   "title": "Legal standards",
+   "section": [
+    "Resources"
+   ],
+   "description": "The main accessibility standards and laws, including WCAG and the ADA, with a link to each.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "reference",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Legal & Standards Overview"
+   ],
+   "words": 242,
+   "audience": [
+    "developer",
+    "designer",
+    "educator",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "wcag",
+    "legal-compliance",
+    "accessibility"
+   ],
+   "topics": [
+    "wcag",
+    "ada",
+    "section-508",
+    "eaa",
+    "legal",
+    "provider:w3c",
+    "provider:ada.gov"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/research/",
+   "path": "/accessibility-hub/docs/resources/research/",
+   "text": "/accessibility-hub/agent/pages/resources/research.md",
+   "title": "Research & Whitepapers",
+   "section": [
+    "Resources"
+   ],
+   "description": "Research and whitepapers on accessibility, AI, and assistive technology. (Content to be expanded based on future contributions and curation.)",
+   "description_source": "excerpt",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "placeholder",
+   "headings": [],
+   "words": 19,
+   "audience": [
+    "researcher",
+    "educator",
+    "developer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "research",
+    "accessibility"
+   ],
+   "topics": [
+    "research",
+    "whitepapers"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/resources/tool-directory/",
+   "path": "/accessibility-hub/docs/resources/tool-directory/",
+   "text": "/accessibility-hub/agent/pages/resources/tool-directory.md",
+   "title": "Tool Directory",
+   "section": [
+    "Resources"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "resource-list",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 53,
+   "audience": [
+    "end-user",
+    "developer",
+    "designer"
+   ],
+   "disability_type": [
+    "general"
+   ],
+   "tags": [
+    "assistive-technology",
+    "screen-readers",
+    "accessibility"
+   ],
+   "topics": [
+    "tool:NVDA",
+    "tool:seeing-ai",
+    "tool:bookshare",
+    "tool:be-my-eyes",
+    "tool:copilot"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/unmet-needs/",
+   "path": "/accessibility-hub/docs/unmet-needs/",
+   "text": "/accessibility-hub/agent/pages/unmet-needs.md",
+   "title": "Unmet Needs",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Unmet Needs"
+   ],
+   "words": 42,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/unmet-needs/unmet-needs/",
+   "path": "/accessibility-hub/docs/unmet-needs/unmet-needs/",
+   "text": "/accessibility-hub/agent/pages/unmet-needs/unmet-needs.md",
+   "title": "Unmet Needs & Future Possibilities",
+   "section": [
+    "Unmet Needs"
+   ],
+   "description": "Accessibility needs that current tools do not meet yet, such as accessible statistical graphs and advanced reading workflows for scientists.",
+   "description_source": "frontmatter",
+   "level": "intermediate",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [],
+   "words": 139,
+   "audience": [
+    "researcher",
+    "developer",
+    "business",
+    "educator"
+   ],
+   "disability_type": [
+    "visual",
+    "general"
+   ],
+   "tags": [
+    "ai-accessibility",
+    "visual-impairment",
+    "innovation"
+   ],
+   "topics": [
+    "unmet-needs",
+    "ai",
+    "accessibility",
+    "tool:ocr",
+    "tool:vision-ai"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/use-cases/",
+   "path": "/accessibility-hub/docs/use-cases/",
+   "text": "/accessibility-hub/agent/pages/use-cases.md",
+   "title": "Use Cases",
+   "section": [],
+   "description": "How to read this map — full legend",
+   "description_source": "excerpt",
+   "level": "",
+   "type": "",
+   "status": "",
+   "content_status": "",
+   "headings": [
+    "Use Cases"
+   ],
+   "words": 65,
+   "audience": [],
+   "disability_type": [],
+   "tags": [],
+   "topics": []
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/use-cases/future/",
+   "path": "/accessibility-hub/docs/use-cases/future/",
+   "text": "/accessibility-hub/agent/pages/use-cases/future.md",
+   "title": "Hypothetical/Future Scenarios",
+   "section": [
+    "Use Cases"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "overview",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Hypothetical/Future Scenarios"
+   ],
+   "words": 45,
+   "audience": [
+    "end-user",
+    "researcher",
+    "business"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "ai-accessibility",
+    "visual-impairment",
+    "innovation"
+   ],
+   "topics": [
+    "use-cases",
+    "ai",
+    "tool:vision-ai"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/use-cases/home/",
+   "path": "/accessibility-hub/docs/use-cases/home/",
+   "text": "/accessibility-hub/agent/pages/use-cases/home.md",
+   "title": "Home and Daily Life Scenarios",
+   "section": [
+    "Use Cases"
+   ],
+   "description": "Examples of using AI apps such as Be My Eyes and Seeing AI at home: describing a room, and reading prescriptions, receipts and documents.",
+   "description_source": "frontmatter",
+   "level": "beginner",
+   "type": "tutorial",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Home and Daily Life Scenarios"
+   ],
+   "words": 112,
+   "audience": [
+    "end-user"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "visual-impairment",
+    "ai-accessibility",
+    "assistive-technology"
+   ],
+   "topics": [
+    "use-cases",
+    "tool:be-my-eyes",
+    "tool:seeing-ai"
+   ]
+  },
+  {
+   "url": "https://alexarguello.github.io/accessibility-hub/docs/use-cases/work/",
+   "path": "/accessibility-hub/docs/use-cases/work/",
+   "text": "/accessibility-hub/agent/pages/use-cases/work.md",
+   "title": "Work-Related Use Cases",
+   "section": [
+    "Use Cases"
+   ],
+   "description": "",
+   "description_source": "none",
+   "level": "beginner",
+   "type": "tutorial",
+   "status": "draft",
+   "content_status": "shallow",
+   "headings": [
+    "Work-Related Use Cases"
+   ],
+   "words": 59,
+   "audience": [
+    "end-user"
+   ],
+   "disability_type": [
+    "visual"
+   ],
+   "tags": [
+    "visual-impairment",
+    "ai-accessibility",
+    "workplace-accessibility"
+   ],
+   "topics": [
+    "use-cases",
+    "tool:copilot"
+   ]
+  }
+ ]
+}
